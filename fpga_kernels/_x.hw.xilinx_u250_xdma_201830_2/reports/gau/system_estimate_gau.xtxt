@@ -1,0 +1,45 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Dec 17 06:34:13 2023
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             gau
+Target Device:           xilinx:u250:xdma:201830.2
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+gau          c     fpga0:OCL_REGION_0  gau             1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     gau
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                                   Target Frequency  Estimated Frequency
+------------  -----------  --------------------------------------------  ----------------  -------------------
+gau_1         gau          gau_Pipeline_1                                300.300293        551.572021
+gau_1         gau          gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2  300.300293        411.015198
+gau_1         gau          gau                                           300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                                   Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  --------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+gau_1         gau          gau_Pipeline_1                                1538            1538           1538          1538            5.126 us         5.126 us        5.126 us
+gau_1         gau          gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2  262149          262149         262149        262149          0.874 ms         0.874 ms        0.874 ms
+gau_1         gau          gau                                           263828          263827         263827        263827          0.879 ms         0.879 ms        0.879 ms
+
+Area Information
+Compute Unit  Kernel Name  Module Name                                   FF     LUT    DSP  BRAM  URAM
+------------  -----------  --------------------------------------------  -----  -----  ---  ----  ----
+gau_1         gau          gau_Pipeline_1                                13     72     0    0     0
+gau_1         gau          gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2  2458   1809   0    0     0
+gau_1         gau          gau                                           12044  19146  0    1     0
+-------------------------------------------------------------------------------

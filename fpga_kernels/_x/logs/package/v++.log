@@ -1,0 +1,14 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ package can be found at:
+	Reports: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x/reports/package
+	Log files: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x/logs/package
+INFO: [v++ 60-1657] Initializing dispatch client.
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.xclbin.package_summary, at Sun Dec 17 08:44:25 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun Dec 17 08:44:25 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x/reports/package/v++_package_ced_kernels_guidance.html', at Sun Dec 17 08:44:26 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm
+INFO: [v++ 60-1578]   This platform contains Device Support Archive '/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/hw/xilinx_u250_xdma_201830_2.dsa'
+INFO: [v++ 60-1302] Platform 'xilinx_u250_xdma_201830_2.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-2256] Packaging for hardware
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.xclbin.package_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 0m 21s

@@ -1,0 +1,314 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "build_metadata": {
+        "dsa": {
+            "vendor": "xilinx",
+            "board_id": "u250",
+            "name": "xdma",
+            "version_major": "201830",
+            "version_minor": "2",
+            "description": "",
+            "generated_by": {
+                "name": "Vivado",
+                "version": "2018.3",
+                "cl": "2576915",
+                "time_stamp": "Thu Jun 27 12:02:52 2019"
+            },
+            "board": {
+                "name": "xilinx.com:au250:1.0",
+                "vendor": "xilinx.com",
+                "part": "xcu250-figd2104-2L-e",
+                "board_part": "xilinx.com:au250:part0:1.0"
+            },
+            "feature_roms": [
+                {
+                    "majorVersion": "10",
+                    "minorVersion": "1",
+                    "vivadoBuildID": "2576915",
+                    "ipBuildID": "2407534",
+                    "timeSinceEpoch": "1561656294",
+                    "fpgaPartName": "xcu250-figd2104-2L-e",
+                    "vbnvName": "xilinx_u250_xdma_201830_2",
+                    "ddrChannelCount": "4",
+                    "ddrChannelSize": "16",
+                    "drBaseAddress": "0x0",
+                    "featureBitMap": {
+                        "value": "0x3020d",
+                        "unifiedPlatform": "enabled",
+                        "auroraLink": "disabled",
+                        "boardMgmt": "enabled",
+                        "boardScheduler": "enabled",
+                        "promType": "0x0",
+                        "debugType": "0x2",
+                        "peerToPeer": "enabled",
+                        "uuid": "enabled",
+                        "clockThrottling": "disabled",
+                        "passthruTrans": "disabled"
+                    },
+                    "uuid": "6d0cbc7c-2f18-47c6-8877-51e729503014",
+                    "cdmaBaseAddress0": "0x0",
+                    "cdmaBaseAddress1": "0x0",
+                    "cdmaBaseAddress2": "0x0",
+                    "cdmaBaseAddress3": "0x0",
+                    "maxTempLimit": "0",
+                    "maxPowerLimit": "0"
+                }
+            ]
+        },
+        "xclbin": {
+            "generated_by": {
+                "name": "v++",
+                "version": "2020.1",
+                "cl": "2902540",
+                "time_stamp": "Wed May 27 19:54:35 MDT 2020",
+                "options": "\/opt\/xilinx\/Vitis\/2020.1\/bin\/unwrapped\/lnx64.o\/v++ -l --save-temps --jobs 16 -t hw --platform xilinx_u250_xdma_201830_2 --temp_dir .\/_x.hw.xilinx_u250_xdma_201830_2 -o.\/build_dir.hw.xilinx_u250_xdma_201830_2\/ced_kernels.link.xclbin _x.hw.xilinx_u250_xdma_201830_2\/gau.xo _x.hw.xilinx_u250_xdma_201830_2\/sobel.xo _x.hw.xilinx_u250_xdma_201830_2\/nms.xo _x.hw.xilinx_u250_xdma_201830_2\/hyst.xo "
+            },
+            "user_regions": [
+                {
+                    "name": "OCL_REGION_0",
+                    "type": "clc_region",
+                    "instance_path": "pfm_top_i\/dynamic_region",
+                    "base_address": "",
+                    "kernels": [
+                        {
+                            "name": "hyst",
+                            "ports": [
+                                {
+                                    "name": "M_AXI_GMEM0",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM1",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x28",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "data",
+                                    "address_qualifier": "1",
+                                    "id": "0",
+                                    "port": "M_AXI_GMEM0",
+                                    "size": "0x8",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "out",
+                                    "address_qualifier": "1",
+                                    "id": "1",
+                                    "port": "M_AXI_GMEM1",
+                                    "size": "0x8",
+                                    "offset": "0x1C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "hyst_1"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "nms",
+                            "ports": [
+                                {
+                                    "name": "M_AXI_GMEM0",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM1",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "8",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x28",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "data",
+                                    "address_qualifier": "1",
+                                    "id": "0",
+                                    "port": "M_AXI_GMEM0",
+                                    "size": "0x8",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "out",
+                                    "address_qualifier": "1",
+                                    "id": "1",
+                                    "port": "M_AXI_GMEM1",
+                                    "size": "0x8",
+                                    "offset": "0x1C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "nms_1"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "gau",
+                            "ports": [
+                                {
+                                    "name": "M_AXI_GMEM0",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM1",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x28",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "data",
+                                    "address_qualifier": "1",
+                                    "id": "0",
+                                    "port": "M_AXI_GMEM0",
+                                    "size": "0x8",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "out",
+                                    "address_qualifier": "1",
+                                    "id": "1",
+                                    "port": "M_AXI_GMEM1",
+                                    "size": "0x8",
+                                    "offset": "0x1C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "gau_1"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "sobel",
+                            "ports": [
+                                {
+                                    "name": "M_AXI_GMEM0",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "512",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "M_AXI_GMEM1",
+                                    "mode": "master",
+                                    "range": "0xFFFFFFFF",
+                                    "data_width": "16",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                },
+                                {
+                                    "name": "S_AXI_CONTROL",
+                                    "mode": "slave",
+                                    "range": "0x28",
+                                    "data_width": "32",
+                                    "port_type": "addressable",
+                                    "base": "0x0"
+                                }
+                            ],
+                            "arguments": [
+                                {
+                                    "name": "data",
+                                    "address_qualifier": "1",
+                                    "id": "0",
+                                    "port": "M_AXI_GMEM0",
+                                    "size": "0x8",
+                                    "offset": "0x10",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                },
+                                {
+                                    "name": "out",
+                                    "address_qualifier": "1",
+                                    "id": "1",
+                                    "port": "M_AXI_GMEM1",
+                                    "size": "0x8",
+                                    "offset": "0x1C",
+                                    "host_offset": "0x0",
+                                    "host_size": "0x8",
+                                    "type": "void*"
+                                }
+                            ],
+                            "instances": [
+                                {
+                                    "name": "sobel_1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

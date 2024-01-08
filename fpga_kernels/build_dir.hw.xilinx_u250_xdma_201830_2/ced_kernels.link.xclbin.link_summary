@@ -1,0 +1,916 @@
+<ENTRY>
+{
+ "thisFile": "/home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 17 06:38:30 2023",
+ "timestampMillis": "1702816710808",
+ "buildStep": {
+  "cmdId": "cb8367ad-f4b0-4135-9fbb-dc3014355707",
+  "name": "v++",
+  "logFile": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/link.steps.log",
+  "commandLine": "/opt/xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l --save-temps --jobs 16 -t hw --platform xilinx_u250_xdma_201830_2 --temp_dir ./_x.hw.xilinx_u250_xdma_201830_2 -o./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin _x.hw.xilinx_u250_xdma_201830_2/gau.xo _x.hw.xilinx_u250_xdma_201830_2/sobel.xo _x.hw.xilinx_u250_xdma_201830_2/nms.xo _x.hw.xilinx_u250_xdma_201830_2/hyst.xo ",
+  "args": [
+   "-l",
+   "--save-temps",
+   "--jobs",
+   "16",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u250_xdma_201830_2",
+   "--temp_dir",
+   "./_x.hw.xilinx_u250_xdma_201830_2",
+   "-o./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin",
+   "_x.hw.xilinx_u250_xdma_201830_2/gau.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/sobel.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/nms.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/hyst.xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:38:30 2023",
+ "timestampMillis": "1702816710809",
+ "status": {
+  "cmdId": "cb8367ad-f4b0-4135-9fbb-dc3014355707",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun Dec 17 06:38:52 2023",
+ "timestampMillis": "1702816732145",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u250_xdma_201830_2.xpfm",
+  "hardwareDsa": "xilinx_u250_xdma_201830_2.dsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "ced_kernels.link",
+    "file": "/home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "gau",
+     "file": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/gau/gau/cpu_sources/gau.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "gau_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sobel",
+     "file": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/sobel/sobel/cpu_sources/sobel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "sobel_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "nms",
+     "file": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/nms/nms/cpu_sources/nms.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "nms_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "hyst",
+     "file": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/hyst/hyst/cpu_sources/hyst.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "hyst_1"
+    ],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 06:38:52 2023",
+ "timestampMillis": "1702816732367",
+ "buildStep": {
+  "cmdId": "306fa8c2-8de8-4635-8459-386e26bbb0cc",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm --target hw --output_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --temp_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo",
+   "--xo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo",
+   "--xo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo",
+   "--xo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo",
+   "-keep",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int",
+   "--temp_dir",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:38:52 2023",
+ "timestampMillis": "1702816732368",
+ "status": {
+  "cmdId": "306fa8c2-8de8-4635-8459-386e26bbb0cc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:09 2023",
+ "timestampMillis": "1702816749229",
+ "status": {
+  "cmdId": "306fa8c2-8de8-4635-8459-386e26bbb0cc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 06:39:09 2023",
+ "timestampMillis": "1702816749232",
+ "buildStep": {
+  "cmdId": "6a55a704-dfee-4514-bf5e-132c28a110cd",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat -rtd /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/cf2sw.rtd -xclbin /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml -o /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat",
+   "-rtd",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:09 2023",
+ "timestampMillis": "1702816749234",
+ "status": {
+  "cmdId": "6a55a704-dfee-4514-bf5e-132c28a110cd",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:12 2023",
+ "timestampMillis": "1702816752160",
+ "status": {
+  "cmdId": "6a55a704-dfee-4514-bf5e-132c28a110cd",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 06:39:12 2023",
+ "timestampMillis": "1702816752163",
+ "buildStep": {
+  "cmdId": "393b543e-b171-4619-b5cc-3ef30a84784c",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:12 2023",
+ "timestampMillis": "1702816752164",
+ "status": {
+  "cmdId": "393b543e-b171-4619-b5cc-3ef30a84784c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 06:39:13 2023",
+ "timestampMillis": "1702816753863",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:13 2023",
+ "timestampMillis": "1702816753864",
+ "status": {
+  "cmdId": "393b543e-b171-4619-b5cc-3ef30a84784c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 06:39:13 2023",
+ "timestampMillis": "1702816753867",
+ "buildStep": {
+  "cmdId": "454f1de6-8add-48c3-a7b9-2436a148f6de",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u250_xdma_201830_2 -j 16 --remote_ip_cache /home/luoyanl2/ece527_taskpar/fpga_kernels/.ipcache -s --output_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --log_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link --report_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link --config /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini -k /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link --no-info --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel_1_0 --messageDb /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link/vpl.pb /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u250_xdma_201830_2",
+   "-j",
+   "16",
+   "--remote_ip_cache",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/.ipcache",
+   "-s",
+   "--output_dir",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int",
+   "--log_dir",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link",
+   "--report_dir",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link",
+   "--config",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini",
+   "-k",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link",
+   "--no-info",
+   "--iprepo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst_1_0",
+   "--iprepo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms_1_0",
+   "--iprepo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau_1_0",
+   "--iprepo",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel_1_0",
+   "--messageDb",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link/vpl.pb",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/luoyanl2/ece527_taskpar/fpga_kernels\nmisc=BinaryName=ced_kernels.link\n\n[connectivity]\nnk=gau:1:gau_1\nnk=sobel:1:sobel_1\nnk=nms:1:nms_1\nnk=hyst:1:hyst_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:13 2023",
+ "timestampMillis": "1702816753868",
+ "status": {
+  "cmdId": "454f1de6-8add-48c3-a7b9-2436a148f6de",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 17 06:39:16 2023",
+ "timestampMillis": "1702816756408",
+ "buildStep": {
+  "cmdId": "19deea89-06d4-496e-ab28-bf2f174ea24d",
+  "name": "vpl",
+  "logFile": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/link.steps.log",
+  "commandLine": "/opt/xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u250_xdma_201830_2 -j 16 --remote_ip_cache /home/luoyanl2/ece527_taskpar/fpga_kernels/.ipcache -s --output_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --log_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link --report_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link --config /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini -k /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link --no-info --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel_1_0 --messageDb /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link/vpl.pb /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:16 2023",
+ "timestampMillis": "1702816756409",
+ "status": {
+  "cmdId": "19deea89-06d4-496e-ab28-bf2f174ea24d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Sun Dec 17 06:39:33 2023",
+ "timestampMillis": "1702816773610",
+ "vivadoProject": {
+  "openDir": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 06:39:33 2023",
+ "timestampMillis": "1702816773611",
+ "buildStep": {
+  "cmdId": "588ef2a7-5b69-4430-b392-dfe4dfc05878",
+  "name": "vivado",
+  "logFile": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 06:39:33 2023",
+ "timestampMillis": "1702816773612",
+ "status": {
+  "cmdId": "588ef2a7-5b69-4430-b392-dfe4dfc05878",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247568",
+ "status": {
+  "cmdId": "588ef2a7-5b69-4430-b392-dfe4dfc05878",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247630",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247631",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247631",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247632",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247633",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247669",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247694",
+ "status": {
+  "cmdId": "19deea89-06d4-496e-ab28-bf2f174ea24d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247707",
+ "status": {
+  "cmdId": "454f1de6-8add-48c3-a7b9-2436a148f6de",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247710",
+ "buildStep": {
+  "cmdId": "2d83f6b7-c148-4d15-9df2-b9a637075da7",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247712",
+ "status": {
+  "cmdId": "2d83f6b7-c148-4d15-9df2-b9a637075da7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247718",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247720",
+ "buildStep": {
+  "cmdId": "7496c5e4-7edd-4817-9f26-f271600c0e4d",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/address_map.xml -sdsl /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat -xclbin /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml -rtd /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd -o /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.xml",
+  "args": [
+   "-a",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/address_map.xml",
+   "-sdsl",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd",
+   "-o",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:07 2023",
+ "timestampMillis": "1702824247722",
+ "status": {
+  "cmdId": "7496c5e4-7edd-4817-9f26-f271600c0e4d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250658",
+ "status": {
+  "cmdId": "7496c5e4-7edd-4817-9f26-f271600c0e4d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250665",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250666",
+ "buildStep": {
+  "cmdId": "f5b8fabb-39a6-4508-b537-5f5eeb0f6d44",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250667",
+ "status": {
+  "cmdId": "f5b8fabb-39a6-4508-b537-5f5eeb0f6d44",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250668",
+ "status": {
+  "cmdId": "f5b8fabb-39a6-4508-b537-5f5eeb0f6d44",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250669",
+ "status": {
+  "cmdId": "2d83f6b7-c148-4d15-9df2-b9a637075da7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250673",
+ "buildStep": {
+  "cmdId": "f044345c-f5ce-4c30-9efc-4566dac1a67a",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd --append-section :JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_xml.rtd --add-section BUILD_METADATA:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.xml --add-section SYSTEM_METADATA:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json --output /home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd",
+   "--append-section",
+   ":JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:10 2023",
+ "timestampMillis": "1702824250674",
+ "status": {
+  "cmdId": "f044345c-f5ce-4c30-9efc-4566dac1a67a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:11 2023",
+ "timestampMillis": "1702824251223",
+ "status": {
+  "cmdId": "f044345c-f5ce-4c30-9efc-4566dac1a67a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 08:44:11 2023",
+ "timestampMillis": "1702824251226",
+ "buildStep": {
+  "cmdId": "7cac7211-048d-4d79-bd7f-3913a5f0c214",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin.info --input /home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin.info",
+   "--input",
+   "/home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:11 2023",
+ "timestampMillis": "1702824251228",
+ "status": {
+  "cmdId": "7cac7211-048d-4d79-bd7f-3913a5f0c214",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252052",
+ "status": {
+  "cmdId": "7cac7211-048d-4d79-bd7f-3913a5f0c214",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252055",
+ "buildStep": {
+  "cmdId": "103fb120-a78d-4d55-98aa-760c9b0c4b96",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252057",
+ "status": {
+  "cmdId": "103fb120-a78d-4d55-98aa-760c9b0c4b96",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252058",
+ "status": {
+  "cmdId": "103fb120-a78d-4d55-98aa-760c9b0c4b96",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252091",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/system_estimate_ced_kernels.link.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252276",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/v++_link_ced_kernels.link_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252277",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/v++_link_ced_kernels.link_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252280",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:12 2023",
+ "timestampMillis": "1702824252282",
+ "status": {
+  "cmdId": "cb8367ad-f4b0-4135-9fbb-dc3014355707",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

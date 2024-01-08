@@ -1,0 +1,2 @@
+performing high-level synthesis for kernel: sobel
+Log file: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel/sobel/vitis_hls.log

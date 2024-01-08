@@ -1,0 +1,24 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst/hyst/hyst.tcl:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="hyst" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=hyst" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hyst" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=data offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hyst" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out offset=slave bundle=gmem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hyst" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=data bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hyst" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hyst" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="hyst" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

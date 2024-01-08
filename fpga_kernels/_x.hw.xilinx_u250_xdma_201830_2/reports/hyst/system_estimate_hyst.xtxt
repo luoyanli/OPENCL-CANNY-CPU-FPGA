@@ -1,0 +1,42 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Dec 17 06:38:27 2023
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             hyst
+Target Device:           xilinx:u250:xdma:201830.2
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+hyst         c     fpga0:OCL_REGION_0  hyst            1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     hyst
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                                    Target Frequency  Estimated Frequency
+------------  -----------  ---------------------------------------------  ----------------  -------------------
+hyst_1        hyst         hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2  300.300293        411.015198
+hyst_1        hyst         hyst                                           300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                                    Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ---------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+hyst_1        hyst         hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2  262149          262149         262149        262149          0.874 ms         0.874 ms        0.874 ms
+hyst_1        hyst         hyst                                           262290          262289         262289        262289          0.874 ms         0.874 ms        0.874 ms
+
+Area Information
+Compute Unit  Kernel Name  Module Name                                    FF     LUT    DSP  BRAM  URAM
+------------  -----------  ---------------------------------------------  -----  -----  ---  ----  ----
+hyst_1        hyst         hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2  2310   1612   0    0     0
+hyst_1        hyst         hyst                                           11882  18812  0    0     0
+-------------------------------------------------------------------------------

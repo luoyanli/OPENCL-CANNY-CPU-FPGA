@@ -1,0 +1,8 @@
+<pragmas>
+<pragma file="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp" line="29" pragmaType="pipeline" parentfunction="hyst" off="0" ii="1" rewind="0" style=""/>
+<pragma file="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp" line="16" pragmaType="interface" parentfunction="hyst" mode="m_axi" port="data" bundle="gmem0" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp" line="17" pragmaType="interface" parentfunction="hyst" mode="m_axi" port="out" bundle="gmem1" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp" line="18" pragmaType="interface" parentfunction="hyst" mode="s_axilite" port="data" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp" line="19" pragmaType="interface" parentfunction="hyst" mode="s_axilite" port="out" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp" line="20" pragmaType="interface" parentfunction="hyst" mode="s_axilite" port="" bundle="control" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

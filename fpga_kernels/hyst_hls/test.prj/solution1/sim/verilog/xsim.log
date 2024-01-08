@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# xsim v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Dec 10 20:59:02 2023
+# Process ID: 12093
+# Current directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/hyst_hls/test.prj/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/hyst/xsim_script.tcl}
+# Log file: /home/luoyanl2/ece527_taskpar/fpga_kernels/hyst_hls/test.prj/solution1/sim/verilog/xsim.log
+# Journal file: /home/luoyanl2/ece527_taskpar/fpga_kernels/hyst_hls/test.prj/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/hyst/xsim_script.tcl
+# xsim {hyst} -autoloadwcfg -tclbatch {hyst.tcl}
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source hyst.tcl
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "356000"
+// RTL Simulation : 1 / 1 [100.00%] @ "167404000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 167413750 ps : File "/home/luoyanl2/ece527_taskpar/fpga_kernels/hyst_hls/test.prj/solution1/sim/verilog/hyst.autotb.v" Line 266
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Dec 10 20:59:12 2023...

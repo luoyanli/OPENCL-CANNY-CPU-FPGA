@@ -1,0 +1,2019 @@
+{
+    "Used Resources": [
+        {
+            "ip_instance": "pfm_dynamic_gau_1_0",
+            "resources": [
+                {
+                    "LUT": "3693"
+                },
+                {
+                    "LUTAsLogic": "2692"
+                },
+                {
+                    "LUTAsMem": "1001"
+                },
+                {
+                    "REG": "5277"
+                },
+                {
+                    "CARRY8": "73"
+                },
+                {
+                    "F7MUX": "118"
+                },
+                {
+                    "F8MUX": "0"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "16"
+                },
+                {
+                    "URAM": "0"
+                },
+                {
+                    "DSP": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "GTYE4_CHANNEL": "0"
+                },
+                {
+                    "GTYE4_COMMON": "0"
+                },
+                {
+                    "SLL_SLR2-SLR3": "0"
+                },
+                {
+                    "SLL_SLR3-SLR2": "0"
+                },
+                {
+                    "SLL_SLR1-SLR2": "0"
+                },
+                {
+                    "SLL_SLR2-SLR1": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "0"
+                },
+                {
+                    "SLL_SLR1-SLR0": "0"
+                },
+                {
+                    "LUT_SLR0": "0"
+                },
+                {
+                    "LUT_SLR1": "0"
+                },
+                {
+                    "LUT_SLR2": "0"
+                },
+                {
+                    "LUT_SLR3": "0"
+                },
+                {
+                    "LUTAsLogic_SLR0": "0"
+                },
+                {
+                    "LUTAsLogic_SLR1": "0"
+                },
+                {
+                    "LUTAsLogic_SLR2": "0"
+                },
+                {
+                    "LUTAsLogic_SLR3": "0"
+                },
+                {
+                    "LUTAsMem_SLR0": "0"
+                },
+                {
+                    "LUTAsMem_SLR1": "0"
+                },
+                {
+                    "LUTAsMem_SLR2": "0"
+                },
+                {
+                    "LUTAsMem_SLR3": "0"
+                },
+                {
+                    "REG_SLR0": "0"
+                },
+                {
+                    "REG_SLR1": "0"
+                },
+                {
+                    "REG_SLR2": "0"
+                },
+                {
+                    "REG_SLR3": "0"
+                },
+                {
+                    "CARRY8_SLR0": "0"
+                },
+                {
+                    "CARRY8_SLR1": "0"
+                },
+                {
+                    "CARRY8_SLR2": "0"
+                },
+                {
+                    "CARRY8_SLR3": "0"
+                },
+                {
+                    "F7MUX_SLR0": "0"
+                },
+                {
+                    "F7MUX_SLR1": "0"
+                },
+                {
+                    "F7MUX_SLR2": "0"
+                },
+                {
+                    "F7MUX_SLR3": "0"
+                },
+                {
+                    "F8MUX_SLR0": "0"
+                },
+                {
+                    "F8MUX_SLR1": "0"
+                },
+                {
+                    "F8MUX_SLR2": "0"
+                },
+                {
+                    "F8MUX_SLR3": "0"
+                },
+                {
+                    "F9MUX_SLR0": "0"
+                },
+                {
+                    "F9MUX_SLR1": "0"
+                },
+                {
+                    "F9MUX_SLR2": "0"
+                },
+                {
+                    "F9MUX_SLR3": "0"
+                },
+                {
+                    "BRAM_SLR0": "0"
+                },
+                {
+                    "BRAM_SLR1": "0"
+                },
+                {
+                    "BRAM_SLR2": "0"
+                },
+                {
+                    "BRAM_SLR3": "0"
+                },
+                {
+                    "URAM_SLR0": "0"
+                },
+                {
+                    "URAM_SLR1": "0"
+                },
+                {
+                    "URAM_SLR2": "0"
+                },
+                {
+                    "URAM_SLR3": "0"
+                },
+                {
+                    "DSPs_SLR0": "0"
+                },
+                {
+                    "DSPs_SLR1": "0"
+                },
+                {
+                    "DSPs_SLR2": "0"
+                },
+                {
+                    "DSPs_SLR3": "0"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                }
+            ]
+        },
+        {
+            "ip_instance": "pfm_dynamic_hyst_1_0",
+            "resources": [
+                {
+                    "LUT": "3372"
+                },
+                {
+                    "LUTAsLogic": "2371"
+                },
+                {
+                    "LUTAsMem": "1001"
+                },
+                {
+                    "REG": "4281"
+                },
+                {
+                    "CARRY8": "65"
+                },
+                {
+                    "F7MUX": "118"
+                },
+                {
+                    "F8MUX": "0"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "15"
+                },
+                {
+                    "URAM": "0"
+                },
+                {
+                    "DSP": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "GTYE4_CHANNEL": "0"
+                },
+                {
+                    "GTYE4_COMMON": "0"
+                },
+                {
+                    "SLL_SLR2-SLR3": "0"
+                },
+                {
+                    "SLL_SLR3-SLR2": "0"
+                },
+                {
+                    "SLL_SLR1-SLR2": "0"
+                },
+                {
+                    "SLL_SLR2-SLR1": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "0"
+                },
+                {
+                    "SLL_SLR1-SLR0": "0"
+                },
+                {
+                    "LUT_SLR0": "0"
+                },
+                {
+                    "LUT_SLR1": "0"
+                },
+                {
+                    "LUT_SLR2": "0"
+                },
+                {
+                    "LUT_SLR3": "0"
+                },
+                {
+                    "LUTAsLogic_SLR0": "0"
+                },
+                {
+                    "LUTAsLogic_SLR1": "0"
+                },
+                {
+                    "LUTAsLogic_SLR2": "0"
+                },
+                {
+                    "LUTAsLogic_SLR3": "0"
+                },
+                {
+                    "LUTAsMem_SLR0": "0"
+                },
+                {
+                    "LUTAsMem_SLR1": "0"
+                },
+                {
+                    "LUTAsMem_SLR2": "0"
+                },
+                {
+                    "LUTAsMem_SLR3": "0"
+                },
+                {
+                    "REG_SLR0": "0"
+                },
+                {
+                    "REG_SLR1": "0"
+                },
+                {
+                    "REG_SLR2": "0"
+                },
+                {
+                    "REG_SLR3": "0"
+                },
+                {
+                    "CARRY8_SLR0": "0"
+                },
+                {
+                    "CARRY8_SLR1": "0"
+                },
+                {
+                    "CARRY8_SLR2": "0"
+                },
+                {
+                    "CARRY8_SLR3": "0"
+                },
+                {
+                    "F7MUX_SLR0": "0"
+                },
+                {
+                    "F7MUX_SLR1": "0"
+                },
+                {
+                    "F7MUX_SLR2": "0"
+                },
+                {
+                    "F7MUX_SLR3": "0"
+                },
+                {
+                    "F8MUX_SLR0": "0"
+                },
+                {
+                    "F8MUX_SLR1": "0"
+                },
+                {
+                    "F8MUX_SLR2": "0"
+                },
+                {
+                    "F8MUX_SLR3": "0"
+                },
+                {
+                    "F9MUX_SLR0": "0"
+                },
+                {
+                    "F9MUX_SLR1": "0"
+                },
+                {
+                    "F9MUX_SLR2": "0"
+                },
+                {
+                    "F9MUX_SLR3": "0"
+                },
+                {
+                    "BRAM_SLR0": "0"
+                },
+                {
+                    "BRAM_SLR1": "0"
+                },
+                {
+                    "BRAM_SLR2": "0"
+                },
+                {
+                    "BRAM_SLR3": "0"
+                },
+                {
+                    "URAM_SLR0": "0"
+                },
+                {
+                    "URAM_SLR1": "0"
+                },
+                {
+                    "URAM_SLR2": "0"
+                },
+                {
+                    "URAM_SLR3": "0"
+                },
+                {
+                    "DSPs_SLR0": "0"
+                },
+                {
+                    "DSPs_SLR1": "0"
+                },
+                {
+                    "DSPs_SLR2": "0"
+                },
+                {
+                    "DSPs_SLR3": "0"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                }
+            ]
+        },
+        {
+            "ip_instance": "pfm_dynamic_nms_1_0",
+            "resources": [
+                {
+                    "LUT": "3009"
+                },
+                {
+                    "LUTAsLogic": "2493"
+                },
+                {
+                    "LUTAsMem": "516"
+                },
+                {
+                    "REG": "3957"
+                },
+                {
+                    "CARRY8": "81"
+                },
+                {
+                    "F7MUX": "126"
+                },
+                {
+                    "F8MUX": "0"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "9"
+                },
+                {
+                    "URAM": "0"
+                },
+                {
+                    "DSP": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "GTYE4_CHANNEL": "0"
+                },
+                {
+                    "GTYE4_COMMON": "0"
+                },
+                {
+                    "SLL_SLR2-SLR3": "0"
+                },
+                {
+                    "SLL_SLR3-SLR2": "0"
+                },
+                {
+                    "SLL_SLR1-SLR2": "0"
+                },
+                {
+                    "SLL_SLR2-SLR1": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "0"
+                },
+                {
+                    "SLL_SLR1-SLR0": "0"
+                },
+                {
+                    "LUT_SLR0": "0"
+                },
+                {
+                    "LUT_SLR1": "0"
+                },
+                {
+                    "LUT_SLR2": "0"
+                },
+                {
+                    "LUT_SLR3": "0"
+                },
+                {
+                    "LUTAsLogic_SLR0": "0"
+                },
+                {
+                    "LUTAsLogic_SLR1": "0"
+                },
+                {
+                    "LUTAsLogic_SLR2": "0"
+                },
+                {
+                    "LUTAsLogic_SLR3": "0"
+                },
+                {
+                    "LUTAsMem_SLR0": "0"
+                },
+                {
+                    "LUTAsMem_SLR1": "0"
+                },
+                {
+                    "LUTAsMem_SLR2": "0"
+                },
+                {
+                    "LUTAsMem_SLR3": "0"
+                },
+                {
+                    "REG_SLR0": "0"
+                },
+                {
+                    "REG_SLR1": "0"
+                },
+                {
+                    "REG_SLR2": "0"
+                },
+                {
+                    "REG_SLR3": "0"
+                },
+                {
+                    "CARRY8_SLR0": "0"
+                },
+                {
+                    "CARRY8_SLR1": "0"
+                },
+                {
+                    "CARRY8_SLR2": "0"
+                },
+                {
+                    "CARRY8_SLR3": "0"
+                },
+                {
+                    "F7MUX_SLR0": "0"
+                },
+                {
+                    "F7MUX_SLR1": "0"
+                },
+                {
+                    "F7MUX_SLR2": "0"
+                },
+                {
+                    "F7MUX_SLR3": "0"
+                },
+                {
+                    "F8MUX_SLR0": "0"
+                },
+                {
+                    "F8MUX_SLR1": "0"
+                },
+                {
+                    "F8MUX_SLR2": "0"
+                },
+                {
+                    "F8MUX_SLR3": "0"
+                },
+                {
+                    "F9MUX_SLR0": "0"
+                },
+                {
+                    "F9MUX_SLR1": "0"
+                },
+                {
+                    "F9MUX_SLR2": "0"
+                },
+                {
+                    "F9MUX_SLR3": "0"
+                },
+                {
+                    "BRAM_SLR0": "0"
+                },
+                {
+                    "BRAM_SLR1": "0"
+                },
+                {
+                    "BRAM_SLR2": "0"
+                },
+                {
+                    "BRAM_SLR3": "0"
+                },
+                {
+                    "URAM_SLR0": "0"
+                },
+                {
+                    "URAM_SLR1": "0"
+                },
+                {
+                    "URAM_SLR2": "0"
+                },
+                {
+                    "URAM_SLR3": "0"
+                },
+                {
+                    "DSPs_SLR0": "0"
+                },
+                {
+                    "DSPs_SLR1": "0"
+                },
+                {
+                    "DSPs_SLR2": "0"
+                },
+                {
+                    "DSPs_SLR3": "0"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                }
+            ]
+        },
+        {
+            "ip_instance": "pfm_dynamic_sobel_1_0",
+            "resources": [
+                {
+                    "LUT": "4545"
+                },
+                {
+                    "LUTAsLogic": "3973"
+                },
+                {
+                    "LUTAsMem": "572"
+                },
+                {
+                    "REG": "5430"
+                },
+                {
+                    "CARRY8": "246"
+                },
+                {
+                    "F7MUX": "126"
+                },
+                {
+                    "F8MUX": "0"
+                },
+                {
+                    "F9MUX": "0"
+                },
+                {
+                    "BRAM": "8"
+                },
+                {
+                    "URAM": "0"
+                },
+                {
+                    "DSP": "2"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "0"
+                },
+                {
+                    "PLL": "0"
+                },
+                {
+                    "MMCM": "0"
+                },
+                {
+                    "GTYE4_CHANNEL": "0"
+                },
+                {
+                    "GTYE4_COMMON": "0"
+                },
+                {
+                    "SLL_SLR2-SLR3": "0"
+                },
+                {
+                    "SLL_SLR3-SLR2": "0"
+                },
+                {
+                    "SLL_SLR1-SLR2": "0"
+                },
+                {
+                    "SLL_SLR2-SLR1": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "0"
+                },
+                {
+                    "SLL_SLR1-SLR0": "0"
+                },
+                {
+                    "LUT_SLR0": "0"
+                },
+                {
+                    "LUT_SLR1": "0"
+                },
+                {
+                    "LUT_SLR2": "0"
+                },
+                {
+                    "LUT_SLR3": "0"
+                },
+                {
+                    "LUTAsLogic_SLR0": "0"
+                },
+                {
+                    "LUTAsLogic_SLR1": "0"
+                },
+                {
+                    "LUTAsLogic_SLR2": "0"
+                },
+                {
+                    "LUTAsLogic_SLR3": "0"
+                },
+                {
+                    "LUTAsMem_SLR0": "0"
+                },
+                {
+                    "LUTAsMem_SLR1": "0"
+                },
+                {
+                    "LUTAsMem_SLR2": "0"
+                },
+                {
+                    "LUTAsMem_SLR3": "0"
+                },
+                {
+                    "REG_SLR0": "0"
+                },
+                {
+                    "REG_SLR1": "0"
+                },
+                {
+                    "REG_SLR2": "0"
+                },
+                {
+                    "REG_SLR3": "0"
+                },
+                {
+                    "CARRY8_SLR0": "0"
+                },
+                {
+                    "CARRY8_SLR1": "0"
+                },
+                {
+                    "CARRY8_SLR2": "0"
+                },
+                {
+                    "CARRY8_SLR3": "0"
+                },
+                {
+                    "F7MUX_SLR0": "0"
+                },
+                {
+                    "F7MUX_SLR1": "0"
+                },
+                {
+                    "F7MUX_SLR2": "0"
+                },
+                {
+                    "F7MUX_SLR3": "0"
+                },
+                {
+                    "F8MUX_SLR0": "0"
+                },
+                {
+                    "F8MUX_SLR1": "0"
+                },
+                {
+                    "F8MUX_SLR2": "0"
+                },
+                {
+                    "F8MUX_SLR3": "0"
+                },
+                {
+                    "F9MUX_SLR0": "0"
+                },
+                {
+                    "F9MUX_SLR1": "0"
+                },
+                {
+                    "F9MUX_SLR2": "0"
+                },
+                {
+                    "F9MUX_SLR3": "0"
+                },
+                {
+                    "BRAM_SLR0": "0"
+                },
+                {
+                    "BRAM_SLR1": "0"
+                },
+                {
+                    "BRAM_SLR2": "0"
+                },
+                {
+                    "BRAM_SLR3": "0"
+                },
+                {
+                    "URAM_SLR0": "0"
+                },
+                {
+                    "URAM_SLR1": "0"
+                },
+                {
+                    "URAM_SLR2": "0"
+                },
+                {
+                    "URAM_SLR3": "0"
+                },
+                {
+                    "DSPs_SLR0": "0"
+                },
+                {
+                    "DSPs_SLR1": "0"
+                },
+                {
+                    "DSPs_SLR2": "0"
+                },
+                {
+                    "DSPs_SLR3": "0"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                }
+            ]
+        }
+    ],
+    "Available Resources": [
+        {
+            "pblock": "pblock_dynamic_SLR0",
+            "resources": [
+                {
+                    "BRAM": "500"
+                },
+                {
+                    "BRAM_SLR0": "500"
+                },
+                {
+                    "BRAM_SLR1": "0"
+                },
+                {
+                    "BRAM_SLR2": "0"
+                },
+                {
+                    "BRAM_SLR3": "0"
+                },
+                {
+                    "CARRY8": "46818"
+                },
+                {
+                    "CARRY8_SLR0": "47778"
+                },
+                {
+                    "CARRY8_SLR1": "0"
+                },
+                {
+                    "CARRY8_SLR2": "0"
+                },
+                {
+                    "CARRY8_SLR3": "0"
+                },
+                {
+                    "DSP": "2877"
+                },
+                {
+                    "DSPs_SLR0": "2877"
+                },
+                {
+                    "DSPs_SLR1": "0"
+                },
+                {
+                    "DSPs_SLR2": "0"
+                },
+                {
+                    "DSPs_SLR3": "0"
+                },
+                {
+                    "F7MUX": "187253"
+                },
+                {
+                    "F7MUX_SLR0": "191093"
+                },
+                {
+                    "F7MUX_SLR1": "0"
+                },
+                {
+                    "F7MUX_SLR2": "0"
+                },
+                {
+                    "F7MUX_SLR3": "0"
+                },
+                {
+                    "F8MUX": "93811"
+                },
+                {
+                    "F8MUX_SLR0": "95731"
+                },
+                {
+                    "F8MUX_SLR1": "0"
+                },
+                {
+                    "F8MUX_SLR2": "0"
+                },
+                {
+                    "F8MUX_SLR3": "0"
+                },
+                {
+                    "F9MUX": "46920"
+                },
+                {
+                    "F9MUX_SLR0": "47880"
+                },
+                {
+                    "F9MUX_SLR1": "0"
+                },
+                {
+                    "F9MUX_SLR2": "0"
+                },
+                {
+                    "F9MUX_SLR3": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "237"
+                },
+                {
+                    "LUT": "337719"
+                },
+                {
+                    "LUTAsLogic": "345147"
+                },
+                {
+                    "LUTAsLogic_SLR0": "352827"
+                },
+                {
+                    "LUTAsLogic_SLR1": "0"
+                },
+                {
+                    "LUTAsLogic_SLR2": "0"
+                },
+                {
+                    "LUTAsLogic_SLR3": "0"
+                },
+                {
+                    "LUTMem": "165372"
+                },
+                {
+                    "LUTMem_SLR0": "165852"
+                },
+                {
+                    "LUTMem_SLR1": "0"
+                },
+                {
+                    "LUTMem_SLR2": "0"
+                },
+                {
+                    "LUTMem_SLR3": "0"
+                },
+                {
+                    "LUT_SLR0": "345399"
+                },
+                {
+                    "LUT_SLR1": "0"
+                },
+                {
+                    "LUT_SLR2": "0"
+                },
+                {
+                    "LUT_SLR3": "0"
+                },
+                {
+                    "MMCM": "3"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                },
+                {
+                    "PLL": "5"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "REG": "689698"
+                },
+                {
+                    "REG_SLR0": "705058"
+                },
+                {
+                    "REG_SLR1": "0"
+                },
+                {
+                    "REG_SLR2": "0"
+                },
+                {
+                    "REG_SLR3": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "22155"
+                },
+                {
+                    "SLL_SLR1-SLR0": "21997"
+                },
+                {
+                    "SLL_SLR1-SLR2": "21757"
+                },
+                {
+                    "SLL_SLR2-SLR1": "21605"
+                },
+                {
+                    "SLL_SLR2-SLR3": "21646"
+                },
+                {
+                    "SLL_SLR3-SLR2": "21530"
+                },
+                {
+                    "URAM": "320"
+                },
+                {
+                    "URAM_SLR0": "320"
+                },
+                {
+                    "URAM_SLR1": "0"
+                },
+                {
+                    "URAM_SLR2": "0"
+                },
+                {
+                    "URAM_SLR3": "0"
+                }
+            ]
+        },
+        {
+            "pblock": "pblock_dynamic_SLR1",
+            "resources": [
+                {
+                    "BRAM": "500"
+                },
+                {
+                    "BRAM_SLR0": "0"
+                },
+                {
+                    "BRAM_SLR1": "500"
+                },
+                {
+                    "BRAM_SLR2": "0"
+                },
+                {
+                    "BRAM_SLR3": "0"
+                },
+                {
+                    "CARRY8": "45924"
+                },
+                {
+                    "CARRY8_SLR0": "0"
+                },
+                {
+                    "CARRY8_SLR1": "47664"
+                },
+                {
+                    "CARRY8_SLR2": "0"
+                },
+                {
+                    "CARRY8_SLR3": "0"
+                },
+                {
+                    "DSP": "2877"
+                },
+                {
+                    "DSPs_SLR0": "0"
+                },
+                {
+                    "DSPs_SLR1": "2877"
+                },
+                {
+                    "DSPs_SLR2": "0"
+                },
+                {
+                    "DSPs_SLR3": "0"
+                },
+                {
+                    "F7MUX": "183671"
+                },
+                {
+                    "F7MUX_SLR0": "0"
+                },
+                {
+                    "F7MUX_SLR1": "190631"
+                },
+                {
+                    "F7MUX_SLR2": "0"
+                },
+                {
+                    "F7MUX_SLR3": "0"
+                },
+                {
+                    "F8MUX": "92011"
+                },
+                {
+                    "F8MUX_SLR0": "0"
+                },
+                {
+                    "F8MUX_SLR1": "95491"
+                },
+                {
+                    "F8MUX_SLR2": "0"
+                },
+                {
+                    "F8MUX_SLR3": "0"
+                },
+                {
+                    "F9MUX": "46020"
+                },
+                {
+                    "F9MUX_SLR0": "0"
+                },
+                {
+                    "F9MUX_SLR1": "47760"
+                },
+                {
+                    "F9MUX_SLR2": "0"
+                },
+                {
+                    "F9MUX_SLR3": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "202"
+                },
+                {
+                    "LUT": "330969"
+                },
+                {
+                    "LUTAsLogic": "338494"
+                },
+                {
+                    "LUTAsLogic_SLR0": "0"
+                },
+                {
+                    "LUTAsLogic_SLR1": "352414"
+                },
+                {
+                    "LUTAsLogic_SLR2": "0"
+                },
+                {
+                    "LUTAsLogic_SLR3": "0"
+                },
+                {
+                    "LUTMem": "165275"
+                },
+                {
+                    "LUTMem_SLR0": "0"
+                },
+                {
+                    "LUTMem_SLR1": "165275"
+                },
+                {
+                    "LUTMem_SLR2": "0"
+                },
+                {
+                    "LUTMem_SLR3": "0"
+                },
+                {
+                    "LUT_SLR0": "0"
+                },
+                {
+                    "LUT_SLR1": "344889"
+                },
+                {
+                    "LUT_SLR2": "0"
+                },
+                {
+                    "LUT_SLR3": "0"
+                },
+                {
+                    "MMCM": "2"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                },
+                {
+                    "PLL": "3"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "REG": "675120"
+                },
+                {
+                    "REG_SLR0": "0"
+                },
+                {
+                    "REG_SLR1": "702960"
+                },
+                {
+                    "REG_SLR2": "0"
+                },
+                {
+                    "REG_SLR3": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "22155"
+                },
+                {
+                    "SLL_SLR1-SLR0": "21997"
+                },
+                {
+                    "SLL_SLR1-SLR2": "21757"
+                },
+                {
+                    "SLL_SLR2-SLR1": "21605"
+                },
+                {
+                    "SLL_SLR2-SLR3": "21646"
+                },
+                {
+                    "SLL_SLR3-SLR2": "21530"
+                },
+                {
+                    "URAM": "320"
+                },
+                {
+                    "URAM_SLR0": "0"
+                },
+                {
+                    "URAM_SLR1": "320"
+                },
+                {
+                    "URAM_SLR2": "0"
+                },
+                {
+                    "URAM_SLR3": "0"
+                }
+            ]
+        },
+        {
+            "pblock": "pblock_dynamic_SLR2",
+            "resources": [
+                {
+                    "BRAM": "500"
+                },
+                {
+                    "BRAM_SLR0": "0"
+                },
+                {
+                    "BRAM_SLR1": "0"
+                },
+                {
+                    "BRAM_SLR2": "500"
+                },
+                {
+                    "BRAM_SLR3": "0"
+                },
+                {
+                    "CARRY8": "45930"
+                },
+                {
+                    "CARRY8_SLR0": "0"
+                },
+                {
+                    "CARRY8_SLR1": "0"
+                },
+                {
+                    "CARRY8_SLR2": "47670"
+                },
+                {
+                    "CARRY8_SLR3": "0"
+                },
+                {
+                    "DSP": "2877"
+                },
+                {
+                    "DSPs_SLR0": "0"
+                },
+                {
+                    "DSPs_SLR1": "0"
+                },
+                {
+                    "DSPs_SLR2": "2877"
+                },
+                {
+                    "DSPs_SLR3": "0"
+                },
+                {
+                    "F7MUX": "183649"
+                },
+                {
+                    "F7MUX_SLR0": "0"
+                },
+                {
+                    "F7MUX_SLR1": "0"
+                },
+                {
+                    "F7MUX_SLR2": "190609"
+                },
+                {
+                    "F7MUX_SLR3": "0"
+                },
+                {
+                    "F8MUX": "92011"
+                },
+                {
+                    "F8MUX_SLR0": "0"
+                },
+                {
+                    "F8MUX_SLR1": "0"
+                },
+                {
+                    "F8MUX_SLR2": "95491"
+                },
+                {
+                    "F8MUX_SLR3": "0"
+                },
+                {
+                    "F9MUX": "46020"
+                },
+                {
+                    "F9MUX_SLR0": "0"
+                },
+                {
+                    "F9MUX_SLR1": "0"
+                },
+                {
+                    "F9MUX_SLR2": "47760"
+                },
+                {
+                    "F9MUX_SLR3": "0"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "201"
+                },
+                {
+                    "LUT": "331043"
+                },
+                {
+                    "LUTAsLogic": "338531"
+                },
+                {
+                    "LUTAsLogic_SLR0": "0"
+                },
+                {
+                    "LUTAsLogic_SLR1": "0"
+                },
+                {
+                    "LUTAsLogic_SLR2": "352451"
+                },
+                {
+                    "LUTAsLogic_SLR3": "0"
+                },
+                {
+                    "LUTMem": "165312"
+                },
+                {
+                    "LUTMem_SLR0": "0"
+                },
+                {
+                    "LUTMem_SLR1": "0"
+                },
+                {
+                    "LUTMem_SLR2": "165312"
+                },
+                {
+                    "LUTMem_SLR3": "0"
+                },
+                {
+                    "LUT_SLR0": "0"
+                },
+                {
+                    "LUT_SLR1": "0"
+                },
+                {
+                    "LUT_SLR2": "344963"
+                },
+                {
+                    "LUT_SLR3": "0"
+                },
+                {
+                    "MMCM": "2"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                },
+                {
+                    "PLL": "3"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "REG": "675487"
+                },
+                {
+                    "REG_SLR0": "0"
+                },
+                {
+                    "REG_SLR1": "0"
+                },
+                {
+                    "REG_SLR2": "703327"
+                },
+                {
+                    "REG_SLR3": "0"
+                },
+                {
+                    "SLL_SLR0-SLR1": "22155"
+                },
+                {
+                    "SLL_SLR1-SLR0": "21997"
+                },
+                {
+                    "SLL_SLR1-SLR2": "21757"
+                },
+                {
+                    "SLL_SLR2-SLR1": "21605"
+                },
+                {
+                    "SLL_SLR2-SLR3": "21646"
+                },
+                {
+                    "SLL_SLR3-SLR2": "21530"
+                },
+                {
+                    "URAM": "320"
+                },
+                {
+                    "URAM_SLR0": "0"
+                },
+                {
+                    "URAM_SLR1": "0"
+                },
+                {
+                    "URAM_SLR2": "320"
+                },
+                {
+                    "URAM_SLR3": "0"
+                }
+            ]
+        },
+        {
+            "pblock": "pblock_dynamic_SLR3",
+            "resources": [
+                {
+                    "BRAM": "500"
+                },
+                {
+                    "BRAM_SLR0": "0"
+                },
+                {
+                    "BRAM_SLR1": "0"
+                },
+                {
+                    "BRAM_SLR2": "0"
+                },
+                {
+                    "BRAM_SLR3": "500"
+                },
+                {
+                    "CARRY8": "46830"
+                },
+                {
+                    "CARRY8_SLR0": "0"
+                },
+                {
+                    "CARRY8_SLR1": "0"
+                },
+                {
+                    "CARRY8_SLR2": "0"
+                },
+                {
+                    "CARRY8_SLR3": "47670"
+                },
+                {
+                    "DSP": "2877"
+                },
+                {
+                    "DSPs_SLR0": "0"
+                },
+                {
+                    "DSPs_SLR1": "0"
+                },
+                {
+                    "DSPs_SLR2": "0"
+                },
+                {
+                    "DSPs_SLR3": "2877"
+                },
+                {
+                    "F7MUX": "187245"
+                },
+                {
+                    "F7MUX_SLR0": "0"
+                },
+                {
+                    "F7MUX_SLR1": "0"
+                },
+                {
+                    "F7MUX_SLR2": "0"
+                },
+                {
+                    "F7MUX_SLR3": "190605"
+                },
+                {
+                    "F8MUX": "93811"
+                },
+                {
+                    "F8MUX_SLR0": "0"
+                },
+                {
+                    "F8MUX_SLR1": "0"
+                },
+                {
+                    "F8MUX_SLR2": "0"
+                },
+                {
+                    "F8MUX_SLR3": "95491"
+                },
+                {
+                    "F9MUX": "46920"
+                },
+                {
+                    "F9MUX_SLR0": "0"
+                },
+                {
+                    "F9MUX_SLR1": "0"
+                },
+                {
+                    "F9MUX_SLR2": "0"
+                },
+                {
+                    "F9MUX_SLR3": "47760"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "237"
+                },
+                {
+                    "LUT": "338645"
+                },
+                {
+                    "LUTAsLogic": "346075"
+                },
+                {
+                    "LUTAsLogic_SLR0": "0"
+                },
+                {
+                    "LUTAsLogic_SLR1": "0"
+                },
+                {
+                    "LUTAsLogic_SLR2": "0"
+                },
+                {
+                    "LUTAsLogic_SLR3": "352795"
+                },
+                {
+                    "LUTMem": "165370"
+                },
+                {
+                    "LUTMem_SLR0": "0"
+                },
+                {
+                    "LUTMem_SLR1": "0"
+                },
+                {
+                    "LUTMem_SLR2": "0"
+                },
+                {
+                    "LUTMem_SLR3": "165370"
+                },
+                {
+                    "LUT_SLR0": "0"
+                },
+                {
+                    "LUT_SLR1": "0"
+                },
+                {
+                    "LUT_SLR2": "0"
+                },
+                {
+                    "LUT_SLR3": "345365"
+                },
+                {
+                    "MMCM": "3"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                },
+                {
+                    "PLL": "5"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "REG": "690601"
+                },
+                {
+                    "REG_SLR0": "0"
+                },
+                {
+                    "REG_SLR1": "0"
+                },
+                {
+                    "REG_SLR2": "0"
+                },
+                {
+                    "REG_SLR3": "704041"
+                },
+                {
+                    "SLL_SLR0-SLR1": "22155"
+                },
+                {
+                    "SLL_SLR1-SLR0": "21997"
+                },
+                {
+                    "SLL_SLR1-SLR2": "21757"
+                },
+                {
+                    "SLL_SLR2-SLR1": "21605"
+                },
+                {
+                    "SLL_SLR2-SLR3": "21646"
+                },
+                {
+                    "SLL_SLR3-SLR2": "21530"
+                },
+                {
+                    "URAM": "320"
+                },
+                {
+                    "URAM_SLR0": "0"
+                },
+                {
+                    "URAM_SLR1": "0"
+                },
+                {
+                    "URAM_SLR2": "0"
+                },
+                {
+                    "URAM_SLR3": "320"
+                }
+            ]
+        },
+        {
+            "pblock": "pblock_dynamic_region",
+            "resources": [
+                {
+                    "BRAM": "2000"
+                },
+                {
+                    "BRAM_SLR0": "500"
+                },
+                {
+                    "BRAM_SLR1": "500"
+                },
+                {
+                    "BRAM_SLR2": "500"
+                },
+                {
+                    "BRAM_SLR3": "500"
+                },
+                {
+                    "CARRY8": "190542"
+                },
+                {
+                    "CARRY8_SLR0": "47778"
+                },
+                {
+                    "CARRY8_SLR1": "47664"
+                },
+                {
+                    "CARRY8_SLR2": "47670"
+                },
+                {
+                    "CARRY8_SLR3": "47670"
+                },
+                {
+                    "DSP": "11496"
+                },
+                {
+                    "DSPs_SLR0": "2877"
+                },
+                {
+                    "DSPs_SLR1": "2877"
+                },
+                {
+                    "DSPs_SLR2": "2877"
+                },
+                {
+                    "DSPs_SLR3": "2877"
+                },
+                {
+                    "F7MUX": "761956"
+                },
+                {
+                    "F7MUX_SLR0": "191090"
+                },
+                {
+                    "F7MUX_SLR1": "190613"
+                },
+                {
+                    "F7MUX_SLR2": "190608"
+                },
+                {
+                    "F7MUX_SLR3": "190605"
+                },
+                {
+                    "F8MUX": "381724"
+                },
+                {
+                    "F8MUX_SLR0": "95731"
+                },
+                {
+                    "F8MUX_SLR1": "95491"
+                },
+                {
+                    "F8MUX_SLR2": "95491"
+                },
+                {
+                    "F8MUX_SLR3": "95491"
+                },
+                {
+                    "F9MUX": "190920"
+                },
+                {
+                    "F9MUX_SLR0": "47880"
+                },
+                {
+                    "F9MUX_SLR1": "47760"
+                },
+                {
+                    "F9MUX_SLR2": "47760"
+                },
+                {
+                    "F9MUX_SLR3": "47760"
+                },
+                {
+                    "GLOBAL_CLOCK_BUFFERS": "877"
+                },
+                {
+                    "LUT": "1377820"
+                },
+                {
+                    "LUTAsLogic": "1407691"
+                },
+                {
+                    "LUTAsLogic_SLR0": "352599"
+                },
+                {
+                    "LUTAsLogic_SLR1": "352058"
+                },
+                {
+                    "LUTAsLogic_SLR2": "352366"
+                },
+                {
+                    "LUTAsLogic_SLR3": "352588"
+                },
+                {
+                    "LUTMem": "661329"
+                },
+                {
+                    "LUTMem_SLR0": "165852"
+                },
+                {
+                    "LUTMem_SLR1": "165275"
+                },
+                {
+                    "LUTMem_SLR2": "165312"
+                },
+                {
+                    "LUTMem_SLR3": "165370"
+                },
+                {
+                    "LUT_SLR0": "345171"
+                },
+                {
+                    "LUT_SLR1": "344533"
+                },
+                {
+                    "LUT_SLR2": "344878"
+                },
+                {
+                    "LUT_SLR3": "345158"
+                },
+                {
+                    "MMCM": "10"
+                },
+                {
+                    "MMCM_SLR0": "0"
+                },
+                {
+                    "MMCM_SLR1": "0"
+                },
+                {
+                    "MMCM_SLR2": "0"
+                },
+                {
+                    "MMCM_SLR3": "0"
+                },
+                {
+                    "PLL": "16"
+                },
+                {
+                    "PLL_SLR0": "0"
+                },
+                {
+                    "PLL_SLR1": "0"
+                },
+                {
+                    "PLL_SLR2": "0"
+                },
+                {
+                    "PLL_SLR3": "0"
+                },
+                {
+                    "REG": "2810492"
+                },
+                {
+                    "REG_SLR0": "704801"
+                },
+                {
+                    "REG_SLR1": "702517"
+                },
+                {
+                    "REG_SLR2": "703253"
+                },
+                {
+                    "REG_SLR3": "703761"
+                },
+                {
+                    "SLL_SLR0-SLR1": "22155"
+                },
+                {
+                    "SLL_SLR1-SLR0": "21997"
+                },
+                {
+                    "SLL_SLR1-SLR2": "21757"
+                },
+                {
+                    "SLL_SLR2-SLR1": "21605"
+                },
+                {
+                    "SLL_SLR2-SLR3": "21646"
+                },
+                {
+                    "SLL_SLR3-SLR2": "21530"
+                },
+                {
+                    "URAM": "1280"
+                },
+                {
+                    "URAM_SLR0": "320"
+                },
+                {
+                    "URAM_SLR1": "320"
+                },
+                {
+                    "URAM_SLR2": "320"
+                },
+                {
+                    "URAM_SLR3": "320"
+                }
+            ]
+        }
+    ]
+}

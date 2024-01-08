@@ -1,0 +1,1090 @@
+INFO-FLOW: Workspace /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1 opened at Tue Dec 12 20:49:16 CST 2023
+Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -default_interface 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_rtl -register_reset_num 
+Execute     set_part xcu250-figd2104-2L-e 
+INFO-FLOW: DBG:set_part: XILINX_VIVADO=/opt/xilinx/Vivado/2020.1
+INFO-FLOW: DBG:set_part: RDI_DATADIR=/opt/xilinx/Vivado/2020.1/data:/opt/xilinx/Vitis/2020.1/data
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data single -quiet 
+DBG:HLSDevice: Trying to load device library: /opt/xilinx/Vitis/2020.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /opt/xilinx/Vivado/2020.1/data/parts/arch.xml
+Command       ap_part_info done; 2.76 sec.
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info 
+Execute       ap_family_info -name virtexuplus -data info 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcu250:-figd2104:-2L-e 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.lib 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.lib 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Execute         ap_part_info -data single -name xcu250-figd2104-2L-e 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data resources 
+Execute         config_chip_info -resource {SLICE 216000} {LUT 1728000} {FF 3456000} {DSP 12288} {BRAM 5376} {URAM 1280} {SLR 4} 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info 
+Execute         config_chip_info -speed medium 
+Command       add_library done; 0.14 sec.
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xcu250-figd2104-2L-e'
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info 
+Execute       get_default_platform 
+Command     set_part done; 2.96 sec.
+Execute     create_clock -period 2.5 
+Execute       ap_set_clock -name default -period 2.5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+Execute     csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       is_encrypted /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.cpp 
+Execute       is_xip /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.cpp 
+Execute       is_encrypted /home/luoyanl2/ece527_taskpar/fpga_dataflow/src/gsn.cpp 
+Execute       is_xip /home/luoyanl2/ece527_taskpar/fpga_dataflow/src/gsn.cpp 
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info 
+Execute       source run_sim.tcl 
+Command       ap_source done; 0.93 sec.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; 6.85 sec.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-10] Analyzing design file '../src/gsn.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling ../src/gsn.cpp as C++
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute         ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.gsn.cpp.diag.yml -fno-limit-debug-info -gcc-toolchain /opt/xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0 -fhls -fno-exceptions -E ../src/gsn.cpp -I../include -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -I /opt/xilinx/Vitis/2020.1/common/technology/autopilot/39 -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Vitis/2020.1/common/technology/autopilot -I /opt/xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.gsn.cpp.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.gsn.cpp.err.log 
+Command         ap_eval done; 0.16 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
+Execute         set_directive_top gsn -name=gsn 
+INFO-FLOW: Setting directive 'TOP' name=gsn 
+INFO-FLOW: Setting directive 'TOP' name=gsn 
+Execute         source /opt/xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /opt/xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /opt/xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+INFO-FLOW: Setting directive 'TOP' name=gsn 
+Execute         list_core -type functional_unit 
+Execute         clang_tidy xilinx-systemc-detector /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 4.13 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute         clang_tidy xilinx-directive2pragma /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 4.43 sec.
+Execute         clang_tidy xilinx-constantarray-param,xilinx-remove-assert /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-remove-assert -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command         clang_tidy done; 5.33 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 9.8 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+Execute         clang_tidy -errorcheck xilinx-label-all-loops /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.err.log 
+Command           ap_eval done; 6.98 sec.
+Execute           source /opt/xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute             source /opt/xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Command         clang_tidy done; 7.63 sec.
+Execute         clang_tidy -errorcheck xilinx-top-parameters /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-top-parameters -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.err.log 
+Command           ap_eval done; 3.56 sec.
+Command         clang_tidy done; 3.56 sec.
+Execute         clang_tidy -errorcheck xilinx-array-stream-check /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-array-stream-check -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.err.log 
+Command           ap_eval done; 3.52 sec.
+Command         clang_tidy done; 3.52 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.gsn.pp.0.cpp.diag.yml /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.gsn.pp.0.cpp.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/xilinx-dataflow-lawyer.gsn.pp.0.cpp.err.log 
+Command         ap_eval done; 3.39 sec.
+Execute         clang_tidy -errorcheck xilinx-warn-mayneed-no-ctor-attribute /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp std=gnu++14 -target fpga  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.diag.yml -header-filter=.* --checks=-*,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang-tidy.gsn.pp.0.cpp.err.log 
+Command           ap_eval done; 4.47 sec.
+Command         clang_tidy done; 4.47 sec.
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute         ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.gsn.pragma.2.cpp.diag.yml -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.pragma.2.cpp -I../include -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/xilinx/Vitis/2020.1/common/technology/autopilot -I /opt/xilinx/Vitis/2020.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.gsn.pragma.2.cpp.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.gsn.pragma.2.cpp.err.log 
+Command         ap_eval done; 3.48 sec.
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:117:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:118:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:119:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:120:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:121:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:151:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:152:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:153:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:154:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:155:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:156:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:157:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:158:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:159:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:160:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:210:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:211:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:212:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:239:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:240:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:241:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:242:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:243:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:244:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:280:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:281:9
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute         run_link_or_opt -out /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.g.bc"  
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.g.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.0.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/llvm-link.a.g.ld.0.bc.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.diag.yml /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.1.lower.bc.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute         run_link_or_opt -out /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/xilinx/Vitis/2020.1/lnx64/lib/libhlsm_39.bc /opt/xilinx/Vitis/2020.1/lnx64/lib/libhlsmc++_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /opt/xilinx/Vitis/2020.1/lnx64/lib/libhlsm_39.bc /opt/xilinx/Vitis/2020.1/lnx64/lib/libhlsmc++_39.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/llvm-link.a.g.ld.2.m1.bc.err.log 
+Command           ap_eval done; 2.55 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 2.55 sec.
+Execute         run_link_or_opt -opt -out /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=gsn -reflow-float-conversion 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.diag.yml /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=gsn -reflow-float-conversion -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.3.fpc.bc.err.log 
+Command           ap_eval done; 0.92 sec.
+INFO-FLOW: 
+Command         run_link_or_opt done; 0.92 sec.
+Execute         run_link_or_opt -out /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/xilinx/Vitis/2020.1/lnx64/lib/libfloatconversion_39.bc 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /opt/xilinx/Vitis/2020.1/lnx64/lib/libfloatconversion_39.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/llvm-link.a.g.ld.4.m2.bc.err.log 
+INFO-FLOW: 
+Execute         run_link_or_opt -opt -out /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=gsn 
+Execute           ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=.* -pass-remarks-output=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.diag.yml /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=gsn -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/opt.a.g.ld.5.gdce.bc.err.log 
+INFO-FLOW: 
+Execute         get_solution -flow_target 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_interface -default_interface 
+Execute         send_msg_by_id INFO @200-777@%s Vivado 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+Execute         get_config_interface -default_slave_interface 
+Execute         get_solution -flow_target 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         get_config_interface -m_axi_offset 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_latency 
+Execute         get_config_interface -m_axi_min_bitwidth 
+Execute         get_config_interface -m_axi_max_bitwidth 
+Execute         get_config_interface -m_axi_max_widen_bitwidth 
+Execute         get_config_interface -m_axi_auto_max_ports 
+Execute         get_config_interface -m_axi_num_read_outstanding 
+Execute         get_config_interface -m_axi_num_write_outstanding 
+Execute         get_config_interface -m_axi_max_read_burst_length 
+Execute         get_config_interface -m_axi_max_write_burst_length 
+Execute         get_config_interface -s_axilite_data64 
+Execute         get_config_interface -m_axi_alignment_byte_size 
+Execute         get_config_compile -pragma_strict_mode 
+INFO-FLOW: Doing LTO.
+Execute         ap_eval exec -ignorestderr /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang -fsave-optimization-record -foptimization-record-file=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.a.g.ld.0.bc.diag.yml -fhls -mllvm -hls-top-function-name=gsn -mllvm -hls-db-dir -mllvm /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db -emit-llvm -c -mllvm -hls-bitcode-version=3.1 -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=/home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/top-io-fe.xml -mllvm -pass-remarks=supported-subset -mllvm -reflow-enable-interface-default-setting=false -mllvm -reflow-enable-slave-interface-default-setting=false -mllvm -gen-kernel-xml=false -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -assume-maxi-align=0 -mllvm -no-unaligned-maxi-accesses -x ir /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.lto.bc > /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.a.g.ld.0.bc.out.log 2> /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/clang.a.g.ld.0.bc.err.log 
+Command         ap_eval done; 0.34 sec.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'hls::sqrt(float)' into 'sobel(unsigned char*, GradPix*)' (../src/gsn.cpp:75:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'sobel(unsigned char*, GradPix*)' (../src/gsn.cpp:75:0)
+INFO-FLOW: DBG:CMD: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64387 ; free virtual = 145776
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64386 ; free virtual = 145775
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top gsn -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.0.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command           transform done; 0.21 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64367 ; free virtual = 145759
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.1.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+Command           transform done; 0.27 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64353 ; free virtual = 145746
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.g.1.bc to /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -directive-preproc -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.o.1.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'gau' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'gau' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'sobel' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'sobel' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'nms' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'nms' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_196_2' (../src/gsn.cpp:196) in function 'nms' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_96_2' (../src/gsn.cpp:96) in function 'sobel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_32_2' (../src/gsn.cpp:32) in function 'gau' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_205_3' (../src/gsn.cpp:205) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_212_4' (../src/gsn.cpp:212) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_213_5' (../src/gsn.cpp:213) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_218_6' (../src/gsn.cpp:218) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_105_3' (../src/gsn.cpp:105) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_112_4' (../src/gsn.cpp:112) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_113_5' (../src/gsn.cpp:113) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_118_6' (../src/gsn.cpp:118) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_127_7' (../src/gsn.cpp:127) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_128_8' (../src/gsn.cpp:128) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_134_9' (../src/gsn.cpp:134) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_135_10' (../src/gsn.cpp:124) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_39_3' (../src/gsn.cpp:39) in function 'gau' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_47_4' (../src/gsn.cpp:47) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_48_5' (../src/gsn.cpp:48) in function 'gau' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_54_6' (../src/gsn.cpp:54) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_60_7' (../src/gsn.cpp:36) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_61_8' (../src/gsn.cpp:36) in function 'gau' completely with a factor of 3.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsn.cpp:188) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsn.cpp:76) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsn.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:77) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:21) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:189) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:77) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:21) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'gsn'  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'gsn', detected/extracted 3 process function(s): 
+	 'gau6'
+	 'sobel'
+	 'nms'.
+Command           transform done; 1.37 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/gsn.cpp:102:21) in function 'sobel'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'sobel' (../src/gsn.cpp:7:34)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nms' (../src/gsn.cpp:187:59)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'gau6' (../src/gsn.cpp:20:54)...5 expression(s) balanced.
+Command           transform done; 0.37 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64317 ; free virtual = 145713
+Execute           get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin2 -bitwidthmin2 -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.o.2.bc -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_95_1' (../src/gsn.cpp:95:27) in function 'sobel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_195_1' (../src/gsn.cpp:195:28) in function 'nms'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_31_1' (../src/gsn.cpp:31:27) in function 'gau6'.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 262144 on port 'gmem1' (../src/gsn.cpp:259:34). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 262144 on port 'gmem0' (../src/gsn.cpp:44:35). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'out.0' (../src/gsn.cpp:176:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'out.1' (../src/gsn.cpp:181:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:109:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:206:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:209:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:44:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (../src/gsn.cpp:70:30)
+Command           transform done; 1.51 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64263 ; free virtual = 145660
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 3.82 sec.
+Command       elaborate done; 51.11 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'gsn' ...
+Execute         ap_set_top_model gsn 
+Execute         get_model_list gsn -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model gsn 
+Execute         preproc_iomode -model nms 
+Execute         preproc_iomode -model sobel 
+Execute         preproc_iomode -model gau6 
+Execute         get_model_list gsn -filter all-wo-channel 
+INFO-FLOW: Model list for configure: gau6 sobel nms gsn
+INFO-FLOW: Configuring Module : gau6 ...
+Execute         set_default_model gau6 
+Execute         apply_spec_resource_limit gau6 
+INFO-FLOW: Configuring Module : sobel ...
+Execute         set_default_model sobel 
+Execute         apply_spec_resource_limit sobel 
+INFO-FLOW: Configuring Module : nms ...
+Execute         set_default_model nms 
+Execute         apply_spec_resource_limit nms 
+INFO-FLOW: Configuring Module : gsn ...
+Execute         set_default_model gsn 
+Execute         apply_spec_resource_limit gsn 
+INFO-FLOW: Model list for preprocess: gau6 sobel nms gsn
+INFO-FLOW: Preprocessing Module: gau6 ...
+Execute         set_default_model gau6 
+Execute         cdfg_preprocess -model gau6 
+Execute         rtl_gen_preprocess gau6 
+INFO-FLOW: Preprocessing Module: sobel ...
+Execute         set_default_model sobel 
+Execute         cdfg_preprocess -model sobel 
+Execute         rtl_gen_preprocess sobel 
+INFO-FLOW: Preprocessing Module: nms ...
+Execute         set_default_model nms 
+Execute         cdfg_preprocess -model nms 
+Execute         rtl_gen_preprocess nms 
+INFO-FLOW: Preprocessing Module: gsn ...
+Execute         set_default_model gsn 
+Execute         cdfg_preprocess -model gsn 
+Execute         rtl_gen_preprocess gsn 
+WARNING: [SYN 201-107] Renaming port name 'gsn/out' to 'gsn/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO-FLOW: Model list for synthesis: gau6 sobel nms gsn
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gau6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model gau6 
+Execute         schedule -model gau6 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.25 sec.
+INFO: [HLS 200-111]  Elapsed time: 61.61 seconds; current allocated memory: 288.415 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.sched.adb -f 
+INFO-FLOW: Finish scheduling gau6.
+Execute         set_default_model gau6 
+Execute         bind -model gau6 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 289.102 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.13 sec.
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.bind.adb -f 
+INFO-FLOW: Finish binding gau6.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model sobel 
+Execute         schedule -model sobel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_95_1_VITIS_LOOP_96_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 38.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.44 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 289.889 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.2 sec.
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.sched.adb -f 
+INFO-FLOW: Finish scheduling sobel.
+Execute         set_default_model sobel 
+Execute         bind -model sobel 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.2 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 291.089 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.34 sec.
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.bind.adb -f 
+INFO-FLOW: Finish binding sobel.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'nms' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model nms 
+Execute         schedule -model nms 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_195_1_VITIS_LOOP_196_2'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('line_buf_addr_3_write_ln209', ../src/gsn.cpp:209->../src/gsn.cpp:267) of constant <constant:_ssdm_op_Write.bram.i48> on array 'line_buf', ../src/gsn.cpp:188->../src/gsn.cpp:267 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'line_buf'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 10.
+WARNING: [HLS 200-871] Estimated clock period (2.414ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.675ns, effective delay budget: 1.825ns).
+WARNING: [HLS 200-1016] The critical path in module 'nms' consists of the following:	'phi' operation ('empty_75') with incoming values : ('empty_82') [51]  (0 ns)
+	'mul' operation ('mul') [72]  (1.27 ns)
+	blocking operation 1.14 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.41 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.8 seconds; current allocated memory: 291.604 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.11 sec.
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.sched.adb -f 
+INFO-FLOW: Finish scheduling nms.
+Execute         set_default_model nms 
+Execute         bind -model nms 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 301.513 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.19 sec.
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.bind.adb -f 
+INFO-FLOW: Finish binding nms.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gsn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model gsn 
+Execute         schedule -model gsn 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 301.602 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.verbose.sched.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.sched.adb -f 
+INFO-FLOW: Finish scheduling gsn.
+Execute         set_default_model gsn 
+Execute         bind -model gsn 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.46 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 301.757 MB.
+Execute         syn_report -verbosereport -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.verbose.bind.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.41 sec.
+Execute         db_write -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.bind.adb -f 
+INFO-FLOW: Finish binding gsn.
+Execute         get_model_list gsn -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess gau6 
+Execute         rtl_gen_preprocess sobel 
+Execute         rtl_gen_preprocess nms 
+Execute         rtl_gen_preprocess gsn 
+INFO-FLOW: Model list for RTL generation: gau6 sobel nms gsn
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gau6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model gau6 -top_prefix gsn_ -sub_prefix gsn_ -mg_file /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gau6'.
+INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 302.896 MB.
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         gen_rtl gau6 -style xilinx -f -lang vhdl -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/vhdl/gsn_gau6 
+Execute         gen_rtl gau6 -style xilinx -f -lang vlog -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/verilog/gsn_gau6 
+Execute         syn_report -csynth -model gau6 -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/gau6_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.12 sec.
+Execute         syn_report -rtlxml -model gau6 -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/gau6_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model gau6 -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.16 sec.
+Execute         db_write -model gau6 -f -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.adb 
+Execute         gen_tb_info gau6 -p /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model sobel -top_prefix gsn_ -sub_prefix gsn_ -mg_file /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_17_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_11s_22s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_11s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_11s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_8ns_28_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_8s_28_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_20s_11s_20_24_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel'.
+Command         create_rtl_model done; 0.22 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 307.626 MB.
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         gen_rtl sobel -style xilinx -f -lang vhdl -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/vhdl/gsn_sobel 
+Execute         gen_rtl sobel -style xilinx -f -lang vlog -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/verilog/gsn_sobel 
+Execute         syn_report -csynth -model sobel -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/sobel_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.2 sec.
+Execute         syn_report -rtlxml -model sobel -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/sobel_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model sobel -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.4 sec.
+Execute         db_write -model sobel -f -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.adb 
+Command         db_write done; 0.13 sec.
+Execute         gen_tb_info sobel -p /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'nms' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model nms -top_prefix gsn_ -sub_prefix gsn_ -mg_file /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.compgen.tcl 
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_5ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'nms'.
+INFO: [HLS 200-111]  Elapsed time: 1.03 seconds; current allocated memory: 312.912 MB.
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         gen_rtl nms -style xilinx -f -lang vhdl -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/vhdl/gsn_nms 
+Execute         gen_rtl nms -style xilinx -f -lang vlog -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/verilog/gsn_nms 
+Execute         syn_report -csynth -model nms -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/nms_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.14 sec.
+Execute         syn_report -rtlxml -model nms -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/nms_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model nms -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.21 sec.
+Execute         db_write -model nms -f -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.adb 
+Command         db_write done; 0.15 sec.
+Execute         gen_tb_info nms -p /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gsn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model gsn -top_prefix  -sub_prefix gsn_ -mg_file /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gsn' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'data', 'out_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gsn'.
+Command         create_rtl_model done; 0.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.81 seconds; current allocated memory: 317.101 MB.
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         gen_rtl gsn -istop -style xilinx -f -lang vhdl -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/vhdl/gsn 
+Execute         gen_rtl gsn -istop -style xilinx -f -lang vlog -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/verilog/gsn 
+Execute         syn_report -csynth -model gsn -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/gsn_csynth.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Execute         syn_report -rtlxml -model gsn -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/syn/report/gsn_csynth.xml 
+Execute           get_solution -flow_target
+Execute             get_solution -flow_target 
+Execute         syn_report -verbosereport -model gsn -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.verbose.rpt 
+Execute           AP::get_flow_target_display_name
+Execute             get_solution -flow_target 
+Command         syn_report done; 0.4 sec.
+Execute         db_write -model gsn -f -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.adb 
+Execute         gen_tb_info gsn -p /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn 
+Execute         export_constraint_db -f -tool general -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.constraint.tcl 
+Execute         syn_report -designview -model gsn -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.design.xml 
+Command         syn_report done; 0.33 sec.
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model gsn -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model gsn -o /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks gsn 
+Execute         get_config_export -vivado_clock 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         sc_get_portdomain gsn 
+INFO-FLOW: Model list for RTL component generation: gau6 sobel nms gsn
+INFO-FLOW: Handling components in module [gau6] ... 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.compgen.tcl 
+INFO-FLOW: Found component gsn_gau6_line_buf.
+INFO-FLOW: Append model gsn_gau6_line_buf
+INFO-FLOW: Handling components in module [sobel] ... 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.compgen.tcl 
+INFO-FLOW: Found component gsn_sitofp_32s_32_6_no_dsp_1.
+INFO-FLOW: Append model gsn_sitofp_32s_32_6_no_dsp_1
+INFO-FLOW: Found component gsn_fsqrt_32ns_32ns_32_17_no_dsp_1.
+INFO-FLOW: Append model gsn_fsqrt_32ns_32ns_32_17_no_dsp_1
+INFO-FLOW: Found component gsn_sdiv_20s_11s_20_24_1.
+INFO-FLOW: Append model gsn_sdiv_20s_11s_20_24_1
+INFO-FLOW: Found component gsn_mul_mul_11s_11s_22_4_1.
+INFO-FLOW: Append model gsn_mul_mul_11s_11s_22_4_1
+INFO-FLOW: Found component gsn_mul_mul_11s_11s_31_4_1.
+INFO-FLOW: Append model gsn_mul_mul_11s_11s_31_4_1
+INFO-FLOW: Found component gsn_mul_mul_11s_8s_28_4_1.
+INFO-FLOW: Append model gsn_mul_mul_11s_8s_28_4_1
+INFO-FLOW: Found component gsn_mac_muladd_11s_11s_22s_22_4_1.
+INFO-FLOW: Append model gsn_mac_muladd_11s_11s_22s_22_4_1
+INFO-FLOW: Found component gsn_mul_mul_11s_8ns_28_4_1.
+INFO-FLOW: Append model gsn_mul_mul_11s_8ns_28_4_1
+INFO-FLOW: Handling components in module [nms] ... 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.compgen.tcl 
+INFO-FLOW: Found component gsn_mul_7ns_5ns_11_1_1.
+INFO-FLOW: Append model gsn_mul_7ns_5ns_11_1_1
+INFO-FLOW: Found component gsn_nms_line_buf.
+INFO-FLOW: Append model gsn_nms_line_buf
+INFO-FLOW: Handling components in module [gsn] ... 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.tcl 
+INFO-FLOW: Found component gsn_fifo_w64_d3_S.
+INFO-FLOW: Append model gsn_fifo_w64_d3_S
+INFO-FLOW: Found component gsn_control_s_axi.
+INFO-FLOW: Append model gsn_control_s_axi
+INFO-FLOW: Found component gsn_gmem0_m_axi.
+INFO-FLOW: Append model gsn_gmem0_m_axi
+INFO-FLOW: Found component gsn_gmem1_m_axi.
+INFO-FLOW: Append model gsn_gmem1_m_axi
+INFO-FLOW: Append model gau6
+INFO-FLOW: Append model sobel
+INFO-FLOW: Append model nms
+INFO-FLOW: Append model gsn
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: gsn_gau6_line_buf gsn_sitofp_32s_32_6_no_dsp_1 gsn_fsqrt_32ns_32ns_32_17_no_dsp_1 gsn_sdiv_20s_11s_20_24_1 gsn_mul_mul_11s_11s_22_4_1 gsn_mul_mul_11s_11s_31_4_1 gsn_mul_mul_11s_8s_28_4_1 gsn_mac_muladd_11s_11s_22s_22_4_1 gsn_mul_mul_11s_8ns_28_4_1 gsn_mul_7ns_5ns_11_1_1 gsn_nms_line_buf gsn_fifo_w64_d3_S gsn_control_s_axi gsn_gmem0_m_axi gsn_gmem1_m_axi gau6 sobel nms gsn
+INFO-FLOW: To file: write model gsn_gau6_line_buf
+INFO-FLOW: To file: write model gsn_sitofp_32s_32_6_no_dsp_1
+INFO-FLOW: To file: write model gsn_fsqrt_32ns_32ns_32_17_no_dsp_1
+INFO-FLOW: To file: write model gsn_sdiv_20s_11s_20_24_1
+INFO-FLOW: To file: write model gsn_mul_mul_11s_11s_22_4_1
+INFO-FLOW: To file: write model gsn_mul_mul_11s_11s_31_4_1
+INFO-FLOW: To file: write model gsn_mul_mul_11s_8s_28_4_1
+INFO-FLOW: To file: write model gsn_mac_muladd_11s_11s_22s_22_4_1
+INFO-FLOW: To file: write model gsn_mul_mul_11s_8ns_28_4_1
+INFO-FLOW: To file: write model gsn_mul_7ns_5ns_11_1_1
+INFO-FLOW: To file: write model gsn_nms_line_buf
+INFO-FLOW: To file: write model gsn_fifo_w64_d3_S
+INFO-FLOW: To file: write model gsn_control_s_axi
+INFO-FLOW: To file: write model gsn_gmem0_m_axi
+INFO-FLOW: To file: write model gsn_gmem1_m_axi
+INFO-FLOW: To file: write model gau6
+INFO-FLOW: To file: write model sobel
+INFO-FLOW: To file: write model nms
+INFO-FLOW: To file: write model gsn
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute         get_top 
+Execute         get_config_export -ipname 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:CMD:   auto_impl: set ipname to top (module_auto_prefix): gsn
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1
+Execute         get_solution -flow_target 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.12 sec.
+Command         ap_source done; 0.12 sec.
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=2.500 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'gsn_gau6_line_buf_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.compgen.tcl 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'gsn_sdiv_20s_11s_20_24_1_div'
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Command         ap_source done; 0.23 sec.
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.compgen.tcl 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+INFO: [RTMG 210-282] Generating pipelined core: 'gsn_mul_7ns_5ns_11_1_1_Multiplier_0'
+INFO: [RTMG 210-278] Implementing memory 'gsn_nms_line_buf_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.tcl 
+Execute           send_msg_by_id INFO @200-741@%s gsn_gau_buf_memcore 
+INFO: [HLS 200-741] Implementing PIPO gsn_gau_buf_memcore using a single memory for all blocks
+INFO: [RTMG 210-278] Implementing memory 'gsn_gau_buf_memcore_ram (RAM)' using block RAMs.
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'out_c_U(gsn_fifo_w64_d3_S)' using Shift Registers.
+Execute           source ./control.slave.tcl 
+Execute           is_m_axi_addr64 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Command         ap_source done; 0.24 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1
+Execute         get_solution -flow_target 
+Execute         get_config_export -xo 
+Execute         get_config_export -format 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.16 sec.
+Command         ap_source done; 0.16 sec.
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=gsn xml_exists=0
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.compgen.tcl 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.tcl 
+Execute           send_msg_by_id INFO @200-741@%s gsn_gau_buf_memcore 
+INFO: [HLS 200-741] Implementing PIPO gsn_gau_buf_memcore using a single memory for all blocks
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.tcl 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Command         ap_source done; 0.11 sec.
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.compgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.tcl 
+Execute           send_msg_by_id INFO @200-741@%s gsn_gau_buf_memcore 
+INFO: [HLS 200-741] Implementing PIPO gsn_gau_buf_memcore using a single memory for all blocks
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute           ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.constraint.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=0
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=19 #gSsdmPorts=0
+Execute         source /opt/xilinx/Vitis/2020.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/top-io-be.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.dataonly.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.dataonly.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.compgen.dataonly.tcl 
+Execute         get_config_export -format 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gau6.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/sobel.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/nms.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute         get_solution -flow_target 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.constraint.tcl 
+Execute         sc_get_clocks gsn 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/impl/misc/gsn_ap_fsqrt_15_no_dsp_32_ip.tcl 
+Execute         source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/impl/misc/gsn_ap_sitofp_4_no_dsp_32_ip.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64210 ; free virtual = 145617
+INFO: [VHDL 208-304] Generating VHDL RTL for gsn.
+INFO: [VLOG 209-307] Generating Verilog RTL for gsn.
+Execute         syn_report -model gsn -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 414.25 MHz
+Command       autosyn done; 9.58 sec.
+Command     csynth_design done; 60.69 sec.
+Execute     cosim_design 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/xilinx/Vitis/2020.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfft.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/ip/xfir.gen 
+Execute           source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.14 sec.
+Command       ap_source done; 0.14 sec.
+Execute       source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /opt/xilinx/Vitis/2020.1/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       is_encrypted /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.cpp 
+Execute       is_encrypted /home/luoyanl2/ece527_taskpar/fpga_dataflow/src/gsn.cpp 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info 
+INFO-FLOW: TB processing: /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.cpp /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/./sim/autowrap/testbench/test.cpp_pre.cpp
+Execute       clang_tidy xilinx-tb-process /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/./sim/autowrap/testbench/test.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       clang_tidy done; 0.4 sec.
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info 
+INFO-FLOW: TB processing: /home/luoyanl2/ece527_taskpar/fpga_dataflow/src/gsn.cpp /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/./sim/autowrap/testbench/gsn.cpp_pre.cpp
+Execute       clang_tidy xilinx-tb-process /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/./sim/autowrap/testbench/gsn.cpp_pre.cpp.tb.cpp std=c++11 
+INFO-FLOW: exec /opt/xilinx/Vitis/2020.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/./sim/autowrap/testbench/gsn.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
+Command       clang_tidy done; 5.61 sec.
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/./sim/autowrap/testbench/tb.status.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.rtl_wrap.cfg.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+WARNING: [COSIM 212-369] AXI_master port 'gmem0' has a depth of '262144'. Insufficient depth may result in simulation mismatch or freeze.
+WARNING: [COSIM 212-369] AXI_master port 'gmem1' has a depth of '262144'. Insufficient depth may result in simulation mismatch or freeze.
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info 
+Execute       source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command       ap_source done; 1.62 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source ../tv/cdatafile/ref.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source ../tv/cdatafile/ref.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       source /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/gsn.tbgen.tcl 
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu250-figd2104-2L-e -data info -quiet 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute       source .run_sim.tcl 
+Execute         source check_sim.tcl 
+Execute         source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command       ap_source done; 324.3 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command     cosim_design done; 377.17 sec.
+Execute     cleanup_all 

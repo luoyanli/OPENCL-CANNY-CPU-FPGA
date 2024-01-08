@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<cf:model cf:cpu="x86" cf:partition="0" cf:prefix="p_0_" cf:name="dr" xd:type="design" xmlns:xd="http://www.xilinx.com/xd" xmlns:cf="http://www.xilinx.com/connections">
+  <cf:block cf:name="hwblk_gau">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_gau">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_hyst">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_hyst">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_nms">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_nms">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:block cf:name="hwblk_sobel">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="in"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="in"/>
+  </cf:block>
+  <cf:block cf:name="swblk_sobel">
+    <cf:port cf:name="s_axi_control" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="data" cf:portType="stream" cf:direction="out"/>
+    <cf:port cf:name="out" cf:portType="stream" cf:direction="out"/>
+  </cf:block>
+  <cf:comp cf:name="xilinx_u250_xdma_201830_1" xd:componentRef="xilinx_u250_xdma_201830_1" xd:clockId="0"/>
+  <cf:comp cf:name="gau_1" xd:componentRef="gau" xd:clockId="0"/>
+  <cf:comp cf:name="hyst_1" xd:componentRef="hyst" xd:clockId="0"/>
+  <cf:comp cf:name="nms_1" xd:componentRef="nms" xd:clockId="0"/>
+  <cf:comp cf:name="sobel_1" xd:componentRef="sobel" xd:clockId="0"/>
+  <cf:instance cf:name="hwinst_gau_1" cf:blockName="hwblk_gau" cf:compName="gau_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="m_axi_gmem0" cf:ctrlPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="m_axi_gmem1" cf:ctrlPort="s_axi_control" xd:register="0x1C"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_gau_1" cf:blockName="swblk_gau" cf:compName="xilinx_u250_xdma_201830_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="slr0/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_hyst_1" cf:blockName="hwblk_hyst" cf:compName="hyst_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="m_axi_gmem0" cf:ctrlPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="m_axi_gmem1" cf:ctrlPort="s_axi_control" xd:register="0x1C"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_hyst_1" cf:blockName="swblk_hyst" cf:compName="xilinx_u250_xdma_201830_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="slr0/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_nms_1" cf:blockName="hwblk_nms" cf:compName="nms_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="m_axi_gmem0" cf:ctrlPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="m_axi_gmem1" cf:ctrlPort="s_axi_control" xd:register="0x1C"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_nms_1" cf:blockName="swblk_nms" cf:compName="xilinx_u250_xdma_201830_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="slr0/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+  </cf:instance>
+  <cf:instance cf:name="hwinst_sobel_1" cf:blockName="hwblk_sobel" cf:compName="sobel_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="s_axi_control" xd:register="0x0"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="m_axi_gmem0" cf:ctrlPort="s_axi_control" xd:register="0x10"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="m_axi_gmem1" cf:ctrlPort="s_axi_control" xd:register="0x1C"/>
+  </cf:instance>
+  <cf:instance cf:name="swinst_sobel_1" cf:blockName="swblk_sobel" cf:compName="xilinx_u250_xdma_201830_1">
+    <cf:portMap cf:blockPort="s_axi_control" cf:compPort="slr0/interconnect_axilite_user_M01_AXI"/>
+    <cf:portMap cf:blockPort="data" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+    <cf:portMap cf:blockPort="out" cf:compPort="memory_subsystem" cf:ctrlPort="slr0/interconnect_axilite_user_M01_AXI" cf:sptag="DDR[0]"/>
+  </cf:instance>
+  <cf:connection cf:srcInst="swinst_gau_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_gau_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="xilinx_u250_xdma_201830_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_gau_1" cf:srcPort="data" cf:dstInst="hwinst_gau_1" cf:dstPort="data">
+    <cf:dataMover cf:compName="gau_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_gau_1" cf:srcPort="out" cf:dstInst="hwinst_gau_1" cf:dstPort="out">
+    <cf:dataMover cf:compName="gau_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_hyst_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_hyst_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="xilinx_u250_xdma_201830_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_hyst_1" cf:srcPort="data" cf:dstInst="hwinst_hyst_1" cf:dstPort="data">
+    <cf:dataMover cf:compName="hyst_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_hyst_1" cf:srcPort="out" cf:dstInst="hwinst_hyst_1" cf:dstPort="out">
+    <cf:dataMover cf:compName="hyst_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_nms_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_nms_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="xilinx_u250_xdma_201830_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_nms_1" cf:srcPort="data" cf:dstInst="hwinst_nms_1" cf:dstPort="data">
+    <cf:dataMover cf:compName="nms_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_nms_1" cf:srcPort="out" cf:dstInst="hwinst_nms_1" cf:dstPort="out">
+    <cf:dataMover cf:compName="nms_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_sobel_1" cf:srcPort="s_axi_control" cf:dstInst="hwinst_sobel_1" cf:dstPort="s_axi_control">
+    <cf:dataMover cf:compName="xilinx_u250_xdma_201830_1" cf:softwareLib="axi_lite"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_sobel_1" cf:srcPort="data" cf:dstInst="hwinst_sobel_1" cf:dstPort="data">
+    <cf:dataMover cf:compName="sobel_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+  <cf:connection cf:srcInst="swinst_sobel_1" cf:srcPort="out" cf:dstInst="hwinst_sobel_1" cf:dstPort="out">
+    <cf:dataMover cf:compName="sobel_1" cf:softwareLib="zero_copy"/>
+  </cf:connection>
+</cf:model>

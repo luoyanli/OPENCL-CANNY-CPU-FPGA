@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root VersionMajor="1" VersionMinor="0">
+  <Emulations>
+    <Emulation Name="">
+      <Files>
+        <File Type="PROP_JSON" Name="prop.json"/>
+        <File Type="USER_PROP_JSON" Name=""/>
+        <File Type="EMU_DR_BD" Name="emu.bd"/>
+        <File Type="EMU_HPFM" Name="xilinx_u250_xdma_201830_2_emu.hpfm"/>
+        <File Type="POST_SYS_LINK_TCL" Name="dynamic_post_sys_link.tcl"/>
+        <File Type="PRE_SYS_LINK_TCL" Name="dynamic_pre_sys_link.tcl"/>
+      </Files>
+    </Emulation>
+  </Emulations>
+</Root>

@@ -1,0 +1,7 @@
+sv work "glbl.v"
+sv xil_defaultlib "gau.autotb.v"
+sv xil_defaultlib "AESL_automem_data.v"
+sv xil_defaultlib "AESL_automem_out_r.v"
+sv xil_defaultlib "gau.v"
+sv xil_defaultlib "gau_line_buf.v"
+

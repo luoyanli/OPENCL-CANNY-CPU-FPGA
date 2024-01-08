@@ -1,0 +1,1 @@
+ {CheckOptions: [ {key: xilinx-tb-process.TopFunctionName, value: 'hyst'}, {key: xilinx-tb-process.KeepTopName, value: 1} ] } 

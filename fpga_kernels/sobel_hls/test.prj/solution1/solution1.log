@@ -1,0 +1,57 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-10] Setting target device to 'xcu250-figd2104-2L-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file '../src/sobel.cpp' ... 
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:117:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:118:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:119:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:120:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:121:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:151:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:152:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:153:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:154:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:155:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:156:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:157:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:158:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:159:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:160:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:210:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:211:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:212:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:239:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:240:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:241:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:242:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:243:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:244:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:280:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:281:9
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'hls::sqrt(float)' into 'sobel(unsigned char*, GradPix*)' (../src/sobel.cpp:15:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'sobel(unsigned char*, GradPix*)' (../src/sobel.cpp:15:0)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 68972 ; free virtual = 148028
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 68972 ; free virtual = 148028
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 68953 ; free virtual = 148012
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 68941 ; free virtual = 148001
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'sobel' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'sobel' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_42_2' (../src/sobel.cpp:42) in function 'sobel' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_51_3' (../src/sobel.cpp:51) in function 'sobel' completely with a factor of 2.

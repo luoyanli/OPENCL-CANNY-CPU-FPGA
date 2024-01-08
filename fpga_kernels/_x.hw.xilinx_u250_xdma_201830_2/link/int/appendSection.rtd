@@ -1,0 +1,31 @@
+{
+    "ip_layout": {
+        "m_count": "4",
+        "m_ip_data": [
+            {
+                "m_type": "IP_DDR4_CONTROLLER",
+                "properties": "0",
+                "m_base_address": "0x01000000",
+                "m_name": "AXI-LITE-BANK0"
+            },
+            {
+                "m_type": "IP_DDR4_CONTROLLER",
+                "properties": "1",
+                "m_base_address": "0x1010000",
+                "m_name": "AXI-LITE-BANK1"
+            },
+            {
+                "m_type": "IP_DDR4_CONTROLLER",
+                "properties": "2",
+                "m_base_address": "0x1020000",
+                "m_name": "AXI-LITE-BANK2"
+            },
+            {
+                "m_type": "IP_DDR4_CONTROLLER",
+                "properties": "3",
+                "m_base_address": "0x1030000",
+                "m_name": "AXI-LITE-BANK3"
+            }
+        ]
+    }
+}

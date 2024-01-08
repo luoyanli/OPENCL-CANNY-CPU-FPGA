@@ -1,0 +1,9 @@
+<root versionMajor = "1" versionMinor = "5">
+  <kernel src_name="gau" language="c" hwCtrl="ap_ctrl_hs" mem_layout="fpga64-xilinx-none">
+    <args>
+      <arg id="0" access_type="r" src_name="data" src_type="unsigned char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="65536" hw_interface="BRAM" hw_name="data" hw_bitwidth="8" hw_size_or_depth="65536"/>
+      <arg id="1" access_type="w" src_name="out" src_type="unsigned char*" src_isptr="1" src_bitwidth="8" src_size_or_depth="65536" hw_interface="BRAM" hw_name="out" hw_bitwidth="8" hw_size_or_depth="65536"/>
+    </args>
+    <return src_type="void" src_bitwidth="0" hw_interface="" hw_name="" hw_bitwidth="0" offset="0x0"/>
+  </kernel>
+</root>

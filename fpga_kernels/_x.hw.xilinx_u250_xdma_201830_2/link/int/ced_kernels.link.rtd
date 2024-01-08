@@ -1,0 +1,162 @@
+{
+    "schema_version": {
+        "major": "2",
+        "minor": "0",
+        "patch": "0"
+    },
+    "mem_topology": {
+        "m_count": "8",
+        "m_mem_data": {
+            "mem_data": {
+                "m_type": "MEM_DDR4",
+                "m_used": "1",
+                "m_sizeKB": "0x1000000",
+                "m_base_address": "0x4000000000",
+                "m_tag": "bank0",
+                "m_spTag": "DDR[0]"
+            },
+            "mem_data": {
+                "m_type": "MEM_DDR4",
+                "m_used": "0",
+                "m_sizeKB": "0x1000000",
+                "m_base_address": "0x5000000000",
+                "m_tag": "bank1",
+                "m_spTag": "DDR[1]"
+            },
+            "mem_data": {
+                "m_type": "MEM_DDR4",
+                "m_used": "0",
+                "m_sizeKB": "0x1000000",
+                "m_base_address": "0x6000000000",
+                "m_tag": "bank2",
+                "m_spTag": "DDR[2]"
+            },
+            "mem_data": {
+                "m_type": "MEM_DDR4",
+                "m_used": "0",
+                "m_sizeKB": "0x1000000",
+                "m_base_address": "0x7000000000",
+                "m_tag": "bank3",
+                "m_spTag": "DDR[3]"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x80",
+                "m_base_address": "0x3000000000",
+                "m_tag": "PLRAM[0]",
+                "m_spTag": "PLRAM[0]"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x80",
+                "m_base_address": "0x3000200000",
+                "m_tag": "PLRAM[1]",
+                "m_spTag": "PLRAM[1]"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x80",
+                "m_base_address": "0x3000400000",
+                "m_tag": "PLRAM[2]",
+                "m_spTag": "PLRAM[2]"
+            },
+            "mem_data": {
+                "m_type": "MEM_DRAM",
+                "m_used": "0",
+                "m_sizeKB": "0x80",
+                "m_base_address": "0x3000600000",
+                "m_tag": "PLRAM[3]",
+                "m_spTag": "PLRAM[3]"
+            }
+        }
+    },
+    "ip_layout": {
+        "m_count": "4",
+        "m_ip_data": {
+            "ip_data": {
+                "m_type": "IP_KERNEL",
+                "properties": "0x1",
+                "m_int_enable": "1",
+                "m_interrupt_id": "0",
+                "m_ip_control": "AP_CTRL_CHAIN",
+                "m_base_address": "0x1800000",
+                "m_name": "gau:gau_1"
+            },
+            "ip_data": {
+                "m_type": "IP_KERNEL",
+                "properties": "0x1",
+                "m_int_enable": "1",
+                "m_interrupt_id": "0",
+                "m_ip_control": "AP_CTRL_CHAIN",
+                "m_base_address": "0x1810000",
+                "m_name": "hyst:hyst_1"
+            },
+            "ip_data": {
+                "m_type": "IP_KERNEL",
+                "properties": "0x1",
+                "m_int_enable": "1",
+                "m_interrupt_id": "0",
+                "m_ip_control": "AP_CTRL_CHAIN",
+                "m_base_address": "0x1820000",
+                "m_name": "nms:nms_1"
+            },
+            "ip_data": {
+                "m_type": "IP_KERNEL",
+                "properties": "0x1",
+                "m_int_enable": "1",
+                "m_interrupt_id": "0",
+                "m_ip_control": "AP_CTRL_CHAIN",
+                "m_base_address": "0x1830000",
+                "m_name": "sobel:sobel_1"
+            }
+        }
+    },
+    "connectivity": {
+        "m_count": "8",
+        "m_connection": {
+            "connection": {
+                "arg_index": "0",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "1",
+                "m_ip_layout_index": "0",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "0",
+                "m_ip_layout_index": "1",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "1",
+                "m_ip_layout_index": "1",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "0",
+                "m_ip_layout_index": "2",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "1",
+                "m_ip_layout_index": "2",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "0",
+                "m_ip_layout_index": "3",
+                "mem_data_index": "0"
+            },
+            "connection": {
+                "arg_index": "1",
+                "m_ip_layout_index": "3",
+                "mem_data_index": "0"
+            }
+        }
+    }
+}

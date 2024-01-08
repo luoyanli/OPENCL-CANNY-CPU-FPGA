@@ -1,0 +1,9 @@
+0.7
+2020.1
+May 27 2020
+19:59:15
+/home/luoyanl2/ece527_taskpar/fpga_kernels/gau_hls/test.prj/solution1/sim/verilog/AESL_automem_data.v,1702263376,systemVerilog,,,,AESL_automem_data,,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/luoyanl2/ece527_taskpar/fpga_kernels/gau_hls/test.prj/solution1/sim/verilog/AESL_automem_out_r.v,1702263376,systemVerilog,,,,AESL_automem_out_r,,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/luoyanl2/ece527_taskpar/fpga_kernels/gau_hls/test.prj/solution1/sim/verilog/gau.autotb.v,1702263376,systemVerilog,,,,apatb_gau_top,,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/luoyanl2/ece527_taskpar/fpga_kernels/gau_hls/test.prj/solution1/sim/verilog/gau.v,1702263369,systemVerilog,,,,gau,,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,
+/home/luoyanl2/ece527_taskpar/fpga_kernels/gau_hls/test.prj/solution1/sim/verilog/gau_line_buf.v,1702263369,systemVerilog,,,,gau_line_buf;gau_line_buf_ram,,axi_protocol_checker_v1_1_12;axi_protocol_checker_v1_1_13;axis_protocol_checker_v1_1_11;axis_protocol_checker_v1_1_12;ieee_proposed=./ieee_proposed;smartconnect_v1_0;unisims_ver;xil_defaultlib;xpm,,,,,,

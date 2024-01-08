@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        MCS
+Interface          SPIX4
+Size               1024M
+Start Address      0x00000000
+End Address        0x3FFFFFFF
+
+Addr1         Addr2         Date                    File(s)
+0x01002000    0x04AA6A37    Jun 27 11:49:35 2019    /wrk/xsjhdnobkup3/jheydt/perforce/IP3_jheydt_u250_xdma_201830_2_cmc/DEV/sdx_platforms/xilinx_u250_xdma/xilinx_u250_xdma_201830_2/sdaccel_dsa_board_test/000_u250_xdma_201830_2_DSA_build/.Xil/Vivado-11859-xsjl180198/dsa/xilinx_u250_xdma_201830_2.bit

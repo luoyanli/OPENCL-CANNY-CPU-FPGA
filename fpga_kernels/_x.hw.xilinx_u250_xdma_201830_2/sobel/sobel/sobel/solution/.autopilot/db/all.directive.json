@@ -1,0 +1,18 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "sobel",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "\/home\/luoyanl2\/ece527_taskpar\/fpga_kernels\/_x.hw.xilinx_u250_xdma_201830_2\/sobel\/sobel\/sobel.tcl",
+          "sourceLine": "20",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "sobel"
+              }]
+          }
+        }]
+    }]}

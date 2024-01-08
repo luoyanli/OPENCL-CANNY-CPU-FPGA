@@ -1,0 +1,122 @@
+{
+ "dsabin": {
+       "Satellite Controller Family" : "Alveo-Gen1",
+       "Card Management Controller Family" : "CMC-Gen1",  
+       "Scheduler Family" : "ERT-Gen1"
+    },
+ "xclbin" :  {
+         "append_sections" : {
+            "ip_layout" : {
+               "m_count" : "4",
+               "m_ip_data" : [
+                  {
+                     "m_type" : "IP_DDR4_CONTROLLER",
+                     "properties" : "0",
+                     "m_base_address" : "0x01000000",
+                     "m_name" : "AXI-LITE-BANK0"
+                  },
+                  {
+                     "m_type" : "IP_DDR4_CONTROLLER",
+                     "properties" : "1",
+                     "m_base_address" : "0x1010000",
+                     "m_name" : "AXI-LITE-BANK1"
+                  },
+                  {
+                     "m_type" : "IP_DDR4_CONTROLLER",
+                     "properties" : "2",
+                     "m_base_address" : "0x1020000",
+                     "m_name" : "AXI-LITE-BANK2"
+                  },
+                  {
+                    "m_type" : "IP_DDR4_CONTROLLER",
+                    "properties" : "3",
+                    "m_base_address" : "0x1030000",
+                    "m_name" : "AXI-LITE-BANK3"
+                  }
+               ]
+            }
+         }
+      },
+  "chipscope_debug": {
+      "debug_networks": {
+         "user": {
+            "name": "User Debug Network",
+            "pcie_pf": "1",
+            "bar_number": "0",
+            "axi_baseaddr": "0x000C0000",
+            "supports_jtag_fallback": "false",
+            "supports_microblaze_debug": "true",
+            "is_user_visible":"true"
+         },
+         "mgmt": {
+            "name": "Management Debug Network",
+            "pcie_pf": "0",
+            "bar_number": "0",
+            "axi_baseaddr": "0x001C0000",
+            "supports_jtag_fallback": "true",
+            "supports_microblaze_debug": "true",
+            "is_user_visible":"false"
+         }
+      }
+   },
+   "profile_debug": {
+      "slrs": "SLR0 SLR1 SLR2 SLR3",
+      "host": {
+         "SLR0": "memory_subsystem/S00_AXI",
+         "SLR1": "memory_subsystem/S01_AXI",
+         "SLR2": "memory_subsystem/S02_AXI",
+         "SLR3": "memory_subsystem/S03_AXI"
+      },
+      "axilite": {
+         "SLR0": {
+            "ip": "slr0/interconnect_axilite_user",
+            "mi": "M00_AXI",
+            "fallback": "true"
+         },
+         "SLR1": {
+            "ip": "slr1/interconnect_axilite_user",
+            "mi": "M00_AXI",
+            "fallback": "false"
+         },
+         "SLR2": {
+            "ip": "slr2/interconnect_axilite_user",
+            "mi": "M00_AXI",
+            "fallback": "false"
+         },
+         "SLR3": {
+            "ip": "slr3/interconnect_axilite_user",
+            "mi": "M00_AXI",
+            "fallback": "false"
+         }
+      },
+      "trace": {
+         "SLR0": {
+            "mi": "regslice_data_periph_M_AXI",
+            "clk": "dma_pcie_axi_aclk",
+            "rst": "slr0/reset_controllers/psreset_gate_pr_data/interconnect_aresetn"
+         }
+      },
+      "monitor": {
+         "SLR0": {
+            "clk": "clkwiz_kernel_clk_out1",
+            "rst": "slr0/reset_controllers/psreset_gate_pr_kernel/peripheral_aresetn",
+            "fallback": "true"
+         },
+         "SLR1": {
+            "clk": "clkwiz_kernel_clk_out1",
+            "rst": "slr1/reset_controllers/psreset_gate_pr_kernel/peripheral_aresetn",
+            "fallback": "false"
+         },
+         "SLR2": {
+            "clk": "clkwiz_kernel_clk_out1",
+            "rst": "slr2/reset_controllers/psreset_gate_pr_kernel/peripheral_aresetn",
+            "fallback": "false"
+         },
+         "SLR3": {
+            "clk": "clkwiz_kernel_clk_out1",
+            "rst": "slr3/reset_controllers/psreset_gate_pr_kernel/peripheral_aresetn",
+            "fallback": "false"
+         }
+      }
+   }
+}

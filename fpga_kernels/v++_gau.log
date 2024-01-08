@@ -1,0 +1,29 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ compile can be found at:
+	Reports: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/gau
+	Log files: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/gau
+INFO: [v++ 60-1657] Initializing dispatch client.
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo.compile_summary, at Sun Dec 17 06:32:19 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun Dec 17 06:32:19 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/gau/v++_compile_gau_guidance.html', at Sun Dec 17 06:32:20 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm
+INFO: [v++ 60-1578]   This platform contains Device Support Archive '/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/hw/xilinx_u250_xdma_201830_2.dsa'
+INFO: [v++ 60-1302] Platform 'xilinx_u250_xdma_201830_2.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-585] Compiling for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u250_xdma_201830_2
+INFO: [v++ 60-242] Creating kernel: 'gau'
+
+===>The following messages were generated while  performing high-level synthesis for kernel: gau Log file: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau/gau/vitis_hls.log :
+INFO: [v++ 204-61] Pipelining loop 'Loop 1'.
+INFO: [v++ 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Loop 1'
+INFO: [v++ 204-61] Pipelining loop 'VITIS_LOOP_32_1_VITIS_LOOP_33_2'.
+INFO: [v++ 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5, loop 'VITIS_LOOP_32_1_VITIS_LOOP_33_2'
+INFO: [v++ 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [v++ 200-789] **** Estimated Fmax: 411.02 MHz
+INFO: [v++ 60-594] Finished kernel compilation
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/gau/system_estimate_gau.xtxt
+INFO: [v++ 60-586] Created _x.hw.xilinx_u250_xdma_201830_2/gau.xo
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo.compile_summary 
+INFO: [v++ 60-791] Total elapsed time: 0h 2m 4s
+INFO: [v++ 60-1653] Closing dispatch client.

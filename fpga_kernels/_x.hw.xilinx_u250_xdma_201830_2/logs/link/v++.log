@@ -1,0 +1,290 @@
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link
+	Log files: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link
+INFO: [v++ 60-1657] Initializing dispatch client.
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin.link_summary, at Sun Dec 17 06:38:40 2023
+INFO: [v++ 60-1316] Initiating connection to rulecheck server, at Sun Dec 17 06:38:40 2023
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/v++_link_ced_kernels.link_guidance.html', at Sun Dec 17 06:38:42 2023
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm
+INFO: [v++ 60-1578]   This platform contains Device Support Archive '/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/hw/xilinx_u250_xdma_201830_2.dsa'
+INFO: [v++ 60-1302] Platform 'xilinx_u250_xdma_201830_2.xpfm' has been explicitly enabled for this release.
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u250_xdma_201830_2
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [06:38:52] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo --xo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm --target hw --output_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --temp_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+INFO: [SYSTEM_LINK 60-1316] Initiating connection to rulecheck server, at Sun Dec 17 06:38:54 2023
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [06:38:55] build_xd_ip_db started: /opt/xilinx/Vitis/2020.1/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/xilinx_u250_xdma_201830_2.hpfm -clkid 0 -ip /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/iprepo/xilinx_com_hls_gau_1_0,gau -ip /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/iprepo/xilinx_com_hls_sobel_1_0,sobel -ip /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/iprepo/xilinx_com_hls_nms_1_0,nms -ip /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/iprepo/xilinx_com_hls_hyst_1_0,hyst -o /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [06:38:59] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1300.836 ; gain = 0.000 ; free physical = 104622 ; free virtual = 149260
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [06:39:00] cfgen started: /opt/xilinx/Vitis/2020.1/bin/cfgen -dmclkid 0 -r /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: gau, num: 1  {gau_1}
+INFO: [CFGEN 83-0]   kernel: hyst, num: 1  {hyst_1}
+INFO: [CFGEN 83-0]   kernel: nms, num: 1  {nms_1}
+INFO: [CFGEN 83-0]   kernel: sobel, num: 1  {sobel_1}
+INFO: [CFGEN 83-2226] Inferring mapping for argument gau_1.data to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument gau_1.out to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument hyst_1.data to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument hyst_1.out to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument nms_1.data to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument nms_1.out to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument sobel_1.data to DDR[0]
+INFO: [CFGEN 83-2226] Inferring mapping for argument sobel_1.out to DDR[0]
+INFO: [SYSTEM_LINK 82-37] [06:39:04] cfgen finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1300.836 ; gain = 0.000 ; free physical = 104621 ; free virtual = 149259
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [06:39:04] cf2bd started: /opt/xilinx/Vitis/2020.1/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/_sysl/.xsd --temp_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link --output_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --target_bd pfm_dynamic.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd pfm_dynamic.bd -dn dr -dp /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [06:39:09] cf2bd finished successfully
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1300.836 ; gain = 0.000 ; free physical = 104614 ; free virtual = 149256
+INFO: [v++ 60-1441] [06:39:09] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 104645 ; free virtual = 149288
+INFO: [v++ 60-1443] [06:39:09] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat -rtd /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/cf2sw.rtd -xclbin /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml -o /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+INFO: [v++ 60-1441] [06:39:12] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 104650 ; free virtual = 149293
+INFO: [v++ 60-1443] [06:39:12] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+INFO: [v++ 60-1441] [06:39:13] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:02 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 104033 ; free virtual = 148675
+INFO: [v++ 60-1443] [06:39:13] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u250_xdma_201830_2 -j 16 --remote_ip_cache /home/luoyanl2/ece527_taskpar/fpga_kernels/.ipcache -s --output_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --log_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link --report_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link --config /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini -k /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link --no-info --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau_1_0 --iprepo /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel_1_0 --messageDb /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link/vpl.pb /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+
+****** vpl v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat'.
+INFO: [VPL 60-423]   Target device: xilinx_u250_xdma_201830_2
+INFO: [VPL 60-1032] Extracting hardware platform to /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/vivado/vpl/.local/hw_platform
+[06:39:46] Run vpl: Step create_project: Started
+Creating Vivado project.
+[06:39:50] Run vpl: Step create_project: Completed
+[06:39:50] Run vpl: Step create_bd: Started
+[06:41:09] Run vpl: Step create_bd: RUNNING...
+[06:41:56] Run vpl: Step create_bd: Completed
+[06:41:56] Run vpl: Step update_bd: Started
+[06:41:57] Run vpl: Step update_bd: Completed
+[06:41:57] Run vpl: Step generate_target: Started
+[06:43:14] Run vpl: Step generate_target: RUNNING...
+[06:44:29] Run vpl: Step generate_target: RUNNING...
+[06:45:44] Run vpl: Step generate_target: RUNNING...
+[06:46:08] Run vpl: Step generate_target: Completed
+[06:46:08] Run vpl: Step config_hw_runs: Started
+[06:46:12] Run vpl: Step config_hw_runs: Completed
+[06:46:12] Run vpl: Step synth: Started
+[06:46:42] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:47:12] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:47:42] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:48:13] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:48:44] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:49:14] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:49:44] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:50:15] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:50:45] Block-level synthesis in progress, 0 of 4 jobs complete, 1 job running.
+[06:50:57] Run vpl: Step synth: Completed
+[06:50:57] Run vpl: Step impl: Started
+[07:04:33] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 25m 17s 
+
+[07:04:33] Starting logic optimization..
+[07:05:34] Phase 1 Generate And Synthesize MIG Cores
+[07:09:36] Phase 2 Generate And Synthesize Debug Cores
+[07:12:08] Phase 3 Retarget
+[07:12:38] Phase 4 Constant propagation
+[07:13:08] Phase 5 Sweep
+[07:13:39] Phase 6 BUFG optimization
+[07:14:09] Phase 7 Shift Register Optimization
+[07:14:09] Phase 8 Post Processing Netlist
+[07:15:40] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 11m 06s 
+
+[07:15:40] Starting logic placement..
+[07:16:40] Phase 1 Placer Initialization
+[07:16:40] Phase 1.1 Placer Initialization Netlist Sorting
+[07:20:13] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[07:21:43] Phase 1.3 Build Placer Netlist Model
+[07:24:15] Phase 1.4 Constrain Clocks/Macros
+[07:24:45] Phase 2 Global Placement
+[07:24:45] Phase 2.1 Floorplanning
+[07:25:16] Phase 2.1.1 Partition Driven Placement
+[07:25:16] Phase 2.1.1.1 PBP: Partition Driven Placement
+[07:26:16] Phase 2.1.1.2 PBP: Clock Region Placement
+[07:27:17] Phase 2.1.1.3 PBP: Compute Congestion
+[07:27:47] Phase 2.1.1.4 PBP: UpdateTiming
+[07:27:47] Phase 2.1.1.5 PBP: Add part constraints
+[07:28:18] Phase 2.2 Global Placement Core
+[07:37:55] Phase 2.2.1 Physical Synthesis In Placer
+[07:40:27] Phase 3 Detail Placement
+[07:40:27] Phase 3.1 Commit Multi Column Macros
+[07:40:27] Phase 3.2 Commit Most Macros & LUTRAMs
+[07:40:57] Phase 3.3 Area Swap Optimization
+[07:41:28] Phase 3.4 Pipeline Register Optimization
+[07:41:28] Phase 3.5 IO Cut Optimizer
+[07:41:28] Phase 3.6 Fast Optimization
+[07:41:58] Phase 3.7 Small Shape DP
+[07:41:58] Phase 3.7.1 Small Shape Clustering
+[07:42:29] Phase 3.7.2 Flow Legalize Slice Clusters
+[07:42:59] Phase 3.7.3 Slice Area Swap
+[07:44:00] Phase 3.8 Place Remaining
+[07:44:30] Phase 3.9 Re-assign LUT pins
+[07:44:30] Phase 3.10 Pipeline Register Optimization
+[07:45:00] Phase 3.11 Fast Optimization
+[07:45:31] Phase 4 Post Placement Optimization and Clean-Up
+[07:45:31] Phase 4.1 Post Commit Optimization
+[07:46:32] Phase 4.1.1 Post Placement Optimization
+[07:47:02] Phase 4.1.1.1 BUFG Insertion
+[07:47:02] Phase 1 Physical Synthesis Initialization
+[07:47:32] Phase 4.1.1.2 BUFG Replication
+[07:48:03] Phase 4.1.1.3 Replication
+[07:48:33] Phase 4.2 Post Placement Cleanup
+[07:49:34] Phase 4.3 Placer Reporting
+[07:49:34] Phase 4.4 Final Placement Cleanup
+[07:52:06] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 00h 36m 25s 
+
+[07:52:06] Starting logic routing..
+[07:53:06] Phase 1 Build RT Design
+[07:54:38] Phase 2 Router Initialization
+[07:54:38] Phase 2.1 Create Timer
+[07:54:38] Phase 2.2 Fix Topology Constraints
+[07:55:08] Phase 2.3 Pre Route Cleanup
+[07:55:08] Phase 2.4 Global Clock Net Routing
+[07:55:38] Phase 2.5 Update Timing
+[07:58:10] Phase 2.6 Update Timing for Bus Skew
+[07:58:10] Phase 2.6.1 Update Timing
+[07:59:11] Phase 3 Initial Routing
+[07:59:11] Phase 3.1 Global Routing
+[07:59:11] Phase 3.2 Global Routing
+[08:00:42] Phase 4 Rip-up And Reroute
+[08:00:42] Phase 4.1 Global Iteration 0
+[08:07:47] Phase 4.2 Global Iteration 1
+[08:08:48] Phase 4.3 Global Iteration 2
+[08:12:51] Phase 5 Delay and Skew Optimization
+[08:12:51] Phase 5.1 Delay CleanUp
+[08:12:51] Phase 5.1.1 Update Timing
+[08:13:52] Phase 5.2 Clock Skew Optimization
+[08:13:52] Phase 6 Post Hold Fix
+[08:13:52] Phase 6.1 Hold Fix Iter
+[08:13:52] Phase 6.1.1 Update Timing
+[08:14:53] Phase 7 Leaf Clock Prog Delay Opt
+[08:15:53] Phase 8 Route finalize
+[08:16:24] Phase 9 Verifying routed nets
+[08:16:24] Phase 10 Depositing Routes
+[08:17:24] Phase 11 Post Router Timing
+[08:17:24] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 25m 18s 
+
+[08:17:24] Starting bitstream generation..
+[08:28:33] Creating bitmap...
+[08:43:44] Writing bitstream ./pfm_top_i_dynamic_region_my_rm_partial.bit...
+[08:43:44] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 26m 19s 
+[08:44:07] Run vpl: Step impl: Completed
+[08:44:07] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [08:44:07] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:01:20 ; elapsed = 02:04:54 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 97668 ; free virtual = 146695
+INFO: [v++ 60-1443] [08:44:07] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+INFO: [v++ 60-991] clock name 'clkwiz_kernel_clk_out1' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'clkwiz_kernel2_clk_out1' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): Kernel (DATA) clock: clkwiz_kernel_clk_out1 = 300, Kernel (KERNEL) clock: clkwiz_kernel2_clk_out1 = 500
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/address_map.xml -sdsl /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat -xclbin /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml -rtd /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd -o /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-2311] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, rtdInputFilePath: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd
+INFO: [v++ 60-2312] HPISystemDiagram::writeSystemDiagramAfterRunningVivado, systemDiagramOutputFilePath: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json
+INFO: [v++ 60-1618] Launching 
+INFO: [v++ 60-1441] [08:44:10] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 97672 ; free virtual = 146699
+INFO: [v++ 60-1443] [08:44:10] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.rtd --append-section :JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_xml.rtd --add-section BUILD_METADATA:JSON:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.xml --add-section SYSTEM_METADATA:RAW:/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json --output /home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+XRT Build Version: 2.13.466 (2022.1)
+       Build Date: 2022-04-15 00:41:41
+          Hash ID: f5505e402c2ca1ffe45eb6d3a9399b23a0dc8776
+Creating a default 'in-memory' xclbin image.
+
+Section: 'DEBUG_IP_LAYOUT'(9) was successfully added.
+Size   : 296 bytes
+Format : JSON
+File   : '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/debug_ip_layout.rtd'
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 55384883 bytes
+Format : RAW
+File   : '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 274 bytes
+Format : JSON
+File   : '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 5263 bytes
+Format : JSON
+File   : '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 11491 bytes
+Format : RAW
+File   : '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels.link.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 14214 bytes
+Format : RAW
+File   : '/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (55431328 bytes) to the output file: /home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [08:44:11] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.55 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 97613 ; free virtual = 146694
+INFO: [v++ 60-1443] [08:44:11] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin.info --input /home/luoyanl2/ece527_taskpar/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+INFO: [v++ 60-1441] [08:44:12] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.67 ; elapsed = 00:00:00.83 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 97611 ; free virtual = 146693
+INFO: [v++ 60-1443] [08:44:12] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link
+INFO: [v++ 60-1441] [08:44:12] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1335.516 ; gain = 0.000 ; free physical = 97611 ; free virtual = 146693
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/system_estimate_ced_kernels.link.xtxt
+INFO: [v++ 60-586] Created /home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.ltx
+INFO: [v++ 60-586] Created ./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/v++_link_ced_kernels.link_guidance.html
+	Timing Report: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_timing_summary_routed.rpt
+	Utilizations Report: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_routed.rpt
+	Vivado Log: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link/vivado.log
+	Steps Log File: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 2h 5m 41s

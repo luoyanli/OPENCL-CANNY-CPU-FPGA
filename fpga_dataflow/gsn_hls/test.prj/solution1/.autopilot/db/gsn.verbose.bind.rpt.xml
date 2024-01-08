@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'gsn'" level="0">
+<item name = "Date">Tue Dec 12 20:50:21 2023
+</item>
+<item name = "Version">2020.1 (Build 2902540 on Wed May 27 20:16:15 MDT 2020)</item>
+<item name = "Project">test.prj</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">virtexuplus</item>
+<item name = "Target device">xcu250-figd2104-2L-e</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">2.50 ns, 2.414 ns, 0.68 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1053288, 1053288, 2.633 ms, 2.633 ms, 525851, 525851, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_sobel_fu_92">sobel, 263731, 263731, 0.659 ms, 0.659 ms, 263731, 263731, none</column>
+<column name="grp_nms_fu_99">nms, 525850, 525850, 1.315 ms, 1.315 ms, 525850, 525850, none</column>
+<column name="grp_gau6_fu_108">gau6, 263705, 263705, 0.659 ms, 0.659 ms, 263705, 263705, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="ced_kernels.link">
+  <platform vendor="xilinx" boardid="u250" name="xdma" featureRomTime="1561656294">
+    <version major="201830" minor="2"/>
+    <description/>
+    <board name="xilinx.com:au250:1.0" vendor="xilinx.com" fpga="xcu250-figd2104-2L-e">
+      <interfaces>
+        <interface id="int1" name="PCIe" type="gen3x16"/>
+      </interfaces>
+      <memories>
+        <memory name="dynamic_region_memory_subsystem_memory_ddr4_mem00" type="ddr4" size="16GB"/>
+        <memory name="dynamic_region_memory_subsystem_memory_ddr4_mem01" type="ddr4" size="16GB"/>
+        <memory name="dynamic_region_memory_subsystem_memory_ddr4_mem02" type="ddr4" size="16GB"/>
+        <memory name="dynamic_region_memory_subsystem_memory_ddr4_mem03" type="ddr4" size="16GB"/>
+      </memories>
+      <images>
+        <image name="au250_image.jpg" type="HDPI"/>
+        <image name="" type="MDPI"/>
+        <image name="" type="LDPI"/>
+      </images>
+      <id>
+        <vendor/>
+        <device/>
+        <subsystem/>
+      </id>
+    </board>
+    <build_flow/>
+    <host architecture="x86_64"/>
+    <device name="fpga0" fpgaDevice="virtexuplus:xcu250:figd2104:-2L:e" addrWidth="0">
+      <core name="OCL_REGION_0" target="bitstream" type="clc_region" clockFreq="0MHz" numComputeUnits="60">
+        <kernelClocks>
+          <clock port="DATA_CLK" frequency="300.0MHz" name="clkwiz_kernel_clk_out1"/>
+          <clock port="KERNEL_CLK" frequency="500.0MHz" name="clkwiz_kernel2_clk_out1"/>
+        </kernelClocks>
+        <kernel name="hyst" language="c" vlnv="xilinx.com:hls:hyst:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_chain">
+          <module name="hyst">
+            <module name="hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2" instName="grp_hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2_fu_93" type="NonDataflowHS">
+              <rtlPort name="m_axi_gmem0_AWVALID" object="gmem0" protocol="m_axi"/>
+              <rtlPort name="m_axi_gmem1_AWVALID" object="gmem1" protocol="m_axi"/>
+              <rtlPort name="sext_ln27_1" object="sext_ln27_1" protocol="ap_none"/>
+              <rtlPort name="sext_ln27" object="sext_ln27" protocol="ap_none"/>
+            </module>
+          </module>
+          <port name="M_AXI_GMEM0" mode="master" range="0xFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM1" mode="master" range="0xFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x28" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="data" addressQualifier="1" id="0" port="M_AXI_GMEM0" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="out_r" addressQualifier="1" id="1" port="M_AXI_GMEM1" size="0x8" offset="0x1C" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="hyst_1">
+            <addrRemap base="0x1810000" port="S_AXI_CONTROL"/>
+          </instance>
+        </kernel>
+        <kernel name="nms" language="c" vlnv="xilinx.com:hls:nms:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_chain">
+          <module name="nms">
+            <module name="nms_Pipeline_1" instName="grp_nms_Pipeline_1_fu_95" type="NonDataflowHS">
+              <rtlPort name="line_buf_value_d0" object="line_buf_value" protocol="ap_memory"/>
+              <rtlPort name="line_buf_grad_d0" object="line_buf_grad" protocol="ap_memory"/>
+            </module>
+            <module name="nms_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2" instName="grp_nms_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2_fu_103" type="NonDataflowHS">
+              <rtlPort name="m_axi_gmem1_AWVALID" object="gmem1" protocol="m_axi"/>
+              <rtlPort name="m_axi_gmem0_AWVALID" object="gmem0" protocol="m_axi"/>
+              <rtlPort name="sext_ln31" object="sext_ln31" protocol="ap_none"/>
+              <rtlPort name="out_r" object="out_r" protocol="ap_none"/>
+              <rtlPort name="line_buf_value_d0" object="line_buf_value" protocol="ap_memory"/>
+              <rtlPort name="line_buf_value_q1" object="line_buf_value" protocol="ap_memory"/>
+              <rtlPort name="line_buf_grad_d0" object="line_buf_grad" protocol="ap_memory"/>
+              <rtlPort name="line_buf_grad_q1" object="line_buf_grad" protocol="ap_memory"/>
+            </module>
+          </module>
+          <port name="M_AXI_GMEM0" mode="master" range="0xFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM1" mode="master" range="0xFFFFFFFF" dataWidth="8" portType="addressable" base="0x0"/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x28" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="data" addressQualifier="1" id="0" port="M_AXI_GMEM0" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="out_r" addressQualifier="1" id="1" port="M_AXI_GMEM1" size="0x8" offset="0x1C" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="nms_1">
+            <addrRemap base="0x1820000" port="S_AXI_CONTROL"/>
+          </instance>
+        </kernel>
+        <kernel name="gau" language="c" vlnv="xilinx.com:hls:gau:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_chain">
+          <module name="gau">
+            <module name="gau_Pipeline_1" instName="grp_gau_Pipeline_1_fu_103" type="NonDataflowHS">
+              <rtlPort name="line_buf_d0" object="line_buf" protocol="ap_memory"/>
+            </module>
+            <module name="gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2" instName="grp_gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2_fu_109" type="NonDataflowHS">
+              <rtlPort name="m_axi_gmem0_AWVALID" object="gmem0" protocol="m_axi"/>
+              <rtlPort name="m_axi_gmem1_AWVALID" object="gmem1" protocol="m_axi"/>
+              <rtlPort name="sext_ln32_1" object="sext_ln32_1" protocol="ap_none"/>
+              <rtlPort name="sext_ln32" object="sext_ln32" protocol="ap_none"/>
+              <rtlPort name="line_buf_d0" object="line_buf" protocol="ap_memory"/>
+              <rtlPort name="line_buf_q1" object="line_buf" protocol="ap_memory"/>
+            </module>
+          </module>
+          <port name="M_AXI_GMEM0" mode="master" range="0xFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM1" mode="master" range="0xFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x28" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="data" addressQualifier="1" id="0" port="M_AXI_GMEM0" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="out_r" addressQualifier="1" id="1" port="M_AXI_GMEM1" size="0x8" offset="0x1C" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="gau_1">
+            <addrRemap base="0x1800000" port="S_AXI_CONTROL"/>
+          </instance>
+        </kernel>
+        <kernel name="sobel" language="c" vlnv="xilinx.com:hls:sobel:1.0" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true" hwControlProtocol="ap_ctrl_chain">
+          <module name="sobel">
+            <module name="sobel_Pipeline_1" instName="grp_sobel_Pipeline_1_fu_91" type="NonDataflowHS">
+              <rtlPort name="line_buf_d0" object="line_buf" protocol="ap_memory"/>
+            </module>
+            <module name="sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2" instName="grp_sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2_fu_97" type="NonDataflowHS">
+              <rtlPort name="m_axi_gmem0_AWVALID" object="gmem0" protocol="m_axi"/>
+              <rtlPort name="m_axi_gmem1_AWVALID" object="gmem1" protocol="m_axi"/>
+              <rtlPort name="sext_ln45" object="sext_ln45" protocol="ap_none"/>
+              <rtlPort name="out_r" object="out_r" protocol="ap_none"/>
+              <rtlPort name="line_buf_d0" object="line_buf" protocol="ap_memory"/>
+              <rtlPort name="line_buf_q1" object="line_buf" protocol="ap_memory"/>
+            </module>
+          </module>
+          <port name="M_AXI_GMEM0" mode="master" range="0xFFFFFFFF" dataWidth="512" portType="addressable" base="0x0"/>
+          <port name="M_AXI_GMEM1" mode="master" range="0xFFFFFFFF" dataWidth="16" portType="addressable" base="0x0"/>
+          <port name="S_AXI_CONTROL" mode="slave" range="0x28" dataWidth="32" portType="addressable" base="0x0"/>
+          <arg name="data" addressQualifier="1" id="0" port="M_AXI_GMEM0" size="0x8" offset="0x10" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <arg name="out_r" addressQualifier="1" id="1" port="M_AXI_GMEM1" size="0x8" offset="0x1C" hostOffset="0x0" hostSize="0x8" type="void*"/>
+          <compileWorkGroupSize x="1" y="1" z="1"/>
+          <maxWorkGroupSize x="1" y="1" z="1"/>
+          <string_table/>
+          <instance name="sobel_1">
+            <addrRemap base="0x1830000" port="S_AXI_CONTROL"/>
+          </instance>
+        </kernel>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="slr0/interconnect_axilite_user_M01_AXI" dstType="kernel" dstInst="gau_1" dstPort="S_AXI_CONTROL"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="gau_1" dstPort="M_AXI_GMEM0"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="gau_1" dstPort="M_AXI_GMEM1"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="slr0/interconnect_axilite_user_M01_AXI" dstType="kernel" dstInst="hyst_1" dstPort="S_AXI_CONTROL"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="hyst_1" dstPort="M_AXI_GMEM0"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="hyst_1" dstPort="M_AXI_GMEM1"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="slr0/interconnect_axilite_user_M01_AXI" dstType="kernel" dstInst="nms_1" dstPort="S_AXI_CONTROL"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="nms_1" dstPort="M_AXI_GMEM0"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="nms_1" dstPort="M_AXI_GMEM1"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="slr0/interconnect_axilite_user_M01_AXI" dstType="kernel" dstInst="sobel_1" dstPort="S_AXI_CONTROL"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="sobel_1" dstPort="M_AXI_GMEM0"/>
+        <connection srcType="core" srcInst="OCL_REGION_0" srcPort="memory_subsystem" dstType="kernel" dstInst="sobel_1" dstPort="M_AXI_GMEM1"/>
+      </core>
+    </device>
+  </platform>
+</project>

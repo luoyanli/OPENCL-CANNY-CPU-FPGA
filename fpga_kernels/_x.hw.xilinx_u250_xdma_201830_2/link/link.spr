@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="link" dir="" srcset="sources_1">
+  <FileSets>
+    <FileSet Name="kernel_gau" Type="DesignSrcs">
+      <File Path="/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/gau/gau/cpu_sources/gau.cpp"/>
+      <Config/>
+    </FileSet>
+    <FileSet Name="kernel_sobel" Type="DesignSrcs">
+      <File Path="/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/sobel/sobel/cpu_sources/sobel.cpp"/>
+      <Config/>
+    </FileSet>
+    <FileSet Name="kernel_nms" Type="DesignSrcs">
+      <File Path="/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/nms/nms/cpu_sources/nms.cpp"/>
+      <Config/>
+    </FileSet>
+    <FileSet Name="kernel_hyst" Type="DesignSrcs">
+      <File Path="/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/hyst/hyst/cpu_sources/hyst.cpp"/>
+      <Config/>
+    </FileSet>
+    <FileSet Name="sources_1" Type="DesignSrcs">
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs>
+    <Run Id="run_link" Type="Ft102:LinkHwTarget" SrcSet="sources_1" Description="" Dir="run_link">
+      <Strategy>
+        <StratHandle Name="" Flow="Link HW 2018"/>
+        <Step Id="system_link">
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="cf2sw">
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="rtd2_system_diagram"/>
+        <Step Id="vpl">
+          <Option Id="ConfigFileStr">/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini</Option>
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="rtdgen"/>
+        <Step Id="xclbinutil">
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="xclbinutilinfo">
+          <Option Id="OptionsStrList"></Option>
+        </Step>
+        <Step Id="generate_sc_driver"/>
+      </Strategy>
+      <GeneratedRun Dir="run_link" File="gen_run.xml"/>
+    </Run>
+  </Runs>
+</project>

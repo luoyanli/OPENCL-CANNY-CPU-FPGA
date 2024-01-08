@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hyst" dir="">
+  <FileSets>
+    <FileSet Name="kernel_hyst" Type="DesignSrcs">
+      <File Path="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

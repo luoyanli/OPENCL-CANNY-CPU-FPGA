@@ -1,0 +1,91 @@
+mode1: baseline
+0: FPGA Gaussian kernel: 0 ------- 978648
+0: FPGA Sobel kernel: 1138829 ------- 2162982
+0: FPGA NonMaxSuppression kernel: 2173860 ------- 3180306
+0: FPGA Data write to host: 3238413 ------- 3326456
+0: CPU Data read from host: 1413863635680017 ------- 1413863635940581
+0: CPU Hysteresis kernel: 1413863635992550 ------- 1413863636425616
+0: CPU Data write to output: 1413863636471091 ------- 1413863636565045
+1: FPGA Gaussian kernel: 4681849 ------- 5672976
+1: FPGA Sobel kernel: 5683096 ------- 6706899
+1: FPGA NonMaxSuppression kernel: 6716422 ------- 7704365
+1: FPGA Data write to host: 7762433 ------- 7865511
+1: CPU Data read from host: 1413863640141040 ------- 1413863640250910
+1: CPU Hysteresis kernel: 1413863640309803 ------- 1413863640669028
+1: CPU Data write to output: 1413863640722348 ------- 1413863640806989
+2: FPGA Gaussian kernel: 8982600 ------- 9993312
+2: FPGA Sobel kernel: 10003675 ------- 11022031
+2: FPGA NonMaxSuppression kernel: 11031329 ------- 11997837
+2: FPGA Data write to host: 12066724 ------- 12138717
+2: CPU Data read from host: 1413863644426771 ------- 1413863644522789
+2: CPU Hysteresis kernel: 1413863644603086 ------- 1413863645038307
+2: CPU Data write to output: 1413863645072581 ------- 1413863645174911
+3: FPGA Gaussian kernel: 13305658 ------- 14301542
+3: FPGA Sobel kernel: 14310810 ------- 15314898
+3: FPGA NonMaxSuppression kernel: 15324341 ------- 16310016
+3: FPGA Data write to host: 16332189 ------- 16385686
+3: CPU Data read from host: 1413863648689862 ------- 1413863648774846
+3: CPU Hysteresis kernel: 1413863648805613 ------- 1413863649261852
+3: CPU Data write to output: 1413863649314962 ------- 1413863649398975
+4: FPGA Gaussian kernel: 17494444 ------- 18489890
+4: FPGA Sobel kernel: 18499133 ------- 19513725
+4: FPGA NonMaxSuppression kernel: 19522158 ------- 20503453
+4: FPGA Data write to host: 20533327 ------- 20597472
+4: CPU Data read from host: 1413863652831372 ------- 1413863652949765
+4: CPU Hysteresis kernel: 1413863652979185 ------- 1413863653432887
+4: CPU Data write to output: 1413863653474015 ------- 1413863653551603
+5: FPGA Gaussian kernel: 21617819 ------- 22612221
+5: FPGA Sobel kernel: 22621993 ------- 23629497
+5: FPGA NonMaxSuppression kernel: 23638600 ------- 24627763
+5: FPGA Data write to host: 24654705 ------- 24708892
+5: CPU Data read from host: 1413863656968150 ------- 1413863657040381
+5: CPU Hysteresis kernel: 1413863657113675 ------- 1413863657403841
+5: CPU Data write to output: 1413863657438139 ------- 1413863657503790
+Total time for baseline: 24844972 ns
+
+mode2:
+0: FPGA Gaussian kernel: 0 ------- 1022500
+0: FPGA Sobel kernel: 1157273 ------- 2165095
+0: FPGA NonMaxSuppression kernel: 2173870 ------- 3157961
+0: FPGA Data write to host: 3216300 ------- 3279531
+0: CPU Data read from host: 1413958517645133 ------- 1413958517835531
+0: CPU Hysteresis kernel: 1413958517966924 ------- 1413958517835531
+0: CPU Data write to output: 1413958517966924 ------- 1413958517835531
+1: FPGA Gaussian kernel: 4151759 ------- 5180379
+1: FPGA Sobel kernel: 5190802 ------- 6214411
+1: FPGA NonMaxSuppression kernel: 6224372 ------- 7225267
+1: FPGA Data write to host: 7285136 ------- 7392657
+1: CPU Data read from host: 1413958521741529 ------- 1413958521909430
+1: CPU Hysteresis kernel: 1413958521967829 ------- 1413958521909430
+1: CPU Data write to output: 1413958521967829 ------- 1413958521909430
+2: FPGA Gaussian kernel: 8390985 ------- 9396594
+2: FPGA Sobel kernel: 9406611 ------- 10429000
+2: FPGA NonMaxSuppression kernel: 10439070 ------- 11431692
+2: FPGA Data write to host: 11473373 ------- 11526522
+2: CPU Data read from host: 1413958525841696 ------- 1413958525945010
+2: CPU Hysteresis kernel: 1413958526260327 ------- 1413958525945010
+2: CPU Data write to output: 1413958526260327 ------- 1413958525945010
+3: FPGA Gaussian kernel: 12530152 ------- 13572701
+3: FPGA Sobel kernel: 13581149 ------- 14585421
+3: FPGA NonMaxSuppression kernel: 14593206 ------- 15580067
+3: FPGA Data write to host: 15603029 ------- 15649453
+3: CPU Data read from host: 1413958529907782 ------- 1413958530249442
+3: CPU Hysteresis kernel: 1413958530572202 ------- 1413958530249442
+3: CPU Data write to output: 1413958530572202 ------- 1413958530249442
+4: FPGA Gaussian kernel: 16816990 ------- 17808474
+4: FPGA Sobel kernel: 17817007 ------- 18822346
+4: FPGA NonMaxSuppression kernel: 18830722 ------- 19816400
+4: FPGA Data write to host: 19833235 ------- 19871975
+4: CPU Data read from host: 1413958534142176 ------- 1413958535093893
+4: CPU Hysteresis kernel: 1413958535145079 ------- 1413958535093893
+4: CPU Data write to output: 1413958535145079 ------- 1413958535093893
+5: FPGA Gaussian kernel: 21181613 ------- 22187706
+5: FPGA Sobel kernel: 22196476 ------- 23201963
+5: FPGA NonMaxSuppression kernel: 23210186 ------- 24199715
+5: FPGA Data write to host: 24243308 ------- 24290295
+5: CPU Data read from host: 1413958538533841 ------- 1413958538642327
+5: CPU Hysteresis kernel: 1413958538662829 ------- 1413958538642327
+5: CPU Data write to output: 1413958538662829 ------- 1413958538642327
+Total time for Device Overlap: 20796803 ns
+
+mode3:

@@ -1,0 +1,45 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Dec 17 06:36:09 2023
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             sobel
+Target Device:           xilinx:u250:xdma:201830.2
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+sobel        c     fpga0:OCL_REGION_0  sobel           1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     sobel
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                                     Target Frequency  Estimated Frequency
+------------  -----------  ----------------------------------------------  ----------------  -------------------
+sobel_1       sobel        sobel_Pipeline_1                                300.300293        551.572021
+sobel_1       sobel        sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2  300.300293        411.015198
+sobel_1       sobel        sobel                                           300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                                     Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ----------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+sobel_1       sobel        sobel_Pipeline_1                                1538            1538           1538          1538            5.126 us         5.126 us        5.126 us
+sobel_1       sobel        sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2  262241          262241         262241        262241          0.874 ms         0.874 ms        0.874 ms
+sobel_1       sobel        sobel                                           263852          263851         263851        263851          0.879 ms         0.879 ms        0.879 ms
+
+Area Information
+Compute Unit  Kernel Name  Module Name                                     FF    LUT    DSP  BRAM  URAM
+------------  -----------  ----------------------------------------------  ----  -----  ---  ----  ----
+sobel_1       sobel        sobel_Pipeline_1                                13    72     0    0     0
+sobel_1       sobel        sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2  3975  2957   0    0     0
+sobel_1       sobel        sobel                                           9621  12808  0    1     0
+-------------------------------------------------------------------------------

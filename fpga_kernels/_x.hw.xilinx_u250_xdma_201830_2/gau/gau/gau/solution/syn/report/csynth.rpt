@@ -1,0 +1,161 @@
+
+
+================================================================
+== Synthesis Summary Report of 'gau'
+================================================================
++ General Information: 
+    * Date:           Sun Dec 17 06:33:04 2023
+    * Version:        2020.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        gau
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu250-figd2104-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+---------+----+-------------+------------+-----+
+    |                     Modules                     |  Issue |       | Latency |  Latency  | Iteration|         |  Trip  |          |         |    |             |            |     |
+    |                     & Loops                     |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval|  Count | Pipelined|  BRAM   | DSP|      FF     |     LUT    | URAM|
+    +-------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+---------+----+-------------+------------+-----+
+    |+ gau                                            |  Timing|  -0.00|   263827|  8.793e+05|         -|   263828|       -|        no|  1 (~0%)|   -|  12044 (~0%)|  19146 (1%)|    -|
+    | + gau_Pipeline_1                                |       -|   0.62|     1538|  5.126e+03|         -|     1538|       -|        no|        -|   -|     13 (~0%)|    72 (~0%)|    -|
+    |  o Loop 1                                       |       -|   2.43|     1536|  5.119e+03|         1|        1|    1536|       yes|        -|   -|            -|           -|    -|
+    | + gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2  |  Timing|  -0.00|   262149|  8.737e+05|         -|   262149|       -|        no|        -|   -|   2458 (~0%)|  1809 (~0%)|    -|
+    |  o VITIS_LOOP_32_1_VITIS_LOOP_33_2              |       -|   2.43|   262147|  8.737e+05|         5|        1|  262144|       yes|        -|   -|            -|           -|    -|
+    +-------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+---------+----+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 8 -> 512   | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem1 | 8 -> 512   | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | data_1   | 0x10   | 32    | W      | Data signal of data              |                                                                                    |
+| s_axi_control | data_2   | 0x14   | 32    | W      | Data signal of data              |                                                                                    |
+| s_axi_control | out_r_1  | 0x1c   | 32    | W      | Data signal of out_r             |                                                                                    |
+| s_axi_control | out_r_2  | 0x20   | 32    | W      | Data signal of out_r             |                                                                                    |
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| data     | in        | unsigned char* |
+| out      | out       | unsigned char* |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+----------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                          |
++----------+---------------+-----------+----------+----------------------------------+
+| data     | m_axi_gmem0   | interface |          |                                  |
+| data     | s_axi_control | register  | offset   | name=data_1 offset=0x10 range=32 |
+| data     | s_axi_control | register  | offset   | name=data_2 offset=0x14 range=32 |
+| out      | m_axi_gmem1   | interface |          |                                  |
+| out      | s_axi_control | interface | offset   |                                  |
++----------+---------------+-----------+----------+----------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+--------------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Location                                                     |
++--------------+-----------+--------+-------+--------------------------------------------------------------+
+| m_axi_gmem0  | read      | 4096   | 512   | /home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:32:19 |
+| m_axi_gmem1  | write     | 4096   | 512   | /home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:32:19 |
++--------------+-----------+--------+-------+--------------------------------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+------------+-----+--------+---------+
+| Name                                            | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++-------------------------------------------------+-----+--------+------------+-----+--------+---------+
+| + gau                                           | 0   |        |            |     |        |         |
+|  + gau_Pipeline_1                               | 0   |        |            |     |        |         |
+|    empty_38_fu_68_p2                            | -   |        | empty_38   | add | fabric | 0       |
+|  + gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2 | 0   |        |            |     |        |         |
+|    add_ln32_fu_278_p2                           | -   |        | add_ln32   | add | fabric | 0       |
+|    tmp1_fu_459_p2                               | -   |        | tmp1       | add | fabric | 0       |
+|    tmp2_fu_469_p2                               | -   |        | tmp2       | add | fabric | 0       |
+|    tmp146_fu_479_p2                             | -   |        | tmp146     | add | fabric | 0       |
+|    add_ln63_fu_497_p2                           | -   |        | add_ln63   | add | fabric | 0       |
+|    add_ln63_2_fu_503_p2                         | -   |        | add_ln63_2 | add | fabric | 0       |
+|    add_ln63_3_fu_513_p2                         | -   |        | add_ln63_3 | add | fabric | 0       |
+|    add_ln33_fu_322_p2                           | -   |        | add_ln33   | add | fabric | 0       |
++-------------------------------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------+------+------+--------+----------+---------+------+---------+
+| Name         | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++--------------+------+------+--------+----------+---------+------+---------+
+| + gau        | 1    | 0    |        |          |         |      |         |
+|   line_buf_U | 1    | -    |        | line_buf | ram_s2p | auto | 1       |
++--------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-------------------------------------------+--------------------------------------------+
+| Type            | Options                                   | Location                                   |
++-----------------+-------------------------------------------+--------------------------------------------+
+| interface       | m_axi port=data offset=slave bundle=gmem0 | ../../../src/gau.cpp:15 in gau, data       |
+| interface       | m_axi port=out offset=slave bundle=gmem1  | ../../../src/gau.cpp:16 in gau, out        |
+| interface       | s_axilite port=data bundle=control        | ../../../src/gau.cpp:17 in gau, data       |
+| interface       | s_axilite port=out bundle=control         | ../../../src/gau.cpp:18 in gau, out        |
+| interface       | s_axilite port=return bundle=control      | ../../../src/gau.cpp:19 in gau, return     |
+| array_reshape   | variable=line_buf complete dim=1          | ../../../src/gau.cpp:23 in gau, line_buf   |
+| array_partition | variable=window_buf complete dim=0        | ../../../src/gau.cpp:24 in gau, window_buf |
+| array_partition | variable=gaus complete dim=0              | ../../../src/gau.cpp:29 in gau, gaus       |
+| pipeline        | II=1                                      | ../../../src/gau.cpp:34 in gau             |
++-----------------+-------------------------------------------+--------------------------------------------+
+
+

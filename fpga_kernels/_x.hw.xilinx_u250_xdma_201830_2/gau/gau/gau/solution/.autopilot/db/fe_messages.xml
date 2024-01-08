@@ -1,0 +1,75 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau/gau/gau.tcl:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=gau" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=data offset=slave bundle=gmem0" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=out offset=slave bundle=gmem1" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=data bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=out bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return bundle=control" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:23:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=line_buf complete dim=1" ARG_PragmaType="array_reshape" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:24:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=window_buf complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:29:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=gaus complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="gau" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:40:30" msg_body="Loop 'VITIS_LOOP_40_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_40_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:48:30" msg_body="Loop 'VITIS_LOOP_48_4' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_48_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:49:34" msg_body="Loop 'VITIS_LOOP_49_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_49_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:55:30" msg_body="Loop 'VITIS_LOOP_55_6' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_55_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:61:30" msg_body="Loop 'VITIS_LOOP_61_7' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_61_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:62:34" msg_body="Loop 'VITIS_LOOP_62_8' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_62_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:14:0" msg_body="Unrolling loop 'VITIS_LOOP_40_3' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:40:30) in function 'gau' completely with a factor of 2">
+        <args Factor="2" LoopLoc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:40:30" LoopName="VITIS_LOOP_40_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:14:0" msg_body="Unrolling loop 'VITIS_LOOP_48_4' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:48:30) in function 'gau' completely with a factor of 3">
+        <args Factor="3" LoopLoc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:48:30" LoopName="VITIS_LOOP_48_4"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:14:0" msg_body="Unrolling loop 'VITIS_LOOP_49_5' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:49:34) in function 'gau' completely with a factor of 2">
+        <args Factor="2" LoopLoc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:49:34" LoopName="VITIS_LOOP_49_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:14:0" msg_body="Unrolling loop 'VITIS_LOOP_55_6' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:55:30) in function 'gau' completely with a factor of 3">
+        <args Factor="3" LoopLoc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:55:30" LoopName="VITIS_LOOP_55_6"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:14:0" msg_body="Unrolling loop 'VITIS_LOOP_61_7' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:61:30) in function 'gau' completely with a factor of 3">
+        <args Factor="3" LoopLoc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:61:30" LoopName="VITIS_LOOP_61_7"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:14:0" msg_body="Unrolling loop 'VITIS_LOOP_62_8' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:62:34) in function 'gau' completely with a factor of 3">
+        <args Factor="3" LoopLoc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:62:34" LoopName="VITIS_LOOP_62_8"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:22:13" msg_body="Applying array_partition to 'window_buf': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="window_buf"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/gau.cpp:21:10" msg_body="Applying array_reshape to 'line_buf': Complete reshaping on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="line_buf"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

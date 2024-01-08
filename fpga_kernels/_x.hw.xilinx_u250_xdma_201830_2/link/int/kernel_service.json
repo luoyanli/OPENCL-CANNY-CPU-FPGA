@@ -1,0 +1,46 @@
+{
+ "kernels": [],
+ "computeUnits": [
+  {
+   "id": "",
+   "kernelName": "",
+   "cuName": "gau_1",
+   "baseAddress": "",
+   "instancePath": "pfm_top_i/dynamic_region/gau_1/inst",
+   "slr": [
+    "0"
+   ]
+  },
+  {
+   "id": "",
+   "kernelName": "",
+   "cuName": "hyst_1",
+   "baseAddress": "",
+   "instancePath": "pfm_top_i/dynamic_region/hyst_1/inst",
+   "slr": [
+    "0"
+   ]
+  },
+  {
+   "id": "",
+   "kernelName": "",
+   "cuName": "nms_1",
+   "baseAddress": "",
+   "instancePath": "pfm_top_i/dynamic_region/nms_1/inst",
+   "slr": [
+    "0"
+   ]
+  },
+  {
+   "id": "",
+   "kernelName": "",
+   "cuName": "sobel_1",
+   "baseAddress": "",
+   "instancePath": "pfm_top_i/dynamic_region/sobel_1/inst",
+   "slr": [
+    "0"
+   ]
+  }
+ ]
+}
+

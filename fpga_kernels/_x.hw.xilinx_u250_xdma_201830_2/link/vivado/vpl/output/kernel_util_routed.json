@@ -1,0 +1,96 @@
+{
+    "schema_version": {
+        "major": "1",
+        "minor": "0",
+        "patch": "0"
+    },
+    "design_state": "Routed",
+    "user_budget": {
+        "actual_resources": {
+            "LUT": "13374",
+            "LUTAsMem": "2286",
+            "REG": "18349",
+            "BRAM": "48",
+            "URAM": "0",
+            "DSP": "2"
+        },
+        "supply_resources": {
+            "LUT": "1576074",
+            "LUTAsMem": "774796",
+            "REG": "3213658",
+            "BRAM": "2452",
+            "URAM": "1280",
+            "DSP": "12281"
+        }
+    },
+    "kernels": [
+        {
+            "name": "gau",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "gau_1",
+                    "actual_resources": {
+                        "LUT": "3258",
+                        "LUTAsMem": "672",
+                        "REG": "5117",
+                        "BRAM": "16",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hyst",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "hyst_1",
+                    "actual_resources": {
+                        "LUT": "2939",
+                        "LUTAsMem": "672",
+                        "REG": "4122",
+                        "BRAM": "15",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "nms",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "nms_1",
+                    "actual_resources": {
+                        "LUT": "2833",
+                        "LUTAsMem": "443",
+                        "REG": "3785",
+                        "BRAM": "9",
+                        "URAM": "0",
+                        "DSP": "0"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "sobel",
+            "compute_unit_count": "1",
+            "compute_units": [
+                {
+                    "cu_name": "sobel_1",
+                    "actual_resources": {
+                        "LUT": "4344",
+                        "LUTAsMem": "499",
+                        "REG": "5325",
+                        "BRAM": "8",
+                        "URAM": "0",
+                        "DSP": "2"
+                    }
+                }
+            ]
+        }
+    ]
+}

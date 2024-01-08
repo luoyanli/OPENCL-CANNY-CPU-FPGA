@@ -1,0 +1,72 @@
+===============================================================================
+Version:    v++ v2020.1 (64-bit)
+Build:      SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+Copyright:  Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Created:    Sun Dec 17 08:44:12 2023
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             ced_kernels.link
+Target Device:           xilinx:u250:xdma:201830.2
+Target Clock:            300.000000MHz
+Total number of kernels: 4
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library    Compute Units
+-----------  ----  ------------------  ----------------  -------------
+hyst         c     fpga0:OCL_REGION_0  ced_kernels.link  1
+nms          c     fpga0:OCL_REGION_0  ced_kernels.link  1
+gau          c     fpga0:OCL_REGION_0  ced_kernels.link  1
+sobel        c     fpga0:OCL_REGION_0  ced_kernels.link  1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     ced_kernels.link
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                                     Target Frequency  Estimated Frequency
+------------  -----------  ----------------------------------------------  ----------------  -------------------
+gau_1         gau          gau_Pipeline_1                                  300.300293        551.572021
+gau_1         gau          gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2    300.300293        411.015198
+gau_1         gau          gau                                             300.300293        411.015198
+sobel_1       sobel        sobel_Pipeline_1                                300.300293        551.572021
+sobel_1       sobel        sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2  300.300293        411.015198
+sobel_1       sobel        sobel                                           300.300293        411.015198
+nms_1         nms          nms_Pipeline_1                                  300.300293        551.572021
+nms_1         nms          nms_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2    300.300293        411.015198
+nms_1         nms          nms                                             300.300293        411.015198
+hyst_1        hyst         hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2   300.300293        411.015198
+hyst_1        hyst         hyst                                            300.300293        411.015198
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                                     Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ----------------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+gau_1         gau          gau_Pipeline_1                                  1538            1538           1538          1538            5.126 us         5.126 us        5.126 us
+gau_1         gau          gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2    262149          262149         262149        262149          0.874 ms         0.874 ms        0.874 ms
+gau_1         gau          gau                                             263828          263827         263827        263827          0.879 ms         0.879 ms        0.879 ms
+sobel_1       sobel        sobel_Pipeline_1                                1538            1538           1538          1538            5.126 us         5.126 us        5.126 us
+sobel_1       sobel        sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2  262241          262241         262241        262241          0.874 ms         0.874 ms        0.874 ms
+sobel_1       sobel        sobel                                           263852          263851         263851        263851          0.879 ms         0.879 ms        0.879 ms
+nms_1         nms          nms_Pipeline_1                                  1538            1538           1538          1538            5.126 us         5.126 us        5.126 us
+nms_1         nms          nms_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2    262216          262216         262216        262216          0.874 ms         0.874 ms        0.874 ms
+nms_1         nms          nms                                             263827          263826         263826        263826          0.879 ms         0.879 ms        0.879 ms
+hyst_1        hyst         hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2   262149          262149         262149        262149          0.874 ms         0.874 ms        0.874 ms
+hyst_1        hyst         hyst                                            262290          262289         262289        262289          0.874 ms         0.874 ms        0.874 ms
+
+Area Information
+Compute Unit  Kernel Name  Module Name                                     FF     LUT    DSP  BRAM  URAM
+------------  -----------  ----------------------------------------------  -----  -----  ---  ----  ----
+gau_1         gau          gau_Pipeline_1                                  13     72     0    0     0
+gau_1         gau          gau_Pipeline_VITIS_LOOP_32_1_VITIS_LOOP_33_2    2458   1809   0    0     0
+gau_1         gau          gau                                             12044  19146  0    1     0
+sobel_1       sobel        sobel_Pipeline_1                                13     72     0    0     0
+sobel_1       sobel        sobel_Pipeline_VITIS_LOOP_45_1_VITIS_LOOP_46_2  3975   2957   0    0     0
+sobel_1       sobel        sobel                                           9621   12808  0    1     0
+nms_1         nms          nms_Pipeline_1                                  13     81     0    0     0
+nms_1         nms          nms_Pipeline_VITIS_LOOP_31_1_VITIS_LOOP_32_2    1367   1390   0    0     0
+nms_1         nms          nms                                             6976   11230  0    2     0
+hyst_1        hyst         hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2   2310   1612   0    0     0
+hyst_1        hyst         hyst                                            11882  18812  0    0     0
+-------------------------------------------------------------------------------

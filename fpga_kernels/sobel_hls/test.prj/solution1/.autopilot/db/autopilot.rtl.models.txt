@@ -1,0 +1,10 @@
+sobel_sitofp_32s_32_6_no_dsp_1
+sobel_fsqrt_32ns_32ns_32_17_no_dsp_1
+sobel_sdiv_20s_11s_20_24_1
+sobel_mul_mul_11s_11s_22_4_1
+sobel_mul_mul_11s_11s_31_4_1
+sobel_mul_mul_11s_8s_28_4_1
+sobel_mac_muladd_11s_11s_22s_22_4_1
+sobel_mul_mul_11s_8ns_28_4_1
+sobel_line_buf
+sobel

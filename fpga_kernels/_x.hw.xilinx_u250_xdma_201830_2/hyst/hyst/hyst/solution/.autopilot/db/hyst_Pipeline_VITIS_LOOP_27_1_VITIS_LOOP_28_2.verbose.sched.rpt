@@ -1,0 +1,220 @@
+
+
+================================================================
+== Vitis HLS Report for 'hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2'
+================================================================
+* Date:           Sun Dec 17 06:37:57 2023
+
+* Version:        2020.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+* Project:        hyst
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  3.33 ns|  2.433 ns|     0.90 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   262149|   262149|  0.874 ms|  0.874 ms|  262149|  262149|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- VITIS_LOOP_27_1_VITIS_LOOP_28_2  |   262147|   262147|         5|          1|          1|  262144|       yes|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.01>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%shiftreg9 = alloca i32 1"   --->   Operation 8 'alloca' 'shiftreg9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%phi_ln46 = alloca i32 1"   --->   Operation 9 'alloca' 'phi_ln46' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%xi = alloca i32 1"   --->   Operation 10 'alloca' 'xi' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%indvar_flatten = alloca i32 1"   --->   Operation 11 'alloca' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%sext_ln27_read = read i58 @_ssdm_op_Read.ap_auto.i58, i58 %sext_ln27"   --->   Operation 12 'read' 'sext_ln27_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%sext_ln27_1_read = read i58 @_ssdm_op_Read.ap_auto.i58, i58 %sext_ln27_1"   --->   Operation 13 'read' 'sext_ln27_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%sext_ln27_cast = sext i58 %sext_ln27_read"   --->   Operation 14 'sext' 'sext_ln27_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%sext_ln27_1_cast = sext i58 %sext_ln27_1_read"   --->   Operation 15 'sext' 'sext_ln27_1_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem1, void @empty, i32 0, i32 0, void @empty_11, i32 64, i32 0, void @empty_2, void @empty_1, void @empty_11, i32 16, i32 16, i32 16, i32 16, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem0, void @empty, i32 0, i32 0, void @empty_11, i32 64, i32 0, void @empty_0, void @empty_1, void @empty_11, i32 16, i32 16, i32 16, i32 16, void @empty_11, void @empty_11, i32 4294967295, i32 0"   --->   Operation 17 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.38ns)   --->   "%store_ln0 = store i19 0, i19 %indvar_flatten"   --->   Operation 18 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 19 [1/1] (0.38ns)   --->   "%store_ln0 = store i10 0, i10 %xi"   --->   Operation 19 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 20 [1/1] (0.38ns)   --->   "%store_ln0 = store i497 0, i497 %phi_ln46"   --->   Operation 20 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 21 [1/1] (0.38ns)   --->   "%store_ln0 = store i504 0, i504 %shiftreg9"   --->   Operation 21 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body6"   --->   Operation 22 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%indvar_flatten_load = load i19 %indvar_flatten" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 23 'load' 'indvar_flatten_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.71ns)   --->   "%icmp_ln27 = icmp_eq  i19 %indvar_flatten_load, i19 262144" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 24 'icmp' 'icmp_ln27' <Predicate = true> <Delay = 0.71> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.80ns)   --->   "%add_ln27 = add i19 %indvar_flatten_load, i19 1" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 25 'add' 'add_ln27' <Predicate = true> <Delay = 0.80> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%br_ln27 = br i1 %icmp_ln27, void %for.inc36, void %for.end38.exitStub" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 26 'br' 'br_ln27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%xi_load = load i10 %xi" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 27 'load' 'xi_load' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.60ns)   --->   "%icmp_ln28 = icmp_eq  i10 %xi_load, i10 512" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 28 'icmp' 'icmp_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.60> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.60> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.30ns)   --->   "%select_ln27 = select i1 %icmp_ln28, i10 0, i10 %xi_load" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 29 'select' 'select_ln27' <Predicate = (!icmp_ln27)> <Delay = 0.30> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.30> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln28 = trunc i10 %select_ln27" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 30 'trunc' 'trunc_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.61ns)   --->   "%icmp_ln35 = icmp_eq  i6 %trunc_ln28, i6 0" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35]   --->   Operation 31 'icmp' 'icmp_ln35' <Predicate = (!icmp_ln27)> <Delay = 0.61> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 32 [1/1] (0.61ns)   --->   "%icmp_ln46 = icmp_eq  i6 %trunc_ln28, i6 63" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46]   --->   Operation 32 'icmp' 'icmp_ln46' <Predicate = (!icmp_ln27)> <Delay = 0.61> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%br_ln46 = br i1 %icmp_ln46, void %for.inc._crit_edge, void" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46]   --->   Operation 33 'br' 'br_ln46' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.72ns)   --->   "%add_ln28 = add i10 %select_ln27, i10 1" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 34 'add' 'add_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.38ns)   --->   "%store_ln28 = store i19 %add_ln27, i19 %indvar_flatten" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 35 'store' 'store_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.38>
+ST_1 : Operation 36 [1/1] (0.38ns)   --->   "%store_ln28 = store i10 %add_ln28, i10 %xi" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 36 'store' 'store_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 2.43>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i512 %gmem0, i64 %sext_ln27_cast" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 37 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (2.43ns)   --->   "%gmem0_addr_read = read i512 @_ssdm_op_Read.m_axi.p1i512, i512 %gmem0_addr" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35]   --->   Operation 38 'read' 'gmem0_addr_read' <Predicate = (!icmp_ln27 & icmp_ln35)> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 3 <SV = 2> <Delay = 1.53>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%shiftreg9_load = load i504 %shiftreg9" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 39 'load' 'shiftreg9_load' <Predicate = (!icmp_ln27 & !icmp_ln28)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.56ns)   --->   "%select_ln27_2 = select i1 %icmp_ln28, i504 0, i504 %shiftreg9_load" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 40 'select' 'select_ln27_2' <Predicate = (!icmp_ln27)> <Delay = 0.56> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%zext_ln28 = zext i504 %select_ln27_2" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 41 'zext' 'zext_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.38ns)   --->   "%br_ln35 = br i1 %icmp_ln35, void %for.body6.split._crit_edge_ifconv, void" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35]   --->   Operation 42 'br' 'br_ln35' <Predicate = (!icmp_ln27)> <Delay = 0.38>
+ST_3 : Operation 43 [1/1] (0.38ns)   --->   "%br_ln35 = br void %for.body6.split._crit_edge_ifconv" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35]   --->   Operation 43 'br' 'br_ln35' <Predicate = (!icmp_ln27 & icmp_ln35)> <Delay = 0.38>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%empty = phi i512 %gmem0_addr_read, void, i512 %zext_ln28, void %for.inc36" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35]   --->   Operation 44 'phi' 'empty' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%trunc_ln35 = trunc i512 %empty" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35]   --->   Operation 45 'trunc' 'trunc_ln35' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%trunc_ln35_1 = partselect i504 @_ssdm_op_PartSelect.i504.i512.i32.i32, i512 %empty, i32 8, i32 511" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35]   --->   Operation 46 'partselect' 'trunc_ln35_1' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.58ns)   --->   "%icmp_ln40 = icmp_ugt  i8 %trunc_ln35, i8 50" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:40]   --->   Operation 47 'icmp' 'icmp_ln40' <Predicate = (!icmp_ln27)> <Delay = 0.58> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 48 [1/1] (0.38ns)   --->   "%store_ln28 = store i504 %trunc_ln35_1, i504 %shiftreg9" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 48 'store' 'store_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.38>
+
+State 4 <SV = 3> <Delay = 1.50>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %gmem1"   --->   Operation 49 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i512 %gmem0"   --->   Operation 50 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i512 %gmem1, i64 %sext_ln27_1_cast" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 51 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%phi_ln46_load = load i497 %phi_ln46" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 52 'load' 'phi_ln46_load' <Predicate = (!icmp_ln27 & !icmp_ln28)> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.55ns)   --->   "%select_ln27_1 = select i1 %icmp_ln28, i497 0, i497 %phi_ln46_load" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 53 'select' 'select_ln27_1' <Predicate = (!icmp_ln27)> <Delay = 0.55> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.55> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i489 @_ssdm_op_PartSelect.i489.i497.i32.i32, i497 %select_ln27_1, i32 8, i32 496" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 54 'partselect' 'tmp_3' <Predicate = (!icmp_ln27 & !icmp_ln46)> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%sext_ln28 = sext i489 %tmp_3" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 55 'sext' 'sext_ln28' <Predicate = (!icmp_ln27 & !icmp_ln46)> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "%tmp_2 = bitconcatenate i497 @_ssdm_op_BitConcatenate.i497.i1.i496, i1 %icmp_ln40, i496 %sext_ln28" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 56 'bitconcatenate' 'tmp_2' <Predicate = (!icmp_ln27 & !icmp_ln46)> <Delay = 0.00>
+ST_4 : Operation 57 [1/1] (0.55ns)   --->   "%select_ln46 = select i1 %icmp_ln46, i497 0, i497 %tmp_2" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46]   --->   Operation 57 'select' 'select_ln46' <Predicate = (!icmp_ln27)> <Delay = 0.55> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.55> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_4 : Operation 58 [1/1] (0.38ns)   --->   "%store_ln28 = store i497 %select_ln46, i497 %phi_ln46" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 58 'store' 'store_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.38>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%br_ln28 = br void %for.body6" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 59 'br' 'br_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_4 : Operation 69 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 69 'ret' 'ret_ln0' <Predicate = (icmp_ln27)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 2.43>
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @VITIS_LOOP_27_1_VITIS_LOOP_28_2_str"   --->   Operation 60 'specloopname' 'specloopname_ln0' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "%empty_22 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 262144, i64 262144, i64 262144"   --->   Operation 61 'speclooptripcount' 'empty_22' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%sext_ln27_2 = sext i497 %select_ln27_1" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27]   --->   Operation 62 'sext' 'sext_ln27_2' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "%specpipeline_ln29 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_11" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:29]   --->   Operation 63 'specpipeline' 'specpipeline_ln29' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_5 : Operation 64 [1/1] (0.00ns)   --->   "%specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, void @empty_10" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28]   --->   Operation 64 'specloopname' 'specloopname_ln28' <Predicate = (!icmp_ln27)> <Delay = 0.00>
+ST_5 : Operation 65 [1/1] (0.00ns)   --->   "%tmp = bitconcatenate i505 @_ssdm_op_BitConcatenate.i505.i1.i504, i1 %icmp_ln40, i504 %sext_ln27_2" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46]   --->   Operation 65 'bitconcatenate' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 66 [1/1] (0.00ns)   --->   "%sext_ln46 = sext i505 %tmp" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46]   --->   Operation 66 'sext' 'sext_ln46' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 67 [1/1] (2.43ns)   --->   "%write_ln46 = write void @_ssdm_op_Write.m_axi.p1i512, i512 %gmem1_addr, i512 %sext_ln46, i64 18446744073709551615" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46]   --->   Operation 67 'write' 'write_ln46' <Predicate = (icmp_ln46)> <Delay = 2.43> <CoreInst = "m_axi">   --->   Core 121 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 68 [1/1] (0.00ns)   --->   "%br_ln46 = br void %for.inc._crit_edge" [/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46]   --->   Operation 68 'br' 'br_ln46' <Predicate = (icmp_ln46)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 3.33ns, clock uncertainty: 0.9ns.
+
+ <State 1>: 2.02ns
+The critical path consists of the following:
+	'alloca' operation ('xi') [7]  (0 ns)
+	'load' operation ('xi_load', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28) on local variable 'xi' [32]  (0 ns)
+	'icmp' operation ('icmp_ln28', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28) [35]  (0.605 ns)
+	'select' operation ('select_ln27', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27) [36]  (0.303 ns)
+	'add' operation ('add_ln28', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28) [62]  (0.725 ns)
+	'store' operation ('store_ln28', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28) of variable 'add_ln28', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28 on local variable 'xi' [68]  (0.387 ns)
+
+ <State 2>: 2.43ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem0_addr', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27) [25]  (0 ns)
+	bus read operation ('gmem0_addr_read', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35) on port 'gmem0' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35) [47]  (2.43 ns)
+
+ <State 3>: 1.54ns
+The critical path consists of the following:
+	'load' operation ('shiftreg9_load', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27) on local variable 'shiftreg9' [30]  (0 ns)
+	'select' operation ('select_ln27_2', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27) [39]  (0.568 ns)
+	multiplexor before 'phi' operation ('empty', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35) with incoming values : ('zext_ln28', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28) ('gmem0_addr_read', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35) [50]  (0.387 ns)
+	'phi' operation ('empty', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35) with incoming values : ('zext_ln28', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28) ('gmem0_addr_read', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:35) [50]  (0 ns)
+	'icmp' operation ('icmp_ln40', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:40) [53]  (0.581 ns)
+
+ <State 4>: 1.51ns
+The critical path consists of the following:
+	'load' operation ('phi_ln46_load', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27) on local variable 'phi_ln46' [31]  (0 ns)
+	'select' operation ('select_ln27_1', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27) [37]  (0.559 ns)
+	'select' operation ('select_ln46', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46) [66]  (0.559 ns)
+	'store' operation ('store_ln28', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:28) of variable 'select_ln46', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46 on local variable 'phi_ln46' [69]  (0.387 ns)
+
+ <State 5>: 2.43ns
+The critical path consists of the following:
+	bus write operation ('write_ln46', /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46) on port 'gmem1' (/home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:46) [59]  (2.43 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

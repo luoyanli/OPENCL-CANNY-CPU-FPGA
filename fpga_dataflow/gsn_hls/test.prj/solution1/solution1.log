@@ -1,0 +1,242 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-10] Setting target device to 'xcu250-figd2104-2L-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file '../src/gsn.cpp' ... 
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:117:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:118:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:119:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:120:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:121:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:151:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:152:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:153:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:154:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:155:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:156:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:157:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:158:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:159:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:160:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:210:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:211:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:212:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:239:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:240:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:241:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:242:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:243:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:244:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:280:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:281:9
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'hls::sqrt(float)' into 'sobel(unsigned char*, GradPix*)' (../src/gsn.cpp:75:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'sobel(unsigned char*, GradPix*)' (../src/gsn.cpp:75:0)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64387 ; free virtual = 145776
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64386 ; free virtual = 145775
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64367 ; free virtual = 145759
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64353 ; free virtual = 145746
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'gau' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'gau' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'sobel' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'sobel' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'nms' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'nms' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_196_2' (../src/gsn.cpp:196) in function 'nms' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_96_2' (../src/gsn.cpp:96) in function 'sobel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_32_2' (../src/gsn.cpp:32) in function 'gau' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_205_3' (../src/gsn.cpp:205) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_212_4' (../src/gsn.cpp:212) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_213_5' (../src/gsn.cpp:213) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_218_6' (../src/gsn.cpp:218) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_105_3' (../src/gsn.cpp:105) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_112_4' (../src/gsn.cpp:112) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_113_5' (../src/gsn.cpp:113) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_118_6' (../src/gsn.cpp:118) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_127_7' (../src/gsn.cpp:127) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_128_8' (../src/gsn.cpp:128) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_134_9' (../src/gsn.cpp:134) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_135_10' (../src/gsn.cpp:124) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_39_3' (../src/gsn.cpp:39) in function 'gau' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_47_4' (../src/gsn.cpp:47) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_48_5' (../src/gsn.cpp:48) in function 'gau' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_54_6' (../src/gsn.cpp:54) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_60_7' (../src/gsn.cpp:36) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_61_8' (../src/gsn.cpp:36) in function 'gau' completely with a factor of 3.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsn.cpp:188) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsn.cpp:76) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsn.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:77) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:21) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:189) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:77) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsn.cpp:21) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'gsn'  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+INFO: [XFORM 203-712] Applying dataflow to function 'gsn', detected/extracted 3 process function(s): 
+	 'gau6'
+	 'sobel'
+	 'nms'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/gsn.cpp:102:21) in function 'sobel'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'sobel' (../src/gsn.cpp:7:34)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nms' (../src/gsn.cpp:187:59)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'gau6' (../src/gsn.cpp:20:54)...5 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64317 ; free virtual = 145713
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_95_1' (../src/gsn.cpp:95:27) in function 'sobel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_195_1' (../src/gsn.cpp:195:28) in function 'nms'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_31_1' (../src/gsn.cpp:31:27) in function 'gau6'.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 262144 on port 'gmem1' (../src/gsn.cpp:259:34). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 262144 on port 'gmem0' (../src/gsn.cpp:44:35). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'out.0' (../src/gsn.cpp:176:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'out.1' (../src/gsn.cpp:181:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:109:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:206:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:209:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsn.cpp:44:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (../src/gsn.cpp:70:30)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64263 ; free virtual = 145660
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gsn' ...
+WARNING: [SYN 201-107] Renaming port name 'gsn/out' to 'gsn/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gau6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 61.61 seconds; current allocated memory: 288.415 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 289.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_95_1_VITIS_LOOP_96_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 38.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 289.889 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.42 seconds; current allocated memory: 291.089 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'nms' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_195_1_VITIS_LOOP_196_2'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('line_buf_addr_3_write_ln209', ../src/gsn.cpp:209->../src/gsn.cpp:267) of constant <constant:_ssdm_op_Write.bram.i48> on array 'line_buf', ../src/gsn.cpp:188->../src/gsn.cpp:267 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'line_buf'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 10.
+WARNING: [HLS 200-871] Estimated clock period (2.414ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.675ns, effective delay budget: 1.825ns).
+WARNING: [HLS 200-1016] The critical path in module 'nms' consists of the following:	'phi' operation ('empty_75') with incoming values : ('empty_82') [51]  (0 ns)
+	'mul' operation ('mul') [72]  (1.27 ns)
+	blocking operation 1.14 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.8 seconds; current allocated memory: 291.604 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 301.513 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gsn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.32 seconds; current allocated memory: 301.602 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 301.757 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gau6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gau6'.
+INFO: [HLS 200-111]  Elapsed time: 0.54 seconds; current allocated memory: 302.896 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_17_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_11s_22s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_11s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_11s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_8ns_28_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_8s_28_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_20s_11s_20_24_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel'.
+INFO: [HLS 200-111]  Elapsed time: 0.68 seconds; current allocated memory: 307.626 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'nms' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_5ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'nms'.
+INFO: [HLS 200-111]  Elapsed time: 1.03 seconds; current allocated memory: 312.912 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gsn' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsn/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gsn' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'data', 'out_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gsn'.
+INFO: [HLS 200-111]  Elapsed time: 0.81 seconds; current allocated memory: 317.101 MB.
+INFO: [RTMG 210-278] Implementing memory 'gsn_gau6_line_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'gsn_sdiv_20s_11s_20_24_1_div'
+INFO: [RTMG 210-282] Generating pipelined core: 'gsn_mul_7ns_5ns_11_1_1_Multiplier_0'

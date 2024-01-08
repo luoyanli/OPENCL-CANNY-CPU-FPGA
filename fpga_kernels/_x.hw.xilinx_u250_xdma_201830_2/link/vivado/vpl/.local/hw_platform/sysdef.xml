@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<Project Version="1" Minor="3" DIGEST="">
+	<TOOL_VERSION Version="2018.3"/>
+	<MODE Name="Post-Synthesis"/>
+	<SYSTEMINFO BOARD="xilinx.com:au250:1.0" PART="xcu250-figd2104-2L-e" ARCH="virtexuplus" PACKAGE="figd2104" DEVICE="xcu250" SPEED="-2L" LUT="1727040" FF="3454080" BRAM="2688" DSP="12288"/>
+	<HIERARCHY Name="pfm_top_wrapper"/>
+	<File Type="HW_HANDOFF" Name="pfm_top.hwh" DESIGN_HIERARCHY="pfm_top_i" BD_TYPE="DEFAULT_BD"/>
+	<File Type="BD_TCL" Name="pfm_top_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_dynamic.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region" BD_TYPE="REFERENCE_BD"/>
+	<File Type="BD_TCL" Name="pfm_dynamic_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_top_user_debug_hub_0.hwh" DESIGN_HIERARCHY="pfm_top_i/static_region/slr1/user_debug_hub/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="pfm_top_user_debug_hub_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_top_user_debug_bridge_0.hwh" DESIGN_HIERARCHY="pfm_top_i/static_region/slr1/user_debug_bridge/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="pfm_top_user_debug_bridge_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_top_mgmt_debug_hub_0.hwh" DESIGN_HIERARCHY="pfm_top_i/static_region/slr1/mgmt_debug_hub/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="pfm_top_mgmt_debug_hub_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_top_mgmt_debug_bridge_0.hwh" DESIGN_HIERARCHY="pfm_top_i/static_region/slr1/mgmt_debug_bridge/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="pfm_top_mgmt_debug_bridge_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_top_jtag_fallback_0.hwh" DESIGN_HIERARCHY="pfm_top_i/static_region/slr1/jtag_fallback/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="pfm_top_jtag_fallback_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_dynamic_memory_subsystem_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="pfm_dynamic_memory_subsystem_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_ddr4_mem03_0_microblaze_mcs.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem03/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_ddr4_mem03_0_microblaze_mcs_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_ddr4_mem02_0_microblaze_mcs.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem02/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_ddr4_mem02_0_microblaze_mcs_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_ddr4_mem01_0_microblaze_mcs.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem01/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_ddr4_mem01_0_microblaze_mcs_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_ddr4_mem00_0_microblaze_mcs.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/memory/ddr4_mem00/inst/u_ddr4_mem_intfc/u_ddr_cal_riu/mcs0/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_ddr4_mem00_0_microblaze_mcs_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_S03_AXI_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_s03_axi/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_S03_AXI_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_S02_AXI_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_s02_axi/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_S02_AXI_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_S01_AXI_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_s01_axi/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_S01_AXI_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_S00_AXI_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_s00_axi/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_S00_AXI_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_PLRAM_MEM03_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_plram_mem03/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_PLRAM_MEM03_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_PLRAM_MEM02_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_plram_mem02/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_PLRAM_MEM02_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_PLRAM_MEM01_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_plram_mem01/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_PLRAM_MEM01_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_PLRAM_MEM00_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_plram_mem00/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_PLRAM_MEM00_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_DDR4_MEM03_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_ddr4_mem03/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_DDR4_MEM03_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_DDR4_MEM02_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_ddr4_mem02/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_DDR4_MEM02_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_DDR4_MEM01_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_ddr4_mem01/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_DDR4_MEM01_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="bd_d216_interconnect_DDR4_MEM00_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/memory_subsystem/inst/interconnect/interconnect_ddr4_mem00/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="bd_d216_interconnect_DDR4_MEM00_0_bd.tcl"/>
+	<File Type="HW_HANDOFF" Name="pfm_dynamic_debug_bridge_xsdbm_0.hwh" DESIGN_HIERARCHY="pfm_top_i/dynamic_region/debug_bridge_xsdbm/inst" BD_TYPE="SCOPED_BD"/>
+	<File Type="BD_TCL" Name="pfm_dynamic_debug_bridge_xsdbm_0_bd.tcl"/>
+	<File Type="BIT" Name="xilinx_u250_xdma_201830_2.bit"/>
+	<BOARD Type="NotIntegrated">
+		<BASEBOARD Name="xilinx.com:au250:1.0">
+			<File PATH="board/au250/board.xml"/>
+			<File PATH="board/au250/part0_pins.xml"/>
+			<File PATH="board/au250/preset.xml"/>
+		</BASEBOARD>
+	</BOARD>
+	<USEDRESOURCES LUT="253652" FF="405087" BRAM="469" DSP="16"/>
+</Project>
+

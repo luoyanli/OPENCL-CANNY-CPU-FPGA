@@ -1,0 +1,7 @@
+Running: xsim.dir/gau/xsimk -simmode gui -wdb gau.wdb -simrunnum 0 -socket 52085
+Design successfully loaded
+Design Loading Memory Usage: 36760 KB (Peak: 36760 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 118956 KB (Peak: 176032 KB)
+Simulation CPU Usage: 1150 ms

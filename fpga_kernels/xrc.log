@@ -1,0 +1,10 @@
+Sun Dec 17 08:44:26 2023: Server was asked to start on port: '45915'
+Sun Dec 17 08:44:26 2023: Server is using token UUID: 'c4c61ca8-796a-4b9a-8fe7-196b76a1f70b'
+Sun Dec 17 08:44:26 2023: Attempting to start server on port '45915'
+Sun Dec 17 08:44:26 2023: XRC main fifo: created main fifo '/tmp/xrcmainc4c61ca8-796a-4b9a-8fe7-196b76a1f70b', fd read = 13
+Sun Dec 17 08:44:26 2023: Running Rule Check Server
+Sun Dec 17 08:44:26 2023: Version 1.6.1
+Sun Dec 17 08:44:26 2023: Rule Check Server: Accepted socket connection from client
+Sun Dec 17 08:44:26 2023: EXCHANGE_TOKEN received, server token: c4c61ca8-796a-4b9a-8fe7-196b76a1f70b, passed token: c4c61ca8-796a-4b9a-8fe7-196b76a1f70b
+Sun Dec 17 08:44:26 2023: SESSION_MGR: creating session with session uuid: '19431c65-ca1d-4792-9f38-a1c189726ad8' and name 'v++_package_ced_kernels'
+Sun Dec 17 08:44:36 2023: SESSION_MGR: closing session for UUID '19431c65-ca1d-4792-9f38-a1c189726ad8' with name 'v++_package_ced_kernels'

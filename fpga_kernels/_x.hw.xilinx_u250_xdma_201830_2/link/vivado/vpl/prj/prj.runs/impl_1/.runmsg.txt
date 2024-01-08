@@ -1,0 +1,2 @@
+Compiling (bitstream) accelerator binary: ced_kernels.link
+Log file: /home/luoyanl2/ece527_taskpar/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/vivado/vpl/prj/prj.runs/impl_1/runme.log

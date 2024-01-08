@@ -1,0 +1,7 @@
+Running: xsim.dir/hyst/xsimk -simmode gui -wdb hyst.wdb -simrunnum 0 -socket 58494
+Design successfully loaded
+Design Loading Memory Usage: 36680 KB (Peak: 36680 KB)
+Design Loading CPU Usage: 10 ms
+Simulation completed
+Simulation Memory Usage: 118768 KB (Peak: 175952 KB)
+Simulation CPU Usage: 680 ms

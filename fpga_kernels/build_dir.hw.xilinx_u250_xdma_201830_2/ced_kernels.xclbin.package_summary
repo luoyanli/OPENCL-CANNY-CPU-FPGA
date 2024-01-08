@@ -1,0 +1,86 @@
+<ENTRY>
+{
+ "thisFile": "/home/luoyanl2/ece527_taskpar/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.xclbin.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Dec 17 08:44:15 2023",
+ "timestampMillis": "1702824255126",
+ "buildStep": {
+  "cmdId": "8c76388c-46dd-4db4-86c2-96f366ae4b94",
+  "name": "v++",
+  "logFile": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x/package/package.steps.log",
+  "commandLine": "/opt/xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -p ./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin --save-temps --jobs 16 -t hw --platform xilinx_u250_xdma_201830_2 --package.out_dir ./package.hw -o ./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.xclbin ",
+  "args": [
+   "-p",
+   "./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin",
+   "--save-temps",
+   "--jobs",
+   "16",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u250_xdma_201830_2",
+   "--package.out_dir",
+   "./package.hw",
+   "-o",
+   "./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/luoyanl2/ece527_taskpar/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:15 2023",
+ "timestampMillis": "1702824255127",
+ "status": {
+  "cmdId": "8c76388c-46dd-4db4-86c2-96f366ae4b94",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:36 2023",
+ "timestampMillis": "1702824276517",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x/reports/package/v++_package_ced_kernels_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sun Dec 17 08:44:36 2023",
+ "timestampMillis": "1702824276518",
+ "report": {
+  "path": "/home/luoyanl2/ece527_taskpar/fpga_kernels/_x/v++_package_ced_kernels_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Dec 17 08:44:36 2023",
+ "timestampMillis": "1702824276520",
+ "status": {
+  "cmdId": "8c76388c-46dd-4db4-86c2-96f366ae4b94",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

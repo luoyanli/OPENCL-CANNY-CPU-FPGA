@@ -1,0 +1,142 @@
+
+
+================================================================
+== Synthesis Summary Report of 'hyst'
+================================================================
++ General Information: 
+    * Date:           Sun Dec 17 06:38:00 2023
+    * Version:        2020.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        hyst
+    * Solution:       solution (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu250-figd2104-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+------+----+-------------+------------+-----+
+    |                      Modules                     |  Issue |       | Latency |  Latency  | Iteration|         |  Trip  |          |      |    |             |            |     |
+    |                      & Loops                     |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval|  Count | Pipelined| BRAM | DSP|      FF     |     LUT    | URAM|
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+------+----+-------------+------------+-----+
+    |+ hyst                                            |  Timing|  -0.00|   262289|  8.742e+05|         -|   262290|       -|        no|     -|   -|  11882 (~0%)|  18812 (1%)|    -|
+    | + hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2  |  Timing|  -0.00|   262149|  8.737e+05|         -|   262149|       -|        no|     -|   -|   2310 (~0%)|  1612 (~0%)|    -|
+    |  o VITIS_LOOP_27_1_VITIS_LOOP_28_2               |       -|   2.43|   262147|  8.737e+05|         5|        1|  262144|       yes|     -|   -|            -|           -|    -|
+    +--------------------------------------------------+--------+-------+---------+-----------+----------+---------+--------+----------+------+----+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 8 -> 512   | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
+| m_axi_gmem1 | 8 -> 512   | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | data_1   | 0x10   | 32    | W      | Data signal of data              |                                                                                    |
+| s_axi_control | data_2   | 0x14   | 32    | W      | Data signal of data              |                                                                                    |
+| s_axi_control | out_r_1  | 0x1c   | 32    | W      | Data signal of out_r             |                                                                                    |
+| s_axi_control | out_r_2  | 0x20   | 32    | W      | Data signal of out_r             |                                                                                    |
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------------+
+| Argument | Direction | Datatype       |
++----------+-----------+----------------+
+| data     | in        | unsigned char* |
+| out      | out       | unsigned char* |
++----------+-----------+----------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+----------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                          |
++----------+---------------+-----------+----------+----------------------------------+
+| data     | m_axi_gmem0   | interface |          |                                  |
+| data     | s_axi_control | register  | offset   | name=data_1 offset=0x10 range=32 |
+| data     | s_axi_control | register  | offset   | name=data_2 offset=0x14 range=32 |
+| out      | m_axi_gmem1   | interface |          |                                  |
+| out      | s_axi_control | interface | offset   |                                  |
++----------+---------------+-----------+----------+----------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+---------------------------------------------------------------+
+| HW Interface | Direction | Length | Width | Location                                                      |
++--------------+-----------+--------+-------+---------------------------------------------------------------+
+| m_axi_gmem0  | read      | 4096   | 512   | /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27:22 |
+| m_axi_gmem1  | write     | 4096   | 512   | /home/luoyanl2/ece527_taskpar/fpga_kernels/src/hyst.cpp:27:22 |
++--------------+-----------+--------+-------+---------------------------------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| Name                                             | DSP | Pragma | Variable | Op  | Impl   | Latency |
++--------------------------------------------------+-----+--------+----------+-----+--------+---------+
+| + hyst                                           | 0   |        |          |     |        |         |
+|  + hyst_Pipeline_VITIS_LOOP_27_1_VITIS_LOOP_28_2 | 0   |        |          |     |        |         |
+|    add_ln27_fu_175_p2                            | -   |        | add_ln27 | add | fabric | 0       |
+|    add_ln28_fu_214_p2                            | -   |        | add_ln28 | add | fabric | 0       |
++--------------------------------------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-------------------------------------------+------------------------------------------+
+| Type      | Options                                   | Location                                 |
++-----------+-------------------------------------------+------------------------------------------+
+| interface | m_axi port=data offset=slave bundle=gmem0 | ../../../src/hyst.cpp:16 in hyst, data   |
+| interface | m_axi port=out offset=slave bundle=gmem1  | ../../../src/hyst.cpp:17 in hyst, out    |
+| interface | s_axilite port=data bundle=control        | ../../../src/hyst.cpp:18 in hyst, data   |
+| interface | s_axilite port=out bundle=control         | ../../../src/hyst.cpp:19 in hyst, out    |
+| interface | s_axilite port=return bundle=control      | ../../../src/hyst.cpp:20 in hyst, return |
+| pipeline  | II=1                                      | ../../../src/hyst.cpp:29 in hyst         |
++-----------+-------------------------------------------+------------------------------------------+
+
+

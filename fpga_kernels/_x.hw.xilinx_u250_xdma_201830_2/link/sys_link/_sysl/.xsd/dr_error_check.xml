@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:component xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="xd" xd:name="dr" xd:version="1.00" xd:type="design">
+    <xd:repository>
+    <xd:file xd:name="xd_ip_db.xml"/>
+  </xd:repository>
+    <xd:instance xd:name="xilinx_u250_xdma_201830_1" xd:componentRef="xilinx_u250_xdma_201830_1"/>
+    <xd:instance xd:name="gau_1" xd:componentRef="gau"/>
+    <xd:instance xd:name="hyst_1" xd:componentRef="hyst"/>
+    <xd:instance xd:name="nms_1" xd:componentRef="nms"/>
+    <xd:instance xd:name="sobel_1" xd:componentRef="sobel"/>
+    <xd:connection>
+    <xd:busInterface xd:name="slr0/interconnect_axilite_user_M01_AXI" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:busInterface xd:name="s_axi_control" xd:instanceRef="gau_1"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem0" xd:instanceRef="gau_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem1" xd:instanceRef="gau_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="slr0/interconnect_axilite_user_M02_AXI" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:busInterface xd:name="s_axi_control" xd:instanceRef="hyst_1"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem0" xd:instanceRef="hyst_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem1" xd:instanceRef="hyst_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="slr0/interconnect_axilite_user_M03_AXI" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:busInterface xd:name="s_axi_control" xd:instanceRef="nms_1"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem0" xd:instanceRef="nms_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem1" xd:instanceRef="nms_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="slr0/interconnect_axilite_user_M04_AXI" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:busInterface xd:name="s_axi_control" xd:instanceRef="sobel_1"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem0" xd:instanceRef="sobel_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:busInterface xd:name="m_axi_gmem1" xd:instanceRef="sobel_1"/>
+    <xd:busInterface xd:name="memory_subsystem" xd:instanceRef="xilinx_u250_xdma_201830_1" xd:memssSegments="DDR4_MEM00"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="_bd_top_clkwiz_kernel_clk_out1" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M01_ACLK" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M02_ACLK" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M03_ACLK" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M04_ACLK" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="gau_1"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="hyst_1"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="nms_1"/>
+    <xd:port xd:name="ap_clk" xd:instanceRef="sobel_1"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="slr0/reset_controllers/psreset_gate_pr_kernel_interconnect_aresetn" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M01_ARESETN" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M02_ARESETN" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M03_ARESETN" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="slr0/interconnect_axilite_user_M04_ARESETN" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+  </xd:connection>
+    <xd:connection>
+    <xd:port xd:name="slr0/reset_controllers/psreset_gate_pr_kernel_peripheral_aresetn" xd:instanceRef="xilinx_u250_xdma_201830_1"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="gau_1"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="hyst_1"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="nms_1"/>
+    <xd:port xd:name="ap_rst_n" xd:instanceRef="sobel_1"/>
+  </xd:connection>
+</xd:component>

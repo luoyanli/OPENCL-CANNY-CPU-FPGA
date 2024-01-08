@@ -1,0 +1,216 @@
+#######CPU Calibration#######
+[+] Platform: numPlatforms -> 4
+[+] Device: numDevices -> 1
+[++] Chosen device is a CPU.
+[++] vendor_name -> Intel(R) Corporation; device_name -> Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz
+[+] context created
+[+] command queue created
+[+] kernel loaded
+Gaussian kernel latency: 1405183 ns
+Sobel kernel latency: 5840614 ns
+NonMaxSuppression kernel latency: 3576736 ns
+Hysteresis kernel latency: 243892 ns
+Whole Canny Edge Detection latency: 11511726 ns
+#######CPU Double Queue#######
+[+] Platform: numPlatforms -> 4
+[+] Device: numDevices -> 1
+[++] Chosen device is a CPU.
+[++] vendor_name -> Intel(R) Corporation; device_name -> Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz
+[+] context created
+[+] command queue 1 created
+[+] command queue 2 created
+[+] kernel loaded
+--------------------Double Queue--------------------
+Task 1:
+Gaussian kernel: 0 ------- 2186417
+Sobel kernel: 2192398 ------- 11466798
+NonMax kernel: 11469570 ------- 16513386
+Hyst kernel: 16516298 ------- 16868950
+Task 2:
+Gaussian kernel: 8290 ------- 2177777
+Sobel kernel: 2182307 ------- 11500062
+NonMax kernel: 11503071 ------- 16554940
+Hyst kernel: 16556845 ------- 16912126
+--------------------Single Queue--------------------
+Task 1:
+Gaussian kernel: 0 ------- 1614347
+Sobel kernel: 3097350 ------- 10139844
+NonMax kernel: 16788790 ------- 20904093
+Hyst kernel: 24806263 ------- 25076019
+Task 2:
+Gaussian kernel: 1619042 ------- 3095247
+Sobel kernel: 10141992 ------- 16786915
+NonMax kernel: 20905858 ------- 24804444
+Hyst kernel: 25122383 ------- 25511260
+Double Queue Canny Edge Detection latency: 11554598 ns
+Single Queue Canny Edge Detection latency: 20744268 ns
+#######CPU OoO Queue#######
+[+] Platform: numPlatforms -> 4
+[+] Device: numDevices -> 1
+[++] Chosen device is a CPU.
+[++] vendor_name -> Intel(R) Corporation; device_name -> Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz
+[+] context created
+[+] command queue 1 (sequential) created
+[+] command queue 2 (out-of-order) created
+[+] kernel loaded
+--------------------OoO Queue--------------------
+Task 1:
+Gaussian kernel: 0 ------- 2193986
+Sobel kernel: 2299173 ------- 11728780
+NonMax kernel: 11832272 ------- 17041315
+Hyst kernel: 17131700 ------- 17617374
+Task 2:
+Gaussian kernel: 3807 ------- 2188309
+Sobel kernel: 2312031 ------- 11739148
+NonMax kernel: 11818120 ------- 17007047
+Hyst kernel: 17136327 ------- 17615178
+--------------------Sequential Queue--------------------
+Task 1:
+Gaussian kernel: 0 ------- 1957096
+Sobel kernel: 3779567 ------- 12457281
+NonMax kernel: 20601532 ------- 25386513
+Hyst kernel: 30092745 ------- 30412013
+Task 2:
+Gaussian kernel: 1962306 ------- 3777460
+Sobel kernel: 12459695 ------- 20599371
+NonMax kernel: 25389016 ------- 30090468
+Hyst kernel: 30441474 ------- 30933554
+OoO Queue Canny Edge Detection latency: 12578043 ns
+Sequential Queue Canny Edge Detection latency: 20896755 ns
+#######FPGA Calibration#######
+[+] Platform: numPlatforms -> 4
+[++] Platform: 0 -> vendor: Xilinx, name: Xilinx
+[++] Platform: 1 -> vendor: NVIDIA Corporation, name: NVIDIA CUDA
+[++] Platform: 2 -> vendor: Intel(R) Corporation, name: Intel(R) OpenCL
+[++] Platform: 3 -> vendor: Intel(R) Corporation, name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+[+] Device: numDevices -> 1
+[++] vendor_name -> Xilinx; device_name -> xilinx_u250_xdma_201830_2; driver_version -> OpenCL 1.0
+[+] context created
+[+] command queue created
+[+] kernel loaded
+[+] input / ouput pages address: 0x7f190399d000 / 0x7f190395b000
+[+] buffer created
+Gaussian kernel latency: 986013 ns
+Sobel kernel latency: 1001401 ns
+NonMaxSuppression kernel latency: 980388 ns
+Hysteresis kernel latency: 986526 ns
+Whole Canny Edge Detection latency: 4673436 ns
+#######FPGA Dataflow#######
+[+] dataflow_flag: 0
+[+] Platform: numPlatforms -> 4
+[++] Platform: 0 -> vendor: Xilinx, name: Xilinx
+[++] Platform: 1 -> vendor: NVIDIA Corporation, name: NVIDIA CUDA
+[++] Platform: 2 -> vendor: Intel(R) Corporation, name: Intel(R) OpenCL
+[++] Platform: 3 -> vendor: Intel(R) Corporation, name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+[+] Device: numDevices -> 1
+[++] vendor_name -> Xilinx; device_name -> xilinx_u250_xdma_201830_2; driver_version -> OpenCL 1.0
+[+] context created
+[+] command queue created
+[+] kernel loaded
+[+] input / ouput pages address: 0x7f30f025f000 / 0x7f30f021d000
+[+] input / ouput pages address: 0x7f30f0159000 / 0x7f30f0117000
+[+] input / ouput pages address: 0x7f30f0053000 / 0x7f30f0011000
+[+] input / ouput pages address: 0x7f30c6db8000 / 0x7f30c6d76000
+[+] buffer created
+[+] kernel args set
+Kernel 0: 6948194 ------- 9754000 ns
+Kernel 1: 7105586 ------- 12366586 ns
+Kernel 2: 7287777 ------- 15059746 ns
+Kernel 3: 7386383 ------- 17730362 ns
+Execution time for 4 kernels: 11159569 ns
+[+] dataflow_flag: 1
+[+] Platform: numPlatforms -> 4
+[++] Platform: 0 -> vendor: Xilinx, name: Xilinx
+[++] Platform: 1 -> vendor: NVIDIA Corporation, name: NVIDIA CUDA
+[++] Platform: 2 -> vendor: Intel(R) Corporation, name: Intel(R) OpenCL
+[++] Platform: 3 -> vendor: Intel(R) Corporation, name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+[+] Device: numDevices -> 1
+[++] vendor_name -> Xilinx; device_name -> xilinx_u250_xdma_201830_2; driver_version -> OpenCL 1.0
+[+] context created
+[+] command queue created
+[+] kernel loaded
+[+] input / ouput pages address: 0x7f6ed1bd9000 / 0x7f6ed1b97000
+[+] input / ouput pages address: 0x7f6ed1ad3000 / 0x7f6ed1a91000
+[+] input / ouput pages address: 0x7f6ed19cd000 / 0x7f6ed198b000
+[+] input / ouput pages address: 0x7f6ed18c7000 / 0x7f6ed1885000
+[+] buffer created
+[+] kernel args set
+Kernel 0: 124917011 ------- 127693741 ns
+Kernel 1: 125069494 ------- 128582257 ns
+Kernel 2: 125215426 ------- 129484451 ns
+Kernel 3: 125355452 ------- 130384451 ns
+Execution time for 4 kernels: 7031143 ns
+#######Collaborative Mode 1: Baseline#######
+[+] Platform: numPlatforms -> 4
+[++] Platform: 0 -> vendor: Xilinx, name: Xilinx
+[++] Platform: 1 -> vendor: NVIDIA Corporation, name: NVIDIA CUDA
+[++] Platform: 2 -> vendor: Intel(R) Corporation, name: Intel(R) OpenCL
+[++] Platform: 3 -> vendor: Intel(R) Corporation, name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+[+] Device: numDevices -> 1
+[++] vendor_name -> Intel(R) Corporation; device_name -> Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz; driver_version -> OpenCL 3.0 (Build 0)
+[++] vendor_name -> Xilinx; device_name -> xilinx_u250_xdma_201830_2; driver_version -> OpenCL 1.0
+[+] context_cpu created
+[+] context_fpga created
+[+] command queue_cpu created
+[+] command queue_fpga created
+[+] cpu kernel loaded
+[+] fpga kernel loaded
+[+] input / in_out /ouput pages address: 0x3fe2000 / 0x4064000 / 0x4023000
+[+] all buffer created
+Total time for baseline: 7879774 ns
+#######Collaborative Mode 2: Device Pipeline#######
+[+] Platform: numPlatforms -> 4
+[++] Platform: 0 -> vendor: Xilinx, name: Xilinx
+[++] Platform: 1 -> vendor: NVIDIA Corporation, name: NVIDIA CUDA
+[++] Platform: 2 -> vendor: Intel(R) Corporation, name: Intel(R) OpenCL
+[++] Platform: 3 -> vendor: Intel(R) Corporation, name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+[+] Device: numDevices -> 1
+[++] vendor_name -> Intel(R) Corporation; device_name -> Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz; driver_version -> OpenCL 3.0 (Build 0)
+[++] vendor_name -> Xilinx; device_name -> xilinx_u250_xdma_201830_2; driver_version -> OpenCL 1.0
+[+] context_cpu created
+[+] context_fpga created
+[+] command queue_cpu created
+[+] command queue_fpga created
+[+] cpu kernel loaded
+[+] fpga kernel loaded
+[+] input / in_out /ouput pages address: 0x25ba000 / 0x263c000 / 0x25fb000
+[+] all buffer created
+Total time for Device Overlap: 7117399 ns
+#######Collaborative Mode 3: Multi-threading + kernel-level pipeine#######
+[+] Platform: numPlatforms -> 4
+[++] Platform: 0 -> vendor: Xilinx, name: Xilinx
+[++] Platform: 1 -> vendor: NVIDIA Corporation, name: NVIDIA CUDA
+[++] Platform: 2 -> vendor: Intel(R) Corporation, name: Intel(R) OpenCL
+[++] Platform: 3 -> vendor: Intel(R) Corporation, name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+[+] Device: numDevices -> 1
+[++] vendor_name -> Intel(R) Corporation; device_name -> Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz; driver_version -> OpenCL 3.0 (Build 0)
+[++] vendor_name -> Xilinx; device_name -> xilinx_u250_xdma_201830_2; driver_version -> OpenCL 1.0
+[+] context_cpu created
+[+] context_fpga created
+[+] command queue_cpu created
+[+] command queue_fpga created
+[+] cpu kernel loaded
+[+] fpga kernel loaded
+[+] input / in_out /ouput pages address: 0x43d2000 / 0x4454000 / 0x4413000
+[+] input / in_out /ouput pages address: 0x4495000 / 0x4517000 / 0x44d6000
+[+] all buffer created
+Total time for Concurrent Execution: 5256385 ns
+#######Collaborative Mode 4: Multi-threading + module-level pipeine#######
+[+] Platform: numPlatforms -> 4
+[++] Platform: 0 -> vendor: Xilinx, name: Xilinx
+[++] Platform: 1 -> vendor: NVIDIA Corporation, name: NVIDIA CUDA
+[++] Platform: 2 -> vendor: Intel(R) Corporation, name: Intel(R) OpenCL
+[++] Platform: 3 -> vendor: Intel(R) Corporation, name: Intel(R) FPGA Emulation Platform for OpenCL(TM)
+[+] Device: numDevices -> 1
+[++] vendor_name -> Intel(R) Corporation; device_name -> Intel(R) Xeon(R) CPU E5-2620 v3 @ 2.40GHz; driver_version -> OpenCL 3.0 (Build 0)
+[++] vendor_name -> Xilinx; device_name -> xilinx_u250_xdma_201830_2; driver_version -> OpenCL 1.0
+[+] context_cpu created
+[+] context_fpga created
+[+] command queue_cpu created
+[+] command queue_fpga created
+[+] cpu kernel loaded
+[+] fpga kernel loaded
+[+] input / in_out /ouput pages address: 0x3562000 / 0x35e4000 / 0x35a3000
+[+] input / in_out /ouput pages address: 0x3625000 / 0x36a7000 / 0x3666000
+[+] all buffer created
+Total time for Concurrent Execution: 6631094 ns

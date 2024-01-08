@@ -1,0 +1,639 @@
+{
+ "system_diagram_metadata": {
+  "schema_version": {
+   "major": "2",
+   "minor": "0",
+   "patch": "0"
+  },
+  "xsa": {
+   "vendor": "xilinx",
+   "board_id": "u250",
+   "name": "xdma",
+   "version_major": "201830",
+   "version_minor": "2",
+   "description": "This platform targets the Alveo U250 Data Center Accelerator Card. This high-performance acceleration platform features up to four channels of DDR4-2400 SDRAM which are instantiated as required by the user kernels for high fabric resource availability, and Xilinx DMA Subsystem for PCI Express with PCIe Gen3 x16 connectivity.",
+   "generated_by": {
+    "name": "Vivado",
+    "version": "2018.3",
+    "cl": "2576915",
+    "time_stamp": "Thu Jun 27 12:02:52 2019"
+   },
+   "board": {
+    "name": "xilinx.com:au250:1.0",
+    "vendor": "xilinx.com",
+    "part": "xcu250-figd2104-2L-e",
+    "board_part": "xilinx.com:au250:part0:1.0"
+   },
+   "available_resources": {
+    "LUT": "1728000",
+    "REG": "3293221",
+    "BRAM": "2688",
+    "DSP": "12288"
+   },
+   "device_topology": [
+    {
+     "id": "0",
+     "type": "Ddr4",
+     "used": "yes",
+     "sizeKB": "0x1000000",
+     "base_address": "0x4000000000",
+     "tag": "bank0",
+     "slr": "SLR0",
+     "spTag": "DDR[0]"
+    },
+    {
+     "id": "1",
+     "type": "Ddr4",
+     "used": "no",
+     "sizeKB": "0x1000000",
+     "base_address": "0x5000000000",
+     "tag": "bank1",
+     "slr": "SLR1",
+     "spTag": "DDR[1]"
+    },
+    {
+     "id": "2",
+     "type": "Ddr4",
+     "used": "no",
+     "sizeKB": "0x1000000",
+     "base_address": "0x6000000000",
+     "tag": "bank2",
+     "slr": "SLR2",
+     "spTag": "DDR[2]"
+    },
+    {
+     "id": "3",
+     "type": "Ddr4",
+     "used": "no",
+     "sizeKB": "0x1000000",
+     "base_address": "0x7000000000",
+     "tag": "bank3",
+     "slr": "SLR3",
+     "spTag": "DDR[3]"
+    },
+    {
+     "id": "4",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x80",
+     "base_address": "0x3000000000",
+     "tag": "PLRAM[0]",
+     "slr": "",
+     "spTag": "PLRAM[0]"
+    },
+    {
+     "id": "5",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x80",
+     "base_address": "0x3000200000",
+     "tag": "PLRAM[1]",
+     "slr": "",
+     "spTag": "PLRAM[1]"
+    },
+    {
+     "id": "6",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x80",
+     "base_address": "0x3000400000",
+     "tag": "PLRAM[2]",
+     "slr": "",
+     "spTag": "PLRAM[2]"
+    },
+    {
+     "id": "7",
+     "type": "Dram",
+     "used": "no",
+     "sizeKB": "0x80",
+     "base_address": "0x3000600000",
+     "tag": "PLRAM[3]",
+     "slr": "",
+     "spTag": "PLRAM[3]"
+    }
+   ],
+   "design_intent": [
+    "dataCenter",
+    "externalHost",
+    "serverManaged"
+   ]
+  },
+  "xclbin": {
+   "generated_by": {
+    "name": "v++",
+    "version": "2020.1",
+    "cl": "2902540",
+    "time_stamp": "Wed May 27 19:54:35 MDT 2020",
+    "options": "/opt/xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++ -l --save-temps --jobs 16 -t hw --platform xilinx_u250_xdma_201830_2 --temp_dir ./_x.hw.xilinx_u250_xdma_201830_2 -o./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels.link.xclbin _x.hw.xilinx_u250_xdma_201830_2/gau.xo _x.hw.xilinx_u250_xdma_201830_2/sobel.xo _x.hw.xilinx_u250_xdma_201830_2/nms.xo _x.hw.xilinx_u250_xdma_201830_2/hyst.xo ",
+    "xclbin_name": "ced_kernels.link",
+    "uuid": "cb8367ad-f4b0-4135-9fbb-dc3014355707"
+   },
+   "user_regions": [
+    {
+     "name": "OCL_REGION_0",
+     "type": "clc_region",
+     "instance_path": "pfm_top_i/dynamic_region",
+     "available_resources": {
+      "LUT": "1622928",
+      "REG": "3293221",
+      "BRAM": "2523",
+      "DSP": "12284",
+      "by_SLR": [
+       {
+        "name": "SLR1",
+        "LUT": "344889",
+        "REG": "702960",
+        "BRAM": "500",
+        "DSP": "2877"
+       },
+       {
+        "name": "SLR0",
+        "LUT": "345399",
+        "REG": "705058",
+        "BRAM": "500",
+        "DSP": "2877"
+       },
+       {
+        "name": "SLR2",
+        "LUT": "344963",
+        "REG": "703327",
+        "BRAM": "500",
+        "DSP": "2877"
+       },
+       {
+        "name": "SLR3",
+        "LUT": "345365",
+        "REG": "704041",
+        "BRAM": "500",
+        "DSP": "2877"
+       }
+      ]
+     },
+     "kernels": [
+      {
+       "name": "hyst",
+       "estimated_resources": {
+        "LUT": "1612",
+        "REG": "2310",
+        "BRAM": "",
+        "DSP": ""
+       },
+       "ports": [
+        {
+         "name": "M_AXI_GMEM0",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "M_AXI_GMEM1",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "S_AXI_CONTROL",
+         "mode": "slave",
+         "range": "0x28",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0"
+        }
+       ],
+       "arguments": [
+        {
+         "id": "0",
+         "name": "data",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM0",
+         "size": "0x8",
+         "offset": "0x10",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        },
+        {
+         "id": "1",
+         "name": "out",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM1",
+         "size": "0x8",
+         "offset": "0x1C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        }
+       ]
+      },
+      {
+       "name": "nms",
+       "estimated_resources": {
+        "LUT": "81",
+        "REG": "13",
+        "BRAM": "",
+        "DSP": ""
+       },
+       "ports": [
+        {
+         "name": "M_AXI_GMEM0",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "M_AXI_GMEM1",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "8",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "S_AXI_CONTROL",
+         "mode": "slave",
+         "range": "0x28",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0"
+        }
+       ],
+       "arguments": [
+        {
+         "id": "0",
+         "name": "data",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM0",
+         "size": "0x8",
+         "offset": "0x10",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        },
+        {
+         "id": "1",
+         "name": "out",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM1",
+         "size": "0x8",
+         "offset": "0x1C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        }
+       ]
+      },
+      {
+       "name": "gau",
+       "estimated_resources": {
+        "LUT": "72",
+        "REG": "13",
+        "BRAM": "",
+        "DSP": ""
+       },
+       "ports": [
+        {
+         "name": "M_AXI_GMEM0",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "M_AXI_GMEM1",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "S_AXI_CONTROL",
+         "mode": "slave",
+         "range": "0x28",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0"
+        }
+       ],
+       "arguments": [
+        {
+         "id": "0",
+         "name": "data",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM0",
+         "size": "0x8",
+         "offset": "0x10",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        },
+        {
+         "id": "1",
+         "name": "out",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM1",
+         "size": "0x8",
+         "offset": "0x1C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        }
+       ]
+      },
+      {
+       "name": "sobel",
+       "estimated_resources": {
+        "LUT": "72",
+        "REG": "13",
+        "BRAM": "",
+        "DSP": ""
+       },
+       "ports": [
+        {
+         "name": "M_AXI_GMEM0",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "512",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "M_AXI_GMEM1",
+         "mode": "master",
+         "range": "0xFFFFFFFF",
+         "data_width": "16",
+         "port_type": "addressable",
+         "base": "0x0"
+        },
+        {
+         "name": "S_AXI_CONTROL",
+         "mode": "slave",
+         "range": "0x28",
+         "data_width": "32",
+         "port_type": "addressable",
+         "base": "0x0"
+        }
+       ],
+       "arguments": [
+        {
+         "id": "0",
+         "name": "data",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM0",
+         "size": "0x8",
+         "offset": "0x10",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        },
+        {
+         "id": "1",
+         "name": "out",
+         "address_qualifier": "1",
+         "port": "M_AXI_GMEM1",
+         "size": "0x8",
+         "offset": "0x1C",
+         "host_offset": "0x0",
+         "host_size": "0x8",
+         "type": "void*"
+        }
+       ]
+      }
+     ],
+     "compute_units": [
+      {
+       "id": "0",
+       "kernel_name": "gau",
+       "cu_name": "gau_1",
+       "base_address": "0x1800000",
+       "actual_resources": [
+        {
+         "design_state": "routed",
+         "LUT": "3258",
+         "REG": "5117",
+         "BRAM": "16",
+         "DSP": "0"
+        },
+        {
+         "design_state": "fully_placed",
+         "LUT": "3258",
+         "REG": "5117",
+         "BRAM": "16",
+         "DSP": "0"
+        },
+        {
+         "design_state": "synthesized",
+         "LUT": "3693",
+         "REG": "5277",
+         "BRAM": "16",
+         "DSP": "0"
+        }
+       ]
+      },
+      {
+       "id": "1",
+       "kernel_name": "hyst",
+       "cu_name": "hyst_1",
+       "base_address": "0x1810000",
+       "actual_resources": [
+        {
+         "design_state": "routed",
+         "LUT": "2939",
+         "REG": "4122",
+         "BRAM": "15",
+         "DSP": "0"
+        },
+        {
+         "design_state": "fully_placed",
+         "LUT": "2939",
+         "REG": "4122",
+         "BRAM": "15",
+         "DSP": "0"
+        },
+        {
+         "design_state": "synthesized",
+         "LUT": "3372",
+         "REG": "4281",
+         "BRAM": "15",
+         "DSP": "0"
+        }
+       ]
+      },
+      {
+       "id": "2",
+       "kernel_name": "nms",
+       "cu_name": "nms_1",
+       "base_address": "0x1820000",
+       "actual_resources": [
+        {
+         "design_state": "routed",
+         "LUT": "2833",
+         "REG": "3785",
+         "BRAM": "9",
+         "DSP": "0"
+        },
+        {
+         "design_state": "fully_placed",
+         "LUT": "2833",
+         "REG": "3785",
+         "BRAM": "9",
+         "DSP": "0"
+        },
+        {
+         "design_state": "synthesized",
+         "LUT": "3009",
+         "REG": "3957",
+         "BRAM": "9",
+         "DSP": "0"
+        }
+       ]
+      },
+      {
+       "id": "3",
+       "kernel_name": "sobel",
+       "cu_name": "sobel_1",
+       "base_address": "0x1830000",
+       "actual_resources": [
+        {
+         "design_state": "routed",
+         "LUT": "4344",
+         "REG": "5325",
+         "BRAM": "8",
+         "DSP": "2"
+        },
+        {
+         "design_state": "fully_placed",
+         "LUT": "4344",
+         "REG": "5325",
+         "BRAM": "8",
+         "DSP": "2"
+        },
+        {
+         "design_state": "synthesized",
+         "LUT": "4545",
+         "REG": "5430",
+         "BRAM": "8",
+         "DSP": "2"
+        }
+       ]
+      }
+     ],
+     "connectivity": [
+      {
+       "id": "0",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "0"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      },
+      {
+       "id": "1",
+       "node1": {
+        "type": "compute_unit",
+        "id": "0",
+        "kernel_argument_id": "1"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      },
+      {
+       "id": "2",
+       "node1": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "0"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      },
+      {
+       "id": "3",
+       "node1": {
+        "type": "compute_unit",
+        "id": "1",
+        "kernel_argument_id": "1"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      },
+      {
+       "id": "4",
+       "node1": {
+        "type": "compute_unit",
+        "id": "2",
+        "kernel_argument_id": "0"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      },
+      {
+       "id": "5",
+       "node1": {
+        "type": "compute_unit",
+        "id": "2",
+        "kernel_argument_id": "1"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      },
+      {
+       "id": "6",
+       "node1": {
+        "type": "compute_unit",
+        "id": "3",
+        "kernel_argument_id": "0"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      },
+      {
+       "id": "7",
+       "node1": {
+        "type": "compute_unit",
+        "id": "3",
+        "kernel_argument_id": "1"
+       },
+       "node2": {
+        "type": "memory",
+        "id": "0",
+        "kernel_argument_id": ""
+       }
+      }
+     ]
+    }
+   ]
+  }
+ }
+}
+

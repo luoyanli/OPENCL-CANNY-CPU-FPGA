@@ -1,0 +1,7 @@
+make[1]: Entering directory `/home/luoyanl2/ece527_taskpar/fpga_kernels/nms_hls/test.prj/solution1/sim/wrapc'
+   Build using "/opt/xilinx/Vivado/2020.1/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling apatb_nms.cpp
+   Compiling nms.cpp_pre.cpp.tb.cpp
+   Compiling test.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/home/luoyanl2/ece527_taskpar/fpga_kernels/nms_hls/test.prj/solution1/sim/wrapc'

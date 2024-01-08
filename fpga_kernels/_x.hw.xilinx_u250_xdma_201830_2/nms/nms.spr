@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="nms" dir="">
+  <FileSets>
+    <FileSet Name="kernel_nms" Type="DesignSrcs">
+      <File Path="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/nms.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../src/gsn.cpp&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:117:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:118:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:119:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:120:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:121:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:151:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:152:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:153:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:154:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:155:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:156:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:157:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:158:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:159:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:160:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:210:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:211:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:212:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:239:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:240:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:241:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:242:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:243:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:244:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:280:9" resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 207-1535]" key="HLS 207-1535" tag="" content="&apos;Resource&apos; is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:281:9" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;fp_struct&lt;float&gt;::fp_struct(float)&apos; into &apos;int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)&apos; (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;fp_struct&lt;float&gt;::mantissa() const&apos; into &apos;int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)&apos; (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;fp_struct&lt;float&gt;::expv() const&apos; into &apos;int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)&apos; (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;fp_struct&lt;float&gt;::__signbit() const&apos; into &apos;int generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;(float, bool, hls::enable_if&lt;std::numeric_limits&lt;int&gt;::is_signed, bool&gt;::type)&apos; (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;int generic_cast_IEEE754&lt;int, float&gt;(float, bool)&apos; into &apos;__hls_fptosi_float_i32&apos; (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;hls::sqrt(float)&apos; into &apos;sobel(unsigned char*, GradPix*)&apos; (../src/gsn.cpp:75:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-178]" key="HLS 214-178" tag="" content="Inlining function &apos;__hls_fptosi_float_i32&apos; into &apos;sobel(unsigned char*, GradPix*)&apos; (../src/gsn.cpp:75:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64387 ; free virtual = 145776" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64386 ; free virtual = 145775" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64367 ; free virtual = 145759" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;&apos; into &apos;sobel&apos; (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64353 ; free virtual = 145746" resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-2&apos; in function &apos;gau&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-3&apos; in function &apos;gau&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-2&apos; in function &apos;sobel&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-3&apos; in function &apos;sobel&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-2&apos; in function &apos;nms&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-510]" key="XFORM_AUTO_PIPELINE_STATUS_244" tag="" content="Pipelining loop &apos;Loop-3&apos; in function &apos;nms&apos; automatically." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;VITIS_LOOP_196_2&apos; (../src/gsn.cpp:196) in function &apos;nms&apos; for pipelining." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;VITIS_LOOP_96_2&apos; (../src/gsn.cpp:96) in function &apos;sobel&apos; for pipelining." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;VITIS_LOOP_32_2&apos; (../src/gsn.cpp:32) in function &apos;gau&apos; for pipelining." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_205_3&apos; (../src/gsn.cpp:205) in function &apos;nms&apos; completely with a factor of 2." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_212_4&apos; (../src/gsn.cpp:212) in function &apos;nms&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_213_5&apos; (../src/gsn.cpp:213) in function &apos;nms&apos; completely with a factor of 2." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_218_6&apos; (../src/gsn.cpp:218) in function &apos;nms&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_105_3&apos; (../src/gsn.cpp:105) in function &apos;sobel&apos; completely with a factor of 2." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_112_4&apos; (../src/gsn.cpp:112) in function &apos;sobel&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_113_5&apos; (../src/gsn.cpp:113) in function &apos;sobel&apos; completely with a factor of 2." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_118_6&apos; (../src/gsn.cpp:118) in function &apos;sobel&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_127_7&apos; (../src/gsn.cpp:127) in function &apos;sobel&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_128_8&apos; (../src/gsn.cpp:128) in function &apos;sobel&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_134_9&apos; (../src/gsn.cpp:134) in function &apos;sobel&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_135_10&apos; (../src/gsn.cpp:124) in function &apos;sobel&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_39_3&apos; (../src/gsn.cpp:39) in function &apos;gau&apos; completely with a factor of 2." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_47_4&apos; (../src/gsn.cpp:47) in function &apos;gau&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_48_5&apos; (../src/gsn.cpp:48) in function &apos;gau&apos; completely with a factor of 2." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_54_6&apos; (../src/gsn.cpp:54) in function &apos;gau&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_60_7&apos; (../src/gsn.cpp:36) in function &apos;gau&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;VITIS_LOOP_61_8&apos; (../src/gsn.cpp:36) in function &apos;gau&apos; completely with a factor of 3." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-131]" key="XFORM_RESHAPE_STATUS_125" tag="" content="Reshaping array &apos;line_buf&apos; (../src/gsn.cpp:188) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-131]" key="XFORM_RESHAPE_STATUS_125" tag="" content="Reshaping array &apos;line_buf&apos; (../src/gsn.cpp:76) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-131]" key="XFORM_RESHAPE_STATUS_125" tag="" content="Reshaping array &apos;line_buf&apos; (../src/gsn.cpp:20) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;window_buf&apos; (../src/gsn.cpp:189) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;window_buf&apos; (../src/gsn.cpp:77) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;H_SOBEL_KERNEL&apos;  in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;V_SOBEL_KERNEL&apos;  in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;window_buf&apos; (../src/gsn.cpp:21) in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;gaus&apos;  in dimension 1 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;window_buf&apos; (../src/gsn.cpp:189) in dimension 2 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;window_buf&apos; (../src/gsn.cpp:77) in dimension 2 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;H_SOBEL_KERNEL&apos;  in dimension 2 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;V_SOBEL_KERNEL&apos;  in dimension 2 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;window_buf&apos; (../src/gsn.cpp:21) in dimension 2 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;gaus&apos;  in dimension 2 completely." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-602]" key="XFORM_AUTO_INLINE_STATUS_223" tag="" content="Inlining function &apos;generic_cast_IEEE754&lt;int, (ap_q_mode)6, float&gt;&apos; into &apos;sobel&apos; (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-786]" key="HLS 200-786" tag="DATAFLOW,VITIS_THROUGHPUT" content="Detected dataflow-on-top in function  &apos;gsn&apos;  with default interface mode &apos;ap_ctrl_hs&apos;. Overlapped execution of successive kernel calls will not happen unless interface mode &apos;ap_ctrl_chain&apos; is used (or &apos;ap_ctrl_none&apos; for a purely data-driven design)." resolution="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-786.html"/>
+	<Message severity="INFO" prefix="[XFORM 203-712]" key="XFORM_DATAFLOW_TRANSFORM_230" tag="DATAFLOW" content="Applying dataflow to function &apos;gsn&apos;, detected/extracted 3 process function(s): 
+	 &apos;gau6&apos;
+	 &apos;sobel&apos;
+	 &apos;nms&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-401]" key="XFORM_IFCONV_STATUS_239" tag="" content="Performing if-conversion on hyperblock from (../src/gsn.cpp:102:21) in function &apos;sobel&apos;... converting 3 basic blocks." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;sobel&apos; (../src/gsn.cpp:7:34)...3 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;nms&apos; (../src/gsn.cpp:187:59)...3 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;gau6&apos; (../src/gsn.cpp:20:54)...5 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64317 ; free virtual = 145713" resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-541]" key="XFORM_LOOPFLAT_STATUS_218" tag="" content="Flattening a loop nest &apos;VITIS_LOOP_95_1&apos; (../src/gsn.cpp:95:27) in function &apos;sobel&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-541]" key="XFORM_LOOPFLAT_STATUS_218" tag="" content="Flattening a loop nest &apos;VITIS_LOOP_195_1&apos; (../src/gsn.cpp:195:28) in function &apos;nms&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-541]" key="XFORM_LOOPFLAT_STATUS_218" tag="" content="Flattening a loop nest &apos;VITIS_LOOP_31_1&apos; (../src/gsn.cpp:31:27) in function &apos;gau6&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,VITIS_INTERFACE" content="Inferring multiple bus burst write of a total cumulative length 262144 on port &apos;gmem1&apos; (../src/gsn.cpp:259:34). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-444]" key="HLS 200-444" tag="AXI,VITIS_INTERFACE" content="Inferring multiple bus burst read of a total cumulative length 262144 on port &apos;gmem0&apos; (../src/gsn.cpp:44:35). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;line_buf&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;out.0&apos; (../src/gsn.cpp:176:40)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;out.1&apos; (../src/gsn.cpp:181:39)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;line_buf&apos; (../src/gsn.cpp:109:33)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;line_buf&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;line_buf&apos; (../src/gsn.cpp:206:34)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;line_buf&apos; (../src/gsn.cpp:209:33)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;line_buf&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;line_buf&apos; (../src/gsn.cpp:44:33)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-472]" key="HLS 200-472" tag="" content="Inferring partial write operation for &apos;out&apos; (../src/gsn.cpp:70:30)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:57 ; elapsed = 00:01:01 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64263 ; free virtual = 145660" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;gsn&apos; ..." resolution=""/>
+	<Message severity="WARNING" prefix="[SYN 201-107]" key="SYN_PORT_NAME_ILLEGAL_593" tag="" content="Renaming port name &apos;gsn/out&apos; to &apos;gsn/out_r&apos; to avoid the conflict with HDL keywords or other object names." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;gau6&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_31_1_VITIS_LOOP_32_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 6." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 61.61 seconds; current allocated memory: 288.415 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.19 seconds; current allocated memory: 289.102 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;sobel&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln140) to 3 in order to utilize available DSP registers." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln157_1) to 3 in order to utilize available DSP registers." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln157) to 3 in order to utilize available DSP registers." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln161_1) to 3 in order to utilize available DSP registers." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-486]" key="HLS 200-486" tag="" content="Changing DSP48 latency (root=mul_ln161) to 3 in order to utilize available DSP registers." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_95_1_VITIS_LOOP_96_2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 38." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.63 seconds; current allocated memory: 289.889 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.42 seconds; current allocated memory: 291.089 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;nms&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 2&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 1." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;VITIS_LOOP_195_1_VITIS_LOOP_196_2&apos;." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-885]" key="HLS 200-885" tag="SCHEDULE,VITIS_KERNEL" content="Unable to schedule &apos;store&apos; operation (&apos;line_buf_addr_3_write_ln209&apos;, ../src/gsn.cpp:209-&gt;../src/gsn.cpp:267) of constant &lt;constant:_ssdm_op_Write.bram.i48&gt; on array &apos;line_buf&apos;, ../src/gsn.cpp:188-&gt;../src/gsn.cpp:267 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;line_buf&apos;." resolution="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-885.html"/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 2, Depth = 10." resolution=""/>
+	<Message severity="WARNING" prefix="[HLS 200-871]" key="HLS 200-871" tag="SCHEDULE,VITIS_KERNEL" content="Estimated clock period (2.414ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.675ns, effective delay budget: 1.825ns)." resolution="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-871.html"/>
+	<Message severity="WARNING" prefix="[HLS 200-1016]" key="HLS 200-1016" tag="SCHEDULE,VITIS_KERNEL" content="The critical path in module &apos;nms&apos; consists of the following:	&apos;phi&apos; operation (&apos;empty_75&apos;) with incoming values : (&apos;empty_82&apos;) [51]  (0 ns)
+	&apos;mul&apos; operation (&apos;mul&apos;) [72]  (1.27 ns)
+	blocking operation 1.14 ns on control path)" resolution="http://www.xilinx.com/html_docs/xilinx2020_1/hls-guidance/200-1016.html"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.8 seconds; current allocated memory: 291.604 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.26 seconds; current allocated memory: 301.513 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;gsn&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.32 seconds; current allocated memory: 301.602 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.48 seconds; current allocated memory: 301.757 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;gau6&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;gau6&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.54 seconds; current allocated memory: 302.896 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;sobel&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;fsqrt_32ns_32ns_32_17_no_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mac_muladd_11s_11s_22s_22_4_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mul_mul_11s_11s_22_4_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mul_mul_11s_11s_31_4_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mul_mul_11s_8ns_28_4_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mul_mul_11s_8s_28_4_1&apos;: 2 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;sdiv_20s_11s_20_24_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;sitofp_32s_32_6_no_dsp_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;sobel&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.68 seconds; current allocated memory: 307.626 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;nms&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mul_7ns_5ns_11_1_1&apos;: 1 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;nms&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.03 seconds; current allocated memory: 312.912 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;gsn&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="WARNING" prefix="[RTGEN 206-101]" key="RTGEN_101_918" tag="" content="Design contains AXI ports. Reset is fixed to synchronous and active low." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;gsn/gmem0&apos; to &apos;m_axi&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;gsn/gmem1&apos; to &apos;m_axi&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;gsn/data&apos; to &apos;s_axilite &amp; ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;gsn/out_r&apos; to &apos;s_axilite &amp; ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;gsn&apos; to &apos;s_axilite &amp; ap_ctrl_hs&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_851" tag="" content="Bundling port &apos;data&apos;, &apos;out_r&apos; and &apos;return&apos; to AXI-Lite port control." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;gsn&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.81 seconds; current allocated memory: 317.101 MB." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;gsn_gau6_line_buf_ram (RAM)&apos; using block RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;gsn_sdiv_20s_11s_20_24_1_div&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-282]" key="RTMG_282_1796" tag="" content="Generating pipelined core: &apos;gsn_mul_7ns_5ns_11_1_1_Multiplier_0&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;gsn_nms_line_buf_ram (RAM)&apos; using block RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-741]" key="HLS 200-741" tag="" content="Implementing PIPO gsn_gau_buf_memcore using a single memory for all blocks" resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;gsn_gau_buf_memcore_ram (RAM)&apos; using block RAMs." resolution=""/>
+	<Message severity="INFO" prefix="[RTMG 210-285]" key="RTMG_285_1799" tag="" content="Implementing FIFO &apos;out_c_U(gsn_fifo_w64_d3_S)&apos; using Shift Registers." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-741]" key="HLS 200-741" tag="" content="Implementing PIPO gsn_gau_buf_memcore using a single memory for all blocks" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-741]" key="HLS 200-741" tag="" content="Implementing PIPO gsn_gau_buf_memcore using a single memory for all blocks" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:01:04 ; elapsed = 00:01:11 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 64210 ; free virtual = 145617" resolution=""/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for gsn." resolution=""/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for gsn." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-790]" key="HLS 200-790" tag="LOOP,VITIS_KERNEL" content="**** Loop Constraint Status: All loop constraints were NOT satisfied." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,VITIS_KERNEL" content="**** Estimated Fmax: 414.25 MHz" resolution=""/>
+</Messages>

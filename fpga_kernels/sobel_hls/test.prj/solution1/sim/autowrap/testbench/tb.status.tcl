@@ -1,0 +1,1 @@
+set ::AESL_AUTOSIM::gTopFileName /home/luoyanl2/ece527_taskpar/fpga_kernels/sobel_hls/test.prj/solution1/./sim/autowrap/testbench/sobel.cpp_pre.cpp.tb.cpp

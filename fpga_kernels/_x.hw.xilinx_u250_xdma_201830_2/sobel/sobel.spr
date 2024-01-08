@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="sobel" dir="">
+  <FileSets>
+    <FileSet Name="kernel_sobel" Type="DesignSrcs">
+      <File Path="/home/luoyanl2/ece527_taskpar/fpga_kernels/src/sobel.cpp"/>
+      <Config/>
+    </FileSet>
+  </FileSets>
+  <Runs/>
+</project>

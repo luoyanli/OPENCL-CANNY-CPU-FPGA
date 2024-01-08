@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:35 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Dec 12 20:50:46 2023
+# Process ID: 17099
+# Current directory: /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/ip_tmp
+# Command line: vivado  -notrace -log vivado.log -mode batch -source run_vivado_gen_ip.tcl
+# Log file: /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/ip_tmp/vivado.log
+# Journal file: /home/luoyanl2/ece527_taskpar/fpga_dataflow/gsn_hls/test.prj/solution1/.autopilot/db/ip_tmp/vivado.jou
+#-----------------------------------------------------------
+source run_vivado_gen_ip.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/xilinx/Vivado/2020.1/data/ip'.
+create_ip: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 2212.457 ; gain = 42.867 ; free physical = 63768 ; free virtual = 145206
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gsn_ap_sitofp_4_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gsn_ap_sitofp_4_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gsn_ap_fsqrt_15_no_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gsn_ap_fsqrt_15_no_dsp_32'...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 20:51:09 2023...
