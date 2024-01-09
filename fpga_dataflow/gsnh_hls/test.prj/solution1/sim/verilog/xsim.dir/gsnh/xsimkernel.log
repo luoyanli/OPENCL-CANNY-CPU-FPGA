@@ -1,0 +1,7 @@
+Running: xsim.dir/gsnh/xsimk -simmode gui -wdb gsnh.wdb -simrunnum 0 -socket 58984
+Design successfully loaded
+Design Loading Memory Usage: 56860 KB (Peak: 56860 KB)
+Design Loading CPU Usage: 60 ms
+Simulation completed
+Simulation Memory Usage: 147256 KB (Peak: 196132 KB)
+Simulation CPU Usage: 341360 ms

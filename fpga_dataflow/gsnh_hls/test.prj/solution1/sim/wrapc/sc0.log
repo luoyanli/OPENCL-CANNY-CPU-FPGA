@@ -1,0 +1,7 @@
+make[1]: Entering directory `/home/bryanxz2/ece527_taskpar/fpga_dataflow/gsnh_hls/test.prj/solution1/sim/wrapc'
+   Build using "/opt/xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_gsnh.cpp
+   Compiling gsnh.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+make[1]: Leaving directory `/home/bryanxz2/ece527_taskpar/fpga_dataflow/gsnh_hls/test.prj/solution1/sim/wrapc'

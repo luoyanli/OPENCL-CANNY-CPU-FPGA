@@ -1,0 +1,615 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-10] Setting target device to 'xcu250-figd2104-2L-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file '../src/gsnh.cpp' ... 
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:117:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:118:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:119:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:120:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:121:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:151:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:152:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:153:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:154:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:155:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:156:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:157:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:158:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:159:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:160:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:210:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:211:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:212:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:239:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:240:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:241:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:242:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:243:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:244:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:280:9
+WARNING: [HLS 207-1535] 'Resource' is deprecated, and it will be removed in future release: /opt/xilinx/Vitis/2020.1/common/technology/autopilot/hls_hotbm_apfixed.h:281:9
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178] Inlining function 'hls::sqrt(float)' into 'sobel(unsigned char*, GradPix*)' (../src/gsnh.cpp:75:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'sobel(unsigned char*, GradPix*)' (../src/gsnh.cpp:75:0)
+INFO: [HLS 214-178] Inlining function 'hyst(unsigned char*, unsigned char*)' into 'gsnh(unsigned char*, unsigned char*)' (../src/gsnh.cpp:299:0)
+INFO: [HLS 214-115] Burst write of length 262144 and bit width 8 has been inferred on port 'gmem1' (../src/gsnh.cpp:273:23)
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 73338 ; free virtual = 148547
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 73337 ; free virtual = 148546
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:52 ; elapsed = 00:00:56 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 73318 ; free virtual = 148530
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:53 ; elapsed = 00:00:56 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 73303 ; free virtual = 148516
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'gau' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'gau' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'sobel' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'sobel' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' in function 'nms' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' in function 'nms' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_196_2' (../src/gsnh.cpp:196) in function 'nms' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_96_2' (../src/gsnh.cpp:96) in function 'sobel' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_32_2' (../src/gsnh.cpp:32) in function 'gau' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_205_3' (../src/gsnh.cpp:205) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_212_4' (../src/gsnh.cpp:212) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_213_5' (../src/gsnh.cpp:213) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_218_6' (../src/gsnh.cpp:218) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_105_3' (../src/gsnh.cpp:105) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_112_4' (../src/gsnh.cpp:112) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_113_5' (../src/gsnh.cpp:113) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_118_6' (../src/gsnh.cpp:118) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_127_7' (../src/gsnh.cpp:127) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_128_8' (../src/gsnh.cpp:128) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_134_9' (../src/gsnh.cpp:134) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_135_10' (../src/gsnh.cpp:124) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_39_3' (../src/gsnh.cpp:39) in function 'gau' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_47_4' (../src/gsnh.cpp:47) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_48_5' (../src/gsnh.cpp:48) in function 'gau' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_54_6' (../src/gsnh.cpp:54) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_60_7' (../src/gsnh.cpp:36) in function 'gau' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_61_8' (../src/gsnh.cpp:36) in function 'gau' completely with a factor of 3.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsnh.cpp:188) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsnh.cpp:76) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsnh.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:77) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:21) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:189) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:77) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:21) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus'  in dimension 2 completely.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2020.1/continuous/2020_05_27_2902540/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/gsnh.cpp:102:21) in function 'sobel'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/gsnh.cpp:274:35) in function 'gsnh'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'sobel' (../src/gsnh.cpp:7:34)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nms' (../src/gsnh.cpp:188:59)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'gau' (../src/gsnh.cpp:19)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 73264 ; free virtual = 148480
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_95_1' (../src/gsnh.cpp:95:27) in function 'sobel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_195_1' (../src/gsnh.cpp:195:28) in function 'nms'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_273_1' (../src/gsnh.cpp:273:31) in function 'gsnh'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_31_1' (../src/gsnh.cpp:31:27) in function 'gau'.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 262144 on port 'gmem0' (../src/gsnh.cpp:44:35). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'out.0' (../src/gsnh.cpp:176:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'out.1' (../src/gsnh.cpp:181:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsnh.cpp:109:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (../src/gsnh.cpp:259:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsnh.cpp:206:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsnh.cpp:209:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsnh.cpp:44:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (../src/gsnh.cpp:70:30)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1668.570 ; gain = 1235.934 ; free physical = 73209 ; free virtual = 148425
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gsnh' ...
+WARNING: [SYN 201-107] Renaming port name 'gsnh/out' to 'gsnh/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gau' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_31_1_VITIS_LOOP_32_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 59.46 seconds; current allocated memory: 288.549 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.19 seconds; current allocated memory: 289.216 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_95_1_VITIS_LOOP_96_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 38.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.66 seconds; current allocated memory: 290.003 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.44 seconds; current allocated memory: 291.203 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'nms' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_195_1_VITIS_LOOP_196_2'.
+WARNING: [HLS 200-885] Unable to schedule 'store' operation ('line_buf_addr_3_write_ln209', ../src/gsnh.cpp:209) of constant <constant:_ssdm_op_Write.bram.i48> on array 'line_buf', ../src/gsnh.cpp:188 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'line_buf'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 2, Depth = 10.
+WARNING: [HLS 200-871] Estimated clock period (2.414ns) exceeds the target (target clock period: 2.5ns, clock uncertainty: 0.675ns, effective delay budget: 1.825ns).
+WARNING: [HLS 200-1016] The critical path in module 'nms' consists of the following:	'phi' operation ('empty_75') with incoming values : ('empty_82') [46]  (0 ns)
+	'mul' operation ('mul') [67]  (1.27 ns)
+	blocking operation 1.14 ns on control path)
+
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.74 seconds; current allocated memory: 291.690 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.29 seconds; current allocated memory: 301.541 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gsnh' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_273_1_VITIS_LOOP_274_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 301.720 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.53 seconds; current allocated memory: 301.997 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gau' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gau'.
+INFO: [HLS 200-111]  Elapsed time: 0.58 seconds; current allocated memory: 303.114 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'fsqrt_32ns_32ns_32_17_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_11s_22s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_11s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_11s_31_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_8ns_28_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_8s_28_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_20s_11s_20_24_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32s_32_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel'.
+INFO: [HLS 200-111]  Elapsed time: 0.67 seconds; current allocated memory: 307.767 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'nms' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_7ns_5ns_11_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'nms'.
+INFO: [HLS 200-111]  Elapsed time: 0.96 seconds; current allocated memory: 312.921 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gsnh' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsnh/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsnh/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsnh/data' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'gsnh/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'gsnh' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'data', 'out_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gsnh'.
+INFO: [HLS 200-111]  Elapsed time: 0.77 seconds; current allocated memory: 316.968 MB.
+INFO: [RTMG 210-278] Implementing memory 'gsnh_gau_line_buf_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-282] Generating pipelined core: 'gsnh_sdiv_20s_11s_20_24_1_div'
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [HLS 200-10] Setting target device to 'xcu250-figd2104-2L-e'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 2.5ns.
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-10] Analyzing design file '../src/gsnh.cpp' ... 
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' target.
+INFO: [HLS 214-131] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:13:17)
+INFO: [HLS 214-131] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:59:8)
+INFO: [HLS 214-131] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:47:20)
+INFO: [HLS 214-131] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:18:79)
+INFO: [HLS 214-131] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:15:57)
+INFO: [HLS 214-131] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:54)
+INFO: [HLS 214-131] Inlining function 'hls::sqrt(float)' into 'sobel(unsigned char*, GradPix*)' (../src/gsnh.cpp:140:25)
+INFO: [HLS 214-131] Inlining function '__hls_fptosi_float_i32' into 'sobel(unsigned char*, GradPix*)' (../src/gsnh.cpp:140:25)
+INFO: [HLS 214-131] Inlining function 'gau(unsigned char*, unsigned char*)' into 'gsnh(unsigned char*, unsigned char*)' (../src/gsnh.cpp:312:5)
+INFO: [HLS 214-131] Inlining function 'hyst(unsigned char*, unsigned char*)' into 'gsnh(unsigned char*, unsigned char*)' (../src/gsnh.cpp:315:5)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:106:36)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:106:34)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:109:33)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:119:41)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:40:36)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:40:34)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:44:33)
+WARNING: [HLS 214-167] The program may have out of bound array access (../src/gsnh.cpp:55:41)
+WARNING: [HLS 200-651] Found issues in source files:
+warning: ../src/gsnh.cpp:106:36: The program may have out of bound array access
+warning: ../src/gsnh.cpp:106:34: The program may have out of bound array access
+warning: ../src/gsnh.cpp:109:33: The program may have out of bound array access
+warning: ../src/gsnh.cpp:119:41: The program may have out of bound array access
+warning: ../src/gsnh.cpp:40:36: The program may have out of bound array access
+warning: ../src/gsnh.cpp:40:34: The program may have out of bound array access
+warning: ../src/gsnh.cpp:44:33: The program may have out of bound array access
+warning: ../src/gsnh.cpp:55:41: The program may have out of bound array access
+
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:49 ; elapsed = 00:01:06 . Memory (MB): peak = 979.289 ; gain = 526.969 ; free physical = 67715 ; free virtual = 146331
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:49 ; elapsed = 00:01:06 . Memory (MB): peak = 979.289 ; gain = 526.969 ; free physical = 67715 ; free virtual = 146331
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:49 ; elapsed = 00:01:07 . Memory (MB): peak = 980.293 ; gain = 527.973 ; free physical = 67663 ; free virtual = 146294
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:50 ; elapsed = 00:01:07 . Memory (MB): peak = 980.293 ; gain = 527.973 ; free physical = 67648 ; free virtual = 146279
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (../src/gsnh.cpp:32) in function 'gsnh' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (../src/gsnh.cpp:196) in function 'nms' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2.1' (../src/gsnh.cpp:96) in function 'sobel' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (../src/gsnh.cpp:39) in function 'gsnh' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2' (../src/gsnh.cpp:47) in function 'gsnh' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2.1' (../src/gsnh.cpp:48) in function 'gsnh' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.3' (../src/gsnh.cpp:54) in function 'gsnh' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.4' (../src/gsnh.cpp:60) in function 'gsnh' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.4.1' (../src/gsnh.cpp:61) in function 'gsnh' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (../src/gsnh.cpp:205) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2' (../src/gsnh.cpp:212) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2.1' (../src/gsnh.cpp:213) in function 'nms' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.3' (../src/gsnh.cpp:218) in function 'nms' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (../src/gsnh.cpp:105) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2' (../src/gsnh.cpp:112) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.2.1' (../src/gsnh.cpp:113) in function 'sobel' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.3' (../src/gsnh.cpp:118) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.4' (../src/gsnh.cpp:127) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.4.1' (../src/gsnh.cpp:128) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.5' (../src/gsnh.cpp:134) in function 'sobel' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.5.1' (../src/gsnh.cpp:135) in function 'sobel' completely with a factor of 3.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsnh.cpp:20) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsnh.cpp:188) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'line_buf' (../src/gsnh.cpp:76) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL' in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:21) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:77) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'gaus' in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'H_SOBEL_KERNEL' in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'V_SOBEL_KERNEL' in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:21) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:189) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf' (../src/gsnh.cpp:77) in dimension 2 completely.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.0.0' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.0.1' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.0.2' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.1.0' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.1.1' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.1.2' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.2.0' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.2.1' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'window_buf.2.2' (../src/gsnh.cpp:189) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.0.0' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.0.1' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.0.2' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.1.0' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.1.1' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.1.2' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.2.0' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.2.1' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'window_buf.2.2' (../src/gsnh.cpp:189) in dimension 1 completely.
+INFO: [XFORM 203-102] Partitioning array 'line_buf' (../src/gsnh.cpp:188) in dimension 2 automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'sobel' (/wrk/2019.2/continuous/2019_11_06_2708876/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/gsnh.cpp:102:21) to (../src/gsnh.cpp:96:9) in function 'sobel'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../src/gsnh.cpp:281:24) to (../src/gsnh.cpp:274:9) in function 'gsnh'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'sobel' (../src/gsnh.cpp:75)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'nms' (../src/gsnh.cpp:187)...3 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'gsnh' (../src/gsnh.cpp:299)...8 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 980.293 ; gain = 527.973 ; free physical = 67607 ; free virtual = 146241
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (../src/gsnh.cpp:95:2) in function 'sobel'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (../src/gsnh.cpp:195:2) in function 'nms'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (../src/gsnh.cpp:31:2) in function 'gsnh'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3' (../src/gsnh.cpp:273:5) in function 'gsnh'.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 262144 on port 'gmem0' (../src/gsnh.cpp:44:35). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 262144 on port 'gmem1' (../src/gsnh.cpp:292:30). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'out.value' (../src/gsnh.cpp:180:40)
+INFO: [HLS 200-472] Inferring partial write operation for 'out.grad' (../src/gsnh.cpp:177:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsnh.cpp:109:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[1]' 
+INFO: [HLS 200-472] Inferring partial write operation for 'out' (../src/gsnh.cpp:256:34)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf[0]' (../src/gsnh.cpp:209:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' 
+INFO: [HLS 200-472] Inferring partial write operation for 'line_buf' (../src/gsnh.cpp:44:33)
+INFO: [HLS 200-472] Inferring partial write operation for 'gau_buf' (../src/gsnh.cpp:70:30)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 980.293 ; gain = 527.973 ; free physical = 67563 ; free virtual = 146197
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'gsnh' ...
+WARNING: [SYN 201-107] Renaming port name 'gsnh/out' to 'gsnh/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln140_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln157) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln161) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('line_buf_addr_2_write_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:76 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'line_buf'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 32, Depth = 33.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 36.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 75.89 seconds; current allocated memory: 222.768 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.41 seconds; current allocated memory: 224.583 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'nms' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('line_buf_0_addr_2_write_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf[0]', ../src/gsnh.cpp:188 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'line_buf_0'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 17.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.96 seconds; current allocated memory: 225.334 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 227.534 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gsnh' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'store' operation ('line_buf_addr_66_write_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'line_buf'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 32, Depth = 33.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.92 seconds; current allocated memory: 228.478 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101]

@@ -1,0 +1,1149 @@
+
+
+================================================================
+== Vitis HLS Report for 'gsnh'
+================================================================
+* Date:           Wed Jan  3 21:16:12 2024
+
+* Version:        2019.2 (Build 2708876 on Wed Nov 06 22:05:07 MST 2019)
+* Project:        test.prj
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcu250-figd2104-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  | 2.50 ns | 1.825 ns |   0.68 ns  |
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+---------+---------+---------+
+    |  Latency (cycles) |  Latency (absolute) |      Interval     | Pipeline|
+    |   min   |   max   |    min   |    max   |   min   |   max   |   Type  |
+    +---------+---------+----------+----------+---------+---------+---------+
+    |  1050950|  1050950| 2.627 ms | 2.627 ms |  1050950|  1050950|   none  |
+    +---------+---------+----------+----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+--------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip  |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  |  Count | Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+--------+----------+
+        |- Loop 1  |      768|      768|        33|         32|          1|      24|    yes   |
+        |- Loop 2  |   262147|   262147|         5|          1|          1|  262144|    yes   |
+        |- Loop 3  |   262147|   262147|         5|          1|          1|  262144|    yes   |
+        +----------+---------+---------+----------+-----------+-----------+--------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 32, depth = 33
+  * Pipeline-1: initiation interval (II) = 1, depth = 5
+  * Pipeline-2: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 60
+* Pipeline : 3
+  Pipeline-0 : II = 32, D = 33, States = { 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 }
+  Pipeline-1 : II = 1, D = 5, States = { 42 43 44 45 46 }
+  Pipeline-2 : II = 1, D = 5, States = { 51 52 53 54 55 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 35 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 2 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 47 45 
+45 --> 46 
+46 --> 42 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 56 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 51 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%spectopmodule_ln0 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_6"   --->   Operation 61 'spectopmodule' 'spectopmodule_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem0, void @empty_5, i32, i32, void @empty_0, i32, i32, void @empty_0, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_0"   --->   Operation 62 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %gmem0"   --->   Operation 63 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %gmem1, void @empty_5, i32, i32, void @empty_0, i32, i32, void @empty_0, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_0"   --->   Operation 64 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %gmem1"   --->   Operation 65 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data, void @empty_4, i32, i32, void @empty_0, i32, i32, void @empty_3, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_2"   --->   Operation 66 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %data, void @empty_1, i32, i32, void @empty_0, i32, i32, void @empty_0, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_2"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_4, i32, i32, void @empty_0, i32, i32, void @empty_3, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_2"   --->   Operation 68 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %out_r, void @empty_1, i32, i32, void @empty_0, i32, i32, void @empty_0, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_2"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32, void @empty_4, i32, i32, void @empty_0, i32, i32, void @empty_3, void @empty_0, void @empty_0, i32, i32, i32, i32, void @empty_0, void @empty_0"   --->   Operation 70 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (1.00ns)   --->   "%out_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %out_r"   --->   Operation 71 'read' 'out_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 52 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 72 [1/1] (1.00ns)   --->   "%data_read = read i64 @_ssdm_op_Read.s_axilite.i64, i64 %data"   --->   Operation 72 'read' 'data_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 52 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 73 [1/1] (0.00ns)   --->   "%line_buf = alloca i64" [../src/gsnh.cpp:20]   --->   Operation 73 'alloca' 'line_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_1 : Operation 74 [1/1] (0.00ns)   --->   "%gau_buf = alloca i64" [../src/gsnh.cpp:307]   --->   Operation 74 'alloca' 'gau_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_1 : Operation 75 [1/1] (0.00ns)   --->   "%sobel_buf_value = alloca i64" [../src/gsnh.cpp:308]   --->   Operation 75 'alloca' 'sobel_buf_value' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 76 [1/1] (0.00ns)   --->   "%sobel_buf_grad = alloca i64" [../src/gsnh.cpp:308]   --->   Operation 76 'alloca' 'sobel_buf_grad' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 77 [1/1] (0.00ns)   --->   "%supp_buf = alloca i64" [../src/gsnh.cpp:309]   --->   Operation 77 'alloca' 'supp_buf' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_1 : Operation 78 [1/1] (0.60ns)   --->   "%br_ln20 = br void %loadstoreloop" [../src/gsnh.cpp:20]   --->   Operation 78 'br' 'br_ln20' <Predicate = true> <Delay = 0.60>
+
+State 2 <SV = 1> <Delay = 1.57>
+ST_2 : Operation 79 [1/1] (0.00ns)   --->   "%empty = phi i5, void, i5 %empty_154, void %loadstoreloop.split"   --->   Operation 79 'phi' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 80 [1/1] (0.63ns)   --->   "%exitcond4012 = icmp_eq  i5 %empty, i5"   --->   Operation 80 'icmp' 'exitcond4012' <Predicate = true> <Delay = 0.63> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%empty_153 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 81 'speclooptripcount' 'empty_153' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.34ns)   --->   "%empty_154 = add i5 %empty, i5"   --->   Operation 82 'add' 'empty_154' <Predicate = true> <Delay = 0.34> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%br_ln0 = br i1 %exitcond4012, void %loadstoreloop.split, void %split.preheader"   --->   Operation 83 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%empty_155 = trunc i5 %empty"   --->   Operation 84 'trunc' 'empty_155' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%tmp_17 = partselect i2 @_ssdm_op_PartSelect.i2.i5.i32.i32, i5 %empty, i32, i32"   --->   Operation 85 'partselect' 'tmp_17' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_18 = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i2.i3, i2 %tmp_17, i3"   --->   Operation 86 'bitconcatenate' 'tmp_18' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%empty_156 = or i5 %empty, i5"   --->   Operation 87 'or' 'empty_156' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_2 : Operation 88 [1/1] (0.63ns)   --->   "%empty_157 = icmp_ugt  i5 %tmp_18, i5 %empty_156"   --->   Operation 88 'icmp' 'empty_157' <Predicate = (!exitcond4012)> <Delay = 0.63> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 89 [1/1] (0.00ns) (grouped into LUT with out node empty_160)   --->   "%empty_158 = select i1 %empty_157, i5 %tmp_18, i5 %empty_156"   --->   Operation 89 'select' 'empty_158' <Predicate = (!exitcond4012)> <Delay = 0.00> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (0.00ns) (grouped into LUT with out node empty_166)   --->   "%empty_159 = select i1 %empty_157, i5 %empty_156, i5 %tmp_18"   --->   Operation 90 'select' 'empty_159' <Predicate = (!exitcond4012)> <Delay = 0.00> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 91 [1/1] (0.34ns) (out node of the LUT)   --->   "%empty_160 = sub i5, i5 %empty_158"   --->   Operation 91 'sub' 'empty_160' <Predicate = (!exitcond4012)> <Delay = 0.34> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 92 [1/1] (0.00ns) (grouped into LUT with out node empty_166)   --->   "%empty_161 = zext i5 %empty_159"   --->   Operation 92 'zext' 'empty_161' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_2 : Operation 93 [1/1] (0.00ns) (grouped into LUT with out node empty_166)   --->   "%empty_162 = zext i5 %empty_160"   --->   Operation 93 'zext' 'empty_162' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns) (grouped into LUT with out node empty_166)   --->   "%empty_163 = select i1 %empty_157, i24, i24"   --->   Operation 94 'select' 'empty_163' <Predicate = (!exitcond4012)> <Delay = 0.00> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 95 [1/1] (0.00ns) (grouped into LUT with out node empty_166)   --->   "%empty_164 = shl i24, i24 %empty_161"   --->   Operation 95 'shl' 'empty_164' <Predicate = (!exitcond4012)> <Delay = 0.00> <Core = "Shift">   --->   Core 14 'Shift' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 96 [1/1] (0.00ns) (grouped into LUT with out node empty_166)   --->   "%empty_165 = lshr i24, i24 %empty_162"   --->   Operation 96 'lshr' 'empty_165' <Predicate = (!exitcond4012)> <Delay = 0.00> <Core = "Shift">   --->   Core 14 'Shift' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 97 [1/1] (0.00ns) (grouped into LUT with out node empty_166)   --->   "%p_demorgan = and i24 %empty_164, i24 %empty_165"   --->   Operation 97 'and' 'p_demorgan' <Predicate = (!exitcond4012)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 13 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 98 [1/1] (0.59ns) (out node of the LUT)   --->   "%empty_166 = and i24 %empty_163, i24 %p_demorgan"   --->   Operation 98 'and' 'empty_166' <Predicate = (!exitcond4012)> <Delay = 0.59> <Core = "LogicGate">   --->   Core 13 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.12> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 1.64>
+ST_3 : Operation 99 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i3.i6, i3 %empty_155, i6"   --->   Operation 99 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_3 : Operation 100 [1/1] (0.00ns)   --->   "%p_cast11 = zext i9 %tmp_s"   --->   Operation 100 'zext' 'p_cast11' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_3 : Operation 101 [1/1] (0.00ns)   --->   "%line_buf_addr = getelementptr i24 %line_buf, i64, i64 %p_cast11"   --->   Operation 101 'getelementptr' 'line_buf_addr' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "%empty_167 = zext i2 %tmp_17"   --->   Operation 102 'zext' 'empty_167' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.48ns)   --->   "%mask = shl i3, i3 %empty_167"   --->   Operation 103 'shl' 'mask' <Predicate = (!exitcond4012)> <Delay = 0.48> <Core = "Shift">   --->   Core 14 'Shift' <Latency = 0> <II = 1> <Delay = 0.48> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 104 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr, i24 %empty_166, i3 %mask"   --->   Operation 104 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "%empty_168 = or i9 %tmp_s, i9"   --->   Operation 105 'or' 'empty_168' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "%p_cast14 = zext i9 %empty_168"   --->   Operation 106 'zext' 'p_cast14' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "%line_buf_addr_65 = getelementptr i24 %line_buf, i64, i64 %p_cast14"   --->   Operation 107 'getelementptr' 'line_buf_addr_65' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_3 : Operation 108 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_65, i24 %empty_166, i3 %mask"   --->   Operation 108 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 4 <SV = 3> <Delay = 1.15>
+ST_4 : Operation 109 [1/1] (0.00ns)   --->   "%empty_169 = or i9 %tmp_s, i9"   --->   Operation 109 'or' 'empty_169' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_4 : Operation 110 [1/1] (0.00ns)   --->   "%p_cast15 = zext i9 %empty_169"   --->   Operation 110 'zext' 'p_cast15' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%line_buf_addr_66 = getelementptr i24 %line_buf, i64, i64 %p_cast15"   --->   Operation 111 'getelementptr' 'line_buf_addr_66' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_4 : Operation 112 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_66, i24 %empty_166, i3 %mask"   --->   Operation 112 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_4 : Operation 113 [1/1] (0.00ns)   --->   "%empty_170 = or i9 %tmp_s, i9"   --->   Operation 113 'or' 'empty_170' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_4 : Operation 114 [1/1] (0.00ns)   --->   "%p_cast16 = zext i9 %empty_170"   --->   Operation 114 'zext' 'p_cast16' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_4 : Operation 115 [1/1] (0.00ns)   --->   "%line_buf_addr_67 = getelementptr i24 %line_buf, i64, i64 %p_cast16"   --->   Operation 115 'getelementptr' 'line_buf_addr_67' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_4 : Operation 116 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_67, i24 %empty_166, i3 %mask"   --->   Operation 116 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 5 <SV = 4> <Delay = 1.15>
+ST_5 : Operation 117 [1/1] (0.00ns)   --->   "%empty_171 = or i9 %tmp_s, i9"   --->   Operation 117 'or' 'empty_171' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%p_cast17 = zext i9 %empty_171"   --->   Operation 118 'zext' 'p_cast17' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%line_buf_addr_68 = getelementptr i24 %line_buf, i64, i64 %p_cast17"   --->   Operation 119 'getelementptr' 'line_buf_addr_68' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_5 : Operation 120 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_68, i24 %empty_166, i3 %mask"   --->   Operation 120 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%empty_172 = or i9 %tmp_s, i9"   --->   Operation 121 'or' 'empty_172' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%p_cast18 = zext i9 %empty_172"   --->   Operation 122 'zext' 'p_cast18' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%line_buf_addr_69 = getelementptr i24 %line_buf, i64, i64 %p_cast18"   --->   Operation 123 'getelementptr' 'line_buf_addr_69' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_5 : Operation 124 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_69, i24 %empty_166, i3 %mask"   --->   Operation 124 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 6 <SV = 5> <Delay = 1.15>
+ST_6 : Operation 125 [1/1] (0.00ns)   --->   "%empty_173 = or i9 %tmp_s, i9"   --->   Operation 125 'or' 'empty_173' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_6 : Operation 126 [1/1] (0.00ns)   --->   "%p_cast19 = zext i9 %empty_173"   --->   Operation 126 'zext' 'p_cast19' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_6 : Operation 127 [1/1] (0.00ns)   --->   "%line_buf_addr_70 = getelementptr i24 %line_buf, i64, i64 %p_cast19"   --->   Operation 127 'getelementptr' 'line_buf_addr_70' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_6 : Operation 128 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_70, i24 %empty_166, i3 %mask"   --->   Operation 128 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_6 : Operation 129 [1/1] (0.00ns)   --->   "%empty_174 = or i9 %tmp_s, i9"   --->   Operation 129 'or' 'empty_174' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_6 : Operation 130 [1/1] (0.00ns)   --->   "%p_cast20 = zext i9 %empty_174"   --->   Operation 130 'zext' 'p_cast20' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_6 : Operation 131 [1/1] (0.00ns)   --->   "%line_buf_addr_71 = getelementptr i24 %line_buf, i64, i64 %p_cast20"   --->   Operation 131 'getelementptr' 'line_buf_addr_71' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_6 : Operation 132 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_71, i24 %empty_166, i3 %mask"   --->   Operation 132 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 7 <SV = 6> <Delay = 1.15>
+ST_7 : Operation 133 [1/1] (0.00ns)   --->   "%empty_175 = or i9 %tmp_s, i9"   --->   Operation 133 'or' 'empty_175' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_7 : Operation 134 [1/1] (0.00ns)   --->   "%p_cast21 = zext i9 %empty_175"   --->   Operation 134 'zext' 'p_cast21' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_7 : Operation 135 [1/1] (0.00ns)   --->   "%line_buf_addr_72 = getelementptr i24 %line_buf, i64, i64 %p_cast21"   --->   Operation 135 'getelementptr' 'line_buf_addr_72' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_7 : Operation 136 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_72, i24 %empty_166, i3 %mask"   --->   Operation 136 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_7 : Operation 137 [1/1] (0.00ns)   --->   "%empty_176 = or i9 %tmp_s, i9"   --->   Operation 137 'or' 'empty_176' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_7 : Operation 138 [1/1] (0.00ns)   --->   "%p_cast22 = zext i9 %empty_176"   --->   Operation 138 'zext' 'p_cast22' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_7 : Operation 139 [1/1] (0.00ns)   --->   "%line_buf_addr_73 = getelementptr i24 %line_buf, i64, i64 %p_cast22"   --->   Operation 139 'getelementptr' 'line_buf_addr_73' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_7 : Operation 140 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_73, i24 %empty_166, i3 %mask"   --->   Operation 140 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 8 <SV = 7> <Delay = 1.15>
+ST_8 : Operation 141 [1/1] (0.00ns)   --->   "%empty_177 = or i9 %tmp_s, i9"   --->   Operation 141 'or' 'empty_177' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_8 : Operation 142 [1/1] (0.00ns)   --->   "%p_cast23 = zext i9 %empty_177"   --->   Operation 142 'zext' 'p_cast23' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_8 : Operation 143 [1/1] (0.00ns)   --->   "%line_buf_addr_74 = getelementptr i24 %line_buf, i64, i64 %p_cast23"   --->   Operation 143 'getelementptr' 'line_buf_addr_74' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_8 : Operation 144 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_74, i24 %empty_166, i3 %mask"   --->   Operation 144 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_8 : Operation 145 [1/1] (0.00ns)   --->   "%empty_178 = or i9 %tmp_s, i9"   --->   Operation 145 'or' 'empty_178' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_8 : Operation 146 [1/1] (0.00ns)   --->   "%p_cast24 = zext i9 %empty_178"   --->   Operation 146 'zext' 'p_cast24' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_8 : Operation 147 [1/1] (0.00ns)   --->   "%line_buf_addr_75 = getelementptr i24 %line_buf, i64, i64 %p_cast24"   --->   Operation 147 'getelementptr' 'line_buf_addr_75' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_8 : Operation 148 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_75, i24 %empty_166, i3 %mask"   --->   Operation 148 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 9 <SV = 8> <Delay = 1.15>
+ST_9 : Operation 149 [1/1] (0.00ns)   --->   "%empty_179 = or i9 %tmp_s, i9"   --->   Operation 149 'or' 'empty_179' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_9 : Operation 150 [1/1] (0.00ns)   --->   "%p_cast25 = zext i9 %empty_179"   --->   Operation 150 'zext' 'p_cast25' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_9 : Operation 151 [1/1] (0.00ns)   --->   "%line_buf_addr_76 = getelementptr i24 %line_buf, i64, i64 %p_cast25"   --->   Operation 151 'getelementptr' 'line_buf_addr_76' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_9 : Operation 152 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_76, i24 %empty_166, i3 %mask"   --->   Operation 152 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_9 : Operation 153 [1/1] (0.00ns)   --->   "%empty_180 = or i9 %tmp_s, i9"   --->   Operation 153 'or' 'empty_180' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_9 : Operation 154 [1/1] (0.00ns)   --->   "%p_cast26 = zext i9 %empty_180"   --->   Operation 154 'zext' 'p_cast26' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_9 : Operation 155 [1/1] (0.00ns)   --->   "%line_buf_addr_77 = getelementptr i24 %line_buf, i64, i64 %p_cast26"   --->   Operation 155 'getelementptr' 'line_buf_addr_77' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_9 : Operation 156 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_77, i24 %empty_166, i3 %mask"   --->   Operation 156 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 10 <SV = 9> <Delay = 1.15>
+ST_10 : Operation 157 [1/1] (0.00ns)   --->   "%empty_181 = or i9 %tmp_s, i9"   --->   Operation 157 'or' 'empty_181' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_10 : Operation 158 [1/1] (0.00ns)   --->   "%p_cast27 = zext i9 %empty_181"   --->   Operation 158 'zext' 'p_cast27' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_10 : Operation 159 [1/1] (0.00ns)   --->   "%line_buf_addr_78 = getelementptr i24 %line_buf, i64, i64 %p_cast27"   --->   Operation 159 'getelementptr' 'line_buf_addr_78' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_10 : Operation 160 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_78, i24 %empty_166, i3 %mask"   --->   Operation 160 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_10 : Operation 161 [1/1] (0.00ns)   --->   "%empty_182 = or i9 %tmp_s, i9"   --->   Operation 161 'or' 'empty_182' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_10 : Operation 162 [1/1] (0.00ns)   --->   "%p_cast28 = zext i9 %empty_182"   --->   Operation 162 'zext' 'p_cast28' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_10 : Operation 163 [1/1] (0.00ns)   --->   "%line_buf_addr_79 = getelementptr i24 %line_buf, i64, i64 %p_cast28"   --->   Operation 163 'getelementptr' 'line_buf_addr_79' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_10 : Operation 164 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_79, i24 %empty_166, i3 %mask"   --->   Operation 164 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 11 <SV = 10> <Delay = 1.15>
+ST_11 : Operation 165 [1/1] (0.00ns)   --->   "%empty_183 = or i9 %tmp_s, i9"   --->   Operation 165 'or' 'empty_183' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_11 : Operation 166 [1/1] (0.00ns)   --->   "%p_cast29 = zext i9 %empty_183"   --->   Operation 166 'zext' 'p_cast29' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_11 : Operation 167 [1/1] (0.00ns)   --->   "%line_buf_addr_80 = getelementptr i24 %line_buf, i64, i64 %p_cast29"   --->   Operation 167 'getelementptr' 'line_buf_addr_80' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_11 : Operation 168 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_80, i24 %empty_166, i3 %mask"   --->   Operation 168 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_11 : Operation 169 [1/1] (0.00ns)   --->   "%empty_184 = or i9 %tmp_s, i9"   --->   Operation 169 'or' 'empty_184' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_11 : Operation 170 [1/1] (0.00ns)   --->   "%p_cast30 = zext i9 %empty_184"   --->   Operation 170 'zext' 'p_cast30' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_11 : Operation 171 [1/1] (0.00ns)   --->   "%line_buf_addr_81 = getelementptr i24 %line_buf, i64, i64 %p_cast30"   --->   Operation 171 'getelementptr' 'line_buf_addr_81' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_11 : Operation 172 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_81, i24 %empty_166, i3 %mask"   --->   Operation 172 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 12 <SV = 11> <Delay = 1.15>
+ST_12 : Operation 173 [1/1] (0.00ns)   --->   "%empty_185 = or i9 %tmp_s, i9"   --->   Operation 173 'or' 'empty_185' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_12 : Operation 174 [1/1] (0.00ns)   --->   "%p_cast31 = zext i9 %empty_185"   --->   Operation 174 'zext' 'p_cast31' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_12 : Operation 175 [1/1] (0.00ns)   --->   "%line_buf_addr_82 = getelementptr i24 %line_buf, i64, i64 %p_cast31"   --->   Operation 175 'getelementptr' 'line_buf_addr_82' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_12 : Operation 176 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_82, i24 %empty_166, i3 %mask"   --->   Operation 176 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_12 : Operation 177 [1/1] (0.00ns)   --->   "%empty_186 = or i9 %tmp_s, i9"   --->   Operation 177 'or' 'empty_186' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_12 : Operation 178 [1/1] (0.00ns)   --->   "%p_cast32 = zext i9 %empty_186"   --->   Operation 178 'zext' 'p_cast32' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_12 : Operation 179 [1/1] (0.00ns)   --->   "%line_buf_addr_83 = getelementptr i24 %line_buf, i64, i64 %p_cast32"   --->   Operation 179 'getelementptr' 'line_buf_addr_83' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_12 : Operation 180 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_83, i24 %empty_166, i3 %mask"   --->   Operation 180 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 13 <SV = 12> <Delay = 1.15>
+ST_13 : Operation 181 [1/1] (0.00ns)   --->   "%empty_187 = or i9 %tmp_s, i9"   --->   Operation 181 'or' 'empty_187' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_13 : Operation 182 [1/1] (0.00ns)   --->   "%p_cast33 = zext i9 %empty_187"   --->   Operation 182 'zext' 'p_cast33' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_13 : Operation 183 [1/1] (0.00ns)   --->   "%line_buf_addr_84 = getelementptr i24 %line_buf, i64, i64 %p_cast33"   --->   Operation 183 'getelementptr' 'line_buf_addr_84' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_13 : Operation 184 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_84, i24 %empty_166, i3 %mask"   --->   Operation 184 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_13 : Operation 185 [1/1] (0.00ns)   --->   "%empty_188 = or i9 %tmp_s, i9"   --->   Operation 185 'or' 'empty_188' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_13 : Operation 186 [1/1] (0.00ns)   --->   "%p_cast34 = zext i9 %empty_188"   --->   Operation 186 'zext' 'p_cast34' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_13 : Operation 187 [1/1] (0.00ns)   --->   "%line_buf_addr_85 = getelementptr i24 %line_buf, i64, i64 %p_cast34"   --->   Operation 187 'getelementptr' 'line_buf_addr_85' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_13 : Operation 188 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_85, i24 %empty_166, i3 %mask"   --->   Operation 188 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 14 <SV = 13> <Delay = 1.15>
+ST_14 : Operation 189 [1/1] (0.00ns)   --->   "%empty_189 = or i9 %tmp_s, i9"   --->   Operation 189 'or' 'empty_189' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_14 : Operation 190 [1/1] (0.00ns)   --->   "%p_cast35 = zext i9 %empty_189"   --->   Operation 190 'zext' 'p_cast35' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_14 : Operation 191 [1/1] (0.00ns)   --->   "%line_buf_addr_86 = getelementptr i24 %line_buf, i64, i64 %p_cast35"   --->   Operation 191 'getelementptr' 'line_buf_addr_86' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_14 : Operation 192 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_86, i24 %empty_166, i3 %mask"   --->   Operation 192 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_14 : Operation 193 [1/1] (0.00ns)   --->   "%empty_190 = or i9 %tmp_s, i9"   --->   Operation 193 'or' 'empty_190' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_14 : Operation 194 [1/1] (0.00ns)   --->   "%p_cast36 = zext i9 %empty_190"   --->   Operation 194 'zext' 'p_cast36' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_14 : Operation 195 [1/1] (0.00ns)   --->   "%line_buf_addr_87 = getelementptr i24 %line_buf, i64, i64 %p_cast36"   --->   Operation 195 'getelementptr' 'line_buf_addr_87' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_14 : Operation 196 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_87, i24 %empty_166, i3 %mask"   --->   Operation 196 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 15 <SV = 14> <Delay = 1.15>
+ST_15 : Operation 197 [1/1] (0.00ns)   --->   "%empty_191 = or i9 %tmp_s, i9"   --->   Operation 197 'or' 'empty_191' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_15 : Operation 198 [1/1] (0.00ns)   --->   "%p_cast37 = zext i9 %empty_191"   --->   Operation 198 'zext' 'p_cast37' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_15 : Operation 199 [1/1] (0.00ns)   --->   "%line_buf_addr_88 = getelementptr i24 %line_buf, i64, i64 %p_cast37"   --->   Operation 199 'getelementptr' 'line_buf_addr_88' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_15 : Operation 200 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_88, i24 %empty_166, i3 %mask"   --->   Operation 200 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_15 : Operation 201 [1/1] (0.00ns)   --->   "%empty_192 = or i9 %tmp_s, i9"   --->   Operation 201 'or' 'empty_192' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_15 : Operation 202 [1/1] (0.00ns)   --->   "%p_cast38 = zext i9 %empty_192"   --->   Operation 202 'zext' 'p_cast38' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_15 : Operation 203 [1/1] (0.00ns)   --->   "%line_buf_addr_89 = getelementptr i24 %line_buf, i64, i64 %p_cast38"   --->   Operation 203 'getelementptr' 'line_buf_addr_89' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_15 : Operation 204 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_89, i24 %empty_166, i3 %mask"   --->   Operation 204 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 16 <SV = 15> <Delay = 1.15>
+ST_16 : Operation 205 [1/1] (0.00ns)   --->   "%empty_193 = or i9 %tmp_s, i9"   --->   Operation 205 'or' 'empty_193' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_16 : Operation 206 [1/1] (0.00ns)   --->   "%p_cast39 = zext i9 %empty_193"   --->   Operation 206 'zext' 'p_cast39' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_16 : Operation 207 [1/1] (0.00ns)   --->   "%line_buf_addr_90 = getelementptr i24 %line_buf, i64, i64 %p_cast39"   --->   Operation 207 'getelementptr' 'line_buf_addr_90' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_16 : Operation 208 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_90, i24 %empty_166, i3 %mask"   --->   Operation 208 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_16 : Operation 209 [1/1] (0.00ns)   --->   "%empty_194 = or i9 %tmp_s, i9"   --->   Operation 209 'or' 'empty_194' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_16 : Operation 210 [1/1] (0.00ns)   --->   "%p_cast40 = zext i9 %empty_194"   --->   Operation 210 'zext' 'p_cast40' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_16 : Operation 211 [1/1] (0.00ns)   --->   "%line_buf_addr_91 = getelementptr i24 %line_buf, i64, i64 %p_cast40"   --->   Operation 211 'getelementptr' 'line_buf_addr_91' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_16 : Operation 212 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_91, i24 %empty_166, i3 %mask"   --->   Operation 212 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 17 <SV = 16> <Delay = 1.15>
+ST_17 : Operation 213 [1/1] (0.00ns)   --->   "%empty_195 = or i9 %tmp_s, i9"   --->   Operation 213 'or' 'empty_195' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_17 : Operation 214 [1/1] (0.00ns)   --->   "%p_cast41 = zext i9 %empty_195"   --->   Operation 214 'zext' 'p_cast41' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_17 : Operation 215 [1/1] (0.00ns)   --->   "%line_buf_addr_92 = getelementptr i24 %line_buf, i64, i64 %p_cast41"   --->   Operation 215 'getelementptr' 'line_buf_addr_92' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_17 : Operation 216 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_92, i24 %empty_166, i3 %mask"   --->   Operation 216 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_17 : Operation 217 [1/1] (0.00ns)   --->   "%empty_196 = or i9 %tmp_s, i9"   --->   Operation 217 'or' 'empty_196' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_17 : Operation 218 [1/1] (0.00ns)   --->   "%p_cast42 = zext i9 %empty_196"   --->   Operation 218 'zext' 'p_cast42' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_17 : Operation 219 [1/1] (0.00ns)   --->   "%line_buf_addr_93 = getelementptr i24 %line_buf, i64, i64 %p_cast42"   --->   Operation 219 'getelementptr' 'line_buf_addr_93' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_17 : Operation 220 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_93, i24 %empty_166, i3 %mask"   --->   Operation 220 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 18 <SV = 17> <Delay = 1.15>
+ST_18 : Operation 221 [1/1] (0.00ns)   --->   "%empty_197 = or i9 %tmp_s, i9"   --->   Operation 221 'or' 'empty_197' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_18 : Operation 222 [1/1] (0.00ns)   --->   "%p_cast43 = zext i9 %empty_197"   --->   Operation 222 'zext' 'p_cast43' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_18 : Operation 223 [1/1] (0.00ns)   --->   "%line_buf_addr_94 = getelementptr i24 %line_buf, i64, i64 %p_cast43"   --->   Operation 223 'getelementptr' 'line_buf_addr_94' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_18 : Operation 224 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_94, i24 %empty_166, i3 %mask"   --->   Operation 224 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_18 : Operation 225 [1/1] (0.00ns)   --->   "%empty_198 = or i9 %tmp_s, i9"   --->   Operation 225 'or' 'empty_198' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_18 : Operation 226 [1/1] (0.00ns)   --->   "%p_cast44 = zext i9 %empty_198"   --->   Operation 226 'zext' 'p_cast44' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_18 : Operation 227 [1/1] (0.00ns)   --->   "%line_buf_addr_95 = getelementptr i24 %line_buf, i64, i64 %p_cast44"   --->   Operation 227 'getelementptr' 'line_buf_addr_95' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_18 : Operation 228 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_95, i24 %empty_166, i3 %mask"   --->   Operation 228 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 19 <SV = 18> <Delay = 1.15>
+ST_19 : Operation 229 [1/1] (0.00ns)   --->   "%empty_199 = or i9 %tmp_s, i9"   --->   Operation 229 'or' 'empty_199' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_19 : Operation 230 [1/1] (0.00ns)   --->   "%p_cast45 = zext i9 %empty_199"   --->   Operation 230 'zext' 'p_cast45' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_19 : Operation 231 [1/1] (0.00ns)   --->   "%line_buf_addr_96 = getelementptr i24 %line_buf, i64, i64 %p_cast45"   --->   Operation 231 'getelementptr' 'line_buf_addr_96' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_19 : Operation 232 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_96, i24 %empty_166, i3 %mask"   --->   Operation 232 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_19 : Operation 233 [1/1] (0.00ns)   --->   "%empty_200 = or i9 %tmp_s, i9"   --->   Operation 233 'or' 'empty_200' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_19 : Operation 234 [1/1] (0.00ns)   --->   "%p_cast46 = zext i9 %empty_200"   --->   Operation 234 'zext' 'p_cast46' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_19 : Operation 235 [1/1] (0.00ns)   --->   "%line_buf_addr_97 = getelementptr i24 %line_buf, i64, i64 %p_cast46"   --->   Operation 235 'getelementptr' 'line_buf_addr_97' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_19 : Operation 236 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_97, i24 %empty_166, i3 %mask"   --->   Operation 236 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 20 <SV = 19> <Delay = 1.15>
+ST_20 : Operation 237 [1/1] (0.00ns)   --->   "%empty_201 = or i9 %tmp_s, i9"   --->   Operation 237 'or' 'empty_201' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_20 : Operation 238 [1/1] (0.00ns)   --->   "%p_cast47 = zext i9 %empty_201"   --->   Operation 238 'zext' 'p_cast47' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_20 : Operation 239 [1/1] (0.00ns)   --->   "%line_buf_addr_98 = getelementptr i24 %line_buf, i64, i64 %p_cast47"   --->   Operation 239 'getelementptr' 'line_buf_addr_98' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_20 : Operation 240 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_98, i24 %empty_166, i3 %mask"   --->   Operation 240 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_20 : Operation 241 [1/1] (0.00ns)   --->   "%empty_202 = or i9 %tmp_s, i9"   --->   Operation 241 'or' 'empty_202' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_20 : Operation 242 [1/1] (0.00ns)   --->   "%p_cast48 = zext i9 %empty_202"   --->   Operation 242 'zext' 'p_cast48' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_20 : Operation 243 [1/1] (0.00ns)   --->   "%line_buf_addr_99 = getelementptr i24 %line_buf, i64, i64 %p_cast48"   --->   Operation 243 'getelementptr' 'line_buf_addr_99' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_20 : Operation 244 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_99, i24 %empty_166, i3 %mask"   --->   Operation 244 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 21 <SV = 20> <Delay = 1.15>
+ST_21 : Operation 245 [1/1] (0.00ns)   --->   "%empty_203 = or i9 %tmp_s, i9"   --->   Operation 245 'or' 'empty_203' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_21 : Operation 246 [1/1] (0.00ns)   --->   "%p_cast49 = zext i9 %empty_203"   --->   Operation 246 'zext' 'p_cast49' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_21 : Operation 247 [1/1] (0.00ns)   --->   "%line_buf_addr_100 = getelementptr i24 %line_buf, i64, i64 %p_cast49"   --->   Operation 247 'getelementptr' 'line_buf_addr_100' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_21 : Operation 248 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_100, i24 %empty_166, i3 %mask"   --->   Operation 248 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_21 : Operation 249 [1/1] (0.00ns)   --->   "%empty_204 = or i9 %tmp_s, i9"   --->   Operation 249 'or' 'empty_204' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_21 : Operation 250 [1/1] (0.00ns)   --->   "%p_cast50 = zext i9 %empty_204"   --->   Operation 250 'zext' 'p_cast50' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_21 : Operation 251 [1/1] (0.00ns)   --->   "%line_buf_addr_101 = getelementptr i24 %line_buf, i64, i64 %p_cast50"   --->   Operation 251 'getelementptr' 'line_buf_addr_101' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_21 : Operation 252 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_101, i24 %empty_166, i3 %mask"   --->   Operation 252 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 22 <SV = 21> <Delay = 1.15>
+ST_22 : Operation 253 [1/1] (0.00ns)   --->   "%empty_205 = or i9 %tmp_s, i9"   --->   Operation 253 'or' 'empty_205' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_22 : Operation 254 [1/1] (0.00ns)   --->   "%p_cast51 = zext i9 %empty_205"   --->   Operation 254 'zext' 'p_cast51' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_22 : Operation 255 [1/1] (0.00ns)   --->   "%line_buf_addr_102 = getelementptr i24 %line_buf, i64, i64 %p_cast51"   --->   Operation 255 'getelementptr' 'line_buf_addr_102' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_22 : Operation 256 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_102, i24 %empty_166, i3 %mask"   --->   Operation 256 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_22 : Operation 257 [1/1] (0.00ns)   --->   "%empty_206 = or i9 %tmp_s, i9"   --->   Operation 257 'or' 'empty_206' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_22 : Operation 258 [1/1] (0.00ns)   --->   "%p_cast52 = zext i9 %empty_206"   --->   Operation 258 'zext' 'p_cast52' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_22 : Operation 259 [1/1] (0.00ns)   --->   "%line_buf_addr_103 = getelementptr i24 %line_buf, i64, i64 %p_cast52"   --->   Operation 259 'getelementptr' 'line_buf_addr_103' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_22 : Operation 260 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_103, i24 %empty_166, i3 %mask"   --->   Operation 260 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 23 <SV = 22> <Delay = 1.15>
+ST_23 : Operation 261 [1/1] (0.00ns)   --->   "%empty_207 = or i9 %tmp_s, i9"   --->   Operation 261 'or' 'empty_207' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_23 : Operation 262 [1/1] (0.00ns)   --->   "%p_cast53 = zext i9 %empty_207"   --->   Operation 262 'zext' 'p_cast53' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_23 : Operation 263 [1/1] (0.00ns)   --->   "%line_buf_addr_104 = getelementptr i24 %line_buf, i64, i64 %p_cast53"   --->   Operation 263 'getelementptr' 'line_buf_addr_104' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_23 : Operation 264 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_104, i24 %empty_166, i3 %mask"   --->   Operation 264 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_23 : Operation 265 [1/1] (0.00ns)   --->   "%empty_208 = or i9 %tmp_s, i9"   --->   Operation 265 'or' 'empty_208' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_23 : Operation 266 [1/1] (0.00ns)   --->   "%p_cast54 = zext i9 %empty_208"   --->   Operation 266 'zext' 'p_cast54' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_23 : Operation 267 [1/1] (0.00ns)   --->   "%line_buf_addr_105 = getelementptr i24 %line_buf, i64, i64 %p_cast54"   --->   Operation 267 'getelementptr' 'line_buf_addr_105' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_23 : Operation 268 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_105, i24 %empty_166, i3 %mask"   --->   Operation 268 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 24 <SV = 23> <Delay = 1.15>
+ST_24 : Operation 269 [1/1] (0.00ns)   --->   "%empty_209 = or i9 %tmp_s, i9"   --->   Operation 269 'or' 'empty_209' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_24 : Operation 270 [1/1] (0.00ns)   --->   "%p_cast55 = zext i9 %empty_209"   --->   Operation 270 'zext' 'p_cast55' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_24 : Operation 271 [1/1] (0.00ns)   --->   "%line_buf_addr_106 = getelementptr i24 %line_buf, i64, i64 %p_cast55"   --->   Operation 271 'getelementptr' 'line_buf_addr_106' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_24 : Operation 272 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_106, i24 %empty_166, i3 %mask"   --->   Operation 272 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_24 : Operation 273 [1/1] (0.00ns)   --->   "%empty_210 = or i9 %tmp_s, i9"   --->   Operation 273 'or' 'empty_210' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_24 : Operation 274 [1/1] (0.00ns)   --->   "%p_cast56 = zext i9 %empty_210"   --->   Operation 274 'zext' 'p_cast56' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_24 : Operation 275 [1/1] (0.00ns)   --->   "%line_buf_addr_107 = getelementptr i24 %line_buf, i64, i64 %p_cast56"   --->   Operation 275 'getelementptr' 'line_buf_addr_107' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_24 : Operation 276 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_107, i24 %empty_166, i3 %mask"   --->   Operation 276 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 25 <SV = 24> <Delay = 1.15>
+ST_25 : Operation 277 [1/1] (0.00ns)   --->   "%empty_211 = or i9 %tmp_s, i9"   --->   Operation 277 'or' 'empty_211' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_25 : Operation 278 [1/1] (0.00ns)   --->   "%p_cast57 = zext i9 %empty_211"   --->   Operation 278 'zext' 'p_cast57' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_25 : Operation 279 [1/1] (0.00ns)   --->   "%line_buf_addr_108 = getelementptr i24 %line_buf, i64, i64 %p_cast57"   --->   Operation 279 'getelementptr' 'line_buf_addr_108' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_25 : Operation 280 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_108, i24 %empty_166, i3 %mask"   --->   Operation 280 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_25 : Operation 281 [1/1] (0.00ns)   --->   "%empty_212 = or i9 %tmp_s, i9"   --->   Operation 281 'or' 'empty_212' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_25 : Operation 282 [1/1] (0.00ns)   --->   "%p_cast58 = zext i9 %empty_212"   --->   Operation 282 'zext' 'p_cast58' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_25 : Operation 283 [1/1] (0.00ns)   --->   "%line_buf_addr_109 = getelementptr i24 %line_buf, i64, i64 %p_cast58"   --->   Operation 283 'getelementptr' 'line_buf_addr_109' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_25 : Operation 284 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_109, i24 %empty_166, i3 %mask"   --->   Operation 284 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 26 <SV = 25> <Delay = 1.15>
+ST_26 : Operation 285 [1/1] (0.00ns)   --->   "%empty_213 = or i9 %tmp_s, i9"   --->   Operation 285 'or' 'empty_213' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_26 : Operation 286 [1/1] (0.00ns)   --->   "%p_cast59 = zext i9 %empty_213"   --->   Operation 286 'zext' 'p_cast59' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_26 : Operation 287 [1/1] (0.00ns)   --->   "%line_buf_addr_110 = getelementptr i24 %line_buf, i64, i64 %p_cast59"   --->   Operation 287 'getelementptr' 'line_buf_addr_110' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_26 : Operation 288 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_110, i24 %empty_166, i3 %mask"   --->   Operation 288 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_26 : Operation 289 [1/1] (0.00ns)   --->   "%empty_214 = or i9 %tmp_s, i9"   --->   Operation 289 'or' 'empty_214' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_26 : Operation 290 [1/1] (0.00ns)   --->   "%p_cast60 = zext i9 %empty_214"   --->   Operation 290 'zext' 'p_cast60' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_26 : Operation 291 [1/1] (0.00ns)   --->   "%line_buf_addr_111 = getelementptr i24 %line_buf, i64, i64 %p_cast60"   --->   Operation 291 'getelementptr' 'line_buf_addr_111' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_26 : Operation 292 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_111, i24 %empty_166, i3 %mask"   --->   Operation 292 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 27 <SV = 26> <Delay = 1.15>
+ST_27 : Operation 293 [1/1] (0.00ns)   --->   "%empty_215 = or i9 %tmp_s, i9"   --->   Operation 293 'or' 'empty_215' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_27 : Operation 294 [1/1] (0.00ns)   --->   "%p_cast61 = zext i9 %empty_215"   --->   Operation 294 'zext' 'p_cast61' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_27 : Operation 295 [1/1] (0.00ns)   --->   "%line_buf_addr_112 = getelementptr i24 %line_buf, i64, i64 %p_cast61"   --->   Operation 295 'getelementptr' 'line_buf_addr_112' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_27 : Operation 296 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_112, i24 %empty_166, i3 %mask"   --->   Operation 296 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_27 : Operation 297 [1/1] (0.00ns)   --->   "%empty_216 = or i9 %tmp_s, i9"   --->   Operation 297 'or' 'empty_216' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_27 : Operation 298 [1/1] (0.00ns)   --->   "%p_cast62 = zext i9 %empty_216"   --->   Operation 298 'zext' 'p_cast62' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_27 : Operation 299 [1/1] (0.00ns)   --->   "%line_buf_addr_113 = getelementptr i24 %line_buf, i64, i64 %p_cast62"   --->   Operation 299 'getelementptr' 'line_buf_addr_113' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_27 : Operation 300 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_113, i24 %empty_166, i3 %mask"   --->   Operation 300 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 28 <SV = 27> <Delay = 1.15>
+ST_28 : Operation 301 [1/1] (0.00ns)   --->   "%empty_217 = or i9 %tmp_s, i9"   --->   Operation 301 'or' 'empty_217' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_28 : Operation 302 [1/1] (0.00ns)   --->   "%p_cast63 = zext i9 %empty_217"   --->   Operation 302 'zext' 'p_cast63' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_28 : Operation 303 [1/1] (0.00ns)   --->   "%line_buf_addr_114 = getelementptr i24 %line_buf, i64, i64 %p_cast63"   --->   Operation 303 'getelementptr' 'line_buf_addr_114' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_28 : Operation 304 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_114, i24 %empty_166, i3 %mask"   --->   Operation 304 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_28 : Operation 305 [1/1] (0.00ns)   --->   "%empty_218 = or i9 %tmp_s, i9"   --->   Operation 305 'or' 'empty_218' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_28 : Operation 306 [1/1] (0.00ns)   --->   "%p_cast64 = zext i9 %empty_218"   --->   Operation 306 'zext' 'p_cast64' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_28 : Operation 307 [1/1] (0.00ns)   --->   "%line_buf_addr_115 = getelementptr i24 %line_buf, i64, i64 %p_cast64"   --->   Operation 307 'getelementptr' 'line_buf_addr_115' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_28 : Operation 308 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_115, i24 %empty_166, i3 %mask"   --->   Operation 308 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 29 <SV = 28> <Delay = 1.15>
+ST_29 : Operation 309 [1/1] (0.00ns)   --->   "%empty_219 = or i9 %tmp_s, i9"   --->   Operation 309 'or' 'empty_219' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_29 : Operation 310 [1/1] (0.00ns)   --->   "%p_cast65 = zext i9 %empty_219"   --->   Operation 310 'zext' 'p_cast65' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_29 : Operation 311 [1/1] (0.00ns)   --->   "%line_buf_addr_116 = getelementptr i24 %line_buf, i64, i64 %p_cast65"   --->   Operation 311 'getelementptr' 'line_buf_addr_116' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_29 : Operation 312 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_116, i24 %empty_166, i3 %mask"   --->   Operation 312 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_29 : Operation 313 [1/1] (0.00ns)   --->   "%empty_220 = or i9 %tmp_s, i9"   --->   Operation 313 'or' 'empty_220' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_29 : Operation 314 [1/1] (0.00ns)   --->   "%p_cast66 = zext i9 %empty_220"   --->   Operation 314 'zext' 'p_cast66' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_29 : Operation 315 [1/1] (0.00ns)   --->   "%line_buf_addr_117 = getelementptr i24 %line_buf, i64, i64 %p_cast66"   --->   Operation 315 'getelementptr' 'line_buf_addr_117' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_29 : Operation 316 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_117, i24 %empty_166, i3 %mask"   --->   Operation 316 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 30 <SV = 29> <Delay = 1.15>
+ST_30 : Operation 317 [1/1] (0.00ns)   --->   "%empty_221 = or i9 %tmp_s, i9"   --->   Operation 317 'or' 'empty_221' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_30 : Operation 318 [1/1] (0.00ns)   --->   "%p_cast67 = zext i9 %empty_221"   --->   Operation 318 'zext' 'p_cast67' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_30 : Operation 319 [1/1] (0.00ns)   --->   "%line_buf_addr_118 = getelementptr i24 %line_buf, i64, i64 %p_cast67"   --->   Operation 319 'getelementptr' 'line_buf_addr_118' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_30 : Operation 320 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_118, i24 %empty_166, i3 %mask"   --->   Operation 320 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_30 : Operation 321 [1/1] (0.00ns)   --->   "%empty_222 = or i9 %tmp_s, i9"   --->   Operation 321 'or' 'empty_222' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_30 : Operation 322 [1/1] (0.00ns)   --->   "%p_cast68 = zext i9 %empty_222"   --->   Operation 322 'zext' 'p_cast68' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_30 : Operation 323 [1/1] (0.00ns)   --->   "%line_buf_addr_119 = getelementptr i24 %line_buf, i64, i64 %p_cast68"   --->   Operation 323 'getelementptr' 'line_buf_addr_119' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_30 : Operation 324 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_119, i24 %empty_166, i3 %mask"   --->   Operation 324 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 31 <SV = 30> <Delay = 1.15>
+ST_31 : Operation 325 [1/1] (0.00ns)   --->   "%empty_223 = or i9 %tmp_s, i9"   --->   Operation 325 'or' 'empty_223' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_31 : Operation 326 [1/1] (0.00ns)   --->   "%p_cast69 = zext i9 %empty_223"   --->   Operation 326 'zext' 'p_cast69' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_31 : Operation 327 [1/1] (0.00ns)   --->   "%line_buf_addr_120 = getelementptr i24 %line_buf, i64, i64 %p_cast69"   --->   Operation 327 'getelementptr' 'line_buf_addr_120' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_31 : Operation 328 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_120, i24 %empty_166, i3 %mask"   --->   Operation 328 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_31 : Operation 329 [1/1] (0.00ns)   --->   "%empty_224 = or i9 %tmp_s, i9"   --->   Operation 329 'or' 'empty_224' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_31 : Operation 330 [1/1] (0.00ns)   --->   "%p_cast70 = zext i9 %empty_224"   --->   Operation 330 'zext' 'p_cast70' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_31 : Operation 331 [1/1] (0.00ns)   --->   "%line_buf_addr_121 = getelementptr i24 %line_buf, i64, i64 %p_cast70"   --->   Operation 331 'getelementptr' 'line_buf_addr_121' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_31 : Operation 332 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_121, i24 %empty_166, i3 %mask"   --->   Operation 332 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 32 <SV = 31> <Delay = 1.15>
+ST_32 : Operation 333 [1/1] (0.00ns)   --->   "%empty_225 = or i9 %tmp_s, i9"   --->   Operation 333 'or' 'empty_225' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_32 : Operation 334 [1/1] (0.00ns)   --->   "%p_cast71 = zext i9 %empty_225"   --->   Operation 334 'zext' 'p_cast71' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_32 : Operation 335 [1/1] (0.00ns)   --->   "%line_buf_addr_122 = getelementptr i24 %line_buf, i64, i64 %p_cast71"   --->   Operation 335 'getelementptr' 'line_buf_addr_122' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_32 : Operation 336 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_122, i24 %empty_166, i3 %mask"   --->   Operation 336 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_32 : Operation 337 [1/1] (0.00ns)   --->   "%empty_226 = or i9 %tmp_s, i9"   --->   Operation 337 'or' 'empty_226' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_32 : Operation 338 [1/1] (0.00ns)   --->   "%p_cast72 = zext i9 %empty_226"   --->   Operation 338 'zext' 'p_cast72' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_32 : Operation 339 [1/1] (0.00ns)   --->   "%line_buf_addr_123 = getelementptr i24 %line_buf, i64, i64 %p_cast72"   --->   Operation 339 'getelementptr' 'line_buf_addr_123' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_32 : Operation 340 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_123, i24 %empty_166, i3 %mask"   --->   Operation 340 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 33 <SV = 32> <Delay = 1.15>
+ST_33 : Operation 341 [1/1] (0.00ns)   --->   "%empty_227 = or i9 %tmp_s, i9"   --->   Operation 341 'or' 'empty_227' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_33 : Operation 342 [1/1] (0.00ns)   --->   "%p_cast73 = zext i9 %empty_227"   --->   Operation 342 'zext' 'p_cast73' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_33 : Operation 343 [1/1] (0.00ns)   --->   "%line_buf_addr_124 = getelementptr i24 %line_buf, i64, i64 %p_cast73"   --->   Operation 343 'getelementptr' 'line_buf_addr_124' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_33 : Operation 344 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_124, i24 %empty_166, i3 %mask"   --->   Operation 344 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_33 : Operation 345 [1/1] (0.00ns)   --->   "%empty_228 = or i9 %tmp_s, i9"   --->   Operation 345 'or' 'empty_228' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_33 : Operation 346 [1/1] (0.00ns)   --->   "%p_cast74 = zext i9 %empty_228"   --->   Operation 346 'zext' 'p_cast74' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_33 : Operation 347 [1/1] (0.00ns)   --->   "%line_buf_addr_125 = getelementptr i24 %line_buf, i64, i64 %p_cast74"   --->   Operation 347 'getelementptr' 'line_buf_addr_125' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_33 : Operation 348 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_125, i24 %empty_166, i3 %mask"   --->   Operation 348 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 34 <SV = 33> <Delay = 1.15>
+ST_34 : Operation 349 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty"   --->   Operation 349 'specpipeline' 'specpipeline_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 350 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 350 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 351 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 351 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 352 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 352 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 353 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 353 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 354 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 354 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 355 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 355 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 356 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 356 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 357 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 357 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 358 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 358 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 359 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 359 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 360 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 360 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 361 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 361 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 362 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 362 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 363 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 363 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 364 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 364 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 365 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 365 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 366 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 366 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 367 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 367 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 368 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 368 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 369 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 369 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 370 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 370 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 371 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 371 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 372 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 372 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 373 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 373 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 374 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 374 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 375 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 375 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 376 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 376 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 377 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 377 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 378 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 378 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 379 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 379 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 380 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 380 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 381 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 381 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 382 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 382 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 383 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 383 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 384 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 384 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 385 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 385 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 386 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 386 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 387 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 387 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 388 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 388 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 389 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 389 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 390 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 390 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 391 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 391 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 392 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 392 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 393 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 393 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 394 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 394 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 395 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 395 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 396 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 396 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 397 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 397 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 398 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 398 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 399 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 399 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 400 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 400 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 401 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 401 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 402 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 402 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 403 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 403 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 404 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 404 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 405 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 405 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 406 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 406 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 407 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 407 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 408 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 408 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 409 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 409 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 410 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 410 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 411 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 411 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 412 [1/1] (0.00ns)   --->   "%empty_229 = or i9 %tmp_s, i9"   --->   Operation 412 'or' 'empty_229' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 413 [1/1] (0.00ns)   --->   "%p_cast75 = zext i9 %empty_229"   --->   Operation 413 'zext' 'p_cast75' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 414 [1/1] (0.00ns)   --->   "%line_buf_addr_126 = getelementptr i24 %line_buf, i64, i64 %p_cast75"   --->   Operation 414 'getelementptr' 'line_buf_addr_126' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 415 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 415 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 416 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_126, i24 %empty_166, i3 %mask"   --->   Operation 416 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_34 : Operation 417 [1/1] (0.00ns)   --->   "%empty_230 = or i9 %tmp_s, i9"   --->   Operation 417 'or' 'empty_230' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 418 [1/1] (0.00ns)   --->   "%p_cast76 = zext i9 %empty_230"   --->   Operation 418 'zext' 'p_cast76' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 419 [1/1] (0.00ns)   --->   "%line_buf_addr_127 = getelementptr i24 %line_buf, i64, i64 %p_cast76"   --->   Operation 419 'getelementptr' 'line_buf_addr_127' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 420 [1/1] (0.00ns)   --->   "%specbramwithbyteenable_ln0 = specbramwithbyteenable void @_ssdm_op_SpecBRAMWithByteEnable, i24 %line_buf"   --->   Operation 420 'specbramwithbyteenable' 'specbramwithbyteenable_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+ST_34 : Operation 421 [1/1] (1.15ns)   --->   "%store_ln0 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_127, i24 %empty_166, i3 %mask"   --->   Operation 421 'store' 'store_ln0' <Predicate = (!exitcond4012)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_34 : Operation 422 [1/1] (0.00ns)   --->   "%br_ln0 = br void %loadstoreloop"   --->   Operation 422 'br' 'br_ln0' <Predicate = (!exitcond4012)> <Delay = 0.00>
+
+State 35 <SV = 2> <Delay = 1.82>
+ST_35 : Operation 423 [1/1] (0.00ns)   --->   "%gmem0_addr = getelementptr i8 %gmem0, i64 %data_read" [../src/gsnh.cpp:44]   --->   Operation 423 'getelementptr' 'gmem0_addr' <Predicate = true> <Delay = 0.00>
+ST_35 : Operation 424 [7/7] (1.82ns)   --->   "%gmem0_addr_1_rd_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i8P, i8 %gmem0_addr, i32" [../src/gsnh.cpp:44]   --->   Operation 424 'readreq' 'gmem0_addr_1_rd_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 3> <Delay = 1.82>
+ST_36 : Operation 425 [6/7] (1.82ns)   --->   "%gmem0_addr_1_rd_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i8P, i8 %gmem0_addr, i32" [../src/gsnh.cpp:44]   --->   Operation 425 'readreq' 'gmem0_addr_1_rd_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 4> <Delay = 1.82>
+ST_37 : Operation 426 [5/7] (1.82ns)   --->   "%gmem0_addr_1_rd_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i8P, i8 %gmem0_addr, i32" [../src/gsnh.cpp:44]   --->   Operation 426 'readreq' 'gmem0_addr_1_rd_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 5> <Delay = 1.82>
+ST_38 : Operation 427 [4/7] (1.82ns)   --->   "%gmem0_addr_1_rd_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i8P, i8 %gmem0_addr, i32" [../src/gsnh.cpp:44]   --->   Operation 427 'readreq' 'gmem0_addr_1_rd_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 6> <Delay = 1.82>
+ST_39 : Operation 428 [3/7] (1.82ns)   --->   "%gmem0_addr_1_rd_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i8P, i8 %gmem0_addr, i32" [../src/gsnh.cpp:44]   --->   Operation 428 'readreq' 'gmem0_addr_1_rd_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 7> <Delay = 1.82>
+ST_40 : Operation 429 [2/7] (1.82ns)   --->   "%gmem0_addr_1_rd_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i8P, i8 %gmem0_addr, i32" [../src/gsnh.cpp:44]   --->   Operation 429 'readreq' 'gmem0_addr_1_rd_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 8> <Delay = 1.82>
+ST_41 : Operation 430 [1/7] (1.82ns)   --->   "%gmem0_addr_1_rd_req = readreq i1 @_ssdm_op_ReadReq.m_axi.i8P, i8 %gmem0_addr, i32" [../src/gsnh.cpp:44]   --->   Operation 430 'readreq' 'gmem0_addr_1_rd_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_41 : Operation 431 [1/1] (0.60ns)   --->   "%br_ln31 = br void" [../src/gsnh.cpp:31]   --->   Operation 431 'br' 'br_ln31' <Predicate = true> <Delay = 0.60>
+
+State 42 <SV = 9> <Delay = 1.45>
+ST_42 : Operation 432 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i19, void %split.preheader, i19 %add_ln31, void %split" [../src/gsnh.cpp:31]   --->   Operation 432 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 433 [1/1] (0.00ns)   --->   "%xi = phi i10, void %split.preheader, i10 %add_ln32, void %split" [../src/gsnh.cpp:32]   --->   Operation 433 'phi' 'xi' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 434 [1/1] (0.71ns)   --->   "%icmp_ln31 = icmp_eq  i19 %indvar_flatten, i19" [../src/gsnh.cpp:31]   --->   Operation 434 'icmp' 'icmp_ln31' <Predicate = true> <Delay = 0.71> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 435 [1/1] (0.56ns)   --->   "%add_ln31 = add i19 %indvar_flatten, i19" [../src/gsnh.cpp:31]   --->   Operation 435 'add' 'add_ln31' <Predicate = true> <Delay = 0.56> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 436 [1/1] (0.60ns)   --->   "%icmp_ln32 = icmp_eq  i10 %xi, i10" [../src/gsnh.cpp:32]   --->   Operation 436 'icmp' 'icmp_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.60> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 437 [1/1] (0.30ns)   --->   "%select_ln31 = select i1 %icmp_ln32, i10, i10 %xi" [../src/gsnh.cpp:31]   --->   Operation 437 'select' 'select_ln31' <Predicate = (!icmp_ln31)> <Delay = 0.30> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_42 : Operation 438 [1/1] (0.54ns)   --->   "%add_ln32 = add i10, i10 %select_ln31" [../src/gsnh.cpp:32]   --->   Operation 438 'add' 'add_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.54> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 10> <Delay = 1.82>
+ST_43 : Operation 439 [1/1] (0.00ns)   --->   "%zext_ln32 = zext i10 %select_ln31" [../src/gsnh.cpp:32]   --->   Operation 439 'zext' 'zext_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_43 : Operation 440 [1/1] (0.00ns)   --->   "%line_buf_addr_128 = getelementptr i24 %line_buf, i64, i64 %zext_ln32" [../src/gsnh.cpp:40]   --->   Operation 440 'getelementptr' 'line_buf_addr_128' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_43 : Operation 441 [2/2] (1.15ns)   --->   "%line_buf_load = load i9 %line_buf_addr_128" [../src/gsnh.cpp:40]   --->   Operation 441 'load' 'line_buf_load' <Predicate = (!icmp_ln31)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_43 : Operation 442 [1/1] (1.82ns)   --->   "%window_buf_2_2 = read i8 @_ssdm_op_Read.m_axi.i8P, i8 %gmem0_addr, i1 %gmem0_addr_1_rd_req" [../src/gsnh.cpp:44]   --->   Operation 442 'read' 'window_buf_2_2' <Predicate = (!icmp_ln31)> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 11> <Delay = 1.42>
+ST_44 : Operation 443 [1/1] (0.00ns)   --->   "%yi = phi i10, void %split.preheader, i10 %select_ln31_1, void %split" [../src/gsnh.cpp:31]   --->   Operation 443 'phi' 'yi' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 444 [1/1] (0.00ns)   --->   "%window_buf_2_1 = phi i8, void %split.preheader, i8 %window_buf_2_2, void %split"   --->   Operation 444 'phi' 'window_buf_2_1' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 445 [1/1] (0.00ns)   --->   "%window_buf_2_1_1 = phi i8, void %split.preheader, i8 %window_buf_2_1, void %split"   --->   Operation 445 'phi' 'window_buf_2_1_1' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 446 [1/1] (0.00ns)   --->   "%window_buf_1_1 = phi i8, void %split.preheader, i8 %window_buf_1_2, void %split"   --->   Operation 446 'phi' 'window_buf_1_1' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 447 [1/1] (0.00ns)   --->   "%window_buf_1_1_1 = phi i8, void %split.preheader, i8 %window_buf_1_1, void %split"   --->   Operation 447 'phi' 'window_buf_1_1_1' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 448 [1/1] (0.00ns)   --->   "%window_buf_0_1 = phi i8, void %split.preheader, i8 %window_buf_0_2, void %split"   --->   Operation 448 'phi' 'window_buf_0_1' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 449 [1/1] (0.00ns)   --->   "%window_buf_0_1_1 = phi i8, void %split.preheader, i8 %window_buf_0_1, void %split"   --->   Operation 449 'phi' 'window_buf_0_1_1' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 450 [1/1] (0.00ns)   --->   "%specpipeline_ln32 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty" [../src/gsnh.cpp:32]   --->   Operation 450 'specpipeline' 'specpipeline_ln32' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 451 [1/1] (0.00ns)   --->   "%br_ln31 = br i1 %icmp_ln31, void %split, void %_Z3gauPhS_.exit" [../src/gsnh.cpp:31]   --->   Operation 451 'br' 'br_ln31' <Predicate = true> <Delay = 0.00>
+ST_44 : Operation 452 [1/1] (0.54ns)   --->   "%add_ln31_1 = add i10, i10 %yi" [../src/gsnh.cpp:31]   --->   Operation 452 'add' 'add_ln31_1' <Predicate = (!icmp_ln31 & icmp_ln32)> <Delay = 0.54> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 453 [1/1] (0.30ns)   --->   "%select_ln31_1 = select i1 %icmp_ln32, i10 %add_ln31_1, i10 %yi" [../src/gsnh.cpp:31]   --->   Operation 453 'select' 'select_ln31_1' <Predicate = (!icmp_ln31)> <Delay = 0.30> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_44 : Operation 454 [1/1] (0.00ns)   --->   "%trunc_ln31 = trunc i10 %select_ln31_1" [../src/gsnh.cpp:31]   --->   Operation 454 'trunc' 'trunc_ln31' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 455 [1/1] (0.00ns)   --->   "%p_mid2 = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i9.i9, i9 %trunc_ln31, i9" [../src/gsnh.cpp:31]   --->   Operation 455 'bitconcatenate' 'p_mid2' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 456 [1/1] (0.00ns)   --->   "%zext_ln32_1 = zext i10 %select_ln31" [../src/gsnh.cpp:32]   --->   Operation 456 'zext' 'zext_ln32_1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 457 [1/2] (1.15ns)   --->   "%line_buf_load = load i9 %line_buf_addr_128" [../src/gsnh.cpp:40]   --->   Operation 457 'load' 'line_buf_load' <Predicate = (!icmp_ln31)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_44 : Operation 458 [1/1] (0.00ns)   --->   "%window_buf_0_2 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %line_buf_load, i32, i32" [../src/gsnh.cpp:40]   --->   Operation 458 'partselect' 'window_buf_0_2' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 459 [1/1] (0.00ns)   --->   "%window_buf_1_2 = partselect i8 @_ssdm_op_PartSelect.i8.i24.i32.i32, i24 %line_buf_load, i32, i32" [../src/gsnh.cpp:40]   --->   Operation 459 'partselect' 'window_buf_1_2' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 460 [1/1] (0.58ns)   --->   "%add_ln44 = add i18 %zext_ln32_1, i18 %p_mid2" [../src/gsnh.cpp:44]   --->   Operation 460 'add' 'add_ln44' <Predicate = (!icmp_ln31)> <Delay = 0.58> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 461 [1/1] (0.00ns)   --->   "%tmp_19 = partselect i16 @_ssdm_op_PartSelect.i16.i24.i32.i32, i24 %line_buf_load, i32, i32" [../src/gsnh.cpp:44]   --->   Operation 461 'partselect' 'tmp_19' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 462 [1/1] (0.00ns)   --->   "%zext_ln62 = zext i8 %window_buf_0_1_1" [../src/gsnh.cpp:62]   --->   Operation 462 'zext' 'zext_ln62' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 463 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %window_buf_0_1, i1" [../src/gsnh.cpp:62]   --->   Operation 463 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 464 [1/1] (0.00ns)   --->   "%zext_ln62_1 = zext i9 %shl_ln" [../src/gsnh.cpp:62]   --->   Operation 464 'zext' 'zext_ln62_1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 465 [1/1] (0.00ns)   --->   "%shl_ln62_1 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %window_buf_1_1_1, i1" [../src/gsnh.cpp:62]   --->   Operation 465 'bitconcatenate' 'shl_ln62_1' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 466 [1/1] (0.00ns)   --->   "%zext_ln62_3 = zext i9 %shl_ln62_1" [../src/gsnh.cpp:62]   --->   Operation 466 'zext' 'zext_ln62_3' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 467 [1/1] (0.00ns)   --->   "%zext_ln62_6 = zext i8 %window_buf_2_1_1" [../src/gsnh.cpp:62]   --->   Operation 467 'zext' 'zext_ln62_6' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 468 [1/1] (0.00ns)   --->   "%shl_ln62_4 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %window_buf_2_1, i1" [../src/gsnh.cpp:62]   --->   Operation 468 'bitconcatenate' 'shl_ln62_4' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 469 [1/1] (0.00ns)   --->   "%zext_ln62_7 = zext i9 %shl_ln62_4" [../src/gsnh.cpp:62]   --->   Operation 469 'zext' 'zext_ln62_7' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 470 [1/1] (0.00ns)   --->   "%zext_ln62_8 = zext i8 %window_buf_2_2" [../src/gsnh.cpp:62]   --->   Operation 470 'zext' 'zext_ln62_8' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_44 : Operation 471 [1/1] (0.51ns)   --->   "%add_ln62 = add i10 %zext_ln62_1, i10 %zext_ln62_3" [../src/gsnh.cpp:62]   --->   Operation 471 'add' 'add_ln62' <Predicate = (!icmp_ln31)> <Delay = 0.51> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 472 [1/1] (0.51ns)   --->   "%add_ln62_3 = add i10 %zext_ln62_7, i10 %zext_ln62" [../src/gsnh.cpp:62]   --->   Operation 472 'add' 'add_ln62_3' <Predicate = (!icmp_ln31)> <Delay = 0.51> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 473 [1/1] (0.48ns)   --->   "%add_ln62_4 = add i9 %zext_ln62_6, i9 %zext_ln62_8" [../src/gsnh.cpp:62]   --->   Operation 473 'add' 'add_ln62_4' <Predicate = (!icmp_ln31)> <Delay = 0.48> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 12> <Delay = 1.81>
+ST_45 : Operation 474 [1/1] (0.00ns)   --->   "%tmp_20 = bitconcatenate i24 @_ssdm_op_BitConcatenate.i24.i8.i16, i8 %window_buf_2_2, i16 %tmp_19" [../src/gsnh.cpp:44]   --->   Operation 474 'bitconcatenate' 'tmp_20' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 475 [1/1] (1.15ns)   --->   "%store_ln44 = store void @_ssdm_op_Write.bram.i24, i9 %line_buf_addr_128, i24 %tmp_20, i3, i24 %line_buf_load" [../src/gsnh.cpp:44]   --->   Operation 475 'store' 'store_ln44' <Predicate = (!icmp_ln31)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_45 : Operation 476 [1/1] (0.00ns)   --->   "%zext_ln62_2 = zext i8 %window_buf_0_2" [../src/gsnh.cpp:62]   --->   Operation 476 'zext' 'zext_ln62_2' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 477 [1/1] (0.00ns)   --->   "%shl_ln62_2 = bitconcatenate i10 @_ssdm_op_BitConcatenate.i10.i8.i2, i8 %window_buf_1_1, i2" [../src/gsnh.cpp:62]   --->   Operation 477 'bitconcatenate' 'shl_ln62_2' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 478 [1/1] (0.00ns)   --->   "%zext_ln62_4 = zext i10 %shl_ln62_2" [../src/gsnh.cpp:62]   --->   Operation 478 'zext' 'zext_ln62_4' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 479 [1/1] (0.00ns)   --->   "%shl_ln62_3 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i8.i1, i8 %window_buf_1_2, i1" [../src/gsnh.cpp:62]   --->   Operation 479 'bitconcatenate' 'shl_ln62_3' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 480 [1/1] (0.00ns)   --->   "%zext_ln62_5 = zext i9 %shl_ln62_3" [../src/gsnh.cpp:62]   --->   Operation 480 'zext' 'zext_ln62_5' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 481 [1/1] (0.00ns)   --->   "%zext_ln62_9 = zext i10 %add_ln62" [../src/gsnh.cpp:62]   --->   Operation 481 'zext' 'zext_ln62_9' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 482 [1/1] (0.54ns)   --->   "%add_ln62_1 = add i11 %zext_ln62_4, i11 %zext_ln62_5" [../src/gsnh.cpp:62]   --->   Operation 482 'add' 'add_ln62_1' <Predicate = (!icmp_ln31)> <Delay = 0.54> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 483 [1/1] (0.00ns)   --->   "%zext_ln62_10 = zext i11 %add_ln62_1" [../src/gsnh.cpp:62]   --->   Operation 483 'zext' 'zext_ln62_10' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 484 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln62_2 = add i12 %zext_ln62_10, i12 %zext_ln62_9" [../src/gsnh.cpp:62]   --->   Operation 484 'add' 'add_ln62_2' <Predicate = (!icmp_ln31)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 4 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_45 : Operation 485 [1/1] (0.00ns)   --->   "%zext_ln62_11 = zext i10 %add_ln62_3" [../src/gsnh.cpp:62]   --->   Operation 485 'zext' 'zext_ln62_11' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 486 [1/1] (0.00ns)   --->   "%zext_ln62_12 = zext i9 %add_ln62_4" [../src/gsnh.cpp:62]   --->   Operation 486 'zext' 'zext_ln62_12' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 487 [1/1] (0.51ns)   --->   "%add_ln62_5 = add i10 %zext_ln62_12, i10 %zext_ln62_2" [../src/gsnh.cpp:62]   --->   Operation 487 'add' 'add_ln62_5' <Predicate = (!icmp_ln31)> <Delay = 0.51> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 488 [1/1] (0.00ns)   --->   "%zext_ln62_13 = zext i10 %add_ln62_5" [../src/gsnh.cpp:62]   --->   Operation 488 'zext' 'zext_ln62_13' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 489 [1/1] (0.54ns)   --->   "%add_ln62_6 = add i11 %zext_ln62_13, i11 %zext_ln62_11" [../src/gsnh.cpp:62]   --->   Operation 489 'add' 'add_ln62_6' <Predicate = (!icmp_ln31)> <Delay = 0.54> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 490 [1/1] (0.00ns)   --->   "%zext_ln62_14 = zext i11 %add_ln62_6" [../src/gsnh.cpp:62]   --->   Operation 490 'zext' 'zext_ln62_14' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_45 : Operation 491 [1/1] (0.75ns) (root node of TernaryAdder)   --->   "%add_ln62_7 = add i12 %zext_ln62_14, i12 %add_ln62_2" [../src/gsnh.cpp:62]   --->   Operation 491 'add' 'add_ln62_7' <Predicate = (!icmp_ln31)> <Delay = 0.75> <Core = "TAddSub">   --->   Core 4 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_45 : Operation 492 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i8 @_ssdm_op_PartSelect.i8.i12.i32.i32, i12 %add_ln62_7, i32, i32" [../src/gsnh.cpp:70]   --->   Operation 492 'partselect' 'trunc_ln' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+
+State 46 <SV = 13> <Delay = 1.15>
+ST_46 : Operation 493 [1/1] (0.00ns)   --->   "%empty_231 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 493 'speclooptripcount' 'empty_231' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_46 : Operation 494 [1/1] (0.00ns)   --->   "%specpipeline_ln32 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty" [../src/gsnh.cpp:32]   --->   Operation 494 'specpipeline' 'specpipeline_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_46 : Operation 495 [1/1] (0.00ns)   --->   "%zext_ln44 = zext i18 %add_ln44" [../src/gsnh.cpp:44]   --->   Operation 495 'zext' 'zext_ln44' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_46 : Operation 496 [1/1] (0.00ns)   --->   "%gau_buf_addr = getelementptr i8 %gau_buf, i64, i64 %zext_ln44" [../src/gsnh.cpp:70]   --->   Operation 496 'getelementptr' 'gau_buf_addr' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+ST_46 : Operation 497 [1/1] (1.15ns)   --->   "%store_ln70 = store i8 %trunc_ln, i18 %gau_buf_addr" [../src/gsnh.cpp:70]   --->   Operation 497 'store' 'store_ln70' <Predicate = (!icmp_ln31)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_46 : Operation 498 [1/1] (0.00ns)   --->   "%br_ln32 = br void" [../src/gsnh.cpp:32]   --->   Operation 498 'br' 'br_ln32' <Predicate = (!icmp_ln31)> <Delay = 0.00>
+
+State 47 <SV = 12> <Delay = 0.00>
+ST_47 : Operation 499 [2/2] (0.00ns)   --->   "%call_ln313 = call void @sobel, i8 %gau_buf, i8 %sobel_buf_value, i8 %sobel_buf_grad" [../src/gsnh.cpp:313]   --->   Operation 499 'call' 'call_ln313' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_47 : Operation 500 [1/1] (0.00ns)   --->   "%gmem1_addr = getelementptr i8 %gmem1, i64 %out_read" [../src/gsnh.cpp:292]   --->   Operation 500 'getelementptr' 'gmem1_addr' <Predicate = true> <Delay = 0.00>
+
+State 48 <SV = 13> <Delay = 0.00>
+ST_48 : Operation 501 [1/2] (0.00ns)   --->   "%call_ln313 = call void @sobel, i8 %gau_buf, i8 %sobel_buf_value, i8 %sobel_buf_grad" [../src/gsnh.cpp:313]   --->   Operation 501 'call' 'call_ln313' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 49 <SV = 14> <Delay = 0.00>
+ST_49 : Operation 502 [2/2] (0.00ns)   --->   "%call_ln314 = call void @nms, i8 %sobel_buf_value, i8 %sobel_buf_grad, i8 %supp_buf, void %call_ln313, void %call_ln313" [../src/gsnh.cpp:314]   --->   Operation 502 'call' 'call_ln314' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 50 <SV = 15> <Delay = 1.82>
+ST_50 : Operation 503 [1/2] (0.00ns)   --->   "%call_ln314 = call void @nms, i8 %sobel_buf_value, i8 %sobel_buf_grad, i8 %supp_buf, void %call_ln313, void %call_ln313" [../src/gsnh.cpp:314]   --->   Operation 503 'call' 'call_ln314' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_50 : Operation 504 [1/1] (1.82ns)   --->   "%gmem1_addr_1_wr_req = writereq i1 @_ssdm_op_WriteReq.m_axi.i8P, i8 %gmem1_addr, i32" [../src/gsnh.cpp:292]   --->   Operation 504 'writereq' 'gmem1_addr_1_wr_req' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_50 : Operation 505 [1/1] (0.60ns)   --->   "%br_ln273 = br void" [../src/gsnh.cpp:273]   --->   Operation 505 'br' 'br_ln273' <Predicate = true> <Delay = 0.60>
+
+State 51 <SV = 16> <Delay = 1.48>
+ST_51 : Operation 506 [1/1] (0.00ns)   --->   "%indvar_flatten10 = phi i19, void %_Z3gauPhS_.exit, i19 %add_ln273, void %.reset7" [../src/gsnh.cpp:273]   --->   Operation 506 'phi' 'indvar_flatten10' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 507 [1/1] (0.00ns)   --->   "%yi_1 = phi i10, void %_Z3gauPhS_.exit, i10 %select_ln273_1, void %.reset7" [../src/gsnh.cpp:273]   --->   Operation 507 'phi' 'yi_1' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 508 [1/1] (0.00ns)   --->   "%xi_1 = phi i10, void %_Z3gauPhS_.exit, i10 %add_ln274, void %.reset7" [../src/gsnh.cpp:274]   --->   Operation 508 'phi' 'xi_1' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 509 [1/1] (0.00ns)   --->   "%specpipeline_ln274 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty" [../src/gsnh.cpp:274]   --->   Operation 509 'specpipeline' 'specpipeline_ln274' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 510 [1/1] (0.71ns)   --->   "%icmp_ln273 = icmp_eq  i19 %indvar_flatten10, i19" [../src/gsnh.cpp:273]   --->   Operation 510 'icmp' 'icmp_ln273' <Predicate = true> <Delay = 0.71> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 511 [1/1] (0.56ns)   --->   "%add_ln273 = add i19 %indvar_flatten10, i19" [../src/gsnh.cpp:273]   --->   Operation 511 'add' 'add_ln273' <Predicate = true> <Delay = 0.56> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 512 [1/1] (0.00ns)   --->   "%br_ln273 = br i1 %icmp_ln273, void %.reset7, void %_Z4hystPhS_.exit" [../src/gsnh.cpp:273]   --->   Operation 512 'br' 'br_ln273' <Predicate = true> <Delay = 0.00>
+ST_51 : Operation 513 [1/1] (0.60ns)   --->   "%icmp_ln274 = icmp_eq  i10 %xi_1, i10" [../src/gsnh.cpp:274]   --->   Operation 513 'icmp' 'icmp_ln274' <Predicate = (!icmp_ln273)> <Delay = 0.60> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 514 [1/1] (0.30ns)   --->   "%select_ln273 = select i1 %icmp_ln274, i10, i10 %xi_1" [../src/gsnh.cpp:273]   --->   Operation 514 'select' 'select_ln273' <Predicate = (!icmp_ln273)> <Delay = 0.30> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_51 : Operation 515 [1/1] (0.54ns)   --->   "%add_ln273_1 = add i10, i10 %yi_1" [../src/gsnh.cpp:273]   --->   Operation 515 'add' 'add_ln273_1' <Predicate = (!icmp_ln273)> <Delay = 0.54> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 516 [1/1] (0.30ns)   --->   "%select_ln273_1 = select i1 %icmp_ln274, i10 %add_ln273_1, i10 %yi_1" [../src/gsnh.cpp:273]   --->   Operation 516 'select' 'select_ln273_1' <Predicate = (!icmp_ln273)> <Delay = 0.30> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_51 : Operation 517 [1/1] (0.00ns)   --->   "%trunc_ln273 = trunc i10 %select_ln273_1" [../src/gsnh.cpp:273]   --->   Operation 517 'trunc' 'trunc_ln273' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_51 : Operation 518 [1/1] (0.00ns)   --->   "%p_mid = bitconcatenate i18 @_ssdm_op_BitConcatenate.i18.i9.i9, i9 %trunc_ln273, i9" [../src/gsnh.cpp:273]   --->   Operation 518 'bitconcatenate' 'p_mid' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_51 : Operation 519 [1/1] (0.00ns)   --->   "%zext_ln274 = zext i10 %select_ln273" [../src/gsnh.cpp:274]   --->   Operation 519 'zext' 'zext_ln274' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_51 : Operation 520 [1/1] (0.58ns)   --->   "%add_ln281 = add i18 %zext_ln274, i18 %p_mid" [../src/gsnh.cpp:281]   --->   Operation 520 'add' 'add_ln281' <Predicate = (!icmp_ln273)> <Delay = 0.58> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_51 : Operation 521 [1/1] (0.54ns)   --->   "%add_ln274 = add i10, i10 %select_ln273" [../src/gsnh.cpp:274]   --->   Operation 521 'add' 'add_ln274' <Predicate = (!icmp_ln273)> <Delay = 0.54> <Core = "Adder">   --->   Core 2 'Adder' <Latency = 0> <II = 1> <Delay = 0.54> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 17> <Delay = 1.15>
+ST_52 : Operation 522 [1/1] (0.00ns)   --->   "%zext_ln281 = zext i18 %add_ln281" [../src/gsnh.cpp:281]   --->   Operation 522 'zext' 'zext_ln281' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_52 : Operation 523 [1/1] (0.00ns)   --->   "%supp_buf_addr = getelementptr i8 %supp_buf, i64, i64 %zext_ln281" [../src/gsnh.cpp:281]   --->   Operation 523 'getelementptr' 'supp_buf_addr' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_52 : Operation 524 [2/2] (1.15ns)   --->   "%supp_buf_load = load i18 %supp_buf_addr" [../src/gsnh.cpp:281]   --->   Operation 524 'load' 'supp_buf_load' <Predicate = (!icmp_ln273)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+
+State 53 <SV = 18> <Delay = 1.73>
+ST_53 : Operation 525 [1/2] (1.15ns)   --->   "%supp_buf_load = load i18 %supp_buf_addr" [../src/gsnh.cpp:281]   --->   Operation 525 'load' 'supp_buf_load' <Predicate = (!icmp_ln273)> <Delay = 1.15> <Core = "RAM">   --->   Core 23 'RAM' <Latency = 1> <II = 1> <Delay = 1.15> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 262144> <RAM>
+ST_53 : Operation 526 [1/1] (0.58ns)   --->   "%icmp_ln286 = icmp_ugt  i8 %supp_buf_load, i8" [../src/gsnh.cpp:286]   --->   Operation 526 'icmp' 'icmp_ln286' <Predicate = (!icmp_ln273)> <Delay = 0.58> <Core = "Cmp">   --->   Core 11 'Cmp' <Latency = 0> <II = 1> <Delay = 0.58> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 19> <Delay = 0.27>
+ST_54 : Operation 527 [1/1] (0.27ns)   --->   "%select_ln292 = select i1 %icmp_ln286, i8, i8" [../src/gsnh.cpp:292]   --->   Operation 527 'select' 'select_ln292' <Predicate = (!icmp_ln273)> <Delay = 0.27> <Core = "Sel">   --->   Core 12 'Sel' <Latency = 0> <II = 1> <Delay = 0.27> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 55 <SV = 20> <Delay = 1.82>
+ST_55 : Operation 528 [1/1] (0.00ns)   --->   "%empty_232 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64, i64, i64"   --->   Operation 528 'speclooptripcount' 'empty_232' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_55 : Operation 529 [1/1] (0.00ns)   --->   "%specpipeline_ln274 = specpipeline void @_ssdm_op_SpecPipeline, i32, i32, i32, i32, void @empty" [../src/gsnh.cpp:274]   --->   Operation 529 'specpipeline' 'specpipeline_ln274' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+ST_55 : Operation 530 [1/1] (1.82ns)   --->   "%write_ln292 = write void @_ssdm_op_Write.m_axi.i8P, i8 %gmem1_addr, i8 %select_ln292, i1, i1 %gmem1_addr_1_wr_req" [../src/gsnh.cpp:292]   --->   Operation 530 'write' 'write_ln292' <Predicate = (!icmp_ln273)> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_55 : Operation 531 [1/1] (0.00ns)   --->   "%br_ln274 = br void" [../src/gsnh.cpp:274]   --->   Operation 531 'br' 'br_ln274' <Predicate = (!icmp_ln273)> <Delay = 0.00>
+
+State 56 <SV = 17> <Delay = 1.82>
+ST_56 : Operation 532 [5/5] (1.82ns)   --->   "%gmem1_addr_1_wr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P, i8 %gmem1_addr" [../src/gsnh.cpp:292]   --->   Operation 532 'writeresp' 'gmem1_addr_1_wr_resp' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 57 <SV = 18> <Delay = 1.82>
+ST_57 : Operation 533 [4/5] (1.82ns)   --->   "%gmem1_addr_1_wr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P, i8 %gmem1_addr" [../src/gsnh.cpp:292]   --->   Operation 533 'writeresp' 'gmem1_addr_1_wr_resp' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 58 <SV = 19> <Delay = 1.82>
+ST_58 : Operation 534 [3/5] (1.82ns)   --->   "%gmem1_addr_1_wr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P, i8 %gmem1_addr" [../src/gsnh.cpp:292]   --->   Operation 534 'writeresp' 'gmem1_addr_1_wr_resp' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 59 <SV = 20> <Delay = 1.82>
+ST_59 : Operation 535 [2/5] (1.82ns)   --->   "%gmem1_addr_1_wr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P, i8 %gmem1_addr" [../src/gsnh.cpp:292]   --->   Operation 535 'writeresp' 'gmem1_addr_1_wr_resp' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 60 <SV = 21> <Delay = 1.82>
+ST_60 : Operation 536 [1/5] (1.82ns)   --->   "%gmem1_addr_1_wr_resp = writeresp i1 @_ssdm_op_WriteResp.m_axi.i8P, i8 %gmem1_addr" [../src/gsnh.cpp:292]   --->   Operation 536 'writeresp' 'gmem1_addr_1_wr_resp' <Predicate = true> <Delay = 1.82> <Core = "m_axi">   --->   Core 51 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_60 : Operation 537 [1/1] (0.00ns)   --->   "%ret_ln317 = ret" [../src/gsnh.cpp:317]   --->   Operation 537 'ret' 'ret_ln317' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 2.5ns, clock uncertainty: 0.675ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'out_r' [15]  (1 ns)
+
+ <State 2>: 1.57ns
+The critical path consists of the following:
+	'phi' operation ('empty') with incoming values : ('empty_154') [24]  (0 ns)
+	'icmp' operation ('empty_157') [38]  (0.637 ns)
+	'select' operation ('empty_158') [39]  (0 ns)
+	'sub' operation ('empty_160') [41]  (0.341 ns)
+	'lshr' operation ('empty_165') [46]  (0 ns)
+	'and' operation ('p_demorgan') [47]  (0 ns)
+	'and' operation ('empty_166') [48]  (0.592 ns)
+
+ <State 3>: 1.65ns
+The critical path consists of the following:
+	'shl' operation ('mask') [51]  (0.487 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [52]  (1.16 ns)
+
+ <State 4>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_169') [58]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_66') [60]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [62]  (1.16 ns)
+
+ <State 5>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_171') [68]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_68') [70]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [72]  (1.16 ns)
+
+ <State 6>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_173') [78]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_70') [80]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [82]  (1.16 ns)
+
+ <State 7>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_175') [88]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_72') [90]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [92]  (1.16 ns)
+
+ <State 8>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_177') [98]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_74') [100]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [102]  (1.16 ns)
+
+ <State 9>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_179') [108]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_76') [110]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [112]  (1.16 ns)
+
+ <State 10>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_181') [118]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_78') [120]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [122]  (1.16 ns)
+
+ <State 11>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_183') [128]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_80') [130]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [132]  (1.16 ns)
+
+ <State 12>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_185') [138]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_82') [140]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [142]  (1.16 ns)
+
+ <State 13>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_187') [148]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_84') [150]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [152]  (1.16 ns)
+
+ <State 14>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_189') [158]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_86') [160]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [162]  (1.16 ns)
+
+ <State 15>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_191') [168]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_88') [170]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [172]  (1.16 ns)
+
+ <State 16>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_193') [178]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_90') [180]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [182]  (1.16 ns)
+
+ <State 17>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_195') [188]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_92') [190]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [192]  (1.16 ns)
+
+ <State 18>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_197') [198]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_94') [200]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [202]  (1.16 ns)
+
+ <State 19>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_199') [208]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_96') [210]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [212]  (1.16 ns)
+
+ <State 20>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_201') [218]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_98') [220]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [222]  (1.16 ns)
+
+ <State 21>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_203') [228]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_100') [230]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [232]  (1.16 ns)
+
+ <State 22>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_205') [238]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_102') [240]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [242]  (1.16 ns)
+
+ <State 23>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_207') [248]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_104') [250]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [252]  (1.16 ns)
+
+ <State 24>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_209') [258]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_106') [260]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [262]  (1.16 ns)
+
+ <State 25>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_211') [268]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_108') [270]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [272]  (1.16 ns)
+
+ <State 26>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_213') [278]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_110') [280]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [282]  (1.16 ns)
+
+ <State 27>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_215') [288]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_112') [290]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [292]  (1.16 ns)
+
+ <State 28>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_217') [298]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_114') [300]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [302]  (1.16 ns)
+
+ <State 29>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_219') [308]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_116') [310]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [312]  (1.16 ns)
+
+ <State 30>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_221') [318]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_118') [320]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [322]  (1.16 ns)
+
+ <State 31>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_223') [328]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_120') [330]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [332]  (1.16 ns)
+
+ <State 32>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_225') [338]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_122') [340]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [342]  (1.16 ns)
+
+ <State 33>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_227') [348]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_124') [350]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [352]  (1.16 ns)
+
+ <State 34>: 1.16ns
+The critical path consists of the following:
+	'or' operation ('empty_229') [358]  (0 ns)
+	'getelementptr' operation ('line_buf_addr_126') [360]  (0 ns)
+	'store' operation ('store_ln0') of constant <constant:_ssdm_op_Write.bram.i24> on array 'line_buf', ../src/gsnh.cpp:20 [362]  (1.16 ns)
+
+ <State 35>: 1.83ns
+The critical path consists of the following:
+	'getelementptr' operation ('gmem0_addr', ../src/gsnh.cpp:44) [370]  (0 ns)
+	bus request on port 'gmem0' (../src/gsnh.cpp:44) [371]  (1.83 ns)
+
+ <State 36>: 1.83ns
+The critical path consists of the following:
+	bus request on port 'gmem0' (../src/gsnh.cpp:44) [371]  (1.83 ns)
+
+ <State 37>: 1.83ns
+The critical path consists of the following:
+	bus request on port 'gmem0' (../src/gsnh.cpp:44) [371]  (1.83 ns)
+
+ <State 38>: 1.83ns
+The critical path consists of the following:
+	bus request on port 'gmem0' (../src/gsnh.cpp:44) [371]  (1.83 ns)
+
+ <State 39>: 1.83ns
+The critical path consists of the following:
+	bus request on port 'gmem0' (../src/gsnh.cpp:44) [371]  (1.83 ns)
+
+ <State 40>: 1.83ns
+The critical path consists of the following:
+	bus request on port 'gmem0' (../src/gsnh.cpp:44) [371]  (1.83 ns)
+
+ <State 41>: 1.83ns
+The critical path consists of the following:
+	bus request on port 'gmem0' (../src/gsnh.cpp:44) [371]  (1.83 ns)
+
+ <State 42>: 1.45ns
+The critical path consists of the following:
+	'phi' operation ('xi', ../src/gsnh.cpp:32) with incoming values : ('add_ln32', ../src/gsnh.cpp:32) [382]  (0 ns)
+	'icmp' operation ('icmp_ln32', ../src/gsnh.cpp:32) [389]  (0.605 ns)
+	'select' operation ('select_ln31', ../src/gsnh.cpp:31) [390]  (0.303 ns)
+	'add' operation ('add_ln32', ../src/gsnh.cpp:32) [439]  (0.543 ns)
+
+ <State 43>: 1.83ns
+The critical path consists of the following:
+	bus read on port 'gmem0' (../src/gsnh.cpp:44) [404]  (1.83 ns)
+
+ <State 44>: 1.43ns
+The critical path consists of the following:
+	'phi' operation ('yi', ../src/gsnh.cpp:31) with incoming values : ('select_ln31_1', ../src/gsnh.cpp:31) [375]  (0 ns)
+	'add' operation ('add_ln31_1', ../src/gsnh.cpp:31) [391]  (0.543 ns)
+	'select' operation ('select_ln31_1', ../src/gsnh.cpp:31) [392]  (0.303 ns)
+	'add' operation ('add_ln44', ../src/gsnh.cpp:44) [402]  (0.582 ns)
+
+ <State 45>: 1.81ns
+The critical path consists of the following:
+	'add' operation ('add_ln62_5', ../src/gsnh.cpp:62) [431]  (0.512 ns)
+	'add' operation ('add_ln62_6', ../src/gsnh.cpp:62) [433]  (0.543 ns)
+	'add' operation ('add_ln62_7', ../src/gsnh.cpp:62) [435]  (0.756 ns)
+
+ <State 46>: 1.16ns
+The critical path consists of the following:
+	'getelementptr' operation ('gau_buf_addr', ../src/gsnh.cpp:70) [437]  (0 ns)
+	'store' operation ('store_ln70', ../src/gsnh.cpp:70) of variable 'trunc_ln', ../src/gsnh.cpp:70 on array 'gau_buf', ../src/gsnh.cpp:307 [438]  (1.16 ns)
+
+ <State 47>: 0ns
+The critical path consists of the following:
+
+ <State 48>: 0ns
+The critical path consists of the following:
+
+ <State 49>: 0ns
+The critical path consists of the following:
+
+ <State 50>: 1.83ns
+The critical path consists of the following:
+	bus request on port 'gmem1' (../src/gsnh.cpp:292) [445]  (1.83 ns)
+
+ <State 51>: 1.49ns
+The critical path consists of the following:
+	'phi' operation ('xi', ../src/gsnh.cpp:274) with incoming values : ('add_ln274', ../src/gsnh.cpp:274) [450]  (0 ns)
+	'icmp' operation ('icmp_ln274', ../src/gsnh.cpp:274) [457]  (0.605 ns)
+	'select' operation ('select_ln273_1', ../src/gsnh.cpp:273) [460]  (0.303 ns)
+	'add' operation ('add_ln281', ../src/gsnh.cpp:281) [465]  (0.582 ns)
+
+ <State 52>: 1.16ns
+The critical path consists of the following:
+	'getelementptr' operation ('supp_buf_addr', ../src/gsnh.cpp:281) [467]  (0 ns)
+	'load' operation ('supp_buf_load', ../src/gsnh.cpp:281) on array 'supp_buf', ../src/gsnh.cpp:309 [468]  (1.16 ns)
+
+ <State 53>: 1.74ns
+The critical path consists of the following:
+	'load' operation ('supp_buf_load', ../src/gsnh.cpp:281) on array 'supp_buf', ../src/gsnh.cpp:309 [468]  (1.16 ns)
+	'icmp' operation ('icmp_ln286', ../src/gsnh.cpp:286) [469]  (0.581 ns)
+
+ <State 54>: 0.278ns
+The critical path consists of the following:
+	'select' operation ('select_ln292', ../src/gsnh.cpp:292) [470]  (0.278 ns)
+
+ <State 55>: 1.83ns
+The critical path consists of the following:
+	bus write on port 'gmem1' (../src/gsnh.cpp:292) [471]  (1.83 ns)
+
+ <State 56>: 1.83ns
+The critical path consists of the following:
+	bus access on port 'gmem1' (../src/gsnh.cpp:292) [475]  (1.83 ns)
+
+ <State 57>: 1.83ns
+The critical path consists of the following:
+	bus access on port 'gmem1' (../src/gsnh.cpp:292) [475]  (1.83 ns)
+
+ <State 58>: 1.83ns
+The critical path consists of the following:
+	bus access on port 'gmem1' (../src/gsnh.cpp:292) [475]  (1.83 ns)
+
+ <State 59>: 1.83ns
+The critical path consists of the following:
+	bus access on port 'gmem1' (../src/gsnh.cpp:292) [475]  (1.83 ns)
+
+ <State 60>: 1.83ns
+The critical path consists of the following:
+	bus access on port 'gmem1' (../src/gsnh.cpp:292) [475]  (1.83 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
