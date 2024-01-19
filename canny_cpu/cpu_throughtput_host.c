@@ -93,6 +93,9 @@ int main(int argc, char** argv) {
         exit(1);
     }
     cl_kernel gau_kernel = clCreateKernel(program, "gaussian_kernel", &status);
+    cl_kernel sob_kernel = clCreateKernel(program, "sobel_kernel", &status);
+    cl_kernel nonmax_kernel = clCreateKernel(program, "nonmaxsuppression_kernel", &status);
+    cl_kernel hyst_kernel = clCreateKernel(program, "hysteresis_kernel", &status);
     printf("[+] kernel loaded\n");
 
     // allocate input image
@@ -115,11 +118,22 @@ int main(int argc, char** argv) {
     cl_mem in_out_buf[2];
     in_out_buf[0] = clCreateBuffer(context, CL_MEM_READ_WRITE, img_buffer_size, NULL, NULL);
     in_out_buf[1] = clCreateBuffer(context, CL_MEM_READ_WRITE, img_buffer_size, NULL, NULL);
+    cl_mem theta_buf = clCreateBuffer(context, CL_MEM_READ_WRITE, grad_buffer_size, NULL, NULL);
+
 
     // Set the arguments of the kernel
     status = clSetKernelArg(gau_kernel, 0, sizeof(cl_mem), &in_out_buf[0]);
     status |= clSetKernelArg(gau_kernel, 1, sizeof(cl_mem), &in_out_buf[1]);
+    status = clSetKernelArg(sob_kernel, 0, sizeof(cl_mem), &in_out_buf[1]);
+    status |= clSetKernelArg(sob_kernel, 1, sizeof(cl_mem), &theta_buf);
     assert(status == CL_SUCCESS);
+    status = clSetKernelArg(nonmax_kernel, 0, sizeof(cl_mem), &theta_buf);
+    status |= clSetKernelArg(nonmax_kernel, 1, sizeof(cl_mem), &in_out_buf[0]);
+    assert(status == CL_SUCCESS);
+    status = clSetKernelArg(hyst_kernel, 0, sizeof(cl_mem), &in_out_buf[0]);
+    status |= clSetKernelArg(hyst_kernel, 1, sizeof(cl_mem), &in_out_buf[1]);
+    assert(status == CL_SUCCESS);
+    printf("[+] arg set\n");
 
     // Start Profiling
     size_t global_work_size = 1;
@@ -131,7 +145,7 @@ int main(int argc, char** argv) {
     assert(status == CL_SUCCESS);
 
     // write results to csv file
-    FILE *file = fopen("results.csv", "w");
+    FILE *file = fopen("results_sob.csv", "w");
     if (file == NULL) {
         printf("Unable to open file\n");
         return 1;
@@ -144,7 +158,10 @@ int main(int argc, char** argv) {
             assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
             for (int kernel_id = 0; kernel_id < queue_num; kernel_id++) {
                 // Gaussian kernel
-                status = clEnqueueNDRangeKernel(queue, gau_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
+                // status = clEnqueueNDRangeKernel(queue, gau_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
+                status = clEnqueueNDRangeKernel(queue, sob_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
+                // status = clEnqueueNDRangeKernel(queue, nonmax_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
+                // status = clEnqueueNDRangeKernel(queue, hyst_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
                 assert(status == CL_SUCCESS);
             }
             // End Queue
@@ -163,13 +180,22 @@ int main(int argc, char** argv) {
     }
     fclose(file); // close file
 
+    // Read the output back to host
+    status = clEnqueueReadBuffer(queue, in_out_buf[1], CL_TRUE, 0, img_buffer_size, output_img, 0, NULL, NULL);
+    assert(status == CL_SUCCESS);
+
+
     // Release
     clReleaseKernel(gau_kernel);
+    clReleaseKernel(sob_kernel);
+    clReleaseKernel(nonmax_kernel);
+    clReleaseKernel(hyst_kernel);
     clReleaseProgram(program);
     clReleaseCommandQueue(queue);
     clReleaseContext(context);
     clReleaseMemObject(in_out_buf[0]);
     clReleaseMemObject(in_out_buf[1]);
+    clReleaseMemObject(theta_buf);
 
     return 0;
 }
