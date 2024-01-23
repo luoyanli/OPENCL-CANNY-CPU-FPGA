@@ -1,0 +1,1390 @@
+<ENTRY>
+{
+ "thisFile": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Jan 22 17:01:45 2024",
+ "timestampMillis": "1705964505519",
+ "buildStep": {
+  "cmdId": "195c3a48-bdb8-49ce-98ae-99e510d4a11f",
+  "name": "v++",
+  "logFile": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/link.steps.log",
+  "commandLine": "/opt/xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l --save-temps --jobs 16 -t hw --platform xilinx_u250_xdma_201830_2 --temp_dir ./_x.hw.xilinx_u250_xdma_201830_2 -o./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin _x.hw.xilinx_u250_xdma_201830_2/gau.xo _x.hw.xilinx_u250_xdma_201830_2/sobel.xo _x.hw.xilinx_u250_xdma_201830_2/nms.xo _x.hw.xilinx_u250_xdma_201830_2/hyst.xo _x.hw.xilinx_u250_xdma_201830_2/gau2.xo _x.hw.xilinx_u250_xdma_201830_2/sobel2.xo _x.hw.xilinx_u250_xdma_201830_2/nms2.xo _x.hw.xilinx_u250_xdma_201830_2/hyst2.xo ",
+  "args": [
+   "-l",
+   "--save-temps",
+   "--jobs",
+   "16",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u250_xdma_201830_2",
+   "--temp_dir",
+   "./_x.hw.xilinx_u250_xdma_201830_2",
+   "-o./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin",
+   "_x.hw.xilinx_u250_xdma_201830_2/gau.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/sobel.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/nms.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/hyst.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/gau2.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/sobel2.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/nms2.xo",
+   "_x.hw.xilinx_u250_xdma_201830_2/hyst2.xo"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:01:45 2024",
+ "timestampMillis": "1705964505519",
+ "status": {
+  "cmdId": "195c3a48-bdb8-49ce-98ae-99e510d4a11f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Mon Jan 22 17:02:07 2024",
+ "timestampMillis": "1705964527153",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u250_xdma_201830_2.xpfm",
+  "hardwareDsa": "xilinx_u250_xdma_201830_2.dsa",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "ced_kernels2.link",
+    "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin",
+    "reports": []
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "gau",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/gau/gau/cpu_sources/gau.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "gau_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sobel",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/sobel/sobel/cpu_sources/sobel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "sobel_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "nms",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/nms/nms/cpu_sources/nms.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "nms_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "hyst",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/hyst/hyst/cpu_sources/hyst.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "hyst_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "gau2",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau2.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/gau2/gau2/cpu_sources/gau.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "gau2_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "sobel2",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel2.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/sobel2/sobel2/cpu_sources/sobel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "sobel2_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "nms2",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms2.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/nms2/nms2/cpu_sources/nms.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "nms2_1"
+    ],
+    "type": "HLS"
+   },
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "hyst2",
+     "file": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst2.xo",
+     "reports": []
+    },
+    "sources": [
+     "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/hyst2/hyst2/cpu_sources/hyst.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "hyst2_1"
+    ],
+    "type": "HLS"
+   }
+  ],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 17:02:07 2024",
+ "timestampMillis": "1705964527531",
+ "buildStep": {
+  "cmdId": "e9f43197-1933-4393-86b8-b4730fc7011e",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau2.xo --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel2.xo --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms2.xo --xo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst2.xo -keep --xpfm /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm --target hw --output_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --temp_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau.xo",
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel.xo",
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms.xo",
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst.xo",
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/gau2.xo",
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/sobel2.xo",
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/nms2.xo",
+   "--xo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/hyst2.xo",
+   "-keep",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u250_xdma_201830_2/xilinx_u250_xdma_201830_2.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int",
+   "--temp_dir",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/sys_link"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:07 2024",
+ "timestampMillis": "1705964527532",
+ "status": {
+  "cmdId": "e9f43197-1933-4393-86b8-b4730fc7011e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:27 2024",
+ "timestampMillis": "1705964547243",
+ "status": {
+  "cmdId": "e9f43197-1933-4393-86b8-b4730fc7011e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 17:02:27 2024",
+ "timestampMillis": "1705964547247",
+ "buildStep": {
+  "cmdId": "490b5b0a-291a-4675-9e7b-66e0bc862dd6",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat -rtd /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/cf2sw.rtd -xclbin /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml -o /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat",
+   "-rtd",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/cf2sw.rtd",
+   "-xclbin",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:27 2024",
+ "timestampMillis": "1705964547248",
+ "status": {
+  "cmdId": "490b5b0a-291a-4675-9e7b-66e0bc862dd6",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:31 2024",
+ "timestampMillis": "1705964551372",
+ "status": {
+  "cmdId": "490b5b0a-291a-4675-9e7b-66e0bc862dd6",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 17:02:31 2024",
+ "timestampMillis": "1705964551377",
+ "buildStep": {
+  "cmdId": "cd9c1f7d-f851-4d1c-9b4a-df47f9ce86e4",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:31 2024",
+ "timestampMillis": "1705964551378",
+ "status": {
+  "cmdId": "cd9c1f7d-f851-4d1c-9b4a-df47f9ce86e4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 17:02:33 2024",
+ "timestampMillis": "1705964553180",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:33 2024",
+ "timestampMillis": "1705964553181",
+ "status": {
+  "cmdId": "cd9c1f7d-f851-4d1c-9b4a-df47f9ce86e4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 17:02:33 2024",
+ "timestampMillis": "1705964553184",
+ "buildStep": {
+  "cmdId": "4ee5815b-f888-4e42-a10d-030a31a196e0",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f xilinx_u250_xdma_201830_2 -j 16 --remote_ip_cache /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/.ipcache -s --output_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --log_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link --report_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link --config /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini -k /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link --no-info --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst_1_0 --messageDb /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link/vpl.pb /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "xilinx_u250_xdma_201830_2",
+   "-j",
+   "16",
+   "--remote_ip_cache",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/.ipcache",
+   "-s",
+   "--output_dir",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int",
+   "--log_dir",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link",
+   "--report_dir",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link",
+   "--config",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini",
+   "-k",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link",
+   "--no-info",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst2_1_0",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms2_1_0",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel_1_0",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau_1_0",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau2_1_0",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms_1_0",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel2_1_0",
+   "--iprepo",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst_1_0",
+   "--messageDb",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link/vpl.pb",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels\nmisc=BinaryName=ced_kernels2.link\n\n[connectivity]\nnk=gau:1:gau_1\nnk=sobel:1:sobel_1\nnk=nms:1:nms_1\nnk=hyst:1:hyst_1\nnk=gau2:1:gau2_1\nnk=sobel2:1:sobel2_1\nnk=nms2:1:nms2_1\nnk=hyst2:1:hyst2_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:33 2024",
+ "timestampMillis": "1705964553185",
+ "status": {
+  "cmdId": "4ee5815b-f888-4e42-a10d-030a31a196e0",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Jan 22 17:02:35 2024",
+ "timestampMillis": "1705964555888",
+ "buildStep": {
+  "cmdId": "abba6fb1-7472-486f-96ff-d97c0fbce519",
+  "name": "vpl",
+  "logFile": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/link.steps.log",
+  "commandLine": "/opt/xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/vpl -t hw -f xilinx_u250_xdma_201830_2 -j 16 --remote_ip_cache /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/.ipcache -s --output_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int --log_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/link --report_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link --config /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/vplConfig.ini -k /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link --no-info --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_gau2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_nms_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_sobel2_1_0 --iprepo /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xo/ip_repo/xilinx_com_hls_hyst_1_0 --messageDb /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link/vpl.pb /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:35 2024",
+ "timestampMillis": "1705964555889",
+ "status": {
+  "cmdId": "abba6fb1-7472-486f-96ff-d97c0fbce519",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Mon Jan 22 17:02:52 2024",
+ "timestampMillis": "1705964572823",
+ "vivadoProject": {
+  "openDir": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 17:02:52 2024",
+ "timestampMillis": "1705964572825",
+ "buildStep": {
+  "cmdId": "dcf5e50e-5418-4b32-b1b8-0bbe52852f80",
+  "name": "vivado",
+  "logFile": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 17:02:52 2024",
+ "timestampMillis": "1705964572825",
+ "status": {
+  "cmdId": "dcf5e50e-5418-4b32-b1b8-0bbe52852f80",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523115",
+ "status": {
+  "cmdId": "dcf5e50e-5418-4b32-b1b8-0bbe52852f80",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523213",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523214",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523215",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523216",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523217",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523258",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_memory_subsystem_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523259",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_xbar_6_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523259",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523260",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_gau_1_0_utilization_synth.rpt",
+  "name": "gau",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523261",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_gau2_1_0_utilization_synth.rpt",
+  "name": "gau2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523261",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_hyst_1_0_utilization_synth.rpt",
+  "name": "hyst",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523262",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_hyst2_1_0_utilization_synth.rpt",
+  "name": "hyst2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523263",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_nms_1_0_utilization_synth.rpt",
+  "name": "nms",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523264",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_nms2_1_0_utilization_synth.rpt",
+  "name": "nms2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523264",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_sobel_1_0_utilization_synth.rpt",
+  "name": "sobel",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523265",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/pfm_dynamic_sobel2_1_0_utilization_synth.rpt",
+  "name": "sobel2",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523266",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_interconnect_DDR4_MEM01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523266",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S04_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523267",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S05_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523268",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S06_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523268",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S07_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523269",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S08_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523269",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S09_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523270",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S10_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523271",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S11_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523272",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S12_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523272",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S13_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523273",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S14_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523273",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S15_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523274",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S16_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523275",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S17_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523275",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S18_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523276",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_vip_S19_AXI_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523277",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_interconnect_DDR4_MEM00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523277",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/syn/bd_d216_ddr4_mem01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523293",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/imp/xilinx_u250_xdma_201830_2_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523326",
+ "status": {
+  "cmdId": "abba6fb1-7472-486f-96ff-d97c0fbce519",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523345",
+ "status": {
+  "cmdId": "4ee5815b-f888-4e42-a10d-030a31a196e0",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523349",
+ "buildStep": {
+  "cmdId": "a82b8c1e-60af-4921-aaf6-421f77accd64",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523350",
+ "status": {
+  "cmdId": "a82b8c1e-60af-4921-aaf6-421f77accd64",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523358",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523361",
+ "buildStep": {
+  "cmdId": "0185dc1b-b503-42ad-82ff-eb833444a365",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/address_map.xml -sdsl /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat -xclbin /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml -rtd /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.rtd -o /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.xml",
+  "args": [
+   "-a",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/address_map.xml",
+   "-sdsl",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.rtd",
+   "-o",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:23 2024",
+ "timestampMillis": "1705975523362",
+ "status": {
+  "cmdId": "0185dc1b-b503-42ad-82ff-eb833444a365",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527792",
+ "status": {
+  "cmdId": "0185dc1b-b503-42ad-82ff-eb833444a365",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527800",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527801",
+ "buildStep": {
+  "cmdId": "6ac7a8a3-363f-473d-b1fe-6ab5600fc22a",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.rtd",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527802",
+ "status": {
+  "cmdId": "6ac7a8a3-363f-473d-b1fe-6ab5600fc22a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527803",
+ "status": {
+  "cmdId": "6ac7a8a3-363f-473d-b1fe-6ab5600fc22a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527803",
+ "status": {
+  "cmdId": "a82b8c1e-60af-4921-aaf6-421f77accd64",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527806",
+ "buildStep": {
+  "cmdId": "d2ab5f9b-8f57-4c2d-85ab-2606550f9018",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section DEBUG_IP_LAYOUT:JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/debug_ip_layout.rtd --add-section BITSTREAM:RAW:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.rtd --append-section :JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link_xml.rtd --add-section BUILD_METADATA:JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.xml --add-section SYSTEM_METADATA:RAW:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json --output /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin",
+  "args": [
+   "--add-section",
+   "DEBUG_IP_LAYOUT:JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/debug_ip_layout.rtd",
+   "--add-section",
+   "BITSTREAM:RAW:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.rtd",
+   "--append-section",
+   ":JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/ced_kernels2.link.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--output",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:27 2024",
+ "timestampMillis": "1705975527807",
+ "status": {
+  "cmdId": "d2ab5f9b-8f57-4c2d-85ab-2606550f9018",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:28 2024",
+ "timestampMillis": "1705975528183",
+ "status": {
+  "cmdId": "d2ab5f9b-8f57-4c2d-85ab-2606550f9018",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 20:05:28 2024",
+ "timestampMillis": "1705975528187",
+ "buildStep": {
+  "cmdId": "b25da449-1185-4b26-ae76-47b703d4b135",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin.info --input /home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin.info",
+   "--input",
+   "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:28 2024",
+ "timestampMillis": "1705975528188",
+ "status": {
+  "cmdId": "b25da449-1185-4b26-ae76-47b703d4b135",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529107",
+ "status": {
+  "cmdId": "b25da449-1185-4b26-ae76-47b703d4b135",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529110",
+ "buildStep": {
+  "cmdId": "5abb7a05-b0b9-4333-b93e-e2264e9bda52",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529111",
+ "status": {
+  "cmdId": "5abb7a05-b0b9-4333-b93e-e2264e9bda52",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529112",
+ "status": {
+  "cmdId": "5abb7a05-b0b9-4333-b93e-e2264e9bda52",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529167",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/system_estimate_ced_kernels2.link.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529343",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/reports/link/v++_link_ced_kernels2.link_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529344",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/v++_link_ced_kernels2.link_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529350",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x.hw.xilinx_u250_xdma_201830_2/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:29 2024",
+ "timestampMillis": "1705975529352",
+ "status": {
+  "cmdId": "195c3a48-bdb8-49ce-98ae-99e510d4a11f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

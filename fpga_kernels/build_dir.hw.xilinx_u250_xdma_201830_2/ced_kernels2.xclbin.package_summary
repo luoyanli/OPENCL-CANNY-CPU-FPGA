@@ -1,0 +1,86 @@
+<ENTRY>
+{
+ "thisFile": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.xclbin.package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Mon Jan 22 20:05:32 2024",
+ "timestampMillis": "1705975532699",
+ "buildStep": {
+  "cmdId": "81a60199-ab84-4c73-ab8d-4bdaeee2f96d",
+  "name": "v++",
+  "logFile": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x/package/package.steps.log",
+  "commandLine": "/opt/xilinx/Vitis/2020.1/bin/unwrapped/lnx64.o/v++  --xp \"vivado_prop:run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --xp \"misc:report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -p ./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin --save-temps --jobs 16 -t hw --platform xilinx_u250_xdma_201830_2 --package.out_dir ./package.hw -o ./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.xclbin ",
+  "args": [
+   "-p",
+   "./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.link.xclbin",
+   "--save-temps",
+   "--jobs",
+   "16",
+   "-t",
+   "hw",
+   "--platform",
+   "xilinx_u250_xdma_201830_2",
+   "--package.out_dir",
+   "./package.hw",
+   "-o",
+   "./build_dir.hw.xilinx_u250_xdma_201830_2/ced_kernels2.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:32 2024",
+ "timestampMillis": "1705975532700",
+ "status": {
+  "cmdId": "81a60199-ab84-4c73-ab8d-4bdaeee2f96d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:54 2024",
+ "timestampMillis": "1705975554007",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x/reports/package/v++_package_ced_kernels2_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Mon Jan 22 20:05:54 2024",
+ "timestampMillis": "1705975554008",
+ "report": {
+  "path": "/home/zz44/OPENCL-CANNY-CPU-FPGA/fpga_kernels/_x/v++_package_ced_kernels2_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Mon Jan 22 20:05:54 2024",
+ "timestampMillis": "1705975554009",
+ "status": {
+  "cmdId": "81a60199-ab84-4c73-ab8d-4bdaeee2f96d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
