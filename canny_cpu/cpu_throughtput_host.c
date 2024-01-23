@@ -32,6 +32,10 @@ int main(int argc, char** argv) {
     status = clGetPlatformIDs(numPlatforms, platforms, NULL);
     platform_id = platforms[2];  // 0 and 1 cannot be used
     free(platforms);
+    char version[128];
+    clGetPlatformInfo(platform_id, CL_PLATFORM_VERSION, 128, version, NULL);
+    printf("%s\n", version);
+
 
     cl_uint numDevices;
     cl_device_id device_id = NULL;
@@ -145,7 +149,7 @@ int main(int argc, char** argv) {
     assert(status == CL_SUCCESS);
 
     // write results to csv file
-    FILE *file = fopen("results_sob.csv", "w");
+    FILE *file = fopen("results_all_kernels.csv", "w");
     if (file == NULL) {
         printf("Unable to open file\n");
         return 1;
@@ -158,10 +162,10 @@ int main(int argc, char** argv) {
             assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
             for (int kernel_id = 0; kernel_id < queue_num; kernel_id++) {
                 // Gaussian kernel
-                // status = clEnqueueNDRangeKernel(queue, gau_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
+                status = clEnqueueNDRangeKernel(queue, gau_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
                 status = clEnqueueNDRangeKernel(queue, sob_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
-                // status = clEnqueueNDRangeKernel(queue, nonmax_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
-                // status = clEnqueueNDRangeKernel(queue, hyst_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
+                status = clEnqueueNDRangeKernel(queue, nonmax_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
+                status = clEnqueueNDRangeKernel(queue, hyst_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
                 assert(status == CL_SUCCESS);
             }
             // End Queue
