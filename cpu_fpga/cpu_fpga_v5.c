@@ -263,6 +263,14 @@ int main() {
             }
             assert(clock_gettime(CLOCK_MONOTONIC_RAW, &end) != -1);
             total_time += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
+            for (int i = 0; i < NUM_KERNEL; i++){
+                clReleaseEvent(kernel_events[i][0]);
+                clReleaseEvent(kernel_events[i][1]);
+                clReleaseEvent(kernel_events[i][2]);
+                clReleaseEvent(kernel_events[i][3]);
+                clReleaseEvent(migrate_events[i][0]);
+                clReleaseEvent(migrate_events[i][1]);
+            }
             // printf("test running\n");
             if (test_id == REPETITIONS - 1) {
                 // Output image to file
