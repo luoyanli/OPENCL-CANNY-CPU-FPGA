@@ -128,10 +128,12 @@ int main() {
     cl_kernel gau_kernel_fpga[MAX_NUM_QUEUE];
     cl_kernel sob_kernel_fpga[MAX_NUM_QUEUE];
     cl_kernel nms_kernel_fpga[MAX_NUM_QUEUE];
+    cl_kernel hyst_kernel_fpga[MAX_NUM_QUEUE];
     for (int i = 0; i < MAX_NUM_QUEUE; i++){
         gau_kernel_fpga[i] = clCreateKernel(program_fpga, "gau", &status);
         sob_kernel_fpga[i] = clCreateKernel(program_fpga, "sobel", &status);
         nms_kernel_fpga[i] = clCreateKernel(program_fpga, "nms", &status);
+        hyst_kernel_fpga[i] = clCreateKernel(program_fpga, "hyst", &status);
     }
     assert(status == CL_SUCCESS);
     printf("[+] fpga kernel loaded\n");
@@ -142,22 +144,20 @@ int main() {
         assert(status == CL_SUCCESS);
     }
 
-    uint8_t *test = (uint8_t*)malloc(sizeof(uint8_t)); // used for sync CPU and FPGA timestamp
     uint8_t **input_imgs = (uint8_t**)malloc(MAX_NUM_QUEUE * sizeof(uint8_t*));
     uint8_t **output_imgs = (uint8_t**)malloc(MAX_NUM_QUEUE * sizeof(uint8_t*));
-    uint8_t **in_out_imgs = (uint8_t**)malloc(MAX_NUM_QUEUE * sizeof(uint8_t*));
-    if (!input_imgs || !output_imgs || !in_out_imgs) {
+    // uint8_t **in_out_imgs = (uint8_t**)malloc(MAX_NUM_QUEUE * sizeof(uint8_t*));
+    if (!input_imgs || !output_imgs) {
         printf("Memory allocation failed\n");
         return -1;
     }
     for (int i = 0; i < MAX_NUM_QUEUE; i++) {
         posix_memalign((void**)&input_imgs[i], 4096, ROWS*COLS*sizeof(uint8_t));
         posix_memalign((void**)&output_imgs[i], 4096, ROWS*COLS*sizeof(uint8_t));
-        posix_memalign((void**)&in_out_imgs[i], 4096, ROWS*COLS*sizeof(uint8_t));
     }
-    posix_memalign((void**)&test, 4096, ROWS*COLS*sizeof(uint8_t));
-    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[0], in_out_imgs[0], output_imgs[0]);
-    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[1], in_out_imgs[1], output_imgs[1]);
+
+    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[0], output_imgs[0]);
+    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[1], output_imgs[1]);
     srand(527);
     int cols = COLS;
     int rows = ROWS;
@@ -174,24 +174,22 @@ int main() {
 
     // buffer interact with hdost
     cl_mem input_buf[MAX_NUM_QUEUE];
-    cl_mem fpga_output_buf[MAX_NUM_QUEUE];
     cl_mem gau_out_sob_in_buffer[MAX_NUM_QUEUE];
     cl_mem sob_out_nms_in_buffer[MAX_NUM_QUEUE];
-    cl_mem fpga_output_buf_2[MAX_NUM_QUEUE];
-    cl_mem hyst_in_buffer[MAX_NUM_QUEUE];
-    cl_mem cpu_output_buf[MAX_NUM_QUEUE];
+    cl_mem nms_out_hyst_in_buffer[MAX_NUM_QUEUE];
+    cl_mem fpga_output_buf[MAX_NUM_QUEUE];
+
 
     for (int i = 0; i < MAX_NUM_QUEUE; i++){
         input_buf[i] = clCreateBuffer(context_fpga, CL_MEM_READ_ONLY | CL_MEM_USE_HOST_PTR, buffer_size, input_imgs[i], &status);
-        fpga_output_buf[i] = clCreateBuffer(context_fpga, CL_MEM_WRITE_ONLY | CL_MEM_USE_HOST_PTR, buffer_size, in_out_imgs[i], &status);
         gau_out_sob_in_buffer[i] = clCreateBuffer(context_fpga, CL_MEM_READ_WRITE, buffer_size, NULL, &status);
         sob_out_nms_in_buffer[i] = clCreateBuffer(context_fpga, CL_MEM_READ_WRITE, buffer_size2, NULL, &status);
-        hyst_in_buffer[i] = clCreateBuffer(context_cpu, CL_MEM_READ_WRITE, buffer_size, NULL, &status);
-        cpu_output_buf[i] = clCreateBuffer(context_cpu, CL_MEM_WRITE_ONLY | CL_MEM_USE_HOST_PTR, buffer_size, output_imgs[i], &status);
+        nms_out_hyst_in_buffer[i] = clCreateBuffer(context_fpga, CL_MEM_READ_WRITE, buffer_size, NULL, &status);
+        fpga_output_buf[i] = clCreateBuffer(context_fpga, CL_MEM_WRITE_ONLY | CL_MEM_USE_HOST_PTR, buffer_size, output_imgs[i], &status);
     }
     printf("[+] all buffer created\n");
 
-    cl_event migrate_events[MAX_NUM_QUEUE];
+    // cl_event migrate_events[MAX_NUM_QUEUE];
 
     for (int i = 0; i < MAX_NUM_QUEUE; i++ ){
         // Set arguments
@@ -200,14 +198,14 @@ int main() {
         status = clSetKernelArg(sob_kernel_fpga[i], 0, sizeof(cl_mem), (void *)&gau_out_sob_in_buffer[i]);
         status |= clSetKernelArg(sob_kernel_fpga[i], 1, sizeof(cl_mem), (void *)&sob_out_nms_in_buffer[i]);
         status = clSetKernelArg(nms_kernel_fpga[i], 0, sizeof(cl_mem), (void *)&sob_out_nms_in_buffer[i]);
-        status |= clSetKernelArg(nms_kernel_fpga[i], 1, sizeof(cl_mem), (void *)&fpga_output_buf[i]);
-        status = clSetKernelArg(hyst_kernel_cpu[i], 0, sizeof(cl_mem), (void *)&hyst_in_buffer[i]);
-        status |= clSetKernelArg(hyst_kernel_cpu[i], 1, sizeof(cl_mem), (void *)&cpu_output_buf[i]);
+        status |= clSetKernelArg(nms_kernel_fpga[i], 1, sizeof(cl_mem), (void *)&nms_out_hyst_in_buffer[i]);
+        status = clSetKernelArg(hyst_kernel_fpga[i], 0, sizeof(cl_mem), (void *)&nms_out_hyst_in_buffer[i]);
+        status |= clSetKernelArg(hyst_kernel_fpga[i], 1, sizeof(cl_mem), (void *)&fpga_output_buf[i]);
         assert(status == CL_SUCCESS);
     }
 
     // write results to csv file
-    FILE *file = fopen("results_cpu_fpga.csv", "w");
+    FILE *file = fopen("results_fpga.csv", "w");
     if (file == NULL) {
         printf("Unable to open file\n");
         return 1;
@@ -232,28 +230,23 @@ int main() {
                 // assert(status == CL_SUCCESS);
                 status |= clEnqueueTask(queue_fpga[i], nms_kernel_fpga[i], 0, NULL, NULL);
                 assert(status == CL_SUCCESS);
-                status = clEnqueueMigrateMemObjects(queue_fpga[i], 1, &fpga_output_buf[i], CL_MIGRATE_MEM_OBJECT_HOST, 0, NULL, &migrate_events[i]);
-                assert(status == CL_SUCCESS);
-                // Execute cpu kernels
-                // Write input to CPU
-                clWaitForEvents(1, &migrate_events[i]);
-                status = clEnqueueWriteBuffer(queue_cpu[i], hyst_in_buffer[i], CL_FALSE, 0, buffer_size, in_out_imgs[i], 0, NULL, NULL);
-                status |= clEnqueueTask(queue_cpu[i], hyst_kernel_cpu[i], 0, NULL, NULL);
+                status |= clEnqueueTask(queue_fpga[i], hyst_kernel_fpga[i], 0, NULL, NULL);
                 // Read the output back to host
-                status = clEnqueueReadBuffer(queue_cpu[i], cpu_output_buf[i], CL_FALSE, 0, buffer_size, output_imgs[i], 0, NULL, NULL);
+                status = clEnqueueMigrateMemObjects(queue_fpga[i], 1, &fpga_output_buf[i], CL_MIGRATE_MEM_OBJECT_HOST, 0, NULL, NULL);
+                assert(status == CL_SUCCESS);
             }
 
             // Finish
             for (int i = 0; i < num_queue; i++){
                 clFinish(queue_fpga[i]);
-                clFinish(queue_cpu[i]);
+                // clFinish(queue_cpu[i]);
             }
             assert(clock_gettime(CLOCK_MONOTONIC_RAW, &end) != -1);
             total_time += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
 
-            for (int i = 0; i < MAX_NUM_QUEUE; i++){
-                clReleaseEvent(migrate_events[i]);
-            }
+            // for (int i = 0; i < MAX_NUM_QUEUE; i++){
+            //     clReleaseEvent(migrate_events[i]);
+            // }
 
         }
         // Print Profiling
@@ -277,18 +270,17 @@ int main() {
     for (int i = 0; i < MAX_NUM_QUEUE; i++){
         free(input_imgs[i]);
         free(output_imgs[i]);
-        free(in_out_imgs[i]);
+        // free(in_out_imgs[i]);
     }
     free(input_imgs);
     free(output_imgs);
-    free(in_out_imgs);
+    // free(in_out_imgs);
     for (int i = 0; i < MAX_NUM_QUEUE; i++){
         clReleaseMemObject(input_buf[i]);
-        clReleaseMemObject(fpga_output_buf[i]);
         clReleaseMemObject(gau_out_sob_in_buffer[i]);
         clReleaseMemObject(sob_out_nms_in_buffer[i]);
-        clReleaseMemObject(hyst_in_buffer[i]);
-        clReleaseMemObject(cpu_output_buf[i]);
+        clReleaseMemObject(nms_out_hyst_in_buffer[i]);
+        clReleaseMemObject(fpga_output_buf[i]);
     }
     clReleaseProgram(program_fpga);
     clReleaseProgram(program_cpu);

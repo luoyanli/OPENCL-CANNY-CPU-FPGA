@@ -143,19 +143,19 @@ int main() {
     uint8_t *test = (uint8_t*)malloc(sizeof(uint8_t)); // used for sync CPU and FPGA timestamp
     uint8_t **input_imgs = (uint8_t**)malloc(NUM_KERNEL * sizeof(uint8_t*));
     uint8_t **output_imgs = (uint8_t**)malloc(NUM_KERNEL * sizeof(uint8_t*));
-    uint8_t **in_out_imgs = (uint8_t**)malloc(NUM_KERNEL * sizeof(uint8_t*));
-    if (!input_imgs || !output_imgs || !in_out_imgs) {
+    // uint8_t **in_out_imgs = (uint8_t**)malloc(NUM_KERNEL * sizeof(uint8_t*));
+    if (!input_imgs || !output_imgs) {
         printf("Memory allocation failed\n");
         return -1;
     }
     for (int i = 0; i < NUM_KERNEL; i++) {
         posix_memalign((void**)&input_imgs[i], 4096, ROWS*COLS*sizeof(uint8_t));
         posix_memalign((void**)&output_imgs[i], 4096, ROWS*COLS*sizeof(uint8_t));
-        posix_memalign((void**)&in_out_imgs[i], 4096, ROWS*COLS*sizeof(uint8_t));
+        // posix_memalign((void**)&in_out_imgs[i], 4096, ROWS*COLS*sizeof(uint8_t));
     }
     posix_memalign((void**)&test, 4096, ROWS*COLS*sizeof(uint8_t));
-    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[0], in_out_imgs[0], output_imgs[0]);
-    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[1], in_out_imgs[1], output_imgs[1]);
+    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[0], output_imgs[0]);
+    printf("[+] input / in_out /ouput pages address: %p / %p / %p\n", input_imgs[1], output_imgs[1]);
     srand(527);
     int cols = COLS;
     int rows = ROWS;
@@ -207,7 +207,7 @@ int main() {
     cl_event kernel_events[NUM_KERNEL];
     cl_event migrate_events[NUM_KERNEL][2];
     cl_event write_events[NUM_KERNEL][2];
-    cl_event test_event;
+    // cl_event test_event;
     for (int i = 0; i < NUM_KERNEL; i++ ){
         // Set arguments
         // status = clSetKernelArg(gau_kernel_fpga[i], 0, sizeof(cl_mem), (void *)&input_buf[i]);
@@ -231,11 +231,11 @@ int main() {
             assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
 
             for (int img_id = 0; img_id < TaskNum/2; img_id++){    
-                if (img_id == 0) {
-                    // Get CPU platform start time
-                    status = clEnqueueWriteBuffer(queue_cpu, test_buf, CL_TRUE, 0, sizeof(char), test, 0, NULL, &test_event);
-                    assert(status == CL_SUCCESS);
-                }
+                // if (img_id == 0) {
+                //     // Get CPU platform start time
+                //     status = clEnqueueWriteBuffer(queue_cpu, test_buf, CL_TRUE, 0, sizeof(char), test, 0, NULL, &test_event);
+                //     assert(status == CL_SUCCESS);
+                // }
                 // Migrate
                 for (int i = 0; i < NUM_KERNEL; i++){
                     int queue_number = i % num_queue;
@@ -293,11 +293,11 @@ int main() {
     for (int i = 0; i < NUM_KERNEL; i++){
         free(input_imgs[i]);
         free(output_imgs[i]);
-        free(in_out_imgs[i]);
+        // free(in_out_imgs[i]);
     }
     free(input_imgs);
     free(output_imgs);
-    free(in_out_imgs);
+    // free(in_out_imgs);
     for (int i = 0; i < NUM_KERNEL; i++){
         clReleaseMemObject(input_buf[i]);
         clReleaseMemObject(fpga_output_buf[i]);
