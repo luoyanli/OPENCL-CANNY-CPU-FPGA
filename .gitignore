@@ -5,3 +5,4 @@ hyst_profile/
 fpga_kernels/**/*.mcs
 fpga_kernels/**/*.dcp
 *.csv
+fpga_kernels/gau_hls
