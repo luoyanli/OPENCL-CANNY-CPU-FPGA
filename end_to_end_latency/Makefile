@@ -1,14 +1,13 @@
 CC=gcc
-TARGET= fpga_cpu cpu fpga cpu_fpga_no_dependency_comb cpu_fixed
+TARGET= cpu_ete_mul cpu_ete_ooo fpga_ete_mul fpga_ete_ooo
 CFLAGS=-lOpenCL -std=c99 -L/opt/xilinx/xrt/lib -I/opt/xilinx/xrt/include
 
 all: $(TARGET)
 
-fpga_cpu: fpga_cpu
-cpu: cpu
-fpga: fpga
-nodepen: cpu_fpga_no_dependency_comb
-fix: cpu_fixed
+cpumul: cpu_ete_mul
+cpuooo: cpu_ete_ooo
+fpgamul: fpga_ete_mul
+fpgaooo: fpga_ete_ooo
 
 %: %.c
 	$(CC) -o $@ $^ $(CFLAGS)

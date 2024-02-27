@@ -207,7 +207,7 @@ int main() {
     }
 
     // write results to csv file
-    FILE *file = fopen("results_cpu.csv", "w");
+    FILE *file = fopen("testing.csv", "w");
     if (file == NULL) {
         printf("Unable to open file\n");
         return 1;

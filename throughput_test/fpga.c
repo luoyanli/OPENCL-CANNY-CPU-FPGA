@@ -10,7 +10,7 @@
 #define COLS 512
 #define REPETITIONS 100
 #define BILLION 1000000000L
-#define MAX_NUM_QUEUE 20   
+#define MAX_NUM_QUEUE 40   
 
 int main() {
     // struct timespec start, end;
@@ -205,7 +205,7 @@ int main() {
     }
 
     // write results to csv file
-    FILE *file = fopen("results_fpga.csv", "w");
+    FILE *file = fopen("results_fpga2.csv", "w");
     if (file == NULL) {
         printf("Unable to open file\n");
         return 1;
