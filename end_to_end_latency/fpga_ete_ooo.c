@@ -11,6 +11,8 @@
 
 int main(int argc, char** argv) {
     cl_ulong time_start, time_end, time_base;
+    struct timespec start, end;
+    cl_ulong total_time = 0;
     
     // Get Platform and Device Info
     cl_uint numPlatforms;
@@ -141,6 +143,7 @@ int main(int argc, char** argv) {
     }
 
     cl_event kernel_events[MAX_TASK_NUM][4];
+    cl_event write_events[MAX_TASK_NUM][2];
 
     // set arguments
     for (int i = 0; i < MAX_TASK_NUM; i++ ){
@@ -157,37 +160,48 @@ int main(int argc, char** argv) {
     }
 
 
-    FILE *file;
-    file = fopen("result_NtN_fpga_1000.csv", "w");
-    if (file == NULL) {
-        printf("Unable to open file\n");
-        return 1;
-    }
-    fprintf(file, "Tasks Num, Time starts , Time ends, End-to-end Latency(ns)\n");
-
+    // FILE *file;
+    // file = fopen("result_NtN_fpga_1000.csv", "w");
+    // if (file == NULL) {
+    //     printf("Unable to open file\n");
+    //     return 1;
+    // }
+    // fprintf(file, "Tasks Num, Time starts , Time ends, End-to-end Latency(ns)\n");
+    assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
     for (int test_id = 0; test_id  < 1; test_id++){
         for (int task_id = 0; task_id < MAX_TASK_NUM; task_id++) {
-            status = clEnqueueWriteBuffer(queue_fpga,input_buf[task_id] , 0, 0, buffer_size, input_imgs[task_id], 0, NULL, NULL);
+            // status = clEnqueueWriteBuffer(queue_fpga, input_buf[task_id], CL_TRUE, 0, buffer_size, input_imgs[task_id], 0, NULL, &write_events[task_id][0]);
             // assert(status == CL_SUCCESS);
             status |= clEnqueueTask(queue_fpga, gau_kernel[task_id], 0, NULL, &kernel_events[task_id][0]);
-            // assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_fpga, sob_kernel[task_id], 0, NULL, &kernel_events[task_id][1]);
-            // assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_fpga, nonmax_kernel[task_id], 0, NULL, &kernel_events[task_id][2]);
-            // assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_fpga, hyst_kernel[task_id], 0, NULL, &kernel_events[task_id][3]);
-            // assert(status == CL_SUCCESS);
-            status |= clEnqueueReadBuffer(queue_fpga, output_buf[task_id], 0, 0, buffer_size, output_imgs[task_id], 0, NULL, NULL);
+            // status |= clEnqueueTask(queue_fpga, gau_kernel[task_id], 1, write_events[task_id], &kernel_events[task_id][0]);
             assert(status == CL_SUCCESS);
+            status |= clEnqueueTask(queue_fpga, sob_kernel[task_id], 1, kernel_events[task_id], &kernel_events[task_id][1]);
+            assert(status == CL_SUCCESS);
+            status |= clEnqueueTask(queue_fpga, nonmax_kernel[task_id], 2, kernel_events[task_id], &kernel_events[task_id][2]);
+            assert(status == CL_SUCCESS);
+            status |= clEnqueueTask(queue_fpga, hyst_kernel[task_id], 3, kernel_events[task_id], &kernel_events[task_id][3]);
+            assert(status == CL_SUCCESS);
+            status |= clEnqueueReadBuffer(queue_fpga, output_buf[task_id], 0, 0, buffer_size, output_imgs[task_id], 4, kernel_events[task_id], &write_events[task_id][1]);
         }
         clFinish(queue_fpga);
-        printf("queue finish\n");
+        assert(clock_gettime(CLOCK_MONOTONIC_RAW, &end) != -1);
+        total_time += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec; 
+        printf("Time: %lf\n", (double)total_time);  
+    
+        FILE *fp = fopen("fpga_ooo.txt", "w");
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                fprintf(fp, "%u ", output_imgs[0][j + i * cols]);
+            }
+            fprintf(fp, "\n");
+        }
+        fclose(fp);
 
         status = clGetEventProfilingInfo(kernel_events[0][0], CL_PROFILING_COMMAND_START, sizeof(time_base), &time_base, NULL);
         for (int i = 0; i < MAX_QUEUE_NUM; i++){
             status = clGetEventProfilingInfo(kernel_events[i][0], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
             status |= clGetEventProfilingInfo(kernel_events[i][3], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
-            fprintf(file, "%d,%lu, %lu, %lu\n", i, time_start-time_base, time_end - time_base, time_end - time_start);
+            // fprintf(file, "%d,%lu, %lu, %lu\n", i, time_start-time_base, time_end - time_base, time_end - time_start);
         }
 
         for (int i = 0; i < MAX_TASK_NUM; i++){
@@ -195,6 +209,8 @@ int main(int argc, char** argv) {
             clReleaseEvent(kernel_events[i][1]);
             clReleaseEvent(kernel_events[i][2]);
             clReleaseEvent(kernel_events[i][3]);
+            clReleaseEvent(write_events[i][0]);
+            clReleaseEvent(write_events[i][1]);
         }
         // Release
 
@@ -224,7 +240,5 @@ int main(int argc, char** argv) {
         clReleaseProgram(program);
         clReleaseContext(context);
     }
-    fclose(file);
-
     return 0;
 }

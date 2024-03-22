@@ -5,12 +5,14 @@
 #define BILLION 1000000000L
 #define ROWS 512
 #define COLS 512
-#define MAX_TASK_NUM 100
-#define MAX_QUEUE_NUM 100
+#define MAX_TASK_NUM 1000
+#define MAX_QUEUE_NUM 1000
 
 
 int main(int argc, char** argv) {
     cl_ulong time_start, time_end, time_base;
+    struct timespec start, end;
+    cl_ulong total_time = 0;
     
     // Get Platform and Device Info
     cl_uint numPlatforms;
@@ -152,7 +154,7 @@ int main(int argc, char** argv) {
     }
 
     cl_event kernel_events[MAX_TASK_NUM][4];
-    cl_event write_events[MAX_TASK_NUM][2];
+    cl_event write_events[MAX_TASK_NUM];
 
     // set arguments
     for (int i = 0; i < MAX_TASK_NUM; i++ ){
@@ -180,9 +182,10 @@ int main(int argc, char** argv) {
     }
     fprintf(file, "Tasks Num, Time starts , Time ends, End-to-end Latency(ns)\n");
 
+    assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
     for (int test_id = 0; test_id  < 1; test_id++){
         for (int task_id = 0; task_id < MAX_TASK_NUM; task_id++) {
-            status = clEnqueueWriteBuffer(queue_cpu,input_buf[task_id], CL_TRUE, 0, buffer_size, input_imgs[task_id], 0, NULL, &write_events[task_id][0]);
+            // status = clEnqueueWriteBuffer(queue_cpu,input_buf[task_id], CL_TRUE, 0, buffer_size, input_imgs[task_id], 0, NULL, &write_events[task_id][0]);
             // assert(status == CL_SUCCESS);
             // clWaitForEvents(1, &write_events[task_id][0]);
             status = clEnqueueNDRangeKernel(queue_cpu, gau_kernel[task_id], 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[task_id][0]);
@@ -197,7 +200,7 @@ int main(int argc, char** argv) {
             status = clEnqueueNDRangeKernel(queue_cpu, hyst_kernel[task_id], 1, NULL, &global_work_size, &local_work_size, 3, kernel_events[task_id], &kernel_events[task_id][3]);
             // clWaitForEvents(1, &kernel_events[task_id][3]);
             // assert(status == CL_SUCCESS);
-            status |= clEnqueueReadBuffer(queue_cpu, output_buf[task_id], 0, 0, buffer_size, output_imgs[task_id], 0, NULL, &write_events[task_id][1]);
+            status |= clEnqueueReadBuffer(queue_cpu, output_buf[task_id], 0, 0, buffer_size, output_imgs[task_id], 0, NULL, &write_events[task_id]);
             assert(status == CL_SUCCESS);
         }
         // for (int task_id = 0; task_id < MAX_TASK_NUM; task_id++) {
@@ -223,7 +226,9 @@ int main(int argc, char** argv) {
 
 
         clFinish(queue_cpu);
-
+        assert(clock_gettime(CLOCK_MONOTONIC_RAW, &end) != -1);
+        total_time += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec; 
+        printf("Time: %lf\n", (double)total_time);  
         // Output image to file
         FILE *fp = fopen("cpu_ooo.txt", "w");
         for(int i = 0; i < rows; i++) {
@@ -246,8 +251,7 @@ int main(int argc, char** argv) {
             clReleaseEvent(kernel_events[i][1]);
             clReleaseEvent(kernel_events[i][2]);
             clReleaseEvent(kernel_events[i][3]);
-            clReleaseEvent(write_events[i][0]);
-            clReleaseEvent(write_events[i][1]);
+            clReleaseEvent(write_events[i]);
         }
         // Release
 

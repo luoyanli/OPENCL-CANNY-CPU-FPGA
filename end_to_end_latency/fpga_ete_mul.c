@@ -195,6 +195,15 @@ int main(int argc, char** argv) {
             status |= clGetEventProfilingInfo(kernel_events[i][3], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
             fprintf(file, "%d,%lu, %lu, %lu\n", i, time_start-time_base, time_end - time_base, time_end - time_start);
         }
+        FILE *fp = fopen("fpga_mul_ete.txt", "w");
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                fprintf(fp, "%u ", output_imgs[0][j + i * cols]);
+            }
+            fprintf(fp, "\n");
+        }
+        fclose(fp);
+
 
         for (int i = 0; i < MAX_TASK_NUM; i++){
             clReleaseEvent(kernel_events[i][0]);
