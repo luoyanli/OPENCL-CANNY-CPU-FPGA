@@ -112,8 +112,8 @@ int main() {
     printf("[+] Environment built up \n");
 
     // initialize 
-    int CPU_TASKS = 20;
-    int FPGA_TASKS = 20;
+    int CPU_TASKS = 50;
+    int FPGA_TASKS = 50;
     int TOTAL_TASKS = CPU_TASKS + FPGA_TASKS;
     int CPU_SUM, FPGA_SUM;
     int TASK_LEFT = 1000;
@@ -338,9 +338,11 @@ int main() {
         // first version scheduler
 
         // Final phase
-        if (TASK_LEFT < 50){
-            FPGA_TASKS = TASK_LEFT / 2;
-            CPU_TASKS = TASK_LEFT - FPGA_TASKS;
+        if (TASK_LEFT < 100){
+            // FPGA_TASKS = TASK_LEFT / 2;
+            // CPU_TASKS = TASK_LEFT - FPGA_TASKS;
+            CPU_TASKS = ceil((TASK_LEFT) * 1 / (1 + ratio));
+            FPGA_TASKS = TASK_LEFT - CPU_TASKS;
             TOTAL_TASKS = CPU_TASKS + FPGA_TASKS;
             CPU_SUM += CPU_TASKS;
             FPGA_SUM += FPGA_TASKS;
@@ -360,6 +362,9 @@ int main() {
         }
         TASK_LEFT -= TOTAL_TASKS;
         // printf("TASK_LEFT = %d\n", TASK_LEFT);
+    }
+    if (TASK_LEFT != 0){
+        printf("ERRO TASK_LEFT = %d\n", TASK_LEFT);
     }
     printf("scheduler_count = %d\n", scheduler_count);
     printf("CPU_SUM = %d\n", CPU_SUM);

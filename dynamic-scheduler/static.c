@@ -9,7 +9,7 @@
 
 #define ROWS 512
 #define COLS 512
-#define REPETITIONS 100
+#define REPETITIONS 10
 #define BILLION 1000000000L
 
 int main() {
@@ -115,6 +115,8 @@ int main() {
     int CPU_TASKS = 50;
     int FPGA_TASKS = 50;
     int TOTAL_TASKS = CPU_TASKS + FPGA_TASKS;
+    int TOTAL_CPU = 0;
+    int TOTAL_FPGA = 0;
     int ALL_EPOCHS = 1000;
     float ratio = 0;
 
@@ -233,54 +235,61 @@ int main() {
         }
 
         // Start
-        assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
-        for (int i = 0; i < CPU_TASKS; i++){
-            // status = clEnqueueWriteBuffer(queue_cpu,input_buf_cpu[i] , 0, 0, buffer_size, input_imgs[i], 0, NULL, &write_events_cpu[i][0]);
-            // assert(status == CL_SUCCESS);
-            // status |= clEnqueueTask(queue_cpu, gau_kernel_cpu[i], 1, write_events_cpu[i], &kernel_events_cpu[i][0]);
-            status |= clEnqueueTask(queue_cpu, gau_kernel_cpu[i], 0, NULL, &kernel_events_cpu[i][0]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_cpu, sob_kernel_cpu[i], 1, kernel_events_cpu[i], &kernel_events_cpu[i][1]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_cpu, nms_kernel_cpu[i], 2, kernel_events_cpu[i], &kernel_events_cpu[i][2]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_cpu, hyst_kernel_cpu[i], 3, kernel_events_cpu[i], &kernel_events_cpu[i][3]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueReadBuffer(queue_cpu, output_buf_cpu[i], 0, 0, buffer_size, output_imgs[i], 4, kernel_events_cpu[i], &write_events_cpu[i]);
-            assert(status == CL_SUCCESS);
+        printf("[+] Start\n");
+        for (int rep = 0; rep < REPETITIONS; rep++){
+            assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
+            for (int i = 0; i < CPU_TASKS; i++){
+                // status = clEnqueueWriteBuffer(queue_cpu,input_buf_cpu[i] , 0, 0, buffer_size, input_imgs[i], 0, NULL, &write_events_cpu[i][0]);
+                // assert(status == CL_SUCCESS);
+                // status |= clEnqueueTask(queue_cpu, gau_kernel_cpu[i], 1, write_events_cpu[i], &kernel_events_cpu[i][0]);
+                status |= clEnqueueTask(queue_cpu, gau_kernel_cpu[i], 0, NULL, &kernel_events_cpu[i][0]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueTask(queue_cpu, sob_kernel_cpu[i], 1, kernel_events_cpu[i], &kernel_events_cpu[i][1]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueTask(queue_cpu, nms_kernel_cpu[i], 2, kernel_events_cpu[i], &kernel_events_cpu[i][2]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueTask(queue_cpu, hyst_kernel_cpu[i], 3, kernel_events_cpu[i], &kernel_events_cpu[i][3]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueReadBuffer(queue_cpu, output_buf_cpu[i], 0, 0, buffer_size, output_imgs[i], 4, kernel_events_cpu[i], &write_events_cpu[i]);
+                assert(status == CL_SUCCESS);
+            }
+            for (int i = 0; i < FPGA_TASKS; i++){
+                // status = clEnqueueWriteBuffer(queue_fpga,input_buf_fpga[i] , 0, 0, buffer_size, input_imgs[i + CPU_TASKS], 0, NULL, &write_events_fpga[i][0]);
+                // assert(status == CL_SUCCESS);
+                // status = clEnqueueTask(queue_fpga, gau_kernel_fpga[i], 1, write_events_fpga[i], &kernel_events_fpga[i][0]);
+                clEnqueueTask(queue_fpga, gau_kernel_fpga[i], 0, NULL, &kernel_events_fpga[i][0]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueTask(queue_fpga, sob_kernel_fpga[i], 1, kernel_events_fpga[i], &kernel_events_fpga[i][1]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueTask(queue_fpga, nms_kernel_fpga[i], 2, kernel_events_fpga[i], &kernel_events_fpga[i][2]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueTask(queue_fpga, hyst_kernel_fpga[i], 3, kernel_events_fpga[i], &kernel_events_fpga[i][3]);
+                assert(status == CL_SUCCESS);
+                status |= clEnqueueReadBuffer(queue_fpga, output_buf_fpga[i], 0, 0, buffer_size, output_imgs[i + CPU_TASKS], 4, kernel_events_fpga[i], &write_events_fpga[i]);
+                assert(status == CL_SUCCESS);
+            }
+            // Run
+            clFinish(queue_fpga);
+            clFinish(queue_cpu);
+            assert(clock_gettime(CLOCK_MONOTONIC_RAW, &end) != -1);
+            total_time += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec; 
+            status = clGetEventProfilingInfo(kernel_events_cpu[0][0], CL_PROFILING_COMMAND_START, sizeof(time_start_cpu), &time_start_cpu, NULL);
+            status |= clGetEventProfilingInfo(kernel_events_cpu[CPU_TASKS-1][3], CL_PROFILING_COMMAND_END, sizeof(time_end_cpu), &time_end_cpu, NULL);
+            // status |= clGetEventProfilingInfo(write_events_cpu[CPU_TASKS-1], CL_PROFILING_COMMAND_END, sizeof(time_end_cpu), &time_end_cpu, NULL);
+            status |= clGetEventProfilingInfo(kernel_events_fpga[0][0], CL_PROFILING_COMMAND_START, sizeof(time_start_fpga), &time_start_fpga, NULL);
+            status |= clGetEventProfilingInfo(kernel_events_fpga[FPGA_TASKS-1][3], CL_PROFILING_COMMAND_END, sizeof(time_end_fpga), &time_end_fpga, NULL);
+            // status |= clGetEventProfilingInfo(write_events_fpga[FPGA_TASKS-1], CL_PROFILING_COMMAND_END, sizeof(time_end_fpga), &time_end_fpga, NULL);
+            cpu_time += time_end_cpu - time_start_cpu;
+            fpga_time += time_end_fpga - time_start_fpga;
         }
-        for (int i = 0; i < FPGA_TASKS; i++){
-            // status = clEnqueueWriteBuffer(queue_fpga,input_buf_fpga[i] , 0, 0, buffer_size, input_imgs[i + CPU_TASKS], 0, NULL, &write_events_fpga[i][0]);
-            // assert(status == CL_SUCCESS);
-            // status = clEnqueueTask(queue_fpga, gau_kernel_fpga[i], 1, write_events_fpga[i], &kernel_events_fpga[i][0]);
-            clEnqueueTask(queue_fpga, gau_kernel_fpga[i], 0, NULL, &kernel_events_fpga[i][0]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_fpga, sob_kernel_fpga[i], 1, kernel_events_fpga[i], &kernel_events_fpga[i][1]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_fpga, nms_kernel_fpga[i], 2, kernel_events_fpga[i], &kernel_events_fpga[i][2]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueTask(queue_fpga, hyst_kernel_fpga[i], 3, kernel_events_fpga[i], &kernel_events_fpga[i][3]);
-            assert(status == CL_SUCCESS);
-            status |= clEnqueueReadBuffer(queue_fpga, output_buf_fpga[i], 0, 0, buffer_size, output_imgs[i + CPU_TASKS], 4, kernel_events_fpga[i], &write_events_fpga[i]);
-            assert(status == CL_SUCCESS);
-        }
-        // Run
-        clFinish(queue_fpga);
-        clFinish(queue_cpu);
         // return tasks and time to calculate throughput
-        assert(clock_gettime(CLOCK_MONOTONIC_RAW, &end) != -1);
-        total_time += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec; 
-        status = clGetEventProfilingInfo(kernel_events_cpu[0][0], CL_PROFILING_COMMAND_START, sizeof(time_start_cpu), &time_start_cpu, NULL);
-        status |= clGetEventProfilingInfo(write_events_cpu[CPU_TASKS-1], CL_PROFILING_COMMAND_END, sizeof(time_end_cpu), &time_end_cpu, NULL);
-        status |= clGetEventProfilingInfo(kernel_events_fpga[0][0], CL_PROFILING_COMMAND_START, sizeof(time_start_fpga), &time_start_fpga, NULL);
-        status |= clGetEventProfilingInfo(write_events_fpga[FPGA_TASKS-1], CL_PROFILING_COMMAND_END, sizeof(time_end_fpga), &time_end_fpga, NULL);
-        cpu_time = time_end_cpu - time_start_cpu;
-        fpga_time = time_end_fpga - time_start_fpga;
-        printf("%d CPU task execute for %lu ns\n", CPU_TASKS, cpu_time);
-        printf("%d FPGA task execute for %lu ns\n", FPGA_TASKS, fpga_time);
-        printf("CPU Throughput = %f s/Gops\n", (float)cpu_time / (float)CPU_TASKS);
+
+        
+        // printf("%d CPU task execute for %lu ns\n", CPU_TASKS, cpu_time);
+        // printf("%d FPGA task execute for %lu ns\n", FPGA_TASKS, fpga_time);
+        // printf("CPU Throughput = %f s/Gops\n", (float)cpu_time / (float)CPU_TASKS);
         // printf("%f\n", (float)fpga_time / (float)FPGA_TASKS);
-        printf("FPGA Throughput = %f s/Gops\n", (float)fpga_time / (float)(FPGA_TASKS));
+        // printf("FPGA Throughput = %f s/Gops\n", (float)fpga_time / (float)(FPGA_TASKS));
 
 
         for (int i = 0; i < CPU_TASKS; i++){
@@ -335,18 +344,30 @@ int main() {
 
         // first version scheduler
         // main body
+        cpu_time /= REPETITIONS;
+        fpga_time /= REPETITIONS;
         if (epoch == 0){
             ratio =  ((float)cpu_time / CPU_TASKS) / ((float)fpga_time / FPGA_TASKS);
             printf("ratio = %f\n", ratio);
-            FPGA_TASKS = ceil((ALL_EPOCHS - TOTAL_TASKS) * 1 / (1 + ratio));
-            CPU_TASKS = ALL_EPOCHS - TOTAL_TASKS - FPGA_TASKS;
-            printf("CPU_TASKS = %d, FPGA_TASKS = %d\n", CPU_TASKS, FPGA_TASKS);
+            TOTAL_CPU += CPU_TASKS;
+            TOTAL_FPGA += FPGA_TASKS;
+            CPU_TASKS = ceil((ALL_EPOCHS - TOTAL_TASKS) * 1 / (1 + ratio));
+            FPGA_TASKS = ALL_EPOCHS - TOTAL_TASKS - CPU_TASKS;
+            // printf("CPU_TASKS = %d, FPGA_TASKS = %d\n", CPU_TASKS, FPGA_TASKS);
             TOTAL_TASKS = CPU_TASKS + FPGA_TASKS;
-            printf("TOTAL_TASKS = %d \n", TOTAL_TASKS);
+            // printf("TOTAL_TASKS = %d \n", TOTAL_TASKS);
         }
+        else{
+            TOTAL_CPU += CPU_TASKS;
+            TOTAL_FPGA += FPGA_TASKS;
+            TOTAL_TASKS = TOTAL_CPU + TOTAL_FPGA;
+        };
+    }////////////////////// end of epoch
 
-    }
-    printf(" Total time = %f ns\n", (float)total_time);
+    printf(" Total time = %f ns\n", (float)total_time / REPETITIONS);
+    printf(" Total FPGA number = %d\n", TOTAL_FPGA);
+    printf(" Total CPU number = %d\n", TOTAL_CPU);
+    printf(" Total number = %d\n", TOTAL_TASKS);
 
     clReleaseCommandQueue(queue_fpga);
     clReleaseCommandQueue(queue_cpu);
