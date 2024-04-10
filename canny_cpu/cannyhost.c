@@ -10,10 +10,11 @@
 int main(int argc, char** argv) {
     struct timespec start, end;
     cl_ulong time_start, time_end;
-    cl_ulong gau_total_time = 0;
-    cl_ulong sob_total_time = 0;
-    cl_ulong nonmax_total_time = 0;
-    cl_ulong hyst_total_time = 0;
+    // cl_ulong gau_total_time = 0;
+    // cl_ulong sob_total_time = 0;
+    // cl_ulong nonmax_total_time = 0;
+    // cl_ulong hyst_total_time = 0;
+    cl_ulong kernel_time = 0;
     cl_ulong total_time = 0;
     
     // Get Platform and Device Info
@@ -75,7 +76,8 @@ int main(int argc, char** argv) {
     printf("[+] command queue created\n");
 
     // Create a program from the kernel source
-    const char *kernelSource = readKernelSource("../kernel/canny_cpu2.cl");
+    // const char *kernelSource = readKernelSource("../kernel/canny_cpu2.cl");
+    const char *kernelSource = readKernelSource("../kernel/canny_gsnh.cl");
     cl_program program = clCreateProgramWithSource(context, 1, (const char **)&kernelSource, NULL, &status);
     assert(status == CL_SUCCESS);
     char options[100];
@@ -90,10 +92,11 @@ int main(int argc, char** argv) {
         clReleaseProgram(program);
         exit(1);
     }
-    cl_kernel gau_kernel = clCreateKernel(program, "gaussian_kernel", &status);
-    cl_kernel sob_kernel = clCreateKernel(program, "sobel_kernel", &status);
-    cl_kernel nonmax_kernel = clCreateKernel(program, "nonmaxsuppression_kernel", &status);
-    cl_kernel hyst_kernel = clCreateKernel(program, "hysteresis_kernel", &status);
+    // cl_kernel gau_kernel = clCreateKernel(program, "gaussian_kernel", &status);
+    // cl_kernel sob_kernel = clCreateKernel(program, "sobel_kernel", &status);
+    // cl_kernel nonmax_kernel = clCreateKernel(program, "nonmaxsuppression_kernel", &status);
+    // cl_kernel hyst_kernel = clCreateKernel(program, "hysteresis_kernel", &status);
+    cl_kernel gsnh_kernel = clCreateKernel(program, "gsnh", &status);
     printf("[+] kernel loaded\n");
 
     // allocate input image
@@ -112,77 +115,92 @@ int main(int argc, char** argv) {
         // printf("\n");
     }
     size_t img_buffer_size = cols * rows * sizeof(char);
-    size_t grad_buffer_size = cols * rows * sizeof(GradPix);
-    cl_mem in_out_buf[2];
-    in_out_buf[0] = clCreateBuffer(context, CL_MEM_READ_WRITE, img_buffer_size, NULL, NULL);
-    in_out_buf[1] = clCreateBuffer(context, CL_MEM_READ_WRITE, img_buffer_size, NULL, NULL);
-    cl_mem theta_buf = clCreateBuffer(context, CL_MEM_READ_WRITE, grad_buffer_size, NULL, NULL);
+    cl_mem in_buf = clCreateBuffer(context, CL_MEM_READ_ONLY, img_buffer_size, NULL, NULL);
+    cl_mem out_buf = clCreateBuffer(context, CL_MEM_WRITE_ONLY, img_buffer_size, NULL, NULL);
+    // size_t grad_buffer_size = cols * rows * sizeof(GradPix);
+    // cl_mem in_out_buf[2];
+    // in_out_buf[0] = clCreateBuffer(context, CL_MEM_READ_WRITE, img_buffer_size, NULL, NULL);
+    // in_out_buf[1] = clCreateBuffer(context, CL_MEM_READ_WRITE, img_buffer_size, NULL, NULL);
+    // cl_mem theta_buf = clCreateBuffer(context, CL_MEM_READ_WRITE, grad_buffer_size, NULL, NULL);
 
     // Set the arguments of the kernel
-    status = clSetKernelArg(gau_kernel, 0, sizeof(cl_mem), &in_out_buf[0]);
-    status |= clSetKernelArg(gau_kernel, 1, sizeof(cl_mem), &in_out_buf[1]);
-    assert(status == CL_SUCCESS);
-    status = clSetKernelArg(sob_kernel, 0, sizeof(cl_mem), &in_out_buf[1]);
-    status |= clSetKernelArg(sob_kernel, 1, sizeof(cl_mem), &theta_buf);
-    assert(status == CL_SUCCESS);
-    status = clSetKernelArg(nonmax_kernel, 0, sizeof(cl_mem), &theta_buf);
-    status |= clSetKernelArg(nonmax_kernel, 1, sizeof(cl_mem), &in_out_buf[0]);
-    assert(status == CL_SUCCESS);
-    status = clSetKernelArg(hyst_kernel, 0, sizeof(cl_mem), &in_out_buf[0]);
-    status |= clSetKernelArg(hyst_kernel, 1, sizeof(cl_mem), &in_out_buf[1]);
+    // status = clSetKernelArg(gau_kernel, 0, sizeof(cl_mem), &in_out_buf[0]);
+    // status |= clSetKernelArg(gau_kernel, 1, sizeof(cl_mem), &in_out_buf[1]);
+    // assert(status == CL_SUCCESS);
+    // status = clSetKernelArg(sob_kernel, 0, sizeof(cl_mem), &in_out_buf[1]);
+    // status |= clSetKernelArg(sob_kernel, 1, sizeof(cl_mem), &theta_buf);
+    // assert(status == CL_SUCCESS);
+    // status = clSetKernelArg(nonmax_kernel, 0, sizeof(cl_mem), &theta_buf);
+    // status |= clSetKernelArg(nonmax_kernel, 1, sizeof(cl_mem), &in_out_buf[0]);
+    // assert(status == CL_SUCCESS);
+    // status = clSetKernelArg(hyst_kernel, 0, sizeof(cl_mem), &in_out_buf[0]);
+    // status |= clSetKernelArg(hyst_kernel, 1, sizeof(cl_mem), &in_out_buf[1]);
+    // assert(status == CL_SUCCESS);
+    status = clSetKernelArg(gsnh_kernel, 0, sizeof(cl_mem), &in_buf);
+    status |= clSetKernelArg(gsnh_kernel, 1, sizeof(cl_mem), &out_buf);
     assert(status == CL_SUCCESS);
 
     // Start Profiling
     size_t global_work_size = 1;
     size_t local_work_size = 1;
-    cl_event kernel_events[4];
+    // cl_event kernel_events[4];
+    cl_event kernel_events;
     for (int test_id = 0; test_id < REPETITIONS; test_id++) {
         // Start Computing
         assert(clock_gettime(CLOCK_MONOTONIC_RAW, &start) != -1);
 
         // Write input image to buffer
-        status = clEnqueueWriteBuffer(queue, in_out_buf[0], CL_TRUE, 0, img_buffer_size, input_img, 0, NULL, NULL);
+        // status = clEnqueueWriteBuffer(queue, in_out_buf[0], CL_TRUE, 0, img_buffer_size, input_img, 0, NULL, NULL);
+        status = clEnqueueWriteBuffer(queue, in_buf, CL_TRUE, 0, img_buffer_size, input_img, 0, NULL, NULL);
         assert(status == CL_SUCCESS);
 
-        // Gaussian kernel
-        status = clEnqueueNDRangeKernel(queue, gau_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[0]);
-        assert(status == CL_SUCCESS);
+        // // Gaussian kernel
+        // status = clEnqueueNDRangeKernel(queue, gau_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[0]);
+        // assert(status == CL_SUCCESS);
 
-        // Sobel kernel
-        status = clEnqueueNDRangeKernel(queue, sob_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[1]);
-        assert(status == CL_SUCCESS);
+        // // Sobel kernel
+        // status = clEnqueueNDRangeKernel(queue, sob_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[1]);
+        // assert(status == CL_SUCCESS);
 
-        // NonMaxSuppression kernel
-        status = clEnqueueNDRangeKernel(queue, nonmax_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[2]);
-        assert(status == CL_SUCCESS);
+        // // NonMaxSuppression kernel
+        // status = clEnqueueNDRangeKernel(queue, nonmax_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[2]);
+        // assert(status == CL_SUCCESS);
 
-        // Hystersis kernel
-        status = clEnqueueNDRangeKernel(queue, hyst_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[3]);
-        assert(status == CL_SUCCESS);
+        // // Hystersis kernel
+        // status = clEnqueueNDRangeKernel(queue, hyst_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events[3]);
+        // assert(status == CL_SUCCESS);
+
+        // gsnh kernel
+        status = clEnqueueNDRangeKernel(queue, gsnh_kernel, 1, NULL, &global_work_size, &local_work_size, 0, NULL, &kernel_events);
 
         // Read the output back to host
-        status = clEnqueueReadBuffer(queue, in_out_buf[1], CL_TRUE, 0, img_buffer_size, output_img, 0, NULL, NULL);
+        // status = clEnqueueReadBuffer(queue, in_out_buf[1], CL_TRUE, 0, img_buffer_size, output_img, 0, NULL, NULL);
+        status = clEnqueueReadBuffer(queue, out_buf, CL_TRUE, 0, img_buffer_size, output_img, 0, NULL, NULL);
         assert(status == CL_SUCCESS);
         assert(clock_gettime(CLOCK_MONOTONIC_RAW, &end) != -1);
 
         // accumulate time
         total_time += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
-        status = clGetEventProfilingInfo(kernel_events[0], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
-        status |= clGetEventProfilingInfo(kernel_events[0], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
+        // status = clGetEventProfilingInfo(kernel_events[0], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
+        // status |= clGetEventProfilingInfo(kernel_events[0], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
+        // assert(status == CL_SUCCESS);
+        // gau_total_time += time_end - time_start;
+        // status = clGetEventProfilingInfo(kernel_events[1], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
+        // status |= clGetEventProfilingInfo(kernel_events[1], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
+        // assert(status == CL_SUCCESS);
+        // sob_total_time += time_end - time_start;
+        // status = clGetEventProfilingInfo(kernel_events[2], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
+        // status |= clGetEventProfilingInfo(kernel_events[2], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
+        // assert(status == CL_SUCCESS);
+        // nonmax_total_time += time_end - time_start;
+        // status = clGetEventProfilingInfo(kernel_events[3], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
+        // status |= clGetEventProfilingInfo(kernel_events[3], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
+        // assert(status == CL_SUCCESS);
+        // hyst_total_time += time_end - time_start;
+        status = clGetEventProfilingInfo(kernel_events, CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
+        status |= clGetEventProfilingInfo(kernel_events, CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
         assert(status == CL_SUCCESS);
-        gau_total_time += time_end - time_start;
-        status = clGetEventProfilingInfo(kernel_events[1], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
-        status |= clGetEventProfilingInfo(kernel_events[1], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
-        assert(status == CL_SUCCESS);
-        sob_total_time += time_end - time_start;
-        status = clGetEventProfilingInfo(kernel_events[2], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
-        status |= clGetEventProfilingInfo(kernel_events[2], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
-        assert(status == CL_SUCCESS);
-        nonmax_total_time += time_end - time_start;
-        status = clGetEventProfilingInfo(kernel_events[3], CL_PROFILING_COMMAND_START, sizeof(time_start), &time_start, NULL);
-        status |= clGetEventProfilingInfo(kernel_events[3], CL_PROFILING_COMMAND_END, sizeof(time_end), &time_end, NULL);
-        assert(status == CL_SUCCESS);
-        hyst_total_time += time_end - time_start;
+        kernel_time += time_end - time_start;
 
         if (test_id == 0) {
             // Output image to file
@@ -198,23 +216,27 @@ int main(int argc, char** argv) {
     }
 
     // Print Profiling
-    printf("Gaussian kernel latency: %lu ns\n", gau_total_time / REPETITIONS);
-    printf("Sobel kernel latency: %lu ns\n", sob_total_time / REPETITIONS);
-    printf("NonMaxSuppression kernel latency: %lu ns\n", nonmax_total_time / REPETITIONS);
-    printf("Hysteresis kernel latency: %lu ns\n", hyst_total_time / REPETITIONS);
+    // printf("Gaussian kernel latency: %lu ns\n", gau_total_time / REPETITIONS);
+    // printf("Sobel kernel latency: %lu ns\n", sob_total_time / REPETITIONS);
+    // printf("NonMaxSuppression kernel latency: %lu ns\n", nonmax_total_time / REPETITIONS);
+    // printf("Hysteresis kernel latency: %lu ns\n", hyst_total_time / REPETITIONS);
+    printf("GSNH kernel latency: %lu ns\n", kernel_time / REPETITIONS);
     printf("Whole Canny Edge Detection latency: %lu ns\n", total_time / REPETITIONS);
 
     // Release
-    clReleaseKernel(gau_kernel);
-    clReleaseKernel(sob_kernel);
-    clReleaseKernel(nonmax_kernel);
-    clReleaseKernel(hyst_kernel);
+    // clReleaseKernel(gau_kernel);
+    // clReleaseKernel(sob_kernel);
+    // clReleaseKernel(nonmax_kernel);
+    // clReleaseKernel(hyst_kernel);
+    clReleaseKernel(gsnh_kernel);
     clReleaseProgram(program);
     clReleaseCommandQueue(queue);
     clReleaseContext(context);
-    clReleaseMemObject(in_out_buf[0]);
-    clReleaseMemObject(in_out_buf[1]);
-    clReleaseMemObject(theta_buf);
+    clReleaseMemObject(in_buf);
+    clReleaseMemObject(out_buf);
+    // clReleaseMemObject(in_out_buf[0]);
+    // clReleaseMemObject(in_out_buf[1]);
+    // clReleaseMemObject(theta_buf);
 
     return 0;
 }
