@@ -3,8 +3,8 @@
 #include "util.h"
 #define REPETITIONS 100
 #define BILLION 1000000000L
-#define ROWS 512
-#define COLS 512
+#define ROWS 1024
+#define COLS 1024
 
 
 int main(int argc, char** argv) {
